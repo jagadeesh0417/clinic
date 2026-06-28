@@ -1,0 +1,311 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { useRef } from "react"
+
+const benefits = [
+  {
+    id: 1,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /><circle cx="12" cy="12" r="10" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="M2 12h2" /><path d="M20 12h2" />
+      </svg>
+    ),
+    title: "National Recognition",
+    desc: "Your clinic featured across KO Clinics' national brand platform with verified quality credentials.",
+    level: "Platinum",
+  },
+  {
+    id: 2,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+      </svg>
+    ),
+    title: "Website Listing",
+    desc: "Premium profile on the KO Clinics network with SEO-optimized practice pages.",
+    level: "Platinum",
+  },
+  {
+    id: 3,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
+      </svg>
+    ),
+    title: "Leads",
+    desc: "Qualified patient leads routed directly to your clinic through our digital ecosystem.",
+    level: "Gold",
+  },
+  {
+    id: 4,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 12 9 19 22 6" />
+      </svg>
+    ),
+    title: "Marketing Support",
+    desc: "Professional marketing collateral, campaigns, and brand assets to grow your practice.",
+    level: "Gold",
+  },
+  {
+    id: 5,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z" />
+      </svg>
+    ),
+    title: "Training",
+    desc: "Hands-on clinical and operational training programs for you and your staff.",
+    level: "Gold",
+  },
+  {
+    id: 6,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 9h.01" /><path d="M15 9h.01" /><path d="M9 15h6" />
+      </svg>
+    ),
+    title: "AI Software Access",
+    desc: "Cutting-edge AI tools for diagnostics, scheduling, and patient management.",
+    level: "Platinum",
+  },
+  {
+    id: 7,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z" />
+      </svg>
+    ),
+    title: "Equipment Rental",
+    desc: "Access to premium aesthetic and surgical machines on flexible rental terms.",
+    level: "Platinum",
+  },
+  {
+    id: 8,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m8 3 4 8 5-5 5 15H2L8 3Z" />
+      </svg>
+    ),
+    title: "Product Discounts",
+    desc: "Exclusive pricing on dermal fillers, threads, skincare, and medical consumables.",
+    level: "Gold",
+  },
+  {
+    id: 9,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    title: "Doctor Network",
+    desc: "Connect with a curated network of specialists for referrals and collaborative care.",
+    level: "Platinum",
+  },
+  {
+    id: 10,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9" /><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5Z" />
+      </svg>
+    ),
+    title: "Business Consulting",
+    desc: "Strategic guidance on operations, finance, and scaling your healthcare practice.",
+    level: "Gold",
+  },
+  {
+    id: 11,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
+      </svg>
+    ),
+    title: "Call Center Support",
+    desc: "24/7 multi-lingual call center handling appointments, inquiries, and patient follow-ups.",
+    level: "Platinum",
+  },
+  {
+    id: 12,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 21h18" /><path d="M5 21V7l8-4v18" /><path d="M19 21V11l-6-4v14" />
+      </svg>
+    ),
+    title: "Corporate Packages",
+    desc: "B2B corporate wellness programs that bring high-value patient volumes to your clinic.",
+    level: "Gold",
+  },
+]
+
+const levelColors: Record<string, { bg: string; text: string; border: string }> = {
+  Platinum: {
+    bg: "rgba(0,213,255,0.12)",
+    text: "#00D5FF",
+    border: "rgba(0,213,255,0.2)",
+  },
+  Gold: {
+    bg: "rgba(203,161,53,0.12)",
+    text: "#CBA135",
+    border: "rgba(203,161,53,0.2)",
+  },
+}
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
+  },
+}
+
+export default function Membership() {
+  const ref = useRef<HTMLElement>(null)
+
+  return (
+    <section
+      ref={ref}
+      id="membership"
+      className="relative overflow-hidden py-24 md:py-32"
+      style={{ background: "#0D0D0D" }}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+          className="mx-auto mb-16 max-w-3xl text-center md:mb-24"
+        >
+          <span
+            className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
+            style={{ color: "#00D5FF" }}
+          >
+            Premium Network
+          </span>
+          <h2
+            className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}
+          >
+            KO Clinics{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Membership
+            </span>{" "}
+            Program
+          </h2>
+          <p
+            className="mt-5 text-base leading-relaxed md:text-lg"
+            style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+          >
+            Join the premium network of elite healthcare providers and unlock
+            unparalleled growth, recognition, and operational excellence.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
+          {benefits.map((benefit) => {
+            const lvl = levelColors[benefit.level]
+
+            return (
+              <motion.div
+                key={benefit.id}
+                variants={cardVariants}
+                className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  borderColor: "rgba(255,255,255,0.08)",
+                }}
+              >
+                {/* Hover glow */}
+                <div
+                  className="absolute -right-16 -top-16 h-32 w-32 rounded-full opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-20"
+                  style={{
+                    background:
+                      benefit.level === "Platinum"
+                        ? "radial-gradient(circle, #00D5FF 0%, transparent 70%)"
+                        : "radial-gradient(circle, #CBA135 0%, transparent 70%)",
+                  }}
+                />
+
+                {/* Level badge */}
+                <div
+                  className="mb-4 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider"
+                  style={{
+                    backgroundColor: lvl.bg,
+                    color: lvl.text,
+                    border: `1px solid ${lvl.border}`,
+                    fontFamily: "'Space Grotesk', sans-serif",
+                  }}
+                >
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z" />
+                  </svg>
+                  {benefit.level}
+                </div>
+
+                {/* Icon */}
+                <div
+                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl backdrop-blur-sm transition-all duration-500 group-hover:scale-110"
+                  style={{
+                    background:
+                      benefit.level === "Platinum"
+                        ? "rgba(0,213,255,0.1)"
+                        : "rgba(203,161,53,0.1)",
+                    color: lvl.text,
+                    border: `1px solid ${lvl.border}`,
+                  }}
+                >
+                  {benefit.icon}
+                </div>
+
+                <h3
+                  className="mb-2 text-lg font-semibold"
+                  style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}
+                >
+                  {benefit.title}
+                </h3>
+
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter', sans-serif" }}
+                >
+                  {benefit.desc}
+                </p>
+
+                <div
+                  className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full"
+                  style={{
+                    background:
+                      benefit.level === "Platinum"
+                        ? "linear-gradient(90deg, #00D5FF 0%, #CBA135 50%, transparent 100%)"
+                        : "linear-gradient(90deg, #CBA135 0%, #00D5FF 50%, transparent 100%)",
+                  }}
+                />
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
+    </section>
+  )
+}

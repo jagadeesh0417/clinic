@@ -1,10 +1,10 @@
 import PageLayout from "@/components/PageLayout";
-import Hero from "@/components/Hero";
+import QScan from "@/components/QScan";
 
-export default function Home() {
+export default function QScanPage() {
   return (
     <PageLayout>
-      <Hero />
+      <QScan />
     </PageLayout>
   );
 }
