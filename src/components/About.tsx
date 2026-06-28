@@ -40,14 +40,15 @@ const images = [
 ];
 
 const features = [
-  "Technology",
-  "Branding",
-  "Marketing",
-  "Telemedicine",
-  "AI Solutions",
-  "Business Growth",
-  "Doctor Networking",
-  "Medical Tourism",
+  "Healthcare Services",
+  "Quantum Health Products",
+  "Consultation Space Rental",
+  "AI Healthcare Solutions",
+  "Patient Acquisition",
+  "Digital Marketing",
+  "Business Development",
+  "Equipment Support",
+  "Healthcare Networking",
 ];
 
 const stats = [
@@ -130,7 +131,7 @@ function AnimatedCounter({
     if (isInView) {
       const controls = animate(count, value, {
         duration: 2.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       });
       return () => controls.stop();
     }
@@ -162,7 +163,7 @@ export default function About() {
       className="relative bg-[#050505] py-24 md:py-32 overflow-hidden"
     >
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#00D5FF]/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#7EE8FA]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -202,21 +203,32 @@ export default function About() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Redefining{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D5FF] to-[#7EE8FA]">
+              A Modern{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D5FF] to-[#CBA135]">
                 Healthcare
               </span>{" "}
-              Excellence
+              Ecosystem
             </motion.h2>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              KO Clinics is a modern healthcare ecosystem designed to empower
+              independent clinics and healthcare providers through technology,
+              strategic partnerships, product distribution, and business
+              expansion opportunities.
+            </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              KO Clinics is an AI-powered healthcare aggregator committed to
-              making quality healthcare accessible while helping clinics increase
-              revenue, visibility, and operational efficiency.
+              We help healthcare providers increase revenue, improve patient
+              engagement, expand service offerings, and participate in India&apos;s
+              growing healthcare economy.
             </motion.p>
 
             <motion.div

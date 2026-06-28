@@ -5,33 +5,33 @@ import { motion } from "framer-motion"
 const cards = [
   {
     icon: "\uD83D\uDCC0",
-    title: "Digitize Healthcare",
+    title: "Digitize Healthcare Practices",
     desc: "Transform clinics with digital records and smart management",
   },
   {
-    icon: "\uD83E\uDD1D",
-    title: "Increase Patient Access",
-    desc: "Connect patients to quality healthcare nationwide",
-  },
-  {
-    icon: "\uD83E\uDD16",
-    title: "AI Integration",
-    desc: "Power clinics with artificial intelligence and predictive analytics",
-  },
-  {
     icon: "\uD83D\uDCC8",
-    title: "Revenue Growth",
+    title: "Increase Clinic Revenue",
     desc: "Boost clinic revenue through our extensive network",
   },
   {
     icon: "\uD83C\uDF10",
-    title: "Business Expansion",
-    desc: "Expand your practice across cities and countries",
+    title: "Build India's Largest Network",
+    desc: "Connect healthcare providers across the nation",
+  },
+  {
+    icon: "\uD83C\uDFE5",
+    title: "Expand Access to Quality Care",
+    desc: "Make healthcare accessible to every community",
+  },
+  {
+    icon: "\uD83D\uDC69\u200D\u2695\uFE0F",
+    title: "Support Doctors & Entrepreneurs",
+    desc: "Help healthcare professionals grow their practice",
   },
   {
     icon: "\uD83C\uDF0D",
-    title: "Global Healthcare Ecosystem",
-    desc: "Join a worldwide network of healthcare excellence",
+    title: "Create Global Healthcare Ecosystem",
+    desc: "Build an international network of excellence",
   },
 ]
 
@@ -84,9 +84,9 @@ export default function VisionMission() {
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
             className="mt-8 font-['Inter'] text-lg leading-relaxed text-[#B7B7B7] sm:text-xl md:text-2xl"
           >
-            To become the world&apos;s largest integrated healthcare ecosystem
-            connecting clinics, hospitals, specialists, wellness centers, and
-            patients through innovation and trust.
+            To build the world&apos;s most trusted healthcare growth ecosystem by
+            connecting clinics, hospitals, specialists, wellness centres, products,
+            technology, and patients under one unified platform.
           </motion.p>
         </div>
       </div>

@@ -66,7 +66,7 @@ function CircularProgress({
       const controls = animate(progress, value, {
         duration: 2,
         delay: index * 0.1,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       });
       return () => controls.stop();
     }
@@ -247,7 +247,7 @@ function MetricItem({
       const controls = animate(metricProgress, value, {
         duration: 2,
         delay: index * 0.15,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       });
       return () => controls.stop();
     }

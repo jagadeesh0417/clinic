@@ -14,7 +14,13 @@ const STATS = [
   { label: "Clinics Target", value: 5000, suffix: "+" },
   { label: "Cities", value: 100, suffix: "+" },
   { label: "Countries", value: 4, suffix: "+" },
-  { label: "AI Enabled Ecosystem", value: 1, suffix: " Platform" },
+  { label: "AI Enabled Ecosystem", value: 1, suffix: "" },
+];
+
+const VERTICALS = [
+  { name: "Healthcare Services", icon: "cross" },
+  { name: "Quantum Health Products", icon: "hex" },
+  { name: "Clinic Space Rental", icon: "building" },
 ];
 
 function useCountUp(target: number, duration: number, trigger: boolean) {
@@ -79,8 +85,7 @@ function StatItem({ label, value, suffix, trigger }: StatItemProps) {
       transition={{ duration: 0.6 }}
     >
       <span className="stat-value">
-        {count}
-        {suffix}
+        {count}{suffix}
       </span>
       <span className="stat-label">{label}</span>
     </motion.div>
@@ -99,12 +104,12 @@ function Particles() {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const items: Particle[] = Array.from({ length: 20 }, (_, i) => ({
+    const items: Particle[] = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
-      size: Math.random() * 4 + 2,
-      duration: Math.random() * 8 + 6,
-      delay: Math.random() * 5,
+      size: Math.random() * 3 + 1.5,
+      duration: Math.random() * 10 + 8,
+      delay: Math.random() * 6,
     }));
     setParticles(items);
   }, []);
@@ -121,8 +126,8 @@ function Particles() {
             height: p.size,
           }}
           animate={{
-            y: [0, -100],
-            opacity: [0, 0.6, 0],
+            y: [0, -120],
+            opacity: [0, 0.5, 0],
           }}
           transition={{
             duration: p.duration,
@@ -133,6 +138,20 @@ function Particles() {
         />
       ))}
     </div>
+  );
+}
+
+function VerticalBadge({ name, index }: { name: string; index: number }) {
+  return (
+    <motion.div
+      className="vertical-badge"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.9 + index * 0.15 }}
+    >
+      <span className="vertical-badge-dot" />
+      {name}
+    </motion.div>
   );
 }
 
@@ -155,7 +174,7 @@ export default function Hero() {
           position: relative;
           width: 100%;
           height: 100vh;
-          min-height: 700px;
+          min-height: 750px;
           background: #050505;
           overflow: hidden;
           display: flex;
@@ -181,10 +200,10 @@ export default function Hero() {
           inset: 0;
           background: linear-gradient(
             135deg,
-            rgba(5, 5, 5, 0.85) 0%,
-            rgba(5, 5, 5, 0.5) 40%,
-            rgba(5, 5, 5, 0.3) 70%,
-            rgba(5, 5, 5, 0.85) 100%
+            rgba(5, 5, 5, 0.88) 0%,
+            rgba(5, 5, 5, 0.45) 35%,
+            rgba(5, 5, 5, 0.25) 65%,
+            rgba(5, 5, 5, 0.88) 100%
           );
           z-index: 1;
         }
@@ -196,7 +215,7 @@ export default function Hero() {
           background: linear-gradient(
             to bottom,
             transparent 0%,
-            rgba(5, 5, 5, 0.2) 50%,
+            rgba(5, 5, 5, 0.15) 40%,
             rgba(5, 5, 5, 0.95) 100%
           );
         }
@@ -215,24 +234,24 @@ export default function Hero() {
           align-items: center;
           gap: 8px;
           padding: 8px 20px;
-          border: 1px solid rgba(0, 213, 255, 0.3);
+          border: 1px solid rgba(203, 161, 53, 0.25);
           border-radius: 100px;
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: #7EE8FA;
-          background: rgba(0, 213, 255, 0.06);
+          color: #CBA135;
+          background: rgba(203, 161, 53, 0.06);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          margin-bottom: 32px;
+          margin-bottom: 28px;
         }
 
         .hero-badge-dot {
-          width: 6px;
-          height: 6px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
-          background: #00D5FF;
+          background: #CBA135;
           animation: pulse-dot 2s ease-in-out infinite;
         }
 
@@ -243,11 +262,11 @@ export default function Hero() {
 
         .hero-headline {
           font-family: "Playfair Display", serif;
-          font-size: clamp(40px, 8vw, 88px);
+          font-size: clamp(36px, 7.5vw, 82px);
           font-weight: 700;
           line-height: 1.05;
           color: #ffffff;
-          margin: 0 0 20px;
+          margin: 0 0 16px;
           letter-spacing: -0.03em;
         }
 
@@ -260,21 +279,70 @@ export default function Hero() {
 
         .hero-subheadline {
           font-family: "Space Grotesk", sans-serif;
-          font-size: clamp(16px, 2.2vw, 24px);
+          font-size: clamp(14px, 1.8vw, 20px);
           font-weight: 400;
-          color: rgba(255, 255, 255, 0.7);
-          letter-spacing: 0.08em;
+          color: rgba(255, 255, 255, 0.75);
+          letter-spacing: 0.06em;
           text-transform: uppercase;
-          margin: 0 0 16px;
+          margin: 0 0 8px;
+        }
+
+        .hero-secondary-line {
+          font-family: "Inter", sans-serif;
+          font-size: clamp(11px, 1.1vw, 14px);
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.35);
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          margin: 0 0 20px;
         }
 
         .hero-description {
-          font-size: clamp(14px, 1.4vw, 18px);
+          font-size: clamp(13px, 1.3vw, 17px);
           line-height: 1.7;
-          color: rgba(255, 255, 255, 0.55);
-          max-width: 600px;
-          margin: 0 auto 40px;
+          color: rgba(255, 255, 255, 0.5);
+          max-width: 620px;
+          margin: 0 auto 36px;
           font-weight: 300;
+        }
+
+        .verticals-row {
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          margin-bottom: 36px;
+        }
+
+        .vertical-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 16px;
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: 100px;
+          font-size: 11px;
+          font-weight: 400;
+          letter-spacing: 0.05em;
+          color: rgba(255, 255, 255, 0.45);
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          transition: all 0.3s ease;
+        }
+
+        .vertical-badge:hover {
+          border-color: rgba(0, 213, 255, 0.2);
+          color: rgba(255, 255, 255, 0.7);
+          background: rgba(0, 213, 255, 0.05);
+        }
+
+        .vertical-badge-dot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #00D5FF;
+          opacity: 0.6;
         }
 
         .hero-buttons {
@@ -292,7 +360,7 @@ export default function Hero() {
           border: none;
           border-radius: 60px;
           font-family: "Space Grotesk", sans-serif;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 600;
           letter-spacing: 0.02em;
           color: #050505;
@@ -301,6 +369,7 @@ export default function Hero() {
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           position: relative;
           overflow: hidden;
+          text-decoration: none;
         }
 
         .btn-primary::before {
@@ -329,8 +398,8 @@ export default function Hero() {
         .btn-primary svg {
           position: relative;
           z-index: 1;
-          width: 18px;
-          height: 18px;
+          width: 16px;
+          height: 16px;
           transition: transform 0.3s ease;
         }
 
@@ -343,10 +412,10 @@ export default function Hero() {
           align-items: center;
           gap: 10px;
           padding: 16px 40px;
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 60px;
           font-family: "Space Grotesk", sans-serif;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 500;
           letter-spacing: 0.02em;
           color: rgba(255, 255, 255, 0.85);
@@ -355,10 +424,11 @@ export default function Hero() {
           -webkit-backdrop-filter: blur(20px);
           cursor: pointer;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          text-decoration: none;
         }
 
         .btn-secondary:hover {
-          border-color: rgba(255, 255, 255, 0.3);
+          border-color: rgba(255, 255, 255, 0.25);
           background: rgba(255, 255, 255, 0.08);
           transform: translateY(-2px);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -372,11 +442,11 @@ export default function Hero() {
           z-index: 3;
           display: flex;
           justify-content: center;
-          padding: 32px 24px;
+          padding: 28px 24px 32px;
           background: linear-gradient(
             to top,
-            rgba(5, 5, 5, 0.95) 0%,
-            rgba(5, 5, 5, 0.7) 60%,
+            rgba(5, 5, 5, 0.96) 0%,
+            rgba(5, 5, 5, 0.7) 50%,
             transparent 100%
           );
         }
@@ -398,16 +468,16 @@ export default function Hero() {
 
         .stat-value {
           font-family: "Playfair Display", serif;
-          font-size: clamp(28px, 3.5vw, 44px);
+          font-size: clamp(26px, 3.2vw, 42px);
           font-weight: 700;
           color: #ffffff;
           letter-spacing: -0.02em;
         }
 
         .stat-label {
-          font-size: clamp(10px, 1vw, 13px);
+          font-size: clamp(9px, 0.9vw, 12px);
           font-weight: 400;
-          color: rgba(255, 255, 255, 0.4);
+          color: rgba(255, 255, 255, 0.35);
           text-transform: uppercase;
           letter-spacing: 0.12em;
           text-align: center;
@@ -425,27 +495,19 @@ export default function Hero() {
           position: absolute;
           bottom: 0;
           border-radius: 50%;
-          background: rgba(0, 213, 255, 0.3);
-          box-shadow: 0 0 6px rgba(0, 213, 255, 0.15);
+          background: rgba(0, 213, 255, 0.25);
+          box-shadow: 0 0 6px rgba(0, 213, 255, 0.1);
         }
 
-        .hero-scroll-indicator {
+        .glass-line {
           position: absolute;
           bottom: 140px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 2;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          opacity: 0.4;
-        }
-
-        .hero-scroll-line {
           width: 1px;
-          height: 40px;
-          background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+          height: 60px;
+          background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
         }
 
         @media (max-width: 768px) {
@@ -466,8 +528,12 @@ export default function Hero() {
             justify-content: center;
           }
 
-          .hero-scroll-indicator {
+          .glass-line {
             display: none;
+          }
+
+          .verticals-row {
+            gap: 8px;
           }
         }
 
@@ -510,7 +576,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="hero-badge-dot" />
-            Now Partnering Across India
+            India&apos;s Premier Healthcare Ecosystem
           </motion.div>
 
           <motion.h1
@@ -522,7 +588,7 @@ export default function Hero() {
             India&apos;s Largest{" "}
             <span className="hero-headline-accent">AI-Powered</span>
             <br />
-            Clinic Network
+            Healthcare Growth Network
           </motion.h1>
 
           <motion.p
@@ -531,19 +597,39 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            One Network. Thousands of Clinics. Unlimited Growth.
+            Three Businesses. One Powerful Ecosystem.
           </motion.p>
+
+          <motion.p
+            className="hero-secondary-line"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Healthcare Services &bull; Quantum Health Products &bull; Clinic Space Rental
+          </motion.p>
+
+          <motion.div
+            className="verticals-row"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            {VERTICALS.map((v, i) => (
+              <VerticalBadge key={v.name} name={v.name} index={i} />
+            ))}
+          </motion.div>
 
           <motion.p
             className="hero-description"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Join the revolution that&apos;s transforming healthcare across India.
-            KO Clinics empowers you with AI-driven tools, a unified brand, and a
-            network that amplifies your reach — so you can focus on what matters:
-            delivering exceptional patient care.
+            KO Clinics enables clinics, hospitals, wellness centres, aesthetic
+            practices, and healthcare entrepreneurs to grow through technology,
+            branding, patient acquisition, products, and healthcare infrastructure
+            solutions.
           </motion.p>
         </motion.div>
 
@@ -551,41 +637,27 @@ export default function Hero() {
           className="hero-buttons"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
         >
-          <button className="btn-primary">
+          <a href="/contact" className="btn-primary">
             <span>Become a Partner</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </button>
-          <button className="btn-secondary">
-            <span>Explore Network</span>
+          </a>
+          <a href="/services" className="btn-secondary">
+            <span>Explore Services</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 16 16 12 12 8" />
               <line x1="8" y1="12" x2="16" y2="12" />
             </svg>
-          </button>
+          </a>
         </motion.div>
       </div>
 
-      <div className="hero-scroll-indicator">
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
-            <rect x="1" y="1" width="14" height="22" rx="7" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" />
-            <motion.circle
-              cx="8" cy="8" r="2.5" fill="rgba(255,255,255,0.6)"
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </svg>
-        </motion.div>
-      </div>
+      <div className="glass-line" />
 
       <div className="hero-stats" ref={statsRef}>
         <div className="hero-stats-inner">

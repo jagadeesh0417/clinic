@@ -3,6 +3,12 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
+const images = [
+  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
+  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+]
+
 const specialists = [
   "Dermatologists",
   "Plastic Surgeons",
@@ -10,15 +16,19 @@ const specialists = [
   "Nutritionists",
   "Physiotherapists",
   "Psychologists",
-  "Gynecologists",
+  "Hair Specialists",
   "Pediatricians",
-  "Orthopedic Specialists",
+  "Gynecologists",
+  "Orthopedic Doctors",
 ]
 
-const images = [
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+const benefits = [
+  { title: "Additional Monthly Income", icon: "📈" },
+  { title: "Improved Space Utilization", icon: "🏗️" },
+  { title: "Professional Network Expansion", icon: "🤝" },
+  { title: "Access to New Patient Segments", icon: "👥" },
+  { title: "Shared Healthcare Infrastructure", icon: "🏥" },
+  { title: "Business Collaboration Opportunities", icon: "🔗" },
 ]
 
 const containerVariants = {
@@ -64,10 +74,10 @@ function OccupancyGauge() {
           transition={{ duration: 1.8, ease: "easeOut" as const, delay: 0.6 }}
         />
       </svg>
-      <span className="absolute mt-1 text-3xl font-bold text-white" style={{ fontFamily: "Playfair Display, serif" }}>
+      <span className="absolute mt-1 text-3xl font-bold" style={{ fontFamily: "Playfair Display, serif", color: "#ffffff" }}>
         {percent}%
       </span>
-      <span className="text-xs tracking-widest uppercase text-white/50" style={{ fontFamily: "Inter, sans-serif" }}>
+      <span className="text-xs tracking-widest uppercase" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.5)" }}>
         Occupancy
       </span>
     </div>
@@ -77,11 +87,13 @@ function OccupancyGauge() {
 export default function ConsultationRental() {
   return (
     <section
-      id="consultation-rental"
+      id="space-rental"
       className="relative overflow-hidden py-24 md:py-32"
       style={{ background: "#050505" }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a0a0a] to-[#050505]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -91,18 +103,31 @@ export default function ConsultationRental() {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
+            <span
+              className="mb-4 inline-block tracking-[0.2em] text-xs font-mono uppercase"
+              style={{ color: "#CBA135" }}
+            >
+              Vertical Three — Space Rental
+            </span>
             <h2
               className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
               style={{ fontFamily: "Playfair Display, serif", color: "#ffffff" }}
             >
-              Consultation Space Rental
+              Clinic Space{" "}
+              <span style={{ color: "#00D5FF" }}>Rental</span>
             </h2>
+            <p
+              className="mx-auto mt-3 max-w-lg text-sm tracking-wider uppercase"
+              style={{ fontFamily: "Space Grotesk, sans-serif", color: "rgba(255,255,255,0.5)" }}
+            >
+              Monetize Your Unused Clinic Infrastructure
+            </p>
             <p
               className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed md:text-xl"
               style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.6)" }}
             >
-              Monetize unused consultation rooms. Connect with healthcare professionals and maximize your
-              clinic&apos;s revenue potential.
+              KO Clinics helps clinics maximize unused infrastructure. Partner clinics can rent consultation
+              rooms to visiting healthcare professionals and generate additional recurring revenue.
             </p>
           </motion.div>
 
@@ -123,7 +148,7 @@ export default function ConsultationRental() {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={src}
-                    alt={`Consultation space ${i + 1}`}
+                    alt={`Clinic space ${i + 1}`}
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
@@ -132,12 +157,12 @@ export default function ConsultationRental() {
             ))}
           </div>
 
-          {/* Stats + Specialists */}
+          {/* Stats + Benefits */}
           <motion.div
             variants={itemVariants}
             className="grid gap-8 md:grid-cols-2"
           >
-            {/* Occupancy gauge */}
+            {/* Occupancy gauge + Revenue */}
             <div
               className="flex flex-col items-center justify-center rounded-2xl p-8 md:p-10"
               style={{
@@ -149,10 +174,10 @@ export default function ConsultationRental() {
             >
               <OccupancyGauge />
 
-              {/* Revenue illustration */}
+              {/* Revenue indicator */}
               <div className="mt-8 flex items-center gap-3">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-sm font-medium text-white/40" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <span className="text-sm font-medium" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.4)" }}>
                     Rev
                   </span>
                   <motion.span
@@ -165,14 +190,14 @@ export default function ConsultationRental() {
                   >
                     +$4,280
                   </motion.span>
-                  <span className="text-sm text-white/40" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <span className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.4)" }}>
                     /mo
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Specialists */}
+            {/* Benefits */}
             <div
               className="rounded-2xl p-8 md:p-10"
               style={{
@@ -186,25 +211,66 @@ export default function ConsultationRental() {
                 className="mb-6 text-xl font-semibold tracking-tight"
                 style={{ fontFamily: "Playfair Display, serif", color: "#ffffff" }}
               >
-                Connected Specialists
+                Partner Benefits
               </h3>
-              <div className="flex flex-wrap gap-3">
-                {specialists.map((s) => (
-                  <span
-                    key={s}
-                    className="rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 hover:bg-[#00D5FF]/10"
+              <div className="grid grid-cols-2 gap-3">
+                {benefits.map((b) => (
+                  <div
+                    key={b.title}
+                    className="flex items-center gap-3 rounded-xl p-3 transition-all duration-300 hover:bg-[#00D5FF]/5"
                     style={{
-                      fontFamily: "Inter, sans-serif",
-                      color: "rgba(255,255,255,0.75)",
-                      background: "rgba(0, 213, 255, 0.06)",
-                      border: "1px solid rgba(0, 213, 255, 0.15)",
+                      border: "1px solid rgba(255,255,255,0.06)",
                     }}
                   >
-                    {s}
-                  </span>
+                    <span className="text-lg">{b.icon}</span>
+                    <span className="text-sm font-medium leading-tight" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.75)" }}>
+                      {b.title}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
+          </motion.div>
+
+          {/* Specialists */}
+          <motion.div
+            variants={itemVariants}
+            className="rounded-2xl p-8 md:p-12"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          >
+            <h3
+              className="mb-8 text-center text-xl font-semibold tracking-tight md:text-2xl"
+              style={{ fontFamily: "Playfair Display, serif", color: "#ffffff" }}
+            >
+              Supported Specialists
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {specialists.map((s, i) => (
+                <motion.span
+                  key={s}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + i * 0.05, duration: 0.4 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition-colors duration-300"
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    color: "rgba(255,255,255,0.8)",
+                    background: "rgba(0, 213, 255, 0.06)",
+                    border: "1px solid rgba(0, 213, 255, 0.15)",
+                  }}
+                >
+                  {s}
+                </motion.span>
+              ))}
+            </div>
+            <div className="mx-auto mt-8 h-px max-w-md" style={{ background: "linear-gradient(to right, transparent, rgba(0,213,255,0.2), transparent)" }} />
           </motion.div>
         </motion.div>
       </div>

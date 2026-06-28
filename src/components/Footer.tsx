@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Why Partner", href: "/why-partner" },
   { label: "Services", href: "/services" },
-  { label: "Membership", href: "/membership" },
+  { label: "Products", href: "/products" },
+  { label: "Space Rental", href: "/space-rental" },
+  { label: "Partners", href: "/partners" },
+  { label: "Requirements", href: "/partner-requirements" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -55,7 +58,7 @@ export default function Footer() {
               </div>
             </a>
             <p className="text-white/50 text-sm leading-relaxed font-[family-name:var(--font-body)] mb-6 max-w-xs">
-              India&apos;s Largest AI-Powered Clinic Network
+              India&apos;s Largest AI-Powered Healthcare Growth Network
             </p>
             <div className="flex items-center gap-3">
               {socialIcons.map((icon) => (

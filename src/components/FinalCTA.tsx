@@ -11,14 +11,21 @@ const BG_IMAGES = [
 ];
 
 const FEATURES = [
-  { label: "Zero Investment Model", icon: "Z" },
-  { label: "AI Healthcare Platform", icon: "A" },
-  { label: "Patient Network", icon: "P" },
-  { label: "Marketing Support", icon: "M" },
-  { label: "Website Presence", icon: "W" },
-  { label: "Branding", icon: "B" },
-  { label: "Corporate Tie-ups", icon: "C" },
-  { label: "International Expansion", icon: "I" },
+  "Healthcare Services",
+  "Quantum Health Products",
+  "Clinic Space Rental",
+  "AI Technology",
+  "Patient Acquisition",
+  "Business Support",
+  "Product Revenue",
+  "Infrastructure Monetization",
+];
+
+const BENEFITS = [
+  "Marketing Support",
+  "Digital Presence",
+  "National Healthcare Network",
+  "International Growth Opportunities",
 ];
 
 export default function FinalCTA() {
@@ -37,16 +44,12 @@ export default function FinalCTA() {
 
   return (
     <>
-      <section
-        id="cta"
-        ref={sectionRef}
-        className="cta-section"
-      >
+      <section id="cta" ref={sectionRef} className="cta-section">
         <style>{`
           .cta-section {
             position: relative;
             width: 100%;
-            padding: 100px 24px;
+            padding: 120px 24px;
             background: #050505;
             overflow: hidden;
             font-family: "Space Grotesk", sans-serif;
@@ -108,13 +111,13 @@ export default function FinalCTA() {
           .cta-container {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
           }
 
           .cta-glass {
-            padding: 60px 48px;
+            padding: 64px 48px;
             border-radius: 24px;
             background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(20px);
@@ -122,25 +125,9 @@ export default function FinalCTA() {
             border: 1px solid rgba(255, 255, 255, 0.08);
           }
 
-          .cta-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            border: 1px solid rgba(203, 161, 53, 0.3);
-            border-radius: 100px;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #CBA135;
-            background: rgba(203, 161, 53, 0.06);
-            margin-bottom: 24px;
-          }
-
           .cta-headline {
             font-family: "Playfair Display", serif;
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: clamp(34px, 5vw, 60px);
             font-weight: 700;
             line-height: 1.1;
             color: #ffffff;
@@ -157,11 +144,21 @@ export default function FinalCTA() {
 
           .cta-subheadline {
             font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(14px, 1.6vw, 18px);
+            font-size: clamp(15px, 1.8vw, 20px);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.04em;
+            margin: 0 0 8px;
+          }
+
+          .cta-description {
+            font-family: "Inter", sans-serif;
+            font-size: clamp(13px, 1.4vw, 16px);
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.6);
-            letter-spacing: 0.06em;
-            margin: 0 0 40px;
+            color: #CBA135;
+            letter-spacing: 0.08em;
+            margin: 0 0 36px;
+            opacity: 0.9;
           }
 
           .cta-features {
@@ -169,18 +166,18 @@ export default function FinalCTA() {
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
           }
 
           .cta-feature-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 100px;
+            font-family: "Inter", sans-serif;
             font-size: 12px;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.85);
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.3s ease;
@@ -193,18 +190,48 @@ export default function FinalCTA() {
             transform: translateY(-2px);
           }
 
-          .cta-feature-icon {
-            display: inline-flex;
-            align-items: center;
+          .cta-benefits {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 22px;
-            height: 22px;
+            gap: 20px 32px;
+            margin-bottom: 32px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+          }
+
+          .cta-benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Inter", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.02em;
+          }
+
+          .cta-benefit-dot {
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
-            font-size: 10px;
-            font-weight: 700;
-            color: #050505;
-            background: linear-gradient(135deg, #00D5FF, #7EE8FA);
+            background: #00D5FF;
             flex-shrink: 0;
+          }
+
+          .cta-tagline {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(16px, 2vw, 22px);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.04em;
+            margin: 0 0 36px;
+            font-style: italic;
+          }
+
+          .cta-tagline span {
+            color: #CBA135;
           }
 
           .cta-buttons {
@@ -228,6 +255,7 @@ export default function FinalCTA() {
             color: #050505;
             background: linear-gradient(135deg, #CBA135, #e0b84c);
             cursor: pointer;
+            text-decoration: none;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             overflow: hidden;
@@ -283,6 +311,7 @@ export default function FinalCTA() {
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             cursor: pointer;
+            text-decoration: none;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
 
@@ -293,14 +322,13 @@ export default function FinalCTA() {
             box-shadow: 0 20px 40px rgba(0, 213, 255, 0.15);
           }
 
-          /* Sticky CTA */
           .sticky-cta {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             z-index: 999;
-            padding: 12px 20px;
+            padding: 12px 24px;
             background: rgba(5, 5, 5, 0.92);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
@@ -319,32 +347,35 @@ export default function FinalCTA() {
           }
 
           .sticky-cta-text {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
             color: rgba(255, 255, 255, 0.8);
             letter-spacing: 0.02em;
-            display: none;
+            white-space: nowrap;
+          }
+
+          .sticky-cta-text span {
+            color: #CBA135;
           }
 
           .sticky-cta-buttons {
             display: flex;
             gap: 10px;
-            width: 100%;
           }
 
           .sticky-btn {
-            flex: 1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 12px 20px;
+            padding: 10px 24px;
             border: none;
             border-radius: 50px;
             font-family: "Space Grotesk", sans-serif;
             font-size: 13px;
             font-weight: 600;
             cursor: pointer;
+            text-decoration: none;
             transition: all 0.3s ease;
             letter-spacing: 0.01em;
           }
@@ -369,19 +400,6 @@ export default function FinalCTA() {
             background: rgba(255, 255, 255, 0.1);
           }
 
-          @media (min-width: 640px) {
-            .sticky-cta-text {
-              display: block;
-            }
-            .sticky-cta-buttons {
-              width: auto;
-            }
-            .sticky-btn {
-              flex: initial;
-              padding: 10px 28px;
-            }
-          }
-
           @media (max-width: 640px) {
             .cta-glass {
               padding: 40px 20px;
@@ -393,6 +411,12 @@ export default function FinalCTA() {
               font-size: 11px;
               padding: 6px 12px;
             }
+            .cta-benefits {
+              gap: 12px 20px;
+            }
+            .cta-benefit-item {
+              font-size: 11px;
+            }
             .cta-buttons {
               flex-direction: column;
               align-items: center;
@@ -403,10 +427,25 @@ export default function FinalCTA() {
               max-width: 320px;
               justify-content: center;
             }
+            .sticky-cta {
+              flex-direction: column;
+              padding: 10px 16px;
+            }
+            .sticky-cta-text {
+              font-size: 12px;
+            }
+            .sticky-cta-buttons {
+              width: 100%;
+            }
+            .sticky-btn {
+              flex: 1;
+              padding: 10px 16px;
+              font-size: 12px;
+            }
           }
         `}</style>
 
-        {/* Image montage grid */}
+        {/* Background montage */}
         <div className="cta-montage">
           {BG_IMAGES.map((src, i) => (
             <motion.img
@@ -432,27 +471,14 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <motion.div
-              className="cta-tag"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#CBA135">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              Premium Partnership
-            </motion.div>
-
             <motion.h2
               className="cta-headline"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
             >
-              Ready To Grow <span>Your Clinic?</span>
+              Become a <span>KO Clinics</span> Partner
             </motion.h2>
 
             <motion.p
@@ -460,9 +486,19 @@ export default function FinalCTA() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.35 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Become a KO Clinics Premium Partner Today
+              Grow Your Practice Through Three Revenue Models
+            </motion.p>
+
+            <motion.p
+              className="cta-description"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Healthcare Services &bull; Quantum Health Products &bull; Clinic Space Rental
             </motion.p>
 
             <motion.div
@@ -473,36 +509,59 @@ export default function FinalCTA() {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               {FEATURES.map((f) => (
-                <span key={f.label} className="cta-feature-badge">
-                  <span className="cta-feature-icon">{f.icon}</span>
-                  {f.label}
+                <span key={f} className="cta-feature-badge">
+                  {f}
                 </span>
               ))}
             </motion.div>
+
+            <motion.div
+              className="cta-benefits"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              {BENEFITS.map((b) => (
+                <span key={b} className="cta-benefit-item">
+                  <span className="cta-benefit-dot" />
+                  {b}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.p
+              className="cta-tagline"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.65 }}
+            >
+              One Network. <span>Three Revenue Models.</span> Unlimited Growth.
+            </motion.p>
 
             <motion.div
               className="cta-buttons"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.65 }}
+              transition={{ duration: 0.8, delay: 0.75 }}
             >
-              <button className="cta-btn-primary">
-                <span>Become Partner</span>
+              <a href="/contact" className="cta-btn-primary">
+                <span>Partner With KO Clinics Today</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </button>
-              <button className="cta-btn-secondary">
-                <span>Schedule Consultation</span>
+              </a>
+              <a href="/services" className="cta-btn-secondary">
+                <span>Explore Services</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 16 16 12 12 8" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
                 </svg>
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -511,15 +570,15 @@ export default function FinalCTA() {
       {/* Sticky CTA bar */}
       <div className={`sticky-cta${showSticky ? " visible" : ""}`}>
         <span className="sticky-cta-text">
-          Become a KO Clinics Premium Partner
+          <span>One Network.</span> Three Revenue Models. Unlimited Growth.
         </span>
         <div className="sticky-cta-buttons">
-          <button className="sticky-btn sticky-btn-gold">
-            Become Partner
-          </button>
-          <button className="sticky-btn sticky-btn-ghost">
-            Schedule Consultation
-          </button>
+          <a href="/contact" className="sticky-btn sticky-btn-gold">
+            Partner With Us
+          </a>
+          <a href="/services" className="sticky-btn sticky-btn-ghost">
+            Explore Services
+          </a>
         </div>
       </div>
     </>

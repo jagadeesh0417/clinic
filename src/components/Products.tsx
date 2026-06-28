@@ -12,25 +12,37 @@ const SHOWCASE_IMAGES = [
 ];
 
 const PRODUCT_CATEGORIES = [
-  { name: "Hair Care", price: "₹2,499", tag: "Best Seller", items: "12 Products" },
-  { name: "PRP Kits", price: "₹4,999", tag: "Premium", items: "8 Products" },
-  { name: "Stem Cell Products", price: "₹12,999", tag: "Advanced", items: "6 Products" },
-  { name: "Supplements", price: "₹1,999", tag: "Essential", items: "20 Products" },
-  { name: "Cosmeceuticals", price: "₹3,499", tag: "Clinical", items: "15 Products" },
-  { name: "Peels", price: "₹2,999", tag: "Professional", items: "10 Products" },
-  { name: "Boosters", price: "₹3,999", tag: "Concentrated", items: "7 Products" },
-  { name: "Anti-ageing", price: "₹8,999", tag: "Luxury", items: "9 Products" },
-  { name: "NAD+", price: "₹15,999", tag: "Therapy", items: "4 Products" },
-  { name: "Collagen", price: "₹2,299", tag: "Restorative", items: "11 Products" },
-  { name: "Skin Care", price: "₹2,799", tag: "Daily Regimen", items: "18 Products" },
-  { name: "Wellness Products", price: "₹1,499", tag: "Holistic", items: "14 Products" },
+  { name: "Hair Care", price: "₹2,499", tag: "Premium", items: "14 Products" },
+  { name: "PRP Products", price: "₹4,999", tag: "Clinical", items: "9 Products" },
+  { name: "Supplements", price: "₹1,999", tag: "Essential", items: "22 Products" },
+  { name: "Collagen Products", price: "₹2,299", tag: "Restorative", items: "12 Products" },
+  { name: "Stem Cell Products", price: "₹12,999", tag: "Advanced", items: "7 Products" },
+  { name: "Skin Care", price: "₹2,799", tag: "Daily Regimen", items: "20 Products" },
+  { name: "Medical Grade Cosmeceuticals", price: "₹3,499", tag: "Clinical", items: "16 Products" },
+  { name: "Anti-ageing Solutions", price: "₹8,999", tag: "Luxury", items: "10 Products" },
+  { name: "NAD+ Products", price: "₹15,999", tag: "Therapy", items: "5 Products" },
+  { name: "Weight Management Products", price: "₹3,299", tag: "Wellness", items: "8 Products" },
+  { name: "Nutrition Supplements", price: "₹1,799", tag: "Daily", items: "18 Products" },
+  { name: "Wellness Products", price: "₹1,499", tag: "Holistic", items: "15 Products" },
 ];
 
-const WHOLESALE_BENEFITS = [
-  { title: "Bulk Pricing", desc: "Up to 40% off on bulk orders across all categories" },
-  { title: "Free Shipping", desc: "Free pan-India shipping on orders above ₹5,000" },
-  { title: "Priority Dispatch", desc: "Same-day dispatch for all verified partner clinics" },
-  { title: "Exclusive Access", desc: "Early access to new product launches and formulations" },
+const PARTNER_BENEFITS = [
+  { title: "Additional Revenue Stream", desc: "Generate recurring retail income from every patient consultation" },
+  { title: "Wholesale Pricing", desc: "Up to 40% off MRP on all Quantum Health products" },
+  { title: "Exclusive Discounts", desc: "Seasonal promotions and loyalty pricing for partner clinics" },
+  { title: "Product Training", desc: "Comprehensive staff training on product knowledge and sales" },
+  { title: "Marketing Support", desc: "Co-branded digital campaigns and patient outreach materials" },
+  { title: "Point-of-Sale Branding", desc: "Premium Quantum Health counter displays and signage" },
+  { title: "Retail Display Assistance", desc: "Expert retail merchandising setup and optimization" },
+  { title: "Increased Patient Retention", desc: "Keep patients coming back with quality retail products" },
+];
+
+const COUNTER_BENEFITS = [
+  "Quantum Health Counter Branding",
+  "Display Units",
+  "Product Catalogues",
+  "Digital Marketing Support",
+  "Patient Awareness Materials",
 ];
 
 export default function Products() {
@@ -91,9 +103,18 @@ export default function Products() {
         }
 
         .products-subtitle {
+          font-family: "Space Grotesk", sans-serif;
           font-size: clamp(14px, 1.4vw, 18px);
           color: rgba(255, 255, 255, 0.55);
           max-width: 600px;
+          margin: 0 auto 12px;
+          line-height: 1.7;
+        }
+
+        .products-desc {
+          font-size: clamp(13px, 1.2vw, 15px);
+          color: rgba(255, 255, 255, 0.4);
+          max-width: 640px;
           margin: 0 auto;
           line-height: 1.7;
         }
@@ -191,10 +212,10 @@ export default function Products() {
 
         .product-card {
           position: relative;
-          background: rgba(255, 255, 255, 0.03);
+          background: rgba(255, 255, 255, 0.04);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 20px;
           padding: 32px 24px;
           cursor: pointer;
@@ -369,16 +390,17 @@ export default function Products() {
           box-shadow: 0 0 20px rgba(0, 213, 255, 0.1);
         }
 
-        .wholesale {
+        .benefits {
           background: linear-gradient(135deg, rgba(0, 213, 255, 0.03), rgba(203, 161, 53, 0.03));
           border: 1px solid rgba(255, 255, 255, 0.06);
           border-radius: 24px;
           padding: 48px;
           position: relative;
           overflow: hidden;
+          margin-bottom: 80px;
         }
 
-        .wholesale::before {
+        .benefits::before {
           content: "";
           position: absolute;
           top: 0;
@@ -388,12 +410,12 @@ export default function Products() {
           background: linear-gradient(90deg, transparent, rgba(203, 161, 53, 0.4), rgba(0, 213, 255, 0.4), transparent);
         }
 
-        .wholesale-header {
+        .benefits-header {
           text-align: center;
           margin-bottom: 40px;
         }
 
-        .wholesale-title {
+        .benefits-title {
           font-family: "Playfair Display", serif;
           font-size: clamp(28px, 3.5vw, 40px);
           font-weight: 700;
@@ -401,26 +423,26 @@ export default function Products() {
           margin: 0 0 12px;
         }
 
-        .wholesale-title-accent {
+        .benefits-title-accent {
           background: linear-gradient(135deg, #CBA135, #00D5FF);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
-        .wholesale-subtitle {
+        .benefits-subtitle {
           font-size: 16px;
           color: rgba(255, 255, 255, 0.5);
           margin: 0;
         }
 
-        .wholesale-grid {
+        .benefits-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 24px;
         }
 
-        .wholesale-card {
+        .benefits-card {
           background: rgba(255, 255, 255, 0.02);
           border: 1px solid rgba(255, 255, 255, 0.04);
           border-radius: 16px;
@@ -429,13 +451,13 @@ export default function Products() {
           transition: all 0.4s ease;
         }
 
-        .wholesale-card:hover {
+        .benefits-card:hover {
           border-color: rgba(0, 213, 255, 0.15);
           background: rgba(0, 213, 255, 0.03);
           transform: translateY(-4px);
         }
 
-        .wholesale-card-icon {
+        .benefits-card-icon {
           width: 48px;
           height: 48px;
           border-radius: 14px;
@@ -448,26 +470,118 @@ export default function Products() {
           border: 1px solid rgba(0, 213, 255, 0.1);
         }
 
-        .wholesale-card h4 {
+        .benefits-card h4 {
           font-family: "Space Grotesk", sans-serif;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 600;
           color: #ffffff;
           margin: 0 0 8px;
         }
 
-        .wholesale-card p {
+        .benefits-card p {
           font-size: 13px;
           color: rgba(255, 255, 255, 0.45);
           margin: 0;
           line-height: 1.6;
         }
 
+        .counter {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(203, 161, 53, 0.12);
+          border-radius: 24px;
+          padding: 48px;
+          position: relative;
+          overflow: hidden;
+          text-align: center;
+        }
+
+        .counter::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(203, 161, 53, 0.3), rgba(0, 213, 255, 0.3), transparent);
+        }
+
+        .counter-glow {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 400px;
+          height: 400px;
+          transform: translate(-50%, -50%);
+          background: radial-gradient(circle, rgba(203, 161, 53, 0.04), transparent 70%);
+          pointer-events: none;
+        }
+
+        .counter-title {
+          font-family: "Playfair Display", serif;
+          font-size: clamp(24px, 3vw, 36px);
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0 0 16px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .counter-title-accent {
+          background: linear-gradient(135deg, #CBA135, #00D5FF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .counter-desc {
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.5);
+          max-width: 600px;
+          margin: 0 auto 32px;
+          line-height: 1.7;
+          position: relative;
+          z-index: 1;
+        }
+
+        .counter-badges {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          justify-content: center;
+          position: relative;
+          z-index: 1;
+        }
+
+        .counter-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 20px;
+          border-radius: 100px;
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.7);
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          transition: all 0.3s ease;
+        }
+
+        .counter-badge:hover {
+          border-color: rgba(0, 213, 255, 0.2);
+          background: rgba(0, 213, 255, 0.06);
+          color: #ffffff;
+        }
+
+        .counter-badge svg {
+          flex-shrink: 0;
+        }
+
         @media (max-width: 1024px) {
           .products-grid {
             grid-template-columns: repeat(3, 1fr);
           }
-          .wholesale-grid {
+          .benefits-grid {
             grid-template-columns: repeat(2, 1fr);
           }
         }
@@ -507,12 +621,21 @@ export default function Products() {
             font-size: 22px;
           }
 
-          .wholesale {
+          .benefits {
             padding: 32px 20px;
           }
 
-          .wholesale-grid {
+          .benefits-grid {
             grid-template-columns: 1fr;
+          }
+
+          .counter {
+            padding: 32px 20px;
+          }
+
+          .counter-badges {
+            flex-direction: column;
+            align-items: center;
           }
         }
 
@@ -542,19 +665,23 @@ export default function Products() {
         >
           <div className="products-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
             </svg>
-            Premium Product Range
+            KO Clinics Vertical
           </div>
 
           <h2 className="products-title">
-            Curated <span className="products-title-accent">Clinical-Grade</span>
-            <br />
-            Product Portfolio
+            Quantum <span className="products-title-accent">Health</span> Products
           </h2>
 
           <p className="products-subtitle">
-            Wholesale pricing on 200+ dermatology and aesthetic products from world-class manufacturers
+            Premium Healthcare Product Division of KO Clinics
+          </p>
+
+          <p className="products-desc">
+            Partner clinics can retail premium healthcare products directly from their facilities. Each KO Clinics partner location will have a dedicated Quantum Health Counter.
           </p>
         </motion.div>
 
@@ -638,32 +765,32 @@ export default function Products() {
         </div>
 
         <motion.div
-          className="wholesale"
+          className="benefits"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="wholesale-header">
-            <h3 className="wholesale-title">
-              <span className="wholesale-title-accent">Wholesale</span> Benefits for Partners
+          <div className="benefits-header">
+            <h3 className="benefits-title">
+              <span className="benefits-title-accent">Partner</span> Benefits
             </h3>
-            <p className="wholesale-subtitle">
-              Exclusive pricing and perks reserved for KO Clinics network partners
+            <p className="benefits-subtitle">
+              Everything you need to succeed with Quantum Health Products
             </p>
           </div>
 
-          <div className="wholesale-grid">
-            {WHOLESALE_BENEFITS.map((benefit, idx) => (
+          <div className="benefits-grid">
+            {PARTNER_BENEFITS.map((benefit, idx) => (
               <motion.div
                 key={benefit.title}
-                className="wholesale-card"
+                className="benefits-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
               >
-                <div className="wholesale-card-icon">
+                <div className="benefits-card-icon">
                   {idx === 0 && (
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="12" y1="1" x2="12" y2="23" />
@@ -686,9 +813,68 @@ export default function Products() {
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                   )}
+                  {idx === 4 && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  )}
+                  {idx === 5 && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" />
+                      <rect x="14" y="3" width="7" height="7" />
+                      <rect x="14" y="14" width="7" height="7" />
+                      <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                  )}
+                  {idx === 6 && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    </svg>
+                  )}
+                  {idx === 7 && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  )}
                 </div>
                 <h4>{benefit.title}</h4>
                 <p>{benefit.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="counter"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="counter-glow" />
+          <h3 className="counter-title">
+            The <span className="counter-title-accent">Quantum Health</span> Counter
+          </h3>
+          <p className="counter-desc">
+            Each partner clinic receives a complete retail setup to showcase and sell Quantum Health products directly to patients.
+          </p>
+          <div className="counter-badges">
+            {COUNTER_BENEFITS.map((item, idx) => (
+              <motion.div
+                key={item}
+                className="counter-badge"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {item}
               </motion.div>
             ))}
           </div>
