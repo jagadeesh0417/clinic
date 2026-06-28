@@ -5,40 +5,50 @@ import { motion } from "framer-motion"
 const cards = [
   {
     icon: "\uD83D\uDCC0",
-    title: "Digitize Healthcare Practices",
-    desc: "Transform clinics with digital records and smart management",
+    title: "Digitize Clinics",
+    desc: "Transform clinics with smart digital records and modern management systems",
+  },
+  {
+    icon: "\uD83E\uDE78",
+    title: "Increase Patient Accessibility",
+    desc: "Make quality healthcare reachable to every community across the globe",
+  },
+  {
+    icon: "\uD83D\uDE80",
+    title: "Empower Healthcare Entrepreneurs",
+    desc: "Support visionaries building the next generation of healthcare solutions",
   },
   {
     icon: "\uD83D\uDCC8",
-    title: "Increase Clinic Revenue",
-    desc: "Boost clinic revenue through our extensive network",
+    title: "Create Sustainable Clinic Growth",
+    desc: "Drive long-term clinic growth through our integrated digital ecosystem",
   },
   {
-    icon: "\uD83C\uDF10",
-    title: "Build India's Largest Network",
-    desc: "Connect healthcare providers across the nation",
+    icon: "\uD83E\uDDCD",
+    title: "Support Doctors",
+    desc: "Equip doctors with tools and resources so they can focus on patient care",
   },
   {
-    icon: "\uD83C\uDFE5",
-    title: "Expand Access to Quality Care",
-    desc: "Make healthcare accessible to every community",
+    icon: "\uD83C\uDFD7\uFE0F",
+    title: "Expand Healthcare Infrastructure",
+    desc: "Build the digital and physical backbone of a connected healthcare network",
   },
   {
-    icon: "\uD83D\uDC69\u200D\u2695\uFE0F",
-    title: "Support Doctors & Entrepreneurs",
-    desc: "Help healthcare professionals grow their practice",
+    icon: "\uD83E\uDD1D",
+    title: "Increase Partner Profitability",
+    desc: "Maximize value and returns for every partner within our healthcare ecosystem",
   },
   {
     icon: "\uD83C\uDF0D",
-    title: "Create Global Healthcare Ecosystem",
-    desc: "Build an international network of excellence",
+    title: "Build a Global Healthcare Ecosystem",
+    desc: "Create a world-class international network of healthcare innovation and access",
   },
 ]
 
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.12 },
+    transition: { staggerChildren: 0.1 },
   },
 }
 
@@ -53,13 +63,13 @@ const itemVariants = {
 
 export default function VisionMission() {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden">
       {/* Vision Section */}
       <div
         id="vision"
-        className="relative flex min-h-[70vh] items-center justify-center px-6 py-28"
+        className="relative flex min-h-[70vh] items-center justify-center bg-[#0D0D0D] px-6 py-28"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(192,161,_53,_0.06)_0%,_transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(203,161,_53,_0.06)_0%,_transparent_70%)]" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -84,16 +94,17 @@ export default function VisionMission() {
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
             className="mt-8 font-['Inter'] text-lg leading-relaxed text-[#B7B7B7] sm:text-xl md:text-2xl"
           >
-            To build the world&apos;s most trusted healthcare growth ecosystem by
-            connecting clinics, hospitals, specialists, wellness centres, products,
-            technology, and patients under one unified platform.
+            To build the world&apos;s largest integrated healthcare ecosystem
+            connecting clinics, doctors, products, patients, and healthcare
+            technology.
           </motion.p>
         </div>
       </div>
 
       {/* Mission Section */}
-      <div id="mission" className="relative px-6 pb-32 pt-16">
-        <div className="mx-auto max-w-7xl">
+      <div id="mission" className="relative bg-[#050505] px-6 pb-32 pt-16">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(203,161,_53,_0.04)_0%,_transparent_60%)]" />
+        <div className="relative z-10 mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -118,14 +129,14 @@ export default function VisionMission() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
           >
             {cards.map((card, i) => (
               <motion.div
                 key={i}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03, y: -6 }}
-                className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-8 backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(0,213,255,0.15)]"
+                className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-8 backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(203,161,53,0.2)]"
               >
                 <span className="text-4xl">{card.icon}</span>
                 <h3 className="mt-5 font-['Space_Grotesk'] text-xl font-semibold text-white">

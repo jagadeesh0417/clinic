@@ -11,154 +11,112 @@ const HERO_IMAGES = [
 ];
 
 const STATS = [
-  { label: "Clinics Target", value: 5000, suffix: "+" },
-  { label: "Cities", value: 100, suffix: "+" },
-  { label: "Countries", value: 4, suffix: "+" },
-  { label: "AI Enabled Ecosystem", value: 1, suffix: "" },
+  { top: "100–150", bottom: "Leads Monthly" },
+  { top: "Zero", bottom: "Investment" },
+  { top: "3", bottom: "Revenue Streams" },
+  { top: "AI Healthcare", bottom: "Platform" },
 ];
-
-const VERTICALS = [
-  { name: "Healthcare Services", icon: "cross" },
-  { name: "Quantum Health Products", icon: "hex" },
-  { name: "Clinic Space Rental", icon: "building" },
-];
-
-function useCountUp(target: number, duration: number, trigger: boolean) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!trigger) return;
-    let startTime: number | null = null;
-    let raf: number;
-
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      setCount(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);
-    };
-
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, duration, trigger]);
-
-  return count;
-}
-
-function useInView(ref: React.RefObject<HTMLElement>) {
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [ref]);
-
-  return inView;
-}
-
-interface StatItemProps {
-  label: string;
-  value: number;
-  suffix: string;
-  trigger: boolean;
-}
-
-function StatItem({ label, value, suffix, trigger }: StatItemProps) {
-  const count = useCountUp(value, 2, trigger);
-  return (
-    <motion.div
-      className="stat-item"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      <span className="stat-value">
-        {count}{suffix}
-      </span>
-      <span className="stat-label">{label}</span>
-    </motion.div>
-  );
-}
 
 interface Particle {
-  id: number;
   x: number;
+  y: number;
   size: number;
-  duration: number;
-  delay: number;
+  speedX: number;
+  speedY: number;
+  opacity: number;
 }
 
-function Particles() {
-  const [particles, setParticles] = useState<Particle[]>([]);
+function CanvasParticles() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const items: Particle[] = Array.from({ length: 30 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      size: Math.random() * 3 + 1.5,
-      duration: Math.random() * 10 + 8,
-      delay: Math.random() * 6,
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let raf: number;
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const particles: Particle[] = Array.from({ length: 50 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2.5 + 0.5,
+      speedY: -(Math.random() * 0.5 + 0.1),
+      speedX: (Math.random() - 0.5) * 0.2,
+      opacity: Math.random() * 0.4 + 0.1,
     }));
-    setParticles(items);
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const p of particles) {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        if (p.y < -10) {
+          p.y = canvas.height + 10;
+          p.x = Math.random() * canvas.width;
+        }
+        if (p.x < -10) p.x = canvas.width + 10;
+        if (p.x > canvas.width + 10) p.x = -10;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(203, 161, 53, ${p.opacity})`;
+        ctx.fill();
+      }
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
   }, []);
 
   return (
-    <div className="particles-container">
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          className="particle"
-          style={{
-            left: `${p.x}%`,
-            width: p.size,
-            height: p.size,
-          }}
-          animate={{
-            y: [0, -120],
-            opacity: [0, 0.5, 0],
-          }}
-          transition={{
-            duration: p.duration,
-            repeat: Infinity,
-            delay: p.delay,
-            ease: "linear",
-          }}
-        />
-      ))}
-    </div>
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: "absolute",
+        inset: 0,
+        zIndex: 1,
+        pointerEvents: "none",
+      }}
+    />
   );
 }
 
-function VerticalBadge({ name, index }: { name: string; index: number }) {
+function StatCard({
+  top,
+  bottom,
+  index,
+}: {
+  top: string;
+  bottom: string;
+  index: number;
+}) {
   return (
     <motion.div
-      className="vertical-badge"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.9 + index * 0.15 }}
+      className="stat-card"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
     >
-      <span className="vertical-badge-dot" />
-      {name}
+      <span className="stat-top">{top}</span>
+      <span className="stat-bottom">{bottom}</span>
     </motion.div>
   );
 }
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const statsRef = useRef<HTMLDivElement>(null);
-  const statsInView = useInView(statsRef as React.RefObject<HTMLElement>);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -200,10 +158,10 @@ export default function Hero() {
           inset: 0;
           background: linear-gradient(
             135deg,
-            rgba(5, 5, 5, 0.88) 0%,
-            rgba(5, 5, 5, 0.45) 35%,
-            rgba(5, 5, 5, 0.25) 65%,
-            rgba(5, 5, 5, 0.88) 100%
+            rgba(5, 5, 5, 0.92) 0%,
+            rgba(5, 5, 5, 0.5) 35%,
+            rgba(5, 5, 5, 0.3) 65%,
+            rgba(5, 5, 5, 0.92) 100%
           );
           z-index: 1;
         }
@@ -215,7 +173,7 @@ export default function Hero() {
           background: linear-gradient(
             to bottom,
             transparent 0%,
-            rgba(5, 5, 5, 0.15) 40%,
+            rgba(5, 5, 5, 0.2) 40%,
             rgba(5, 5, 5, 0.95) 100%
           );
         }
@@ -223,7 +181,7 @@ export default function Hero() {
         .hero-content {
           position: relative;
           z-index: 2;
-          max-width: 1200px;
+          max-width: 1100px;
           width: 100%;
           padding: 0 24px;
           text-align: center;
@@ -234,14 +192,14 @@ export default function Hero() {
           align-items: center;
           gap: 8px;
           padding: 8px 20px;
-          border: 1px solid rgba(203, 161, 53, 0.25);
+          border: 1px solid rgba(203, 161, 53, 0.3);
           border-radius: 100px;
           font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: #CBA135;
-          background: rgba(203, 161, 53, 0.06);
+          background: rgba(203, 161, 53, 0.08);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           margin-bottom: 28px;
@@ -266,83 +224,57 @@ export default function Hero() {
           font-weight: 700;
           line-height: 1.05;
           color: #ffffff;
-          margin: 0 0 16px;
+          margin: 0 0 24px;
           letter-spacing: -0.03em;
         }
 
         .hero-headline-accent {
-          background: linear-gradient(135deg, #00D5FF, #7EE8FA, #CBA135);
+          background: linear-gradient(135deg, #CBA135, #E8C860, #CBA135);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
-        .hero-subheadline {
-          font-family: "Space Grotesk", sans-serif;
-          font-size: clamp(14px, 1.8vw, 20px);
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.75);
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          margin: 0 0 8px;
+        .hero-lines {
+          margin: 0 0 16px;
         }
 
-        .hero-secondary-line {
-          font-family: "Inter", sans-serif;
-          font-size: clamp(11px, 1.1vw, 14px);
-          font-weight: 300;
-          color: rgba(255, 255, 255, 0.35);
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          margin: 0 0 20px;
+        .hero-line {
+          font-family: "Playfair Display", serif;
+          font-size: clamp(16px, 2vw, 26px);
+          font-weight: 400;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.8);
+          margin: 0;
+          letter-spacing: -0.01em;
+        }
+
+        .hero-line:nth-child(2) {
+          font-size: clamp(18px, 2.3vw, 30px);
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-line:nth-child(3) {
+          font-size: clamp(20px, 2.6vw, 34px);
+          color: #ffffff;
+        }
+
+        .hero-line-final {
+          font-family: "Playfair Display", serif;
+          font-size: clamp(22px, 3vw, 40px);
+          font-weight: 600;
+          color: #CBA135;
+          margin: 4px 0 0;
+          letter-spacing: -0.01em;
         }
 
         .hero-description {
           font-size: clamp(13px, 1.3vw, 17px);
           line-height: 1.7;
-          color: rgba(255, 255, 255, 0.5);
+          color: #B7B7B7;
           max-width: 620px;
           margin: 0 auto 36px;
           font-weight: 300;
-        }
-
-        .verticals-row {
-          display: flex;
-          justify-content: center;
-          gap: 12px;
-          flex-wrap: wrap;
-          margin-bottom: 36px;
-        }
-
-        .vertical-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 16px;
-          border: 1px solid rgba(255, 255, 255, 0.06);
-          border-radius: 100px;
-          font-size: 11px;
-          font-weight: 400;
-          letter-spacing: 0.05em;
-          color: rgba(255, 255, 255, 0.45);
-          background: rgba(255, 255, 255, 0.03);
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
-          transition: all 0.3s ease;
-        }
-
-        .vertical-badge:hover {
-          border-color: rgba(0, 213, 255, 0.2);
-          color: rgba(255, 255, 255, 0.7);
-          background: rgba(0, 213, 255, 0.05);
-        }
-
-        .vertical-badge-dot {
-          width: 4px;
-          height: 4px;
-          border-radius: 50%;
-          background: #00D5FF;
-          opacity: 0.6;
         }
 
         .hero-buttons {
@@ -364,40 +296,18 @@ export default function Hero() {
           font-weight: 600;
           letter-spacing: 0.02em;
           color: #050505;
-          background: linear-gradient(135deg, #00D5FF, #7EE8FA);
+          background: linear-gradient(135deg, #CBA135, #E8C860);
           cursor: pointer;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          position: relative;
-          overflow: hidden;
           text-decoration: none;
-        }
-
-        .btn-primary::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(135deg, #7EE8FA, #00D5FF, #CBA135);
-          opacity: 0;
-          transition: opacity 0.4s ease;
-        }
-
-        .btn-primary:hover::before {
-          opacity: 1;
         }
 
         .btn-primary:hover {
           transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 20px 40px rgba(0, 213, 255, 0.25);
-        }
-
-        .btn-primary span {
-          position: relative;
-          z-index: 1;
+          box-shadow: 0 20px 40px rgba(203, 161, 53, 0.3);
         }
 
         .btn-primary svg {
-          position: relative;
-          z-index: 1;
           width: 16px;
           height: 16px;
           transition: transform 0.3s ease;
@@ -412,14 +322,14 @@ export default function Hero() {
           align-items: center;
           gap: 10px;
           padding: 16px 40px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(203, 161, 53, 0.2);
           border-radius: 60px;
           font-family: "Space Grotesk", sans-serif;
           font-size: 14px;
           font-weight: 500;
           letter-spacing: 0.02em;
-          color: rgba(255, 255, 255, 0.85);
-          background: rgba(255, 255, 255, 0.04);
+          color: #ffffff;
+          background: rgba(203, 161, 53, 0.06);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           cursor: pointer;
@@ -428,10 +338,36 @@ export default function Hero() {
         }
 
         .btn-secondary:hover {
-          border-color: rgba(255, 255, 255, 0.25);
-          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(203, 161, 53, 0.4);
+          background: rgba(203, 161, 53, 0.12);
           transform: translateY(-2px);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-tertiary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 40px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 60px;
+          font-family: "Space Grotesk", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.02em;
+          color: rgba(255, 255, 255, 0.45);
+          background: transparent;
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .btn-tertiary:hover {
+          color: rgba(255, 255, 255, 0.7);
+          border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-tertiary svg {
+          width: 16px;
+          height: 16px;
         }
 
         .hero-stats {
@@ -454,66 +390,45 @@ export default function Hero() {
         .hero-stats-inner {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 32px;
+          gap: 20px;
           max-width: 1000px;
           width: 100%;
         }
 
-        .stat-item {
+        .stat-card {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 4px;
+          padding: 18px 12px;
+          border: 1px solid rgba(203, 161, 53, 0.08);
+          border-radius: 16px;
+          background: rgba(255, 255, 255, 0.02);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
-        .stat-value {
+        .stat-top {
           font-family: "Playfair Display", serif;
-          font-size: clamp(26px, 3.2vw, 42px);
+          font-size: clamp(22px, 2.8vw, 36px);
           font-weight: 700;
-          color: #ffffff;
+          color: #CBA135;
           letter-spacing: -0.02em;
         }
 
-        .stat-label {
+        .stat-bottom {
           font-size: clamp(9px, 0.9vw, 12px);
           font-weight: 400;
-          color: rgba(255, 255, 255, 0.35);
+          color: rgba(255, 255, 255, 0.4);
           text-transform: uppercase;
           letter-spacing: 0.12em;
           text-align: center;
         }
 
-        .particles-container {
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-          pointer-events: none;
-          overflow: hidden;
-        }
-
-        .particle {
-          position: absolute;
-          bottom: 0;
-          border-radius: 50%;
-          background: rgba(0, 213, 255, 0.25);
-          box-shadow: 0 0 6px rgba(0, 213, 255, 0.1);
-        }
-
-        .glass-line {
-          position: absolute;
-          bottom: 140px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 2;
-          width: 1px;
-          height: 60px;
-          background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
-        }
-
         @media (max-width: 768px) {
           .hero-stats-inner {
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 12px;
           }
 
           .hero-buttons {
@@ -522,25 +437,18 @@ export default function Hero() {
           }
 
           .btn-primary,
-          .btn-secondary {
+          .btn-secondary,
+          .btn-tertiary {
             width: 100%;
             max-width: 320px;
             justify-content: center;
-          }
-
-          .glass-line {
-            display: none;
-          }
-
-          .verticals-row {
-            gap: 8px;
           }
         }
 
         @media (max-width: 480px) {
           .hero-stats-inner {
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            gap: 10px;
           }
         }
       `}</style>
@@ -554,20 +462,26 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+            transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
           />
         </AnimatePresence>
       </div>
 
       <div className="hero-overlay" />
 
-      <Particles />
+      <CanvasParticles />
 
       <div className="hero-content">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+          transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
         >
           <motion.div
             className="hero-badge"
@@ -576,7 +490,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="hero-badge-dot" />
-            India&apos;s Premier Healthcare Ecosystem
+            KO Clinics Network
           </motion.div>
 
           <motion.h1
@@ -591,33 +505,16 @@ export default function Hero() {
             Healthcare Growth Network
           </motion.h1>
 
-          <motion.p
-            className="hero-subheadline"
+          <motion.div
+            className="hero-lines"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Three Businesses. One Powerful Ecosystem.
-          </motion.p>
-
-          <motion.p
-            className="hero-secondary-line"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Healthcare Services &bull; Quantum Health Products &bull; Clinic Space Rental
-          </motion.p>
-
-          <motion.div
-            className="verticals-row"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            {VERTICALS.map((v, i) => (
-              <VerticalBadge key={v.name} name={v.name} index={i} />
-            ))}
+            <p className="hero-line">One Room.</p>
+            <p className="hero-line">One Procedure Space.</p>
+            <p className="hero-line">One Signboard.</p>
+            <p className="hero-line-final">Unlimited Opportunities.</p>
           </motion.div>
 
           <motion.p
@@ -626,10 +523,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            KO Clinics enables clinics, hospitals, wellness centres, aesthetic
-            practices, and healthcare entrepreneurs to grow through technology,
-            branding, patient acquisition, products, and healthcare infrastructure
-            solutions.
+            Join KO Clinics and transform your clinic into a premium healthcare
+            destination with zero investment, technology support, patient
+            acquisition, Quantum Health products, and infrastructure
+            monetization.
           </motion.p>
         </motion.div>
 
@@ -637,37 +534,49 @@ export default function Hero() {
           className="hero-buttons"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
         >
           <a href="/contact" className="btn-primary">
-            <span>Become a Partner</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <span>Become Partner</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
-          <a href="/services" className="btn-secondary">
-            <span>Explore Services</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 16 16 12 12 8" />
-              <line x1="8" y1="12" x2="16" y2="12" />
-            </svg>
+          <a href="/contact" className="btn-secondary">
+            <span>Book Consultation</span>
           </a>
+          <span className="btn-tertiary">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Watch Presentation
+          </span>
         </motion.div>
       </div>
 
-      <div className="glass-line" />
-
-      <div className="hero-stats" ref={statsRef}>
+      <div className="hero-stats">
         <div className="hero-stats-inner">
-          {STATS.map((stat) => (
-            <StatItem
-              key={stat.label}
-              label={stat.label}
-              value={stat.value}
-              suffix={stat.suffix}
-              trigger={statsInView}
+          {STATS.map((stat, i) => (
+            <StatCard
+              key={stat.bottom}
+              top={stat.top}
+              bottom={stat.bottom}
+              index={i}
             />
           ))}
         </div>

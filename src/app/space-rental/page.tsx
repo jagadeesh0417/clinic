@@ -1,12 +1,12 @@
 import PageLayout from "@/components/PageLayout";
 import ConsultationRental from "@/components/ConsultationRental";
-import RentalSupport from "@/components/RentalSupport";
+import RevenueModel from "@/components/RevenueModel";
 
 export default function SpaceRentalPage() {
   return (
     <PageLayout>
       <ConsultationRental />
-      <RentalSupport />
+      <RevenueModel />
     </PageLayout>
   );
 }

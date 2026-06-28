@@ -10,9 +10,10 @@ const profiles = [
     subtitle: "Celebrity Hair Transplant Surgeon",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80",
     expertise: [
-      "Cosmetic Dermatologist",
       "International Aesthetic Expert",
-      "Regenerative Medicine Specialist",
+      "20+ Years Experience",
+      "Hair Restoration Specialist",
+      "Regenerative Medicine Practitioner",
       "Healthcare Mentor",
     ],
     experience: "More than 20 years of experience.",
@@ -24,10 +25,9 @@ const profiles = [
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
     expertise: [
       "Business Strategist",
-      "Clinic Operations Expert",
-      "Brand Expansion Specialist",
+      "Clinic Operations Specialist",
       "Partnership Development Leader",
-      "National Healthcare Network Builder",
+      "Healthcare Brand Expansion Expert",
     ],
   },
 ];
@@ -97,7 +97,7 @@ export default function Leadership() {
                 </h3>
 
                 <p
-                  className="text-xs uppercase tracking-[0.2em] mb-1 text-[#00D5FF] font-semibold"
+                  className="text-xs uppercase tracking-[0.2em] mb-1 text-[#CBA135]/70 font-semibold"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {profile.title}

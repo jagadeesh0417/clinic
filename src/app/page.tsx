@@ -1,8 +1,8 @@
 import PageLayout from "@/components/PageLayout";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import ThreeVerticals from "@/components/ThreeVerticals";
-import ExistingPartners from "@/components/ExistingPartners";
+import PartnershipModel from "@/components/PartnershipModel";
+import RevenueModel from "@/components/RevenueModel";
 import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
     <PageLayout>
       <Hero />
       <About />
-      <ThreeVerticals />
-      <ExistingPartners />
+      <PartnershipModel />
+      <RevenueModel />
       <FinalCTA />
     </PageLayout>
   );

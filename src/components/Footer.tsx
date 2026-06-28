@@ -9,7 +9,8 @@ const quickLinks = [
   { label: "Products", href: "/products" },
   { label: "Space Rental", href: "/space-rental" },
   { label: "Partners", href: "/partners" },
-  { label: "Requirements", href: "/partner-requirements" },
+  { label: "Revenue", href: "/revenue-model" },
+  { label: "Join", href: "/how-to-join" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];

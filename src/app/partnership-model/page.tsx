@@ -1,14 +1,12 @@
 import PageLayout from "@/components/PageLayout";
-import About from "@/components/About";
-import VisionMission from "@/components/VisionMission";
 import PartnershipModel from "@/components/PartnershipModel";
+import PartnerRequirements from "@/components/PartnerRequirements";
 
-export default function AboutPage() {
+export default function PartnershipModelPage() {
   return (
     <PageLayout>
-      <About />
-      <VisionMission />
       <PartnershipModel />
+      <PartnerRequirements />
     </PageLayout>
   );
 }

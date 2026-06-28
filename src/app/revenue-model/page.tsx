@@ -1,11 +1,9 @@
 import PageLayout from "@/components/PageLayout";
-import Services from "@/components/Services";
 import RevenueModel from "@/components/RevenueModel";
 
-export default function ServicesPage() {
+export default function RevenueModelPage() {
   return (
     <PageLayout>
-      <Services />
       <RevenueModel />
     </PageLayout>
   );

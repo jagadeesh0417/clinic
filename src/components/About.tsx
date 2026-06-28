@@ -39,16 +39,42 @@ const images = [
   },
 ];
 
-const features = [
-  "Healthcare Services",
-  "Quantum Health Products",
-  "Consultation Space Rental",
-  "AI Healthcare Solutions",
-  "Patient Acquisition",
-  "Digital Marketing",
-  "Business Development",
-  "Equipment Support",
-  "Healthcare Networking",
+const verticals = [
+  {
+    title: "Healthcare Services",
+    description:
+      "Empowering clinics with technology, branding, patient acquisition, and operational excellence.",
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+      </svg>
+    ),
+  },
+  {
+    title: "Quantum Health Products",
+    description:
+      "Distributing cutting-edge health products and solutions across our network of clinics.",
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Consultation Space Rental",
+    description:
+      "Providing premium, fully-equipped consultation spaces for healthcare professionals.",
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+        <line x1="12" y1="6" x2="12" y2="10" />
+        <line x1="8" y1="6" x2="8" y2="10" />
+        <line x1="16" y1="6" x2="16" y2="10" />
+      </svg>
+    ),
+  },
 ];
 
 const stats = [
@@ -101,7 +127,7 @@ function ParallaxImage({
       transition={{ duration: 0.8, ease: "easeOut" as const }}
     >
       <div className="group relative w-full h-full overflow-hidden rounded-2xl">
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#00D5FF]/10 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#CBA135]/10 via-transparent to-transparent z-10 pointer-events-none" />
         <Image
           src={src}
           alt={alt}
@@ -139,10 +165,10 @@ function AnimatedCounter({
 
   return (
     <span ref={ref} className="inline-flex items-baseline gap-0.5">
-      <motion.span className="text-4xl md:text-5xl font-bold text-[#00D5FF] tabular-nums">
+      <motion.span className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
         {displayValue}
       </motion.span>
-      <span className="text-2xl md:text-3xl font-bold text-[#00D5FF]">
+      <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
         {suffix}
       </span>
     </span>
@@ -162,7 +188,7 @@ export default function About() {
       id="about"
       className="relative bg-[#050505] py-24 md:py-32 overflow-hidden"
     >
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#00D5FF]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +217,7 @@ export default function About() {
           >
             <motion.div variants={itemVariants} className="mb-2">
               <span
-                className="inline-block text-[#00D5FF] font-mono text-sm tracking-[0.2em] uppercase"
+                className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 About KO Clinics
@@ -203,11 +229,10 @@ export default function About() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              A Modern{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D5FF] to-[#CBA135]">
-                Healthcare
-              </span>{" "}
-              Ecosystem
+              About{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+                KO Clinics
+              </span>
             </motion.h2>
 
             <motion.p
@@ -215,10 +240,9 @@ export default function About() {
               className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              KO Clinics is a modern healthcare ecosystem designed to empower
-              independent clinics and healthcare providers through technology,
-              strategic partnerships, product distribution, and business
-              expansion opportunities.
+              KO Clinics empowers independent healthcare providers through
+              technology, branding, patient acquisition, product distribution,
+              and healthcare infrastructure optimization.
             </motion.p>
 
             <motion.p
@@ -226,38 +250,63 @@ export default function About() {
               className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              We help healthcare providers increase revenue, improve patient
-              engagement, expand service offerings, and participate in India&apos;s
-              growing healthcare economy.
+              KO Clinics operates across three integrated business verticals:
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 gap-3 mb-12"
+              className="grid gap-4 mb-10"
             >
-              {features.map((feature) => (
-                <div
-                  key={feature}
-                  className="group px-4 py-3 rounded-xl transition-all duration-300 hover:bg-[#00D5FF]/5"
+              {verticals.map((v, i) => (
+                <motion.div
+                  key={v.title}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="group relative overflow-hidden rounded-2xl p-5 transition-all duration-500 hover:translate-x-1"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    backdropFilter: "blur(12px)",
-                    WebkitBackdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    background:
+                      "linear-gradient(135deg, rgba(203,161,53,0.08) 0%, rgba(255,255,255,0.03) 100%)",
+                    backdropFilter: "blur(16px)",
+                    WebkitBackdropFilter: "blur(16px)",
+                    border: "1px solid rgba(203,161,53,0.15)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
                   }}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#00D5FF] shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                    <span
-                      className="text-sm md:text-base text-white/80 group-hover:text-white transition-colors duration-300"
-                      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                    >
-                      {feature}
-                    </span>
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#CBA135] bg-[#CBA135]/10 transition-colors duration-300 group-hover:bg-[#CBA135]/20">
+                      {v.icon}
+                    </div>
+                    <div>
+                      <h3
+                        className="text-white text-lg font-semibold mb-1"
+                        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                      >
+                        {v.title}
+                      </h3>
+                      <p
+                        className="text-[#B7B7B7] text-sm leading-relaxed"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {v.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[#CBA135]/40 via-[#CBA135]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </motion.div>
               ))}
             </motion.div>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-[#B7B7B7] text-base leading-relaxed mb-10 italic"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Together, these three verticals help clinics increase revenue,
+              improve utilization, expand services, and participate in
+              India&apos;s fastest-growing healthcare network.
+            </motion.p>
 
             <motion.div
               variants={itemVariants}
