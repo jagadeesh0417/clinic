@@ -1,12 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import Services from "@/components/Services";
-import RevenueModel from "@/components/RevenueModel";
+import QScan from "@/components/QScan";
+import HomeHealthcare from "@/components/HomeHealthcare";
+import StaffSupport from "@/components/StaffSupport";
 
 export default function ServicesPage() {
   return (
     <PageLayout>
       <Services />
-      <RevenueModel />
+      <QScan />
+      <HomeHealthcare />
+      <StaffSupport />
     </PageLayout>
   );
 }

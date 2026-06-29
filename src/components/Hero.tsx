@@ -11,10 +11,10 @@ const HERO_IMAGES = [
 ];
 
 const STATS = [
-  { top: "100–150", bottom: "Leads Monthly" },
-  { top: "Zero", bottom: "Investment" },
-  { top: "3", bottom: "Revenue Streams" },
-  { top: "AI Healthcare", bottom: "Platform" },
+  { top: "5000+", bottom: "Clinics" },
+  { top: "100+", bottom: "Cities" },
+  { top: "4+", bottom: "Countries" },
+  { top: "AI", bottom: "Enabled" },
 ];
 
 interface Particle {
@@ -358,6 +358,7 @@ export default function Hero() {
           color: rgba(255, 255, 255, 0.45);
           background: transparent;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          text-decoration: none;
         }
 
         .btn-tertiary:hover {
@@ -502,7 +503,7 @@ export default function Hero() {
             India&apos;s Largest{" "}
             <span className="hero-headline-accent">AI-Powered</span>
             <br />
-            Healthcare Growth Network
+            Clinic Network
           </motion.h1>
 
           <motion.div
@@ -511,10 +512,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <p className="hero-line">One Room.</p>
-            <p className="hero-line">One Procedure Space.</p>
-            <p className="hero-line">One Signboard.</p>
-            <p className="hero-line-final">Unlimited Opportunities.</p>
+            <p className="hero-line">One Network.</p>
+            <p className="hero-line">Thousands of Clinics.</p>
+            <p className="hero-line-final">Unlimited Growth.</p>
           </motion.div>
 
           <motion.p
@@ -523,10 +523,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Join KO Clinics and transform your clinic into a premium healthcare
-            destination with zero investment, technology support, patient
-            acquisition, Quantum Health products, and infrastructure
-            monetization.
+            KO Clinics is a global healthcare aggregator connecting aesthetic
+            clinics, hospitals, dermatology centres, wellness facilities,
+            diagnostic centres and specialist doctors under one trusted
+            international brand. KO Clinics empowers healthcare providers
+            through technology, patient acquisition, AI healthcare solutions,
+            branding, digital marketing and operational support with minimal
+            investment.
           </motion.p>
         </motion.div>
 
@@ -537,7 +540,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.0 }}
         >
           <a href="/contact" className="btn-primary">
-            <span>Become Partner</span>
+            <span>Become a Partner</span>
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -550,10 +553,10 @@ export default function Hero() {
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
-          <a href="/contact" className="btn-secondary">
-            <span>Book Consultation</span>
+          <a href="/partners" className="btn-secondary">
+            <span>Find a Clinic</span>
           </a>
-          <span className="btn-tertiary">
+          <a href="/services" className="btn-tertiary">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -564,8 +567,8 @@ export default function Hero() {
             >
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
-            Watch Presentation
-          </span>
+            Explore Services
+          </a>
         </motion.div>
       </div>
 

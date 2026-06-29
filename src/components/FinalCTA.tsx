@@ -1,15 +1,20 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-const FEATURES = [
-  "100–150 Leads Monthly",
-  "Zero Investment",
-  "3 Revenue Streams",
-  "AI Healthcare Platform",
-  "Quantum Health Products",
-  "Space Rental Income",
+const bgImages = [
+  "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80",
+  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
+  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+];
+
+const features = [
+  "One Consultation Room",
+  "One Procedure Room",
+  "One Signboard",
+  "Unlimited Opportunities",
 ];
 
 export default function FinalCTA() {
@@ -37,6 +42,24 @@ export default function FinalCTA() {
             background: #050505;
             overflow: hidden;
             font-family: "Space Grotesk", sans-serif;
+          }
+
+          .cta-bg-montage {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0;
+          }
+
+          .cta-bg-montage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.12;
+            filter: grayscale(0.6);
           }
 
           .cta-overlay {
@@ -129,31 +152,17 @@ export default function FinalCTA() {
             font-family: "Inter", sans-serif;
             font-size: 12px;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.85);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #CBA135;
+            background: rgba(203, 161, 53, 0.08);
+            border: 1px solid rgba(203, 161, 53, 0.2);
             transition: all 0.3s ease;
           }
 
           .cta-feature-badge:hover {
-            border-color: rgba(203, 161, 53, 0.3);
-            background: rgba(203, 161, 53, 0.06);
+            border-color: rgba(203, 161, 53, 0.4);
+            background: rgba(203, 161, 53, 0.12);
             box-shadow: 0 0 20px rgba(203, 161, 53, 0.08);
             transform: translateY(-2px);
-          }
-
-          .cta-tagline {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(16px, 2vw, 24px);
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 0.04em;
-            margin: 0 0 36px;
-            font-style: italic;
-          }
-
-          .cta-tagline span {
-            color: #CBA135;
           }
 
           .cta-buttons {
@@ -388,6 +397,12 @@ export default function FinalCTA() {
           }
         `}</style>
 
+        <div className="cta-bg-montage">
+          {bgImages.map((src, i) => (
+            <img key={i} src={src} alt="" aria-hidden="true" loading="lazy" />
+          ))}
+        </div>
+
         <div className="cta-overlay" />
         <div className="cta-glow" />
 
@@ -406,7 +421,7 @@ export default function FinalCTA() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.15 }}
             >
-              Partner Today & <span>Transform Your Clinic's Future</span>
+              Partner with <span>KO Clinics Today</span>
             </motion.h2>
 
             <motion.p
@@ -416,7 +431,18 @@ export default function FinalCTA() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              No Franchise Fee &bull; No Royalty &bull; No Hidden Costs
+              One Consultation Room. One Procedure Room. One Signboard. Unlimited
+              Opportunities.
+            </motion.p>
+
+            <motion.p
+              className="cta-description"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Join India's Fastest Growing Healthcare Ecosystem.
             </motion.p>
 
             <motion.div
@@ -424,24 +450,14 @@ export default function FinalCTA() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.45 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
-              {FEATURES.map((f) => (
+              {features.map((f) => (
                 <span key={f} className="cta-feature-badge">
                   {f}
                 </span>
               ))}
             </motion.div>
-
-            <motion.p
-              className="cta-tagline"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.55 }}
-            >
-              <span>Grow Your Clinic.</span> We Grow Together.
-            </motion.p>
 
             <motion.div
               className="cta-buttons"
@@ -451,27 +467,33 @@ export default function FinalCTA() {
               transition={{ duration: 0.8, delay: 0.65 }}
             >
               <a href="/contact" className="cta-btn-primary">
-                <span>Become Partner</span>
+                <span>Become A Partner</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </a>
-              <a href="#" className="cta-btn-secondary">
-                <span>Download Brochure</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-              </a>
-              <a href="/contact" className="cta-btn-ghost">
-                <span>Schedule Meeting</span>
+              <a href="/contact" className="cta-btn-secondary">
+                <span>Book Consultation</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                   <line x1="16" y1="2" x2="16" y2="6" />
                   <line x1="8" y1="2" x2="8" y2="6" />
                   <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </a>
+              <a href="/global-presence" className="cta-btn-ghost">
+                <span>Explore Locations</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </a>
+              <a href="/contact" className="cta-btn-ghost">
+                <span>Contact KO Clinics</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
               </a>
             </motion.div>
@@ -481,17 +503,17 @@ export default function FinalCTA() {
 
       <div className={`sticky-cta${showSticky ? " visible" : ""}`}>
         <span className="sticky-cta-text">
-          <span>Grow Your Clinic.</span> We Grow Together.
+          <span>KO Clinics</span> — Join India's Fastest Growing Healthcare Ecosystem
         </span>
         <div className="sticky-cta-buttons">
           <a href="/contact" className="sticky-btn sticky-btn-gold">
-            Become Partner
-          </a>
-          <a href="#" className="sticky-btn sticky-btn-ghost">
-            Download Brochure
+            Become A Partner
           </a>
           <a href="/contact" className="sticky-btn sticky-btn-ghost">
-            Schedule Meeting
+            Book Consultation
+          </a>
+          <a href="/global-presence" className="sticky-btn sticky-btn-ghost">
+            Explore Locations
           </a>
         </div>
       </div>

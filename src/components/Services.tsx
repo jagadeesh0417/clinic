@@ -2,43 +2,39 @@
 
 import { motion } from "framer-motion";
 
+const images = [
+  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+  "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80",
+  "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+];
+
 const services = [
   {
-    title: "Aesthetic Procedures",
-    image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-    items: ["Facial Rejuvenation", "Laser Treatments", "Injectables"],
-  },
-  {
-    title: "Hair Treatments",
-    image:
-      "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80",
-    items: ["PRP Therapy", "Hair Transplant", "Scalp Treatments"],
-  },
-  {
     title: "Dermatology",
-    image:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-    items: ["Medical Dermatology", "Skin检查", "Laser Surgery"],
+    image: images[0],
+    items: ["Acne Treatment", "Pigmentation", "Laser Treatments", "Hydrafacial", "Chemical Peels", "Skin Rejuvenation"],
   },
   {
-    title: "Wellness & Anti-ageing",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
-    items: ["Longevity Medicine", "Nutrition Programs", "Wellness Solutions"],
+    title: "Hair",
+    image: images[1],
+    items: ["Hair Transplant", "PRP Therapy", "GFC", "Exosomes", "Hair Regrowth", "Hair Analysis"],
   },
-];
-
-const otherServices = [
-  "Teleconsultation",
-  "Corporate Healthcare",
-  "Preventive Healthcare",
-];
-
-const partnerBenefits = [
-  "Lead Generation",
-  "Doctor Network",
-  "Marketing Support",
+  {
+    title: "Anti-Ageing",
+    image: images[2],
+    items: ["Botox", "Fillers", "Threads", "Skin Boosters", "Exosomes", "Bio-Regenerative Medicine"],
+  },
+  {
+    title: "Slimming",
+    image: images[3],
+    items: ["Body Contouring", "Fat Reduction", "Weight Management", "Nutrition Programs"],
+  },
+  {
+    title: "Wellness",
+    image: images[3],
+    items: ["Preventive Healthcare", "Health Screening", "Longevity Medicine", "Lifestyle Medicine"],
+  },
 ];
 
 const containerVariants = {
@@ -70,13 +66,13 @@ export default function Services() {
           className="text-center mb-16"
         >
           <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4">
-            Healthcare Services
+            What We Offer
           </span>
           <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-            Healthcare <span className="text-[#CBA135]">Services</span>
+            Our <span className="text-[#CBA135]">Services</span>
           </h2>
           <p className="text-white/60 font-['Inter'] text-lg max-w-2xl mx-auto">
-            Patient Acquisition & Practice Growth
+            Comprehensive clinical and wellness solutions
           </p>
         </motion.div>
 
@@ -85,26 +81,21 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 transition-all duration-500 hover:scale-[1.03] hover:border-[#CBA135]/30"
+              className="group rounded-2xl overflow-hidden bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] transition-all duration-500 hover:scale-[1.03] hover:border-[#CBA135]/30"
             >
-              <div className="relative h-52 w-full overflow-hidden">
+              <div className="relative h-48 w-full overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent" />
-                <div className="absolute top-3 left-3">
-                  <span className="inline-block px-2.5 py-1 text-[10px] font-['Space_Grotesk'] uppercase tracking-wider text-[#CBA135] bg-white/10 border border-[#CBA135]/20 rounded-full">
-                    Clinical
-                  </span>
-                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                   <h3 className="font-['Playfair_Display'] text-xl text-white">
                     {service.title}
@@ -125,58 +116,6 @@ export default function Services() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 text-center"
-        >
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {otherServices.map((item) => (
-              <span
-                key={item}
-                className="inline-block px-5 py-2.5 text-sm font-['Inter'] text-white/70 bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#CBA135]/40 hover:text-[#CBA135] hover:bg-white/10"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 text-center"
-        >
-          <h4 className="font-['Space_Grotesk'] text-sm tracking-[0.15em] uppercase text-[#CBA135] mb-6">
-            Partner Benefits
-          </h4>
-          <div className="flex flex-wrap justify-center gap-3">
-            {partnerBenefits.map((benefit) => (
-              <span
-                key={benefit}
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-['Inter'] text-white/70 bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#CBA135]/40 hover:text-[#CBA135] hover:bg-white/10"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-3.5 w-3.5 flex-shrink-0"
-                  fill="none"
-                  stroke="#CBA135"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                {benefit}
-              </span>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>

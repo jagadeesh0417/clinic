@@ -1,8 +1,10 @@
 import PageLayout from "@/components/PageLayout";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import PartnershipModel from "@/components/PartnershipModel";
-import RevenueModel from "@/components/RevenueModel";
+import VisionMission from "@/components/VisionMission";
+import QScan from "@/components/QScan";
+import WhyChoose from "@/components/WhyChoose";
+import PartnerRequirements from "@/components/PartnerRequirements";
 import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
@@ -10,8 +12,10 @@ export default function Home() {
     <PageLayout>
       <Hero />
       <About />
-      <PartnershipModel />
-      <RevenueModel />
+      <VisionMission />
+      <QScan />
+      <WhyChoose />
+      <PartnerRequirements />
       <FinalCTA />
     </PageLayout>
   );

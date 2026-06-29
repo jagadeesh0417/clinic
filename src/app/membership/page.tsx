@@ -1,12 +1,14 @@
 import PageLayout from "@/components/PageLayout";
-import Products from "@/components/Products";
+import Membership from "@/components/Membership";
 import SpecialOffers from "@/components/SpecialOffers";
+import WhyChoose from "@/components/WhyChoose";
 
-export default function ProductsPage() {
+export default function MembershipPage() {
   return (
     <PageLayout>
-      <Products />
+      <Membership />
       <SpecialOffers />
+      <WhyChoose />
     </PageLayout>
   );
 }

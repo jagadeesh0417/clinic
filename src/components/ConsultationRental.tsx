@@ -9,27 +9,28 @@ const images = [
   "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
 ];
 
-const roomTypes = ["Consultation Room", "Procedure Room"];
-
-const visitingProfessionals = [
-  "Visiting Doctors",
-  "Aesthetic Specialists",
+const specialists = [
   "Dermatologists",
   "Plastic Surgeons",
   "Dentists",
   "Nutritionists",
-  "Physiotherapists",
   "Psychologists",
-  "Hair Experts",
-  "Corporate Programs",
-  "Rental Programs",
-  "Revenue Sharing Models",
+  "Gynecologists",
+  "Orthopedic Specialists",
+  "Visiting Doctors",
+  "Cosmetic Physicians",
 ];
 
-const benefits = [
-  "Additional Monthly Income",
-  "Improved Space Utilization",
-  "Professional Network Expansion",
+const equipment = [
+  "Laser Machines",
+  "PRP Equipment",
+  "Hydrafacial Machines",
+  "HIFU",
+  "Pico Laser",
+  "Hair Transplant Equipment",
+  "Skin Analysis Systems",
+  "Aesthetic Devices",
+  "Slimming Equipment",
 ];
 
 const containerVariants = {
@@ -63,23 +64,21 @@ export default function ConsultationRental() {
           viewport={{ once: true, margin: "-80px" }}
           className="space-y-16"
         >
-          {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
             <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4">
-              Vertical Three — Space Rental
+              Space Rental Program
             </span>
             <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-4">
               Clinic Space <span className="text-[#CBA135]">Rental</span>
             </h2>
             <p className="text-white/50 font-['Space_Grotesk'] text-lg max-w-2xl mx-auto">
-              Monetize Your Consultation & Procedure Rooms
+              Turn Unused Space into Revenue
             </p>
             <p className="text-white/40 font-['Inter'] text-sm max-w-xl mx-auto mt-3">
-              KO Clinics helps clinics maximize unused infrastructure. Partner clinics contribute consultation and procedure rooms utilized by visiting healthcare professionals.
+              Monetize your clinic's unused infrastructure by renting to verified healthcare professionals
             </p>
           </motion.div>
 
-          {/* Image grid */}
           <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
@@ -100,33 +99,15 @@ export default function ConsultationRental() {
             ))}
           </motion.div>
 
-          {/* Room types */}
-          <motion.div variants={itemVariants} className="text-center">
-            <h4 className="font-['Space_Grotesk'] text-sm tracking-[0.15em] uppercase text-[#CBA135] mb-6">
-              Every Partner Clinic Contributes
-            </h4>
-            <div className="flex flex-wrap justify-center gap-4">
-              {roomTypes.map((room) => (
-                <span
-                  key={room}
-                  className="inline-block px-6 py-3 text-sm font-['Inter'] text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-xl"
-                >
-                  {room}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Professionals chips */}
           <motion.div
             variants={itemVariants}
-            className="rounded-2xl p-8 md:p-10 bg-white/5 backdrop-blur-xl border border-white/10"
+            className="rounded-2xl p-8 md:p-10 bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)]"
           >
             <h4 className="font-['Playfair_Display'] text-xl text-white text-center mb-6">
-              Utilized By
+              Specialists Connected
             </h4>
             <div className="flex flex-wrap justify-center gap-3">
-              {visitingProfessionals.map((prof, i) => (
+              {specialists.map((prof, i) => (
                 <motion.span
                   key={prof}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -142,33 +123,26 @@ export default function ConsultationRental() {
             </div>
           </motion.div>
 
-          {/* Benefits */}
           <motion.div
             variants={itemVariants}
-            className="text-center"
+            className="rounded-2xl p-8 md:p-10 bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)]"
           >
-            <h4 className="font-['Space_Grotesk'] text-sm tracking-[0.15em] uppercase text-[#CBA135] mb-6">
-              Partner Benefits
+            <h4 className="font-['Playfair_Display'] text-xl text-white text-center mb-6">
+              Equipment Available for Rental
             </h4>
             <div className="flex flex-wrap justify-center gap-3">
-              {benefits.map((benefit) => (
-                <span
-                  key={benefit}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-['Inter'] text-white/70 bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#CBA135]/40 hover:text-[#CBA135] hover:bg-white/10"
+              {equipment.map((item, i) => (
+                <motion.span
+                  key={item}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.04, duration: 0.4 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="inline-block px-4 py-2 text-sm font-['Inter'] text-white/80 bg-white/5 border border-white/10 rounded-full transition-all duration-300 hover:border-[#CBA135]/40 hover:text-[#CBA135] hover:bg-white/10"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-3.5 w-3.5 flex-shrink-0"
-                    fill="none"
-                    stroke="#CBA135"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {benefit}
-                </span>
+                  {item}
+                </motion.span>
               ))}
             </div>
           </motion.div>

@@ -6,21 +6,11 @@ import { useState } from "react";
 interface Partner {
   name: string;
   location: string;
-  category: string;
+  country: string;
   image: string;
   services: string[];
+  since: string;
 }
-
-const categories = [
-  "All",
-  "Dermatology",
-  "Hair Clinics",
-  "Dental Clinics",
-  "Wellness Centers",
-  "Hospitals",
-  "Diagnostic Centers",
-  "Aesthetic Clinics",
-];
 
 const images = [
   "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80",
@@ -31,25 +21,26 @@ const images = [
   "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
 ];
 
+const countries = ["All", "India", "Hong Kong", "Dubai", "Canada", "Upcoming"];
+
 const partners: Partner[] = [
-  { name: "Dermis Speciality Clinic", location: "Bengaluru", category: "Dermatology", image: images[0], services: ["Laser Treatments", "Acne Therapy", "Skin Rejuvenation"] },
-  { name: "Dr. Mehta's Skin & Hair Clinic", location: "Mumbai", category: "Dermatology", image: images[1], services: ["Hair Restoration", "Scar Revision", "Anti-Aging"] },
-  { name: "Aura Dermatology Center", location: "Hyderabad", category: "Dermatology", image: images[2], services: ["Phototherapy", "Vitiligo Treatment", "Melasma Care"] },
-  { name: "Roots Hair Revival Studio", location: "Delhi", category: "Hair Clinics", image: images[3], services: ["Hair Transplant", "PRP Therapy", "Scalp Micropigmentation"] },
-  { name: "TressForever Clinic", location: "Pune", category: "Hair Clinics", image: images[4], services: ["FUE Transplant", "Laser Cap", "Mesotherapy"] },
-  { name: "Maiwand Dental Care", location: "Bengaluru", category: "Dental Clinics", image: images[5], services: ["Cosmetic Dentistry", "Root Canal", "Implants"] },
-  { name: "Smile Kraft Studio", location: "Chennai", category: "Dental Clinics", image: images[0], services: ["Teeth Whitening", "Braces", "Veneers"] },
-  { name: "Pearls Orthodontic Centre", location: "Kolkata", category: "Dental Clinics", image: images[1], services: ["Pediatric Dentistry", "Scaling", "Crowns"] },
-  { name: "Apollo Cradle & Wellness", location: "Delhi", category: "Wellness Centers", image: images[2], services: ["Yoga Therapy", "Nutrition", "Detox Programs"] },
-  { name: "Zen Den Holistic Hub", location: "Ahmedabad", category: "Wellness Centers", image: images[3], services: ["Stress Management", "Ayurveda", "Meditation"] },
-  { name: "Vitalife Wellness Centre", location: "Mumbai", category: "Wellness Centers", image: images[4], services: ["Panchakarma", "Wellness Coaching", "Holistic Health"] },
-  { name: "Rainbow Children's Hospital", location: "Hyderabad", category: "Hospitals", image: images[5], services: ["Pediatrics", "Neonatology", "Emergency Care"] },
-  { name: "Columbia Asia Referral Hospital", location: "Bengaluru", category: "Hospitals", image: images[0], services: ["Cardiology", "Neurology", "Orthopedics"] },
-  { name: "SRL Diagnostics Centre", location: "Mumbai", category: "Diagnostic Centers", image: images[1], services: ["MRI & CT Scan", "Blood Work", "Pathology"] },
-  { name: "Healthians Labs", location: "Delhi", category: "Diagnostic Centers", image: images[2], services: ["Digital X-Ray", "ECG", "Health Packages"] },
-  { name: "The Aesthetic Lounge", location: "Bengaluru", category: "Aesthetic Clinics", image: images[3], services: ["Botox", "Fillers", "Laser Hair Removal"] },
-  { name: "Glow & You Aesthetics", location: "Kolkata", category: "Aesthetic Clinics", image: images[4], services: ["Chemical Peels", "Microdermabrasion", "HydraFacial"] },
-  { name: "Radiance Medispa", location: "Chennai", category: "Aesthetic Clinics", image: images[5], services: ["Thread Lift", "PRP Facial", "Skin Tightening"] },
+  { name: "Dermis Speciality Clinic", location: "Bengaluru", country: "India", image: images[0], services: ["Laser Treatments", "Acne Therapy", "Skin Rejuvenation"], since: "2021" },
+  { name: "Dr. Mehta's Skin & Hair Clinic", location: "Mumbai", country: "India", image: images[1], services: ["Hair Restoration", "Scar Revision", "Anti-Aging"], since: "2020" },
+  { name: "Aura Dermatology Center", location: "Hyderabad", country: "India", image: images[2], services: ["Phototherapy", "Vitiligo Treatment", "Melasma Care"], since: "2022" },
+  { name: "Roots Hair Revival Studio", location: "Delhi", country: "India", image: images[3], services: ["Hair Transplant", "PRP Therapy", "Scalp Micropigmentation"], since: "2021" },
+  { name: "TressForever Clinic", location: "Pune", country: "India", image: images[4], services: ["FUE Transplant", "Laser Cap", "Mesotherapy"], since: "2023" },
+  { name: "Maiwand Dental Care", location: "Bengaluru", country: "India", image: images[5], services: ["Cosmetic Dentistry", "Root Canal", "Implants"], since: "2020" },
+  { name: "Smile Kraft Studio", location: "Chennai", country: "India", image: images[0], services: ["Teeth Whitening", "Braces", "Veneers"], since: "2022" },
+  { name: "Pearl's Orthodontic Centre", location: "Kolkata", country: "India", image: images[1], services: ["Pediatric Dentistry", "Scaling", "Crowns"], since: "2021" },
+  { name: "Victoria Harbour MediSpa", location: "Central", country: "Hong Kong", image: images[2], services: ["IV Therapy", "Laser Toning", "Cryofacial"], since: "2023" },
+  { name: "Kowloon Aesthetic Centre", location: "Tsim Sha Tsui", country: "Hong Kong", image: images[3], services: ["Botox", "Fillers", "Skin Tightening"], since: "2024" },
+  { name: "Dubai Hills Dermatology", location: "Dubai Hills", country: "Dubai", image: images[4], services: ["HydraFacial", "Morpheus8", "PRP Hair"], since: "2024" },
+  { name: "Jumeirah Wellness Clinic", location: "Jumeirah", country: "Dubai", image: images[5], services: ["Holistic Health", "IV Drip", "Detox"], since: "2023" },
+  { name: "Maple Leaf Derma Clinic", location: "Toronto", country: "Canada", image: images[0], services: ["CoolSculpting", "Laser Hair", "Microneedling"], since: "2024" },
+  { name: "Vancouver Aesthetic Centre", location: "Vancouver", country: "Canada", image: images[1], services: ["Thread Lift", "Chemical Peel", "RF Microneedling"], since: "2025" },
+  { name: "KO Clinics Singapore", location: "Singapore", country: "Upcoming", image: images[2], services: ["Coming 2026", "Pre-Register Now"], since: "Soon" },
+  { name: "KO Clinics London", location: "London", country: "Upcoming", image: images[3], services: ["Coming 2027", "Pre-Register Now"], since: "Soon" },
+  { name: "KO Clinics Sydney", location: "Sydney", country: "Upcoming", image: images[4], services: ["Coming 2027", "Pre-Register Now"], since: "Soon" },
 ];
 
 const containerVariants = {
@@ -71,23 +62,12 @@ const cardVariants = {
 };
 
 export default function ExistingPartners() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [activeCountry, setActiveCountry] = useState("All");
 
   const filtered =
-    activeCategory === "All"
+    activeCountry === "All"
       ? partners
-      : partners.filter((p) => p.category === activeCategory);
-
-  const searched = searchQuery
-    ? filtered.filter(
-        (p) =>
-          p.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : filtered;
-
-  const locations = [...new Set(partners.map((p) => p.location))];
+      : partners.filter((p) => p.country === activeCountry);
 
   return (
     <section
@@ -144,7 +124,7 @@ export default function ExistingPartners() {
               color: "rgba(255,255,255,0.5)",
             }}
           >
-            Trusted by healthcare providers across India
+            Trusted by healthcare providers globally
           </p>
         </motion.div>
 
@@ -153,14 +133,14 @@ export default function ExistingPartners() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8 flex flex-wrap justify-center gap-3"
+          className="mb-10 flex flex-wrap justify-center gap-3"
         >
-          {categories.map((cat) => {
-            const isActive = cat === activeCategory;
+          {countries.map((country) => {
+            const isActive = country === activeCountry;
             return (
               <motion.button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
+                key={country}
+                onClick={() => setActiveCountry(country)}
                 className="relative rounded-full px-5 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-300"
                 style={{
                   fontFamily: "'Inter', sans-serif",
@@ -185,86 +165,22 @@ export default function ExistingPartners() {
                 }}
                 whileTap={{ scale: 0.97 }}
               >
-                {cat}
+                {country}
               </motion.button>
             );
           })}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-10"
-        >
-          <div className="mx-auto max-w-md">
-            <div
-              className="flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-300 focus-within:shadow-lg"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <svg
-                className="h-4 w-4 flex-shrink-0"
-                style={{ color: "rgba(255,255,255,0.3)" }}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-              <input
-                type="text"
-                placeholder={`Search by location — ${locations.slice(0, 4).join(", ")}, ${locations.length > 4 ? `+${locations.length - 4} more` : ""}`}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-transparent text-sm outline-none"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  color: "rgba(255,255,255,0.8)",
-                }}
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="flex-shrink-0 text-xs"
-                  style={{ color: "rgba(255,255,255,0.3)" }}
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-            <p
-              className="mt-2 text-center text-[10px] tracking-wide"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                color: "rgba(255,255,255,0.25)",
-              }}
-            >
-              Search by city, clinic name, or specialty
-            </p>
-          </div>
-        </motion.div>
-
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory + searchQuery}
+            key={activeCountry}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="hidden"
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {searched.length === 0 && (
+            {filtered.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -277,12 +193,11 @@ export default function ExistingPartners() {
                     color: "rgba(255,255,255,0.4)",
                   }}
                 >
-                  No partners match your search. Try a different location or
-                  category.
+                  No partners in this region yet.
                 </p>
               </motion.div>
             )}
-            {searched.map((partner) => (
+            {filtered.map((partner) => (
               <motion.div
                 key={partner.name + partner.location}
                 variants={cardVariants}
@@ -331,7 +246,7 @@ export default function ExistingPartners() {
                         WebkitBackdropFilter: "blur(8px)",
                       }}
                     >
-                      Premium Partner
+                      Partner Since {partner.since}
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3">
@@ -357,25 +272,12 @@ export default function ExistingPartners() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      {partner.location}
+                      {partner.location}, {partner.country === "Upcoming" ? "" : partner.country}
                     </span>
                   </div>
                 </div>
 
                 <div className="relative z-10 p-5">
-                  <div className="mb-2 flex items-center justify-between">
-                    <span
-                      className="rounded-full px-2.5 py-0.5 text-[9px] font-medium uppercase tracking-wider"
-                      style={{
-                        backgroundColor: "rgba(203,161,53,0.08)",
-                        border: "1px solid rgba(203,161,53,0.15)",
-                        color: "#CBA135",
-                        fontFamily: "'Inter', sans-serif",
-                      }}
-                    >
-                      {partner.category}
-                    </span>
-                  </div>
                   <h3
                     className="text-lg font-semibold tracking-tight"
                     style={{ fontFamily: '"Playfair Display", serif' }}

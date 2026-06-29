@@ -39,42 +39,95 @@ const images = [
   },
 ];
 
-const verticals = [
+const platformFeatures = [
   {
-    title: "Healthcare Services",
-    description:
-      "Empowering clinics with technology, branding, patient acquisition, and operational excellence.",
+    title: "Technology",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
       </svg>
     ),
   },
   {
-    title: "Quantum Health Products",
-    description:
-      "Distributing cutting-edge health products and solutions across our network of clinics.",
+    title: "Digital Marketing",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 6V2M8 10l-4 4 4 4M16 10l4 4-4 4" />
+        <circle cx="12" cy="14" r="4" />
       </svg>
     ),
   },
   {
-    title: "Consultation Space Rental",
-    description:
-      "Providing premium, fully-equipped consultation spaces for healthcare professionals.",
+    title: "Telemedicine",
     icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-        <line x1="12" y1="6" x2="12" y2="10" />
-        <line x1="8" y1="6" x2="8" y2="10" />
-        <line x1="16" y1="6" x2="16" y2="10" />
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
       </svg>
     ),
   },
+  {
+    title: "Healthcare Products",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        <rect x="8" y="2" width="8" height="4" rx="1" />
+        <line x1="12" y1="11" x2="12" y2="17" />
+        <line x1="9" y1="14" x2="15" y2="14" />
+      </svg>
+    ),
+  },
+  {
+    title: "AI Health Screening",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a4 4 0 0 1 4 4c0 2-2 3-2 5h-4c0-2-2-3-2-5a4 4 0 0 1 4-4z" />
+        <path d="M12 14v4" />
+        <path d="M8 22h8" />
+        <path d="M12 18c-2 0-4-1-4-3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Doctor Networking",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Patient Acquisition",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="8.5" cy="7" r="4" />
+        <line x1="20" y1="8" x2="20" y2="14" />
+        <line x1="23" y1="11" x2="17" y2="11" />
+      </svg>
+    ),
+  },
+  {
+    title: "Business Growth Support",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+    ),
+  },
+];
+
+const locations = [
+  "Bengaluru",
+  "Hong Kong",
+  "Dubai",
+  "Canada",
 ];
 
 const stats = [
@@ -192,8 +245,8 @@ export default function About() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="relative h-[500px] md:h-[650px]">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="relative h-[500px] md:h-[650px] lg:sticky lg:top-32">
             <div className="relative w-full h-full">
               {images.map((img, i) => (
                 <ParallaxImage
@@ -237,75 +290,87 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-8"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              KO Clinics empowers independent healthcare providers through
-              technology, branding, patient acquisition, product distribution,
-              and healthcare infrastructure optimization.
+              KO Clinics is an AI-powered healthcare ecosystem committed to
+              making quality healthcare accessible while helping clinics improve
+              visibility, operational efficiency and profitability.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-white/50 text-sm tracking-wider uppercase mb-5"
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              KO Clinics operates across three integrated business verticals:
+              The platform combines
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="grid gap-4 mb-10"
+              className="grid grid-cols-2 gap-3 mb-10"
             >
-              {verticals.map((v, i) => (
+              {platformFeatures.map((feature) => (
                 <motion.div
-                  key={v.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="group relative overflow-hidden rounded-2xl p-5 transition-all duration-500 hover:translate-x-1"
+                  key={feature.title}
+                  whileHover={{ y: -2 }}
+                  className="group rounded-xl p-4 transition-all duration-300"
                   style={{
-                    background:
-                      "linear-gradient(135deg, rgba(203,161,53,0.08) 0%, rgba(255,255,255,0.03) 100%)",
-                    backdropFilter: "blur(16px)",
-                    WebkitBackdropFilter: "blur(16px)",
-                    border: "1px solid rgba(203,161,53,0.15)",
-                    boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+                    background: "rgba(255,255,255,0.04)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#CBA135] bg-[#CBA135]/10 transition-colors duration-300 group-hover:bg-[#CBA135]/20">
-                      {v.icon}
-                    </div>
-                    <div>
-                      <h3
-                        className="text-white text-lg font-semibold mb-1"
-                        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                      >
-                        {v.title}
-                      </h3>
-                      <p
-                        className="text-[#B7B7B7] text-sm leading-relaxed"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
-                      >
-                        {v.description}
-                      </p>
-                    </div>
+                  <div className="text-[#CBA135] mb-2 transition-colors duration-300 group-hover:text-[#F5D779]">
+                    {feature.icon}
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[#CBA135]/40 via-[#CBA135]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <p
+                    className="text-white text-sm font-medium leading-tight"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {feature.title}
+                  </p>
                 </motion.div>
               ))}
             </motion.div>
 
+            <motion.div
+              variants={itemVariants}
+              className="mb-8"
+            >
+              <p
+                className="text-white/50 text-sm tracking-wider uppercase mb-4"
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              >
+                Current Presence
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {locations.map((location) => (
+                  <motion.span
+                    key={location}
+                    whileHover={{ scale: 1.05 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(203,161,53,0.05) 100%)",
+                      border: "1px solid rgba(203,161,53,0.3)",
+                      fontFamily: "'Space Grotesk', sans-serif",
+                    }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]" />
+                    {location}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-base leading-relaxed mb-10 italic"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-white text-xl md:text-2xl font-semibold mb-10 italic"
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Together, these three verticals help clinics increase revenue,
-              improve utilization, expand services, and participate in
-              India&apos;s fastest-growing healthcare network.
+              &ldquo;Building a truly global healthcare network.&rdquo;
             </motion.p>
 
             <motion.div
