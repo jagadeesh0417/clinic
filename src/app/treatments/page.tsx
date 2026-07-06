@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { treatments, categories } from "@/data/treatments";
 import type { FaqItem } from "@/data/treatments";
 
+const FALLBACK_IMG = "https://picsum.photos/seed/fallback/800/600";
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
@@ -102,7 +104,7 @@ export default function TreatmentsPage() {
                           {treatment.description}
                         </p>
                       </div>
-                      <div className="flex shrink-0 gap-3">
+                      <div className="flex shrink-0 flex-wrap gap-3">
                         <a
                           href={`/treatments/${treatment.slug}`}
                           className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:border-[#CBA135]/40 hover:bg-[#CBA135]/10 hover:text-[#CBA135]"
@@ -118,22 +120,18 @@ export default function TreatmentsPage() {
                       </div>
                     </div>
 
-                    <div
-                      className={`grid gap-3 transition-all duration-500 ${
-                        expanded === treatment.slug
-                          ? "grid-cols-2 opacity-100 md:grid-cols-4"
-                          : "grid-cols-2 md:grid-cols-4"
-                      }`}
-                    >
+                    {/* Image grid - 4 cols desktop, 2 tablet, 1 mobile */}
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
                       {treatment.images.map((src, i) => (
                         <div
                           key={i}
                           className="group/img relative aspect-[4/3] overflow-hidden rounded-xl border border-white/[0.06] transition-all duration-500 hover:border-[#CBA135]/30 hover:shadow-lg hover:shadow-[#CBA135]/5"
-                          onClick={() => setExpanded(expanded === treatment.slug ? null : treatment.slug)}
                         >
                           <img
                             src={src}
                             alt={`${treatment.name} - Image ${i + 1}`}
+                            loading="lazy"
+                            onError={(e) => { (e.target as HTMLImageElement).src = FALLBACK_IMG; }}
                             className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/img:opacity-100" />
@@ -141,6 +139,7 @@ export default function TreatmentsPage() {
                       ))}
                     </div>
 
+                    {/* FAQ Accordion */}
                     {treatment.faq && treatment.faq.length > 0 && (
                       <div className="mt-6 border-t border-white/[0.06] pt-5">
                         <button
@@ -179,7 +178,7 @@ export default function TreatmentsPage() {
                     )}
                   </div>
 
-                  <div className="absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none"
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                     style={{
                       background: "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(203,161,53,0.03), transparent 40%)"
                     }}
