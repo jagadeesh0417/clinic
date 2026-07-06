@@ -1,3 +1,8 @@
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Treatment {
   slug: string;
   name: string;
@@ -5,6 +10,7 @@ export interface Treatment {
   description: string;
   longDescription: string;
   images: string[];
+  faq?: FaqItem[];
 }
 
 const img = (id: string) => `https://images.unsplash.com/${id}?w=800&q=85&auto=format`;
@@ -78,58 +84,96 @@ const images = {
   ],
 };
 
-function cat(name: string, imagesPool: string[], desc: string, longDesc: string): { images: string[] } {
-  return { images: imagesPool };
-}
-
 export const treatments: Treatment[] = [
   {
     slug: "sculptra",
     name: "Sculptra",
     category: "Anti-Ageing",
-    description: "Stimulate your skin's natural collagen production for gradual, long-lasting rejuvenation.",
-    longDescription: "Sculptra is a biostimulatory injectable that works deep within the skin to gradually restore your face's natural volume and structure. Unlike traditional fillers, Sculptra stimulates your own collagen production for results that build over time and can last up to two years.",
+    description: "An FDA-approved injectable biostimulator that stimulates your body's own collagen for natural, refined results lasting up to two years.",
+    longDescription: "Sculptra is an FDA-approved injectable biostimulator made from poly-L-lactic acid (PLLA), a biocompatible material used safely in medicine for decades. Unlike traditional fillers that add immediate volume, Sculptra works gradually by stimulating your body's own collagen — delivering natural, refined results that build over months and last up to two years. PLLA microparticles are injected into the deep dermis, triggering a controlled healing response that signals fibroblasts to produce new type I and III collagen, rebuilding the skin's structural framework. Over 8–12 weeks, this new collagen restores volume, improves skin thickness, and lifts sagging tissue. A typical protocol is 2–4 sessions spaced 4–6 weeks apart.",
     images: images.anti,
+    faq: [
+      { question: "When will I see results?", answer: "Early changes appear at 4–6 weeks. Full collagen-driven improvement is visible at 3–6 months and continues to refine." },
+      { question: "How long do results last?", answer: "Typically 18–24 months. Maintenance sessions extend outcomes indefinitely." },
+      { question: "How many sessions do I need?", answer: "Most patients require 2–4 sessions spaced 4–6 weeks apart." },
+      { question: "Is there downtime?", answer: "Minimal — mild swelling, redness, or bruising for 24–48 hours. Same-day return to normal activity." },
+      { question: "Can it be combined with other treatments?", answer: "Yes. Sculptra pairs beautifully with Botox, hyaluronic fillers, threads, and skin boosters in a comprehensive rejuvenation plan." },
+    ],
   },
   {
     slug: "non-surgical-breast-lift",
     name: "Non Surgical Breast Lift",
     category: "Breast",
-    description: "Lift and firm sagging breasts without incisions, scars, or downtime.",
-    longDescription: "Our non-surgical breast lift uses advanced technologies like thread lifts and energy-based devices to lift, tighten, and firm breast tissue. Achieve a youthful contour without the risks of traditional surgery.",
+    description: "A combination protocol that lifts, firms, and restores breast appearance without incisions, anaesthesia, or implants.",
+    longDescription: "A non-surgical breast lift is a combination protocol that lifts, firms, and restores the appearance of the breast without incisions, general anaesthesia, or implants. At KO Clinics, this may involve cog threads, PLLA biostimulators, HIFU, and radiofrequency — chosen and combined based on your anatomy and goals. Barbed cog threads are inserted into the subcutaneous tissue of the upper breast and anchored to lift the tissue mechanically. Biostimulators like Sculptra and Profhilo are then injected to rebuild collagen and improve skin quality. HIFU or RF energy tightens the deeper support layers. The combined effect is immediate lift plus progressive firming over 3–6 months.",
     images: images.breast,
+    faq: [
+      { question: "How much lift can I expect?", answer: "Typically 1–3 cm of visible lift, plus improved firmness and skin quality. Best suited to mild-to-moderate sagging." },
+      { question: "How long do results last?", answer: "12–18 months on average, depending on skin quality, age, and lifestyle." },
+      { question: "Is it painful?", answer: "Local anaesthesia is used. Most patients report only mild discomfort." },
+      { question: "When can I return to work?", answer: "24–48 hours. Avoid heavy exercise and underwire bras for 2 weeks." },
+      { question: "Does it interfere with mammograms or breastfeeding?", answer: "No — the treatment does not affect breast tissue function or imaging." },
+    ],
   },
   {
     slug: "non-surgical-tummy-tuck",
     name: "Non Surgical Tummy Tuck",
     category: "Body Contouring",
-    description: "Tighten abdominal skin and reduce fat without going under the knife.",
-    longDescription: "Combining focused ultrasound, radiofrequency, and cryolipolysis, our non-surgical tummy tuck tightens loose skin and eliminates stubborn fat cells for a flatter, more contoured abdomen.",
+    description: "A comprehensive body-contouring protocol that tightens abdominal skin, reduces fat, and improves tone without incisions.",
+    longDescription: "A non-surgical tummy tuck is a comprehensive body-contouring protocol that tightens abdominal skin, reduces stubborn fat, and improves muscle tone — without incisions or downtime. It typically combines HIFU or radiofrequency skin tightening, cog threads, and body biostimulators. Deep-focused ultrasound or RF energy is delivered to the subdermal layers, causing controlled thermal injury that triggers collagen remodelling and skin tightening. Cog threads may be added for immediate mechanical lift. Biostimulators improve texture and firmness. Results develop progressively over 3–6 months as new collagen forms.",
     images: images.body,
+    faq: [
+      { question: "Will it remove fat?", answer: "Some protocols include energy-based fat reduction, but this is primarily a skin tightening and contour treatment." },
+      { question: "How many sessions?", answer: "Usually 3–6 sessions spaced 2–4 weeks apart." },
+      { question: "Is there downtime?", answer: "None to minimal. Mild redness or tenderness may last 24 hours." },
+      { question: "When will I see results?", answer: "Gradual improvement from week 4, peaking at 3–6 months." },
+      { question: "Is it safe after C-section?", answer: "Yes, once fully healed (typically 6+ months post-op) and with medical clearance." },
+    ],
   },
   {
     slug: "liquid-face-lift",
     name: "Liquid Face Lift",
     category: "Anti-Ageing",
-    description: "Restore volume and lift facial contours using advanced dermal fillers and biostimulators.",
-    longDescription: "The liquid face lift uses a strategic combination of dermal fillers, Sculptra, and neurotoxins to recreate the effects of a surgical facelift — lifting cheeks, defining the jawline, and smoothing folds — all without incisions.",
+    description: "A bespoke non-surgical rejuvenation using precisely placed fillers and neuromodulators to lift and redefine facial contours.",
+    longDescription: "A liquid face lift is a bespoke, non-surgical rejuvenation that uses precisely placed dermal fillers and neuromodulators to lift, restore volume, and redefine facial contours. It replaces the surgical facelift for patients wanting refined results without incisions or downtime. Hyaluronic acid fillers are strategically injected in the temples, cheeks, tear troughs, jawline, and chin to restore lost volume and lift descended tissue. Botox is used to relax pulling muscles that drag the face downward. Biostimulators may be added for skin quality and long-term collagen support. The combination creates an instant, natural-looking lift.",
     images: images.filler,
+    faq: [
+      { question: "How is this different from a surgical facelift?", answer: "No incisions, no anaesthesia, no downtime. Results are subtler and last 12–24 months rather than 10+ years." },
+      { question: "How long does it last?", answer: "12–24 months depending on filler type and metabolism." },
+      { question: "How much filler is used?", answer: "Highly personalised — typically 3–8 ml across a single session." },
+      { question: "Is it painful?", answer: "Numbing cream is used and most modern fillers contain lidocaine. Discomfort is minimal." },
+      { question: "Can I go back to work the next day?", answer: "Yes. Mild swelling or bruising may occur but is usually manageable." },
+    ],
   },
   {
     slug: "non-surgical-face-lift",
     name: "Non Surgical Face Lift",
     category: "Anti-Ageing",
-    description: "Advanced thread and energy-based technologies to lift and redefine facial contours.",
-    longDescription: "Using PDO threads, HIFU, and radiofrequency, our non-surgical face lift tightens sagging skin, lifts brows and cheeks, and stimulates collagen for natural-looking rejuvenation.",
+    description: "Advanced energy-based technologies — HIFU, MNRF, and threads — to lift, tighten, and rejuvenate without surgery.",
+    longDescription: "A non-surgical face lift uses advanced energy-based technologies — HIFU, MNRF, threads — either individually or combined to lift, tighten, and rejuvenate the face without surgery. It's ideal for patients seeking meaningful lift with zero downtime and no incisions. HIFU delivers focused ultrasound energy to the SMAS layer (the same layer surgeons tighten in a facelift), triggering collagen contraction and long-term remodelling. MNRF delivers radiofrequency through microneedles to remodel dermal collagen. PDO or PLLA threads mechanically lift tissue. Results develop over 2–3 months and continue improving up to 6 months.",
     images: images.anti,
+    faq: [
+      { question: "Which technology is right for me?", answer: "This depends on your skin, age, and goals. Dr. Singh will assess and recommend the most effective combination during consultation." },
+      { question: "How long do results last?", answer: "12–18 months typically. Maintenance sessions extend outcomes." },
+      { question: "Is one session enough?", answer: "Some patients see meaningful improvement in one session; most benefit from a series of 2–3." },
+      { question: "Is it painful?", answer: "Discomfort is mild with topical numbing. Sensations vary by technology." },
+      { question: "Can this replace a facelift?", answer: "For mild to moderate ageing, yes. For severe laxity, surgery remains the gold standard." },
+    ],
   },
   {
     slug: "micro-bio-fue-hair-transplant",
     name: "Micro Bio FUE Hair Transplant",
     category: "Hair Restoration",
-    description: "Ultra-precise follicular unit extraction for natural, dense hair restoration.",
-    longDescription: "Our Micro Bio FUE technique uses microscopic extraction tools to harvest individual hair follicles with zero linear scarring. The result is completely natural hair restoration with rapid healing.",
+    description: "Ultra-fine micro-punch extraction combined with biological enhancement for dense, natural-looking hair restoration.",
+    longDescription: "Micro Bio-FUE is an advanced hair restoration technique that uses ultra-fine micro-punches (0.6–0.8 mm) to extract individual hair follicles, combined with biological enhancement (PRP, exosomes, or stem cells) to improve graft survival and stimulate the surrounding scalp. The result is dense, natural-looking growth with minimal scarring. Under local anaesthesia, individual follicular units are harvested from the donor area (usually the back of the scalp) using a micro-motorised punch. The extracted grafts are treated in a biological solution (PRP or exosome-enriched medium) to enhance viability. They're then implanted into the recipient area at natural angles to recreate a realistic hairline. Growth begins at 3 months and matures by 12 months.",
     images: images.hair,
+    faq: [
+      { question: "How many grafts do I need?", answer: "Depends on the area and density desired — typically 1,500–4,000 grafts per session." },
+      { question: "Will it look natural?", answer: "Yes — micro-punch technique and precise angling ensure a natural hairline and density pattern." },
+      { question: "When will I see results?", answer: "Initial growth at 3 months, meaningful density at 6 months, final results at 12 months." },
+      { question: "Is there a scar?", answer: "Micro-FUE leaves no linear scar. Extraction sites heal invisibly within 7–10 days." },
+      { question: "Is it permanent?", answer: "Transplanted hair is genetically resistant to balding and grows for life." },
+    ],
   },
   {
     slug: "stem-cell-therapy",

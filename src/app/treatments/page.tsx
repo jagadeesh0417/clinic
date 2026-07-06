@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { treatments, categories } from "@/data/treatments";
+import type { FaqItem } from "@/data/treatments";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -17,6 +18,7 @@ const stagger = {
 export default function TreatmentsPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   const filtered = activeCategory === "All"
     ? treatments
@@ -138,6 +140,43 @@ export default function TreatmentsPage() {
                         </div>
                       ))}
                     </div>
+
+                    {treatment.faq && treatment.faq.length > 0 && (
+                      <div className="mt-6 border-t border-white/[0.06] pt-5">
+                        <button
+                          onClick={() => setOpenFaq(openFaq === treatment.slug ? null : treatment.slug)}
+                          className="flex w-full items-center justify-between"
+                        >
+                          <span className="font-['Space_Grotesk'] text-xs tracking-wider uppercase text-[#CBA135]">
+                            Frequently Asked Questions
+                          </span>
+                          <svg
+                            className={`h-4 w-4 text-white/40 transition-transform duration-300 ${openFaq === treatment.slug ? "rotate-180" : ""}`}
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                          >
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
+                        </button>
+                        <AnimatePresence>
+                          {openFaq === treatment.slug && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="mt-4 space-y-3 overflow-hidden"
+                            >
+                              {treatment.faq.map((item, fi) => (
+                                <div key={fi} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3">
+                                  <p className="font-['Inter'] text-sm font-medium text-white/80">{item.question}</p>
+                                  <p className="mt-1 font-['Inter'] text-xs leading-relaxed text-white/40">{item.answer}</p>
+                                </div>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
                   </div>
 
                   <div className="absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none"

@@ -1,13 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { getTreatmentBySlug, treatments } from "@/data/treatments";
 
 export default function TreatmentDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
   const treatment = getTreatmentBySlug(slug);
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   if (!treatment) {
     return (
@@ -83,6 +85,53 @@ export default function TreatmentDetailPage() {
             {treatment.longDescription}
           </p>
         </motion.div>
+
+        {treatment.faq && treatment.faq.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="mt-12"
+          >
+            <h2 className="font-['Playfair_Display'] text-2xl font-bold text-white">
+              Frequently Asked <span className="text-[#CBA135]">Questions</span>
+            </h2>
+            <div className="mt-6 space-y-3">
+              {treatment.faq.map((item, fi) => (
+                <div key={fi} className="overflow-hidden rounded-2xl border border-white/[0.06] transition-all duration-300 hover:border-[#CBA135]/20">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === `q-${fi}` ? null : `q-${fi}`)}
+                    className="flex w-full items-center justify-between px-6 py-4 text-left"
+                    style={{ background: "rgba(255,255,255,0.03)" }}
+                  >
+                    <span className="flex-1 font-['Inter'] text-sm font-medium text-white/80 pr-4">{item.question}</span>
+                    <svg
+                      className={`h-4 w-4 shrink-0 text-white/40 transition-transform duration-300 ${openFaq === `q-${fi}` ? "rotate-180" : ""}`}
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === `q-${fi}` && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="border-t border-white/[0.06] px-6 py-4">
+                          <p className="font-['Inter'] text-sm leading-relaxed text-white/50">{item.answer}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
