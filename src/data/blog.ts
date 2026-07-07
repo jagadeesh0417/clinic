@@ -1,0 +1,206 @@
+export interface BlogPost {
+  slug: string;
+  title: string;
+  date: string;
+  category: string;
+  source: string;
+  excerpt: string;
+  content: string[];
+  takeaways?: string[];
+  faq?: { q: string; a: string }[];
+  imageSeed: string;
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "post-treatment-care-guide-for-dermal-fillers",
+    title: "Post-Treatment Care Guide for Dermal Fillers",
+    date: "March 2, 2026",
+    category: "Aftercare",
+    source: "liquidfacelift.in",
+    excerpt: "Dermal fillers provide immediate volume restoration and contour enhancement — but proper aftercare plays a crucial role in achieving smooth, natural results.",
+    content: [
+      "Dermal fillers provide immediate volume restoration and contour enhancement — but proper aftercare plays a crucial role in achieving smooth, natural results. Understanding what to expect and how to care for your skin after treatment ensures optimal healing and longevity.",
+      "What is normal after fillers? Immediately after your procedure, you may experience mild swelling, slight redness, tenderness at injection sites, and minor bruising. These effects are temporary and typically settle within a few days. Mild asymmetry during the first 48 hours is common due to swelling and usually resolves naturally.",
+      "First 24 hours — what to avoid: Touching or massaging the treated area unless instructed. Intense exercise. Alcohol. Excessive heat — sauna, steam, hot showers. Lying face-down; keep your head slightly elevated while resting.",
+      "First 48 hours — extra precautions: Facial treatments or massages. Dental procedures. Heavy pressure on treated areas. Use gentle skincare products only. Light makeup can usually be applied after 12–24 hours if there are no open injection points.",
+      "Managing swelling & bruising: Apply a cold compress gently (wrapped in cloth). Stay hydrated. Avoid blood-thinning medications unless prescribed. Bruising, if present, usually fades within 5–7 days.",
+      "Final results & timeline: Although results are visible immediately, final refinement appears once swelling subsides — usually within 7–14 days. A follow-up review may be scheduled to assess results and determine minor adjustments.",
+      "When to contact your doctor: While complications are rare when performed by an experienced professional, contact your clinic immediately if you notice severe or increasing pain, skin discoloration (especially pale or dusky patches), persistent swelling beyond 7 days, or signs of infection. Early intervention ensures safety.",
+      "How long do fillers last? Longevity depends on the area treated, product used, and individual metabolism. Most dermal fillers last between 12–24 months. Regular maintenance sessions help preserve structure and contour.",
+      "Long-term care tips: Follow a good skincare routine. Protect your skin from sun exposure. Maintain hydration. Schedule review consultations. Remember — fillers are not just about volume; they are about facial harmony.",
+    ],
+    takeaways: [
+      "Mild swelling, redness, and bruising are normal and settle within a few days",
+      "Avoid touching, heat, alcohol, and exercise for the first 24–48 hours",
+      "Final results refine within 7–14 days after swelling subsides",
+      "Most fillers last 12–24 months with proper maintenance",
+      "Contact your doctor immediately if you notice severe pain or skin discoloration",
+    ],
+    faq: [
+      { q: "When will I see the final results?", a: "Although results are visible immediately, final refinement appears once swelling subsides — usually within 7–14 days." },
+      { q: "How long do fillers last?", a: "Longevity depends on the area treated, product used, and individual metabolism. Most dermal fillers last between 12–24 months." },
+      { q: "Can I wear makeup after treatment?", a: "Light makeup can usually be applied after 12–24 hours if there are no open injection points." },
+      { q: "When should I contact my doctor?", a: "Contact your clinic immediately if you notice severe or increasing pain, skin discoloration (especially pale or dusky patches), persistent swelling beyond 7 days, or signs of infection." },
+    ],
+    imageSeed: "filler-care",
+  },
+  {
+    slug: "what-to-expect-during-your-first-liquid-face-lift",
+    title: "What to Expect During Your First Liquid Face Lift",
+    date: "March 2, 2026",
+    category: "Procedure",
+    source: "liquidfacelift.in",
+    excerpt: "Thinking about a Liquid Face Lift but unsure what really happens during your first appointment? Here's a complete breakdown — step by step.",
+    content: [
+      "Thinking about a Liquid Face Lift but unsure what really happens during your first appointment? You're not alone. Most patients are curious about the process, the comfort level, and how natural the results will look. Here's a complete breakdown — step by step.",
+      "1. Detailed facial assessment & consultation — Your journey begins with a comprehensive facial evaluation. The doctor carefully studies skin quality, volume loss areas, facial symmetry, jawline definition, under-eye hollowness, and wrinkle patterns. This is not a \u2018one-size-fits-all\u2019 treatment — a customised plan is created based on your facial anatomy and aesthetic goals. Photographs may be taken for planning and comparison.",
+      "2. Facial mapping & treatment planning — Strategic facial mapping determines where volume needs restoration, where lifting is required, which areas need wrinkle relaxation, and how to maintain natural proportions. The goal is enhancement — not overfilling.",
+      "3. Preparation & comfort measures — Skin is cleansed thoroughly. Topical numbing cream is applied to ensure comfort. Most patients describe the procedure as mildly uncomfortable rather than painful. Ice or vibration devices may be used to reduce sensitivity.",
+      "4. The procedure itself — The Liquid Face Lift combines multiple advanced techniques — Botox for dynamic wrinkles, dermal fillers for volume restoration, thread lifts for mechanical lifting, and skin boosters for glow. The procedure typically takes 45–90 minutes. You remain awake throughout, and results are visible immediately in many cases.",
+      "5. Immediately after treatment — You may notice mild swelling, slight redness, and minor bruising. These effects usually settle within a few days. Most patients return to work the same day or the next.",
+      "6. When will you see results? — Some results are immediate — especially with fillers. Collagen stimulation treatments improve gradually, and final refined results appear over 2–4 weeks. The outcome is a lifted, contoured, refreshed look — without surgery.",
+      "7. How long do results last? — Depending on the products used and your metabolism, results can last 12–24 months. Maintenance sessions may be recommended. A personalised follow-up plan is discussed during consultation.",
+      "8. Is it safe? — When performed by a qualified and experienced aesthetic specialist using approved products, the Liquid Face Lift is considered safe and effective. Choosing the right expert is critical to achieving natural, balanced results.",
+      "Your first Liquid Face Lift is not about drastic change. It's about subtle rejuvenation. Restoring structure. Enhancing your natural features. Looking refreshed — not altered.",
+    ],
+    takeaways: [
+      "A comprehensive facial assessment and customised treatment plan are created before any injections",
+      "The procedure combines Botox, fillers, thread lifts, and skin boosters as needed",
+      "Treatment takes 45–90 minutes with immediate return to daily activities",
+      "Results are immediate with fillers; collagen treatments refine over 2–4 weeks",
+      "Results typically last 12–24 months depending on products and metabolism",
+    ],
+    imageSeed: "liquid-face-lift-first",
+  },
+  {
+    slug: "botox-vs-fillers-understanding-the-difference",
+    title: "Botox vs Fillers — Understanding the Difference",
+    date: "March 2, 2026",
+    category: "Comparison",
+    source: "liquidfacelift.in",
+    excerpt: "Botox and dermal fillers are often mentioned together — and frequently confused. While both are non-surgical aesthetic treatments, they work in completely different ways.",
+    content: [
+      "Botox and dermal fillers are often mentioned together — and frequently confused. While both are non-surgical aesthetic treatments used to reduce signs of ageing, they work in completely different ways.",
+      "What is Botox? — Botox is a neuromodulator that relaxes targeted facial muscles. Certain wrinkles are caused by repeated muscle movement — forehead lines, frown lines, crow's feet. These are dynamic wrinkles. Botox temporarily reduces muscle activity, allowing the skin to smooth out. The result is a softer, more refreshed appearance. Best for expression lines, preventing deeper wrinkle formation, and upper face rejuvenation. Results visible in 3–7 days and last approximately 3–6 months.",
+      "What are dermal fillers? — Dermal fillers are injectable gels (commonly hyaluronic acid-based) used to restore lost volume and enhance facial contours. As we age, we lose facial fat, collagen, and structural support — this leads to sagging, hollow areas, and deeper folds. Fillers replace volume and reshape areas such as cheeks, jawline, chin, under-eyes, and nasolabial folds. Results are immediate and last 12–24 months.",
+      "Key differences at a glance — Botox relaxes muscles, treats dynamic wrinkles, works over days, and has a shorter duration (3–6 months). Fillers restore volume, treat static wrinkles and hollowness, show immediate results, and last longer (12–24 months). They are not competitors — they serve different purposes.",
+      "Which one do you need? — It's rarely Botox or fillers. In many cases, optimal facial rejuvenation requires a strategic combination — relaxing forehead lines with Botox, restoring cheek volume with fillers, softening jaw tension, and enhancing chin definition. A proper facial assessment determines what your face actually needs.",
+      "Botox smooths. Fillers sculpt. Together, they can create a balanced, refreshed, naturally youthful appearance — without surgery.",
+    ],
+    takeaways: [
+      "Botox relaxes muscles to smooth dynamic wrinkles; fillers restore volume to treat static wrinkles and hollowness",
+      "Botox results appear in 3–7 days and last 3–6 months; filler results are immediate and last 12–24 months",
+      "Botox is best for expression lines and upper face rejuvenation; fillers reshape cheeks, jawline, chin, and under-eyes",
+      "Optimal results often come from a strategic combination of both treatments",
+    ],
+    imageSeed: "botox-vs-fillers",
+  },
+  {
+    slug: "bio-fue-benefits-for-hair-transplant",
+    title: "Bio FUE — Benefits for Hair Transplant",
+    date: "June 30, 2025",
+    category: "Hair Restoration",
+    source: "drvikassingh.co.in",
+    excerpt: "Bio FUE combines micro-precision follicular extraction with biological enhancement for superior hair restoration outcomes.",
+    content: [
+      "Bio FUE represents a significant advancement in hair restoration, combining ultra-fine follicular extraction with biological enhancement for superior outcomes.",
+      "Minimally invasive technique — Uses ultra-fine punches and precision tools for follicle extraction, minimising scalp trauma and ensuring faster healing.",
+      "Natural-looking results — Allows for artistic hairline design and high-density implantation, delivering fuller, natural-looking hair growth.",
+      "Enhanced graft survival — Combines FUE with biological boosters like PRP or stem cells, improving graft viability and long-term retention.",
+      "Scarless procedure — Micro punches (0.6–0.8 mm) leave no visible linear scars, allowing for short hairstyles post-transplant.",
+      "Faster recovery time — Reduced scalp trauma means quicker healing and minimal downtime, with most individuals resuming routine activities in a few days.",
+      "Stronger, healthier hair growth — Biological enhancement promotes thicker, stronger hair strands and rejuvenates existing hair in thinning areas.",
+      "Long-term durability — High graft retention rates ensure sustainable, natural hair growth for years to come.",
+    ],
+    takeaways: [
+      "Ultra-fine micro punches (0.6–0.8 mm) minimise scalp trauma and leave no visible linear scars",
+      "Biological boosters like PRP or stem cells improve graft viability and long-term retention",
+      "Artistic hairline design and high-density implantation deliver natural-looking results",
+      "Minimal downtime — most individuals resume routine activities within a few days",
+      "Long-term durability with high graft retention rates",
+    ],
+    imageSeed: "bio-fue-hair",
+  },
+  {
+    slug: "hifu-vs-face-lift",
+    title: "HIFU vs Face Lift — Which is Right for You?",
+    date: "June 30, 2025",
+    category: "Comparison",
+    source: "drvikassingh.co.in",
+    excerpt: "As we age, sagging skin, wrinkles, and loss of facial definition become inevitable. Compare non-invasive HIFU with surgical face lift to find the right option.",
+    content: [
+      "As we age, sagging skin, wrinkles, and loss of facial definition become inevitable. Fortunately, advancements in aesthetic medicine offer multiple ways to address these concerns — from non-invasive treatments to surgical solutions.",
+      "What is HIFU? — A revolutionary, non-invasive treatment using focused ultrasound energy to penetrate deep into the skin, targeting the same structural layers addressed in surgical face lifts. Stimulates collagen production in deeper skin layers, gradually lifting and tightening the face, jawline, and neck. No needles, incisions, or recovery time — often called the \u2018lunch-time face lift.\u2019",
+      "What is a surgical face lift? — A rhytidectomy — a surgical procedure that physically lifts and repositions sagging skin and underlying tissues. Tightens loose skin, smooths deep wrinkles, corrects jowls. More dramatic and long-lasting than non-surgical options. Requires downtime and carries surgical risks, but remains the gold standard for significant, long-term facial rejuvenation.",
+      "Key differences — HIFU is non-surgical and non-invasive with minimal to no downtime; results are gradual over 2–3 months and last 12–18 months; best for mild to moderate laxity; no anaesthesia required; no scarring. Face lift surgery requires incisions, 1–2 weeks recovery, immediate visible improvement lasting 5–10 years; best for moderate to severe sagging; requires general or local anaesthesia; scarring is minimal and hidden in natural folds.",
+      "Who is the right candidate for HIFU? — Individuals in their 30s to 50s with mild-to-moderate skin laxity; those wanting gradual, natural-looking lifting; prevention of early ageing signs; anyone not ready for surgery.",
+      "Who is the right candidate for face lift surgery? — Those with significant sagging, deep wrinkles, and jowls; wanting dramatic, long-lasting results; have exhausted non-surgical options; comfortable with downtime and surgical recovery.",
+      "Can you combine HIFU with other treatments? — Yes — with Botox, Fillers, PRP, or Thread Lifts to enhance rejuvenation. Many patients use HIFU to maintain results after a surgical face lift.",
+    ],
+    takeaways: [
+      "HIFU targets the same SMAS layer as surgical face lifts but without incisions or downtime",
+      "HIFU results develop gradually over 2–3 months and last 12–18 months",
+      "Surgical face lifts provide immediate, dramatic results lasting 5–10 years",
+      "HIFU is ideal for ages 30–50 with mild-to-moderate laxity; surgery suits more advanced ageing",
+      "HIFU can be combined with Botox, fillers, PRP, or thread lifts for enhanced results",
+    ],
+    imageSeed: "hifu-vs-facelift",
+  },
+  {
+    slug: "benefits-of-the-vampire-face-lift",
+    title: "Benefits of the Vampire Face Lift",
+    date: "June 30, 2025",
+    category: "Regenerative",
+    source: "drvikassingh.co.in",
+    excerpt: "The Vampire Face Lift combines your body's own Platelet-Rich Plasma with dermal fillers for natural, long-lasting rejuvenation.",
+    content: [
+      "The Vampire Face Lift combines the power of your body's own Platelet-Rich Plasma (PRP) with dermal fillers for comprehensive facial rejuvenation.",
+      "Natural rejuvenation — Uses your body's own PRP to stimulate collagen production and skin healing.",
+      "Improved skin texture & tone — Smoothens rough texture, tightens pores, and enhances overall skin quality.",
+      "Reduction of fine lines & wrinkles — Minimises the appearance of early ageing signs by plumping and firming the skin.",
+      "Restored facial volume — Subtly restores lost volume in areas like cheeks, under-eyes, and smile lines for a youthful, lifted look.",
+      "Brighter, healthier complexion — Promotes skin radiance by improving blood flow and cellular regeneration.",
+      "Minimally invasive with minimal downtime — Quick injectable treatment with little to no recovery compared to surgical procedures.",
+      "Safe & biocompatible — Uses your own PRP, reducing the risk of allergic reactions or adverse effects.",
+      "Gradual, long-lasting results — Results improve over weeks as collagen builds, offering natural, long-lasting rejuvenation.",
+    ],
+    takeaways: [
+      "Uses your body's own PRP for natural, biocompatible rejuvenation",
+      "Improves skin texture, tone, and tightness while reducing fine lines and wrinkles",
+      "Restores facial volume in cheeks, under-eyes, and smile lines",
+      "Minimally invasive with minimal downtime compared to surgical alternatives",
+      "Results improve gradually over weeks as collagen builds naturally",
+    ],
+    imageSeed: "vampire-face-lift-benefits",
+  },
+  {
+    slug: "exosomes-in-hair-loss-the-future-of-hair-regrowth",
+    title: "Exosomes in Hair Loss — The Future of Hair Regrowth",
+    date: "June 30, 2025",
+    category: "Hair Restoration",
+    source: "drvikassingh.co.in",
+    excerpt: "Hair loss can significantly affect self-esteem and confidence. Modern regenerative medicine now offers science-backed solutions through exosome therapy.",
+    content: [
+      "Hair loss is no longer just a cosmetic concern — it can significantly affect self-esteem, confidence, and overall well-being. While traditional treatments like medications and transplants have helped many, modern regenerative medicine is now offering new, science-backed solutions.",
+      "What are exosomes? — Tiny, nano-sized vesicles naturally released by cells, particularly stem cells. They act as messengers carrying essential growth factors, proteins, and genetic material between cells, triggering healing and regeneration. In hair loss treatments, exosomes derived from stem cells are rich in growth factors, anti-inflammatory proteins, and cellular signalling molecules. When applied to the scalp, exosomes stimulate dormant hair follicles, enhance scalp health, and promote stronger, healthier hair.",
+      "How do exosomes work for hair loss? — They reactivate dormant or weakened hair follicles, improve blood circulation to the scalp, reduce inflammation that impedes healthy hair growth, stimulate collagen and extracellular matrix production, and prolong the hair growth cycle (anagen phase). The result: fuller, stronger, denser hair regrowth — without surgery or downtime.",
+      "Key benefits — Non-surgical and minimally invasive with simple injections or topical application with microneedling. Regenerative and natural using stem cell-derived exosomes. Faster recovery with minimal downtime — resume daily activities immediately. Suitable for both men and women, treating male pattern baldness, female thinning, and stress-related shedding.",
+      "Ideal candidates — Early-stage hair thinning or receding hairlines, diffuse hair loss due to stress or hormonal changes, postpartum hair shedding, individuals seeking natural regenerative alternatives, and those looking to improve scalp health.",
+      "What to expect during treatment — 1. Consultation & scalp assessment: examination of scalp, hair density, medical history. 2. Exosome application: injected into the scalp or applied topically after microneedling. 3. Post-treatment care: mild redness or sensitivity may occur; resume normal activities same day. 4. Visible results: reduced shedding and early signs of new hair growth within 8–12 weeks.",
+      "Why exosomes over traditional treatments? — Unlike medications (which manage symptoms) or surgeries (which transplant existing hair), exosome therapy targets the root cause of hair thinning by enhancing natural regenerative processes.",
+    ],
+    takeaways: [
+      "Exosomes are nano-sized vesicles carrying growth factors that trigger healing and regeneration",
+      "They reactivate dormant follicles, improve circulation, reduce inflammation, and prolong the hair growth cycle",
+      "Non-surgical and minimally invasive with same-day return to normal activities",
+      "Suitable for both men and women experiencing various types of hair loss",
+      "Visible results including reduced shedding and new hair growth within 8–12 weeks",
+    ],
+    imageSeed: "exosomes-hair",
+  },
+];
+
+export const blogCategories = [
+  ...new Set(blogPosts.map(p => p.category)),
+];
