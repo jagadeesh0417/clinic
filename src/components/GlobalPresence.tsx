@@ -6,36 +6,46 @@ import { useEffect, useState } from "react";
 interface LocationGroup {
   name: string;
   detail: string;
-  type: "india" | "international" | "future";
+  type: "bengaluru" | "india" | "international";
   cx: number;
   cy: number;
+  address?: string;
+  phone?: string;
+  email?: string;
+  hours?: string;
 }
 
 const locations: LocationGroup[] = [
-  { name: "Bengaluru", detail: "India Headquarters · Koramangala", type: "india", cx: 620, cy: 345 },
-  { name: "Hyderabad", detail: "HITEC City · Medical Hub", type: "india", cx: 635, cy: 360 },
-  { name: "Mumbai", detail: "Bandra Kurla Complex", type: "india", cx: 600, cy: 340 },
-  { name: "Delhi", detail: "Connaught Place", type: "india", cx: 630, cy: 310 },
-  { name: "Chennai", detail: "Guindy · Medical District", type: "india", cx: 650, cy: 375 },
-  { name: "Kolkata", detail: "Salt Lake Sector V", type: "india", cx: 680, cy: 330 },
-  { name: "Pune", detail: "Koregaon Park", type: "india", cx: 600, cy: 355 },
-  { name: "Ahmedabad", detail: "SG Highway", type: "india", cx: 570, cy: 330 },
-  { name: "Hong Kong", detail: "Tuen Mun Centre", type: "international", cx: 740, cy: 290 },
-  { name: "Dubai", detail: "Dubai Healthcare City", type: "international", cx: 590, cy: 310 },
-  { name: "Canada", detail: "Toronto · York Region", type: "international", cx: 200, cy: 270 },
-  { name: "Middle East", detail: "Future Expansion", type: "future", cx: 570, cy: 305 },
-  { name: "Europe", detail: "Future Expansion", type: "future", cx: 460, cy: 230 },
-  { name: "North America", detail: "Future Expansion", type: "future", cx: 200, cy: 290 },
-  { name: "South East Asia", detail: "Future Expansion", type: "future", cx: 710, cy: 360 },
+  // Bengaluru
+  { name: "Koramangala (HQ)", detail: "KO Clinics HQ", type: "bengaluru", cx: 620, cy: 345, address: "52, Koramangala 4th Block, near Sony World signal, 3rd floor, Bengaluru, Karnataka 560034" },
+  { name: "Jayanagar", detail: "KO Clinics \u2014 La Crown Wellness", type: "bengaluru", cx: 618, cy: 348, address: "No. 37, First Floor, Ashoka Pillar Road, 10th Main Rd, 2nd Block, Jayanagar, Bengaluru 560011" },
+  { name: "Frazer Town", detail: "KO Clinic \u2014 Ritz Medical Center", type: "bengaluru", cx: 622, cy: 342, address: "8, Mosque Rd, Cleveland Town, Frazer Town, Bengaluru 560005" },
+  { name: "Indiranagar", detail: "KO Clinic \u2014 Dathura", type: "bengaluru", cx: 625, cy: 344, address: "No. 221, 1st Floor, Indiranagar 1st Main Rd, Stage 2, Domlur, Bengaluru 560071" },
+  { name: "Banashankari", detail: "KO Clinics \u2014 Glowskin Clinic", type: "bengaluru", cx: 615, cy: 350, address: "3rd Floor, No. 241, 7th A Cross Rd, opp Kamakya Theater, 6th Block, 3rd Phase, Banashankari, Bengaluru 560085" },
+  { name: "OMBR Layout", detail: "KO Clinics \u2014 Apollo Kosmedixx", type: "bengaluru", cx: 623, cy: 343, address: "318, B. Channasandra Main Rd, OMBR Layout, Banaswadi, Bengaluru 560043" },
+  { name: "HBR Layout", detail: "Address to be confirmed", type: "bengaluru", cx: 624, cy: 341 },
+  // Other India
+  { name: "Hyderabad", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 635, cy: 360 },
+  { name: "Delhi", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 630, cy: 310 },
+  { name: "Pune", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 600, cy: 355 },
+  { name: "Mangalore", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 608, cy: 365 },
+  { name: "Chennai", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 650, cy: 375 },
+  { name: "Visakhapatnam", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 665, cy: 360 },
+  { name: "Mumbai", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 600, cy: 340 },
+  // International
+  { name: "Hong Kong", detail: "Sun Tuen Mun Center", type: "international", cx: 740, cy: 290, address: "55-65 Lung Mun Road, Sun Tuen Mun Center, Tuen Mun, New Territories, Hong Kong", phone: "+852 6082 3699" },
+  { name: "Bangkok", detail: "JLK Tower, Sukhumvit Rd", type: "international", cx: 720, cy: 310, address: "JLK Tower, 129 Sukhumvit Rd, Khlong Toei Nuea, Watthana, Bangkok 10110" },
+  { name: "Bahrain", detail: "Shaikh Isa Causeway", type: "international", cx: 590, cy: 300, address: "7J62+X92, Shaikh Isa Causeway, Al Sayh, Bahrain" },
+  { name: "Dubai, UAE", detail: "+971 54 536 6831", type: "international", cx: 585, cy: 305, phone: "+971 54 536 6831" },
+  { name: "Canada", detail: "+1 (647) 581-4279", type: "international", cx: 200, cy: 270, phone: "+1 (647) 581-4279" },
+  { name: "Manila", detail: "Address to be confirmed", type: "international", cx: 710, cy: 360, phone: "+63 966 168 8381" },
 ];
 
 const connectionPairs: [number, number][] = [
-  [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7],
-  [2, 9], [3, 9],
-  [4, 5], [5, 8],
-  [9, 10], [9, 11],
-  [10, 12], [11, 12], [12, 13],
-  [8, 14], [13, 14],
+  [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6],
+  [7, 8], [7, 9], [7, 10], [7, 11], [7, 12], [7, 13],
+  [14, 15], [14, 16], [14, 17], [14, 18],
+  [15, 19], [16, 17], [18, 19],
 ];
 
 function ConnectionLine({ from, to, delay }: { from: { cx: number; cy: number }; to: { cx: number; cy: number }; delay: number }) {
@@ -118,17 +128,17 @@ function GlowingMarker({ cx, cy, delay, color }: { cx: number; cy: number; delay
 }
 
 function LocationCard({ location, index }: { location: LocationGroup; index: number }) {
+  const isBengaluru = location.type === "bengaluru";
   const isIndia = location.type === "india";
-  const isInternational = location.type === "international";
-  const statusColor = isIndia ? "#CBA135" : isInternational ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.3)";
-  const statusText = isIndia ? "Operational" : isInternational ? "International" : "Coming Soon";
+  const typeColor = isBengaluru ? "#CBA135" : isIndia ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.4)";
+  const typeLabel = isBengaluru ? "Bengaluru" : isIndia ? "India" : "International";
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.5 }}
+      transition={{ delay: index * 0.06, duration: 0.5 }}
       className="group"
     >
       <div
@@ -141,31 +151,45 @@ function LocationCard({ location, index }: { location: LocationGroup; index: num
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#CBA135]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="relative z-10 flex items-center gap-3">
-          <div className="relative flex-shrink-0">
-            <div
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: statusColor, boxShadow: `0 0 12px ${statusColor}40` }}
-            />
-            {isIndia && (
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                style={{ border: "2px solid rgba(203,161,53,0.3)" }}
-                animate={{ scale: [1, 2], opacity: [0.6, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeOut" as const }}
+        <div className="relative z-10">
+          <div className="flex items-start gap-3">
+            <div className="relative flex-shrink-0 mt-1">
+              <div
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: typeColor, boxShadow: `0 0 12px ${typeColor}40` }}
               />
-            )}
-          </div>
-          <div className="min-w-0">
-            <p className="text-sm font-medium truncate" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#fff" }}>
-              {location.name}
-            </p>
-            <p className="text-xs mt-0.5 truncate" style={{ fontFamily: "'Inter', sans-serif", color: statusColor }}>
-              {location.detail}
-            </p>
-            <p className="text-[10px] mt-0.5" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.3)" }}>
-              {statusText}
-            </p>
+              {isBengaluru && (
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{ border: "2px solid rgba(203,161,53,0.3)" }}
+                  animate={{ scale: [1, 2], opacity: [0.6, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeOut" as const }}
+                />
+              )}
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <p className="text-sm font-medium truncate" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#fff" }}>
+                  {location.name}
+                </p>
+                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ fontFamily: "'Inter', sans-serif", background: "rgba(203,161,53,0.15)", color: "#CBA135" }}>
+                  {typeLabel}
+                </span>
+              </div>
+              <p className="text-xs mt-0.5" style={{ fontFamily: "'Inter', sans-serif", color: typeColor }}>
+                {location.detail}
+              </p>
+              {location.address && (
+                <p className="text-xs mt-1.5" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.4)" }}>
+                  {location.address}
+                </p>
+              )}
+              {location.phone && (
+                <p className="text-xs mt-1" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.4)" }}>
+                  {location.phone}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -177,9 +201,9 @@ export default function GlobalPresence() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  const bengaluruLocations = locations.filter((l) => l.type === "bengaluru");
   const indiaLocations = locations.filter((l) => l.type === "india");
   const internationalLocations = locations.filter((l) => l.type === "international");
-  const futureLocations = locations.filter((l) => l.type === "future");
 
   return (
     <section
@@ -221,8 +245,7 @@ export default function GlobalPresence() {
             className="text-sm max-w-xl mx-auto"
             style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.5)" }}
           >
-            Interactive map integration. Search by location. Search by specialty.
-            Search by treatment category.
+            KO Clinics locations and partner clinics across India and internationally.
           </p>
         </motion.div>
 
@@ -294,9 +317,9 @@ export default function GlobalPresence() {
                 {mounted && locations.map((loc, idx) => {
                   let color: string;
                   switch (loc.type) {
-                    case "india": color = "#CBA135"; break;
-                    case "international": color = "rgba(255,255,255,0.5)"; break;
-                    case "future": color = "rgba(203,161,53,0.4)"; break;
+                    case "bengaluru": color = "#CBA135"; break;
+                    case "india": color = "rgba(255,255,255,0.5)"; break;
+                    case "international": color = "rgba(203,161,53,0.4)"; break;
                     default: color = "#FFFFFF";
                   }
                   return (
@@ -310,7 +333,7 @@ export default function GlobalPresence() {
                   );
                 })}
 
-                {mounted && locations.filter(l => l.type === "india").map((loc, idx) => (
+                {mounted && locations.filter(l => l.type === "bengaluru" || l.type === "india").map((loc, idx) => (
                   <motion.g
                     key={`label-${idx}`}
                     initial={{ opacity: 0 }}
@@ -322,13 +345,13 @@ export default function GlobalPresence() {
                       x={loc.cx}
                       y={loc.cy - 22}
                       textAnchor="middle"
-                      fill="#CBA135"
+                      fill={loc.type === "bengaluru" ? "#CBA135" : "rgba(255,255,255,0.5)"}
                       fontSize="7"
                       fontFamily="'Space Grotesk', sans-serif"
                       fontWeight="500"
                       opacity="0.85"
                     >
-                      {loc.name}
+                      {loc.name.includes("(") ? loc.name.split(" (")[0] : loc.name}
                     </text>
                   </motion.g>
                 ))}
@@ -381,10 +404,10 @@ export default function GlobalPresence() {
                 className="text-xs tracking-[0.2em] uppercase mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#CBA135", letterSpacing: "0.2em" }}
               >
-                India Locations
+                Bengaluru Clinics
               </motion.h3>
               <div className="space-y-3">
-                {indiaLocations.map((loc, idx) => (
+                {bengaluruLocations.map((loc, idx) => (
                   <LocationCard key={loc.name} location={loc} index={idx} />
                 ))}
               </div>
@@ -399,10 +422,10 @@ export default function GlobalPresence() {
                 className="text-xs tracking-[0.2em] uppercase mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "rgba(255,255,255,0.5)", letterSpacing: "0.2em" }}
               >
-                International Locations
+                Other Indian Cities
               </motion.h3>
               <div className="space-y-3">
-                {internationalLocations.map((loc, idx) => (
+                {indiaLocations.map((loc, idx) => (
                   <LocationCard key={loc.name} location={loc} index={idx + 10} />
                 ))}
               </div>
@@ -415,13 +438,13 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "rgba(203,161,53,0.5)", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "rgba(203,161,53,0.6)", letterSpacing: "0.2em" }}
               >
-                Future Expansion
+                International
               </motion.h3>
               <div className="space-y-3">
-                {futureLocations.map((loc, idx) => (
-                  <LocationCard key={loc.name} location={loc} index={idx + 14} />
+                {internationalLocations.map((loc, idx) => (
+                  <LocationCard key={loc.name} location={loc} index={idx + 20} />
                 ))}
               </div>
             </div>
