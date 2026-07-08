@@ -549,8 +549,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Most patients return to work within 2\u20133 days; healing of the donor and recipient areas takes about 7\u201310 days."],
       ["Who is a good candidate?", "Adults with stable pattern hair loss and adequate donor supply seeking natural, permanent results with minimal scarring."],
     ]),
-    images: ["https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80", "https://images.unsplash.com/photo-1595425964272-5bde354e05fe?w=800&q=80"],
+    images: ["/images/mbio-1.png", "/images/mbio-2.png", "/images/mbio-3.png", "/images/mbio-4.png"],
+    gallery: ["/images/mbio-1.png", "/images/mbio-2.png", "/images/mbio-3.png", "/images/mbio-4.png"],
     videos: [],
   },
   {
