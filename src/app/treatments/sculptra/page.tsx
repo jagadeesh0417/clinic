@@ -61,10 +61,9 @@ export default function SculptraDetailPage() {
 
   return (
     <div className="min-h-screen bg-[#0F0F0E]">
-      {/* TODO: Replace with actual hero image for Sculptra */}
       <div className="relative h-[50vh] min-h-[320px] w-full overflow-hidden bg-[#0F0F0E]">
         <img
-          src="https://picsum.photos/seed/sculptra-hero/1600/800"
+          src="/images/sculptra-overview-1.png"
           alt="Sculptra treatment"
           className="h-full w-full object-cover opacity-60"
           onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}

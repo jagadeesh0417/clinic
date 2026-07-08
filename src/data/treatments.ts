@@ -155,8 +155,8 @@ export const treatments: Treatment[] = [
       ["Is it reversible?", "Not immediately reversible, but fades naturally."],
       ["What areas can be treated?", "Cheeks, jawline, chin, temples, nasolabial folds, marionette lines, and hands."],
     ]),
-    images: [pic("sculptra-1",1), pic("sculptra-2",2), pic("sculptra-3",3), pic("sculptra-4",4)],
-    gallery: [pic("sculptra-1",1), pic("sculptra-2",2), pic("sculptra-3",3), pic("sculptra-4",4)],
+    images: ["/images/sculptra-overview-1.png", "/images/sculptra-overview-2.png", "/images/sculptra-results-1.png", "/images/sculptra-results-2.png"],
+    gallery: ["/images/sculptra-overview-1.png", "/images/sculptra-overview-2.png", "/images/sculptra-results-1.png", "/images/sculptra-results-2.png"],
     videos: [],
   },
   {
