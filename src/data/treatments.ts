@@ -219,8 +219,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Minimal; mild redness or swelling may occur for 24\u201348 hours, and most patients resume normal activities the same day."],
       ["Who is a good candidate?", "Adults with mild to moderate skin laxity seeking a non-surgical, scar-free alternative to a traditional facelift."],
     ]),
-    images: ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"],
+    images: ["/images/nsfl-1.png", "/images/nsfl-2.png", "/images/nsfl-3.png", "/images/nsfl-4.png"],
+    gallery: ["/images/nsfl-1.png", "/images/nsfl-2.png", "/images/nsfl-3.png", "/images/nsfl-4.png"],
     videos: [],
   },
   {
@@ -972,8 +972,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Minimal; most patients return to normal activities within 1\u20132 days."],
       ["Who is a good candidate?", "Adults near their ideal weight with mild to moderate skin laxity or stubborn abdominal fat, seeking a non-surgical option."],
     ]),
-    images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"],
+    images: ["/images/nstt-1.png", "/images/nstt-2.png", "/images/nstt-3.png", "/images/nstt-4.png"],
+    gallery: ["/images/nstt-1.png", "/images/nstt-2.png", "/images/nstt-3.png", "/images/nstt-4.png"],
     videos: [],
   },
 
