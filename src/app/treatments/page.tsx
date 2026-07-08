@@ -16,6 +16,22 @@ const breastLift = treatments.find(t => t.slug === "non-surgical-breast-lift");
 const breastAugmentationSculptra = treatments.find(t => t.slug === "breast-augmentation-sculptra");
 const tummyTuck = treatments.find(t => t.slug === "non-surgical-tummy-tuck");
 
+const rhinoplasty = treatments.find(t => t.slug === "rhinoplasty");
+const faceliftSurgical = treatments.find(t => t.slug === "facelift-surgical");
+const blepharoplasty = treatments.find(t => t.slug === "blepharoplasty");
+const browLift = treatments.find(t => t.slug === "brow-lift");
+const neckLift = treatments.find(t => t.slug === "neck-lift");
+const otoplasty = treatments.find(t => t.slug === "otoplasty");
+const chinAugmentation = treatments.find(t => t.slug === "chin-augmentation");
+const liposuction = treatments.find(t => t.slug === "liposuction");
+const tummyTuckSurgical = treatments.find(t => t.slug === "tummy-tuck");
+const gynecomastiaSurgery = treatments.find(t => t.slug === "gynecomastia-surgery");
+const brazilianButtLift = treatments.find(t => t.slug === "brazilian-butt-lift");
+const breastAugImplants = treatments.find(t => t.slug === "breast-augmentation-implants");
+const breastLiftSurgical = treatments.find(t => t.slug === "breast-lift");
+const breastReduction = treatments.find(t => t.slug === "breast-reduction");
+const mommyMakeover = treatments.find(t => t.slug === "mommy-makeover");
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
@@ -758,6 +774,138 @@ export default function TreatmentsPage() {
             </Link>
           </motion.div>
         )}
+
+        {/* ─── Cosmetic Surgery — Face ─── */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Cosmetic Surgery &mdash; Face
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[rhinoplasty, faceliftSurgical, blepharoplasty, browLift, neckLift, otoplasty, chinAugmentation].filter(Boolean).map((t) => t && (
+              <Link key={t.slug} href={`/treatments/${t.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
+                style={{ background: "rgba(255,255,255,0.03)" }}>
+                <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
+                  {t.category}
+                </span>
+                <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
+                  {t.name}
+                </h3>
+                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                  {t.description}
+                </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    View Treatment
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ─── Cosmetic Surgery — Body ─── */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Cosmetic Surgery &mdash; Body
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[liposuction, tummyTuckSurgical, gynecomastiaSurgery, brazilianButtLift].filter(Boolean).map((t) => t && (
+              <Link key={t.slug} href={`/treatments/${t.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
+                style={{ background: "rgba(255,255,255,0.03)" }}>
+                <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
+                  {t.category}
+                </span>
+                <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
+                  {t.name}
+                </h3>
+                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                  {t.description}
+                </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    View Treatment
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ─── Cosmetic Surgery — Breast ─── */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Cosmetic Surgery &mdash; Breast
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[breastAugImplants, breastLiftSurgical, breastReduction].filter(Boolean).map((t) => t && (
+              <Link key={t.slug} href={`/treatments/${t.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
+                style={{ background: "rgba(255,255,255,0.03)" }}>
+                <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
+                  {t.category}
+                </span>
+                <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
+                  {t.name}
+                </h3>
+                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                  {t.description}
+                </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    View Treatment
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ─── Cosmetic Surgery — Combination ─── */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Cosmetic Surgery &mdash; Combination
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {mommyMakeover && (
+              <Link key={mommyMakeover.slug} href={`/treatments/${mommyMakeover.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
+                style={{ background: "rgba(255,255,255,0.03)" }}>
+                <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
+                  {mommyMakeover.category}
+                </span>
+                <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
+                  {mommyMakeover.name}
+                </h3>
+                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                  {mommyMakeover.description}
+                </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    View Treatment
+                  </span>
+                </div>
+              </Link>
+            )}
+          </div>
+        </motion.div>
 
         {/* CTA */}
         <motion.div
