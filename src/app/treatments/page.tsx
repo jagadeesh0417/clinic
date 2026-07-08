@@ -5,11 +5,15 @@ import { treatments } from "@/data/treatments";
 import Link from "next/link";
 
 const sculptra = treatments.find(t => t.slug === "sculptra");
+const profhilo = treatments.find(t => t.slug === "profhilo");
 const liquidFaceLift = treatments.find(t => t.slug === "liquid-face-lift");
 const nonSurgicalFaceLift = treatments.find(t => t.slug === "non-surgical-face-lift");
+const skinBoosters = treatments.find(t => t.slug === "skin-boosters");
 const microBioFue = treatments.find(t => t.slug === "micro-bio-fue-hair-transplant");
 const stemCellTherapy = treatments.find(t => t.slug === "stem-cell-therapy");
+const exosomeTherapy = treatments.find(t => t.slug === "exosome-therapy");
 const breastLift = treatments.find(t => t.slug === "non-surgical-breast-lift");
+const breastAugmentationSculptra = treatments.find(t => t.slug === "breast-augmentation-sculptra");
 const tummyTuck = treatments.find(t => t.slug === "non-surgical-tummy-tuck");
 
 const fadeUp = {
@@ -108,6 +112,73 @@ export default function TreatmentsPage() {
           )}
         </motion.div>
 
+        {/* Category Section: Injectables — Bio-Remodelling */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Injectables &mdash; Bio-Remodelling
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+
+          {profhilo && (
+            <Link
+              href={`/treatments/${profhilo.slug}`}
+              className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
+              style={{ background: "rgba(255,255,255,0.03)" }}
+            >
+              <div className="p-6 md:p-8">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-3 py-1 font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#B8935A]">
+                      {profhilo.category}
+                    </span>
+                    <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
+                      {profhilo.name}
+                    </h2>
+                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                      {profhilo.description}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                      View Treatment
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                      Book Consultation
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {profhilo.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="group/img relative aspect-[4/3] overflow-hidden rounded-xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30 hover:shadow-lg hover:shadow-[#B8935A]/5"
+                    >
+                      <img
+                        src={src}
+                        alt={`${profhilo.name} - Image ${i + 1}`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0E]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/img:opacity-100" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                style={{
+                  background: "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(184,147,90,0.03), transparent 40%)"
+                }}
+              />
+            </Link>
+          )}
+        </motion.div>
+
         {/* Category Section: Injectables — Facial Rejuvenation */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
           <div className="mb-8 flex items-center gap-4">
@@ -156,6 +227,73 @@ export default function TreatmentsPage() {
                       <img
                         src={src}
                         alt={`${liquidFaceLift.name} - Image ${i + 1}`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0E]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/img:opacity-100" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                style={{
+                  background: "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(184,147,90,0.03), transparent 40%)"
+                }}
+              />
+            </Link>
+          )}
+        </motion.div>
+
+        {/* Category Section: Injectables — Skin Quality */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+            <span className="font-['IBM_Plex_Mono'] text-[11px] tracking-[0.25em] uppercase text-[#4A5D3A]">
+              Injectables &mdash; Skin Quality
+            </span>
+            <div className="h-px flex-1 bg-[#B8935A]/20" />
+          </div>
+
+          {skinBoosters && (
+            <Link
+              href={`/treatments/${skinBoosters.slug}`}
+              className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
+              style={{ background: "rgba(255,255,255,0.03)" }}
+            >
+              <div className="p-6 md:p-8">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-3 py-1 font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#B8935A]">
+                      {skinBoosters.category}
+                    </span>
+                    <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
+                      {skinBoosters.name}
+                    </h2>
+                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                      {skinBoosters.description}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                      View Treatment
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                      Book Consultation
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {skinBoosters.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="group/img relative aspect-[4/3] overflow-hidden rounded-xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30 hover:shadow-lg hover:shadow-[#B8935A]/5"
+                    >
+                      <img
+                        src={src}
+                        alt={`${skinBoosters.name} - Image ${i + 1}`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
                       />
@@ -374,6 +512,62 @@ export default function TreatmentsPage() {
               />
             </Link>
           )}
+
+          {exosomeTherapy && (
+            <Link
+              href={`/treatments/${exosomeTherapy.slug}`}
+              className="group relative mt-6 block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
+              style={{ background: "rgba(255,255,255,0.03)" }}
+            >
+              <div className="p-6 md:p-8">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-3 py-1 font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#B8935A]">
+                      {exosomeTherapy.category}
+                    </span>
+                    <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
+                      {exosomeTherapy.name}
+                    </h2>
+                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                      {exosomeTherapy.description}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                      View Treatment
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                      Book Consultation
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {exosomeTherapy.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="group/img relative aspect-[4/3] overflow-hidden rounded-xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30 hover:shadow-lg hover:shadow-[#B8935A]/5"
+                    >
+                      <img
+                        src={src}
+                        alt={`${exosomeTherapy.name} - Image ${i + 1}`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0E]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/img:opacity-100" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                style={{
+                  background: "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(184,147,90,0.03), transparent 40%)"
+                }}
+              />
+            </Link>
+          )}
         </motion.div>
 
         {/* Category Section: Body — Non-Surgical Contouring */}
@@ -424,6 +618,62 @@ export default function TreatmentsPage() {
                       <img
                         src={src}
                         alt={`${breastLift.name} - Image ${i + 1}`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0E]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/img:opacity-100" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                style={{
+                  background: "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(184,147,90,0.03), transparent 40%)"
+                }}
+              />
+            </Link>
+          )}
+
+          {breastAugmentationSculptra && (
+            <Link
+              href={`/treatments/${breastAugmentationSculptra.slug}`}
+              className="group relative mt-6 block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
+              style={{ background: "rgba(255,255,255,0.03)" }}
+            >
+              <div className="p-6 md:p-8">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-3 py-1 font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#B8935A]">
+                      {breastAugmentationSculptra.category}
+                    </span>
+                    <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
+                      {breastAugmentationSculptra.name}
+                    </h2>
+                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                      {breastAugmentationSculptra.description}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                      View Treatment
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                      Book Consultation
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {breastAugmentationSculptra.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="group/img relative aspect-[4/3] overflow-hidden rounded-xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30 hover:shadow-lg hover:shadow-[#B8935A]/5"
+                    >
+                      <img
+                        src={src}
+                        alt={`${breastAugmentationSculptra.name} - Image ${i + 1}`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-all duration-700 group-hover/img:scale-110"
                       />
