@@ -556,7 +556,7 @@ export default function Hero() {
           <a href="/partners" className="btn-secondary">
             <span>Find a Clinic</span>
           </a>
-          <a href="/services" className="btn-tertiary">
+          <a href="/treatments" className="btn-tertiary">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -567,7 +567,7 @@ export default function Hero() {
             >
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
-            Explore Services
+            Explore Treatments
           </a>
         </motion.div>
       </div>
