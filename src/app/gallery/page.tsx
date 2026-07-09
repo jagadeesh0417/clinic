@@ -19,6 +19,17 @@ const sections = [
       { src: "/images/Screenshot 2026-07-09 232909.png", label: "KO Clinics Tour 9" },
     ],
   },
+  {
+    title: "Our KO Clinics Treatments",
+    images: [
+      { src: "/images/Screenshot 2026-07-09 233538.png", label: "Treatment 1" },
+      { src: "/images/Screenshot 2026-07-09 233555.png", label: "Treatment 2" },
+      { src: "/images/Screenshot 2026-07-09 233612.png", label: "Treatment 3" },
+      { src: "/images/Screenshot 2026-07-09 233625.png", label: "Treatment 4" },
+      { src: "/images/Screenshot 2026-07-09 233642.png", label: "Treatment 5" },
+      { src: "/images/Screenshot 2026-07-09 233655.png", label: "Treatment 6" },
+    ],
+  },
 ];
 
 const fadeUp = {
