@@ -19,6 +19,7 @@ interface DoctorProps {
   expertise: string[];
   experience: string;
   achievements?: string[];
+  image?: string;
 }
 
 const doctors: DoctorProps[] = [
@@ -40,6 +41,7 @@ const doctors: DoctorProps[] = [
       "Prof. R.N. Sinha's Award \u2014 Association of Surgeons of India, 2007",
       "Best Published Research Article \u2014 Indian Journal of Plastic Surgery, 2005",
     ],
+    image: "/images/dr-subramini.png",
   },
   {
     name: "Dr. Nandita",
@@ -48,6 +50,7 @@ const doctors: DoctorProps[] = [
     qualifications: ["MDS (OMFS)"],
     expertise: ["Oral Surgery", "Maxillofacial Surgery", "Facial Trauma & Reconstruction"],
     experience: "Specialist in oral and maxillofacial surgical procedures.",
+    image: "/images/dr-nandita.png",
   },
   {
     name: "Dr. D R Sekhar",
@@ -56,6 +59,7 @@ const doctors: DoctorProps[] = [
     qualifications: ["Senior Consultant \u2014 Plastic, Aesthetic & Reconstructive Surgery"],
     expertise: ["Plastic Surgery", "Aesthetic Surgery", "Reconstructive Surgery"],
     experience: "Senior consultant with extensive experience in plastic, aesthetic, and reconstructive surgical procedures.",
+    image: "/images/dr-sekhar.png",
   },
   {
     name: "Dr. Surindher D.S.A",
@@ -149,17 +153,23 @@ export default function TeamSection() {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-              {/* Avatar placeholder */}
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mb-5 text-lg font-bold text-[#CBA135]"
-                style={{
-                  background: "rgba(203,161,53,0.12)",
-                  border: "1px solid rgba(203,161,53,0.25)",
-                  fontFamily: "'Playfair Display', serif",
-                }}
-              >
-                {doctor.name.split(" ").slice(1).map(w => w[0]).join("").slice(0, 2) || doctor.name.split(" ")[0]?.[0]}
-              </div>
+              {/* Avatar */}
+              {doctor.image ? (
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-2 border-[#CBA135]/30">
+                  <img src={doctor.image} alt={doctor.name} className="h-full w-full object-cover" />
+                </div>
+              ) : (
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mb-5 text-lg font-bold text-[#CBA135]"
+                  style={{
+                    background: "rgba(203,161,53,0.12)",
+                    border: "1px solid rgba(203,161,53,0.25)",
+                    fontFamily: "'Playfair Display', serif",
+                  }}
+                >
+                  {doctor.name.split(" ").slice(1).map(w => w[0]).join("").slice(0, 2) || doctor.name.split(" ")[0]?.[0]}
+                </div>
+              )}
 
               <h3
                 className="text-xl md:text-2xl font-bold text-white mb-1"
