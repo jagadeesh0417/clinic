@@ -96,6 +96,7 @@ const doctors: DoctorProps[] = [
     qualifications: ["General Medicine"],
     expertise: ["General Medicine", "Primary Care", "Preventive Healthcare"],
     experience: "Experienced general physician providing comprehensive medical care.",
+    image: "/images/Dr-mohsinpasha.png",
   },
 ];
 
