@@ -68,6 +68,7 @@ const doctors: DoctorProps[] = [
     qualifications: ["MBBS", "MS (General Surgery)", "MCh (Plastic Surgery)"],
     expertise: ["Plastic Surgery", "Aesthetic Reconstruction", "General Surgery"],
     experience: "Qualified plastic surgeon with comprehensive surgical training.",
+    image: "/images/Dr-Surindher.png",
   },
   {
     name: "Dr. Aamod Rao",
@@ -80,6 +81,7 @@ const doctors: DoctorProps[] = [
     ],
     expertise: ["Cosmetic Surgery", "Aesthetic Surgery", "Body Contouring"],
     experience: "Internationally trained cosmetic surgeon with fellowship training in Brazil.",
+    image: "/images/Dr-AamodRao.png",
   },
   {
     name: "Dr. Arivazhagan",
@@ -88,6 +90,7 @@ const doctors: DoctorProps[] = [
     qualifications: ["MBBS", "MCh (CTVS)", "MS (General Surgery)"],
     expertise: ["Cardiology", "Cardiothoracic Surgery", "Vascular Surgery"],
     experience: "38 years of experience in cardiology and cardiothoracic surgery.",
+    image: "/images/Dr- Arivazhagan.png",
   },
   {
     name: "Dr. Mohsin Pasha",
