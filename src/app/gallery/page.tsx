@@ -30,6 +30,21 @@ const sections = [
       { src: "/images/Screenshot 2026-07-09 233655.png", label: "Treatment 6" },
     ],
   },
+  {
+    title: "La Crown Wellness",
+    images: [
+      { src: "/images/Screenshot 2026-07-09 233914.png", label: "La Crown 1" },
+      { src: "/images/Screenshot 2026-07-09 233923.png", label: "La Crown 2" },
+      { src: "/images/Screenshot 2026-07-09 233933.png", label: "La Crown 3" },
+      { src: "/images/Screenshot 2026-07-09 233938.png", label: "La Crown 4" },
+      { src: "/images/Screenshot 2026-07-09 233946.png", label: "La Crown 5" },
+      { src: "/images/Screenshot 2026-07-09 233953.png", label: "La Crown 6" },
+      { src: "/images/Screenshot 2026-07-09 234002.png", label: "La Crown 7" },
+      { src: "/images/Screenshot 2026-07-09 234007.png", label: "La Crown 8" },
+      { src: "/images/Screenshot 2026-07-09 234016.png", label: "La Crown 9" },
+      { src: "/images/Screenshot 2026-07-09 234022.png", label: "La Crown 10" },
+    ],
+  },
 ];
 
 const fadeUp = {
