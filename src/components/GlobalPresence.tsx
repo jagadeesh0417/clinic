@@ -17,13 +17,13 @@ interface LocationGroup {
 
 const locations: LocationGroup[] = [
   // Bengaluru
-  { name: "Koramangala (HQ)", detail: "KO Clinics HQ", type: "bengaluru", cx: 620, cy: 345, address: "52, Koramangala 4th Block, near Sony World signal, 3rd floor, Bengaluru, Karnataka 560034" },
-  { name: "Jayanagar", detail: "KO Clinics \u2014 La Crown Wellness", type: "bengaluru", cx: 618, cy: 348, address: "No. 37, First Floor, Ashoka Pillar Road, 10th Main Rd, 2nd Block, Jayanagar, Bengaluru 560011" },
-  { name: "Frazer Town", detail: "KO Clinic \u2014 Ritz Medical Center", type: "bengaluru", cx: 622, cy: 342, address: "8, Mosque Rd, Cleveland Town, Frazer Town, Bengaluru 560005" },
-  { name: "Indiranagar", detail: "KO Clinic \u2014 Dathura", type: "bengaluru", cx: 625, cy: 344, address: "No. 221, 1st Floor, Indiranagar 1st Main Rd, Stage 2, Domlur, Bengaluru 560071" },
-  { name: "Banashankari", detail: "KO Clinics \u2014 Glowskin Clinic", type: "bengaluru", cx: 615, cy: 350, address: "3rd Floor, No. 241, 7th A Cross Rd, opp Kamakya Theater, 6th Block, 3rd Phase, Banashankari, Bengaluru 560085" },
-  { name: "OMBR Layout", detail: "KO Clinics \u2014 Apollo Kosmedixx", type: "bengaluru", cx: 623, cy: 343, address: "318, B. Channasandra Main Rd, OMBR Layout, Banaswadi, Bengaluru 560043" },
-  { name: "HBR Layout", detail: "Address to be confirmed", type: "bengaluru", cx: 624, cy: 341 },
+  { name: "Koramangala", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 620, cy: 345, address: "52, Koramangala 4th Block, near Sony World signal, 3rd floor, Bengaluru, Karnataka 560034" },
+  { name: "Jayanagar", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 618, cy: 348, address: "No. 37, First Floor, Ashoka Pillar Road, 10th Main Rd, 2nd Block, Jayanagar, Bengaluru 560011" },
+  { name: "Frazer Town", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 622, cy: 342, address: "8, Mosque Rd, Cleveland Town, Frazer Town, Bengaluru 560005" },
+  { name: "Indiranagar", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 625, cy: 344, address: "No. 221, 1st Floor, Indiranagar 1st Main Rd, Stage 2, Domlur, Bengaluru 560071" },
+  { name: "Banashankari", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 615, cy: 350, address: "3rd Floor, No. 241, 7th A Cross Rd, opp Kamakya Theater, 6th Block, 3rd Phase, Banashankari, Bengaluru 560085" },
+  { name: "OMBR Layout", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 623, cy: 343, address: "Shiva Parvathi Kalayan Mandapa, OMBR Layout, Banaswadi, Bengaluru \u2014 Opposite to the clinic" },
+  { name: "HBR Layout", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 624, cy: 341 },
   // Other India
   { name: "Hyderabad", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 635, cy: 360 },
   { name: "Delhi", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 630, cy: 310 },
@@ -33,9 +33,9 @@ const locations: LocationGroup[] = [
   { name: "Visakhapatnam", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 665, cy: 360 },
   { name: "Mumbai", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 600, cy: 340 },
   // International
-  { name: "Hong Kong", detail: "Sun Tuen Mun Center", type: "international", cx: 740, cy: 290, address: "55-65 Lung Mun Road, Sun Tuen Mun Center, Tuen Mun, New Territories, Hong Kong", phone: "+852 6082 3699" },
-  { name: "Bangkok", detail: "JLK Tower, Sukhumvit Rd", type: "international", cx: 720, cy: 310, address: "JLK Tower, 129 Sukhumvit Rd, Khlong Toei Nuea, Watthana, Bangkok 10110" },
-  { name: "Bahrain", detail: "Shaikh Isa Causeway", type: "international", cx: 590, cy: 300, address: "7J62+X92, Shaikh Isa Causeway, Al Sayh, Bahrain" },
+  { name: "Hong Kong", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 740, cy: 290, address: "55-65\u865f, Lung Mun Rd, Tuen Mun, Hong Kong", phone: "+852 6082 3699" },
+  { name: "Bangkok", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 720, cy: 310, address: "JLK Tower, 129 Sukhumvit Rd, Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand" },
+  { name: "Bahrain", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 590, cy: 300, address: "7J62+X92, Shaikh Isa Causeway, Al Sayh, Bahrain" },
   { name: "Dubai, UAE", detail: "+971 54 536 6831", type: "international", cx: 585, cy: 305, phone: "+971 54 536 6831" },
   { name: "Canada", detail: "+1 (647) 581-4279", type: "international", cx: 200, cy: 270, phone: "+1 (647) 581-4279" },
   { name: "Manila", detail: "Address to be confirmed", type: "international", cx: 710, cy: 360, phone: "+63 966 168 8381" },
