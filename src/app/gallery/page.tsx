@@ -8,53 +8,15 @@ const sections = [
   {
     title: "KO Clinics Tour",
     images: [
-      { src: "/images/dr-vikas.png", label: "Dr. Vikas Singh" },
-      { src: "/images/dr-subramini.png", label: "Dr. Subramini" },
-      { src: "/images/dr-nandita.png", label: "Dr. Nandita" },
-      { src: "/images/dr-sekhar.png", label: "Dr. D R Sekhar" },
-      { src: "/images/Dr-Surindher.png", label: "Dr. Surindher D.S.A" },
-      { src: "/images/Dr-AamodRao.png", label: "Dr. Aamod Rao" },
-      { src: "/images/Dr- Arivazhagan.png", label: "Dr. Arivazhagan" },
-      { src: "/images/Dr-mohsinpasha.png", label: "Dr. Mohsin Pasha" },
-      { src: "/images/Screenshot 2026-07-09 232729.png", label: "Clinic Tour 1" },
-      { src: "/images/Screenshot 2026-07-09 232743.png", label: "Clinic Tour 2" },
-      { src: "/images/Screenshot 2026-07-09 232757.png", label: "Clinic Tour 3" },
-      { src: "/images/Screenshot 2026-07-09 232814.png", label: "Clinic Tour 4" },
-      { src: "/images/Screenshot 2026-07-09 232823.png", label: "Clinic Tour 5" },
-      { src: "/images/Screenshot 2026-07-09 232839.png", label: "Clinic Tour 6" },
-      { src: "/images/Screenshot 2026-07-09 232848.png", label: "Clinic Tour 7" },
-      { src: "/images/Screenshot 2026-07-09 232854.png", label: "Clinic Tour 8" },
-      { src: "/images/Screenshot 2026-07-09 232909.png", label: "Clinic Tour 9" },
-    ],
-  },
-  {
-    title: "La Crown Wellness",
-    images: [
-      { src: "/images/dr-vikas.png", label: "Expert Care" },
-      { src: "/images/dr-subramini.png", label: "Wellness Team" },
-      { src: "/images/Dr-mohsinpasha.png", label: "Health Consultation" },
-    ],
-  },
-  {
-    title: "Our KO Clinics Treatments",
-    images: [
-      { src: "/images/sculptra-overview-1.png", label: "Sculptra Treatment" },
-      { src: "/images/sculptra-results-1.png", label: "Sculptra Results" },
-      { src: "/images/profhilo-1.png", label: "Profhilo" },
-      { src: "/images/lfl-1.png", label: "Liquid Face Lift" },
-      { src: "/images/skb-1.png", label: "Skin Boosters" },
-      { src: "/images/nsfl-1.png", label: "Non-Surgical Face Lift" },
-      { src: "/images/nstt-1.png", label: "Non-Surgical Tummy Tuck" },
-      { src: "/images/mbio-1.png", label: "Micro Bio-FUE" },
-      { src: "/images/breastlift-1.png", label: "Breast Lift" },
-      { src: "/images/breastlift-2.png", label: "Breast Augmentation" },
-    ],
-  },
-  {
-    title: "Our Videos",
-    videos: [
-      { url: "https://www.youtube.com/embed/dQw4w9WgXcQ", label: "KO Clinics Overview" },
-      { url: "https://www.youtube.com/embed/dQw4w9WgXcQ", label: "Treatment Journey" },
+      { src: "/images/Screenshot 2026-07-09 232729.png", label: "KO Clinics Tour 1" },
+      { src: "/images/Screenshot 2026-07-09 232743.png", label: "KO Clinics Tour 2" },
+      { src: "/images/Screenshot 2026-07-09 232757.png", label: "KO Clinics Tour 3" },
+      { src: "/images/Screenshot 2026-07-09 232814.png", label: "KO Clinics Tour 4" },
+      { src: "/images/Screenshot 2026-07-09 232823.png", label: "KO Clinics Tour 5" },
+      { src: "/images/Screenshot 2026-07-09 232839.png", label: "KO Clinics Tour 6" },
+      { src: "/images/Screenshot 2026-07-09 232848.png", label: "KO Clinics Tour 7" },
+      { src: "/images/Screenshot 2026-07-09 232854.png", label: "KO Clinics Tour 8" },
+      { src: "/images/Screenshot 2026-07-09 232909.png", label: "KO Clinics Tour 9" },
     ],
   },
 ];
@@ -111,61 +73,36 @@ export default function GalleryPage() {
                   {section.title}
                 </motion.h3>
 
-                {'images' in section && section.images && (
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {section.images.map((img, ii) => (
-                      <motion.div
-                        key={img.label}
-                        variants={fadeUp} custom={ii + 1}
-                        className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer"
-                        style={{
-                          background: "rgba(255,255,255,0.04)",
-                          border: "1px solid rgba(255,255,255,0.08)",
-                        }}
-                      >
-                        <Image
-                          src={img.src}
-                          alt={img.label}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                          sizes="(max-width: 768px) 50vw, 25vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
-                        <div className="absolute bottom-0 left-0 right-0 p-4">
-                          <p
-                            className="text-white text-sm font-medium"
-                            style={{ fontFamily: "'Inter', sans-serif" }}
-                          >
-                            {img.label}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-
-                {'videos' in section && section.videos && (
-                  <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                    {section.videos.map((video, vi) => (
-                      <motion.div
-                        key={video.label}
-                        variants={fadeUp} custom={vi + 1}
-                        className="aspect-video rounded-2xl overflow-hidden"
-                        style={{
-                          border: "1px solid rgba(255,255,255,0.08)",
-                        }}
-                      >
-                        <iframe
-                          src={video.url}
-                          title={video.label}
-                          className="w-full h-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {section.images.map((img, ii) => (
+                    <motion.div
+                      key={img.label}
+                      variants={fadeUp} custom={ii + 1}
+                      className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer"
+                      style={{
+                        background: "rgba(255,255,255,0.04)",
+                        border: "1px solid rgba(255,255,255,0.08)",
+                      }}
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.label}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <p
+                          className="text-white text-sm font-medium"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {img.label}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
