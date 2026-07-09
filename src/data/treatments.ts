@@ -283,8 +283,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Minimal; small bumps or mild redness may last a few hours to a day, and most patients resume normal activities immediately."],
       ["Who is a good candidate?", "Adults of any age with dull, dehydrated, or aging skin seeking a natural glow without adding volume."],
     ]),
-    images: ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80", "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"],
+    images: ["/images/skb-1.png", "/images/skb-2.png", "/images/skb-3.png", "/images/skb-3.png"],
+    gallery: ["/images/skb-1.png", "/images/skb-2.png", "/images/skb-3.png", "/images/skb-3.png"],
     videos: [],
   },
   {
