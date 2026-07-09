@@ -187,8 +187,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Minimal; mild swelling or bruising may occur for 1\u20133 days, and most patients resume normal activities the same day."],
       ["Who is a good candidate?", "Healthy adults with early to moderate signs of aging seeking a non-surgical alternative to a traditional facelift."],
     ]),
-    images: ["https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"],
+    images: ["/images/lfl-1.png", "/images/lfl-2.png", "/images/lfl-3.png", "/images/lfl-3.png"],
+    gallery: ["/images/lfl-1.png", "/images/lfl-2.png", "/images/lfl-3.png", "/images/lfl-3.png"],
     videos: [],
   },
   {
@@ -251,8 +251,8 @@ export const treatments: Treatment[] = [
       ["Is there any downtime?", "Minimal; small bumps at injection points settle within 24\u201348 hours and most patients resume normal activities immediately."],
       ["Who is a good candidate?", "Adults with skin laxity, dehydration, or early signs of aging who want improved skin quality without adding volume."],
     ]),
-    images: ["https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"],
-    gallery: ["https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"],
+    images: ["/images/profhilo-1.png", "/images/profhilo-2.png", "/images/profhilo-3.png", "/images/profhilo-3.png"],
+    gallery: ["/images/profhilo-1.png", "/images/profhilo-2.png", "/images/profhilo-3.png", "/images/profhilo-3.png"],
     videos: [],
   },
   {
