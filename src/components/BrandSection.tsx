@@ -17,23 +17,26 @@ const container = {
 };
 
 const education = [
-  { degree: "MBBS", institution: "Rajiv Gandhi University of Health Sciences (RGUHS), India" },
-  { degree: "PG Diploma \u2014 Clinical Dermatology", institution: "Cardiff University, United Kingdom" },
-  { degree: "Certification in Aesthetic Medicine", institution: "American Academy of Aesthetic Medicine (AAAM), USA" },
-  { degree: "Hair Transplant Certification", institution: "American Academy of Aesthetic Medicine & ISHRS, USA" },
-  { degree: "Cosmetic Dermatology Certification", institution: "American Hair Loss Council, USA" },
-  { degree: "Certified Aesthetic Physician", institution: "International Academy of Aesthetic Medicine (IAAM), USA" },
-  { degree: "Fellowship \u2014 Laser & Aesthetic Medicine", institution: "International Academy of Aesthetic Medicine, USA" },
-  { degree: "Certification \u2014 Cosmetic Dermatology", institution: "American Hair Loss Council, USA" },
-  { degree: "Fellowship \u2014 Experimental Laser Therapy", institution: "International Aesthetic Training Programs, Singapore / HK / Bangkok" },
+  { degree: "MBBS (Bachelor of Medicine & Bachelor of Surgery)", institution: "Rajiv Gandhi University of Health Sciences (RGUHS)", country: "India" },
+  { degree: "PG Diploma / Certification in Clinical Dermatology", institution: "Cardiff University", country: "United Kingdom" },
+  { degree: "Certification in Aesthetic Medicine", institution: "American Academy of Aesthetic Medicine (AAAM)", country: "USA" },
+  { degree: "Hair Transplant Certification", institution: "American Academy of Aesthetic Medicine & ISHRS", country: "USA" },
+  { degree: "Cosmetic Dermatology Certification", institution: "American Hair Loss Council", country: "USA" },
+];
+
+const certificationsData = [
+  { cert: "Certified Aesthetic Physician", org: "International Academy of Aesthetic Medicine (IAAM)", country: "USA" },
+  { cert: "Fellowship in Laser & Aesthetic Medicine", org: "International Academy of Aesthetic Medicine", country: "USA" },
+  { cert: "Certification in Cosmetic Dermatology", org: "American Hair Loss Council", country: "USA" },
+  { cert: "Fellowship in Experimental Laser Therapy", org: "International Aesthetic Training Programs", country: "Singapore / Hong Kong / Bangkok" },
 ];
 
 const specializations = [
-  "Hair Transplant Surgery \u2014 FUE, FUT, DHI, High-Density",
+  "Hair Transplant Surgery \u2014 FUE, FUT, DHI, High-Density Hair Transplant",
   "Anti-Ageing Medicine \u2014 Botox, Fillers, Threads, Skin Rejuvenation",
   "Cosmetic Dermatology \u2014 Acne, Pigmentation, Chemical Peels",
   "Laser Aesthetics \u2014 Fractional CO\u2082, Er-YAG Lasers",
-  "Body Contouring \u2014 Lipodissolve, Inch-Loss Laser Therapy",
+  "Body Contouring \u2014 Lipodissolve, Inch Loss Laser Therapy",
   "Regenerative Medicine \u2014 PRP Therapy, Stem Cell Hair Therapy",
   "Non-Surgical Face Lift \u2014 Thread Lift, Fillers, Contouring",
 ];
@@ -41,9 +44,9 @@ const specializations = [
 const internationalTraining = [
   { location: "Singapore", detail: "Advanced Aesthetic & Laser Medicine \u2014 International Aesthetic Programs" },
   { location: "Hong Kong", detail: "Cosmetic Injectables & Facial Contouring \u2014 International Academy Workshops" },
-  { location: "Bangkok", detail: "Cosmetic Laser Dermatology \u2014 with global experts including Dr. Woffles Wu" },
-  { location: "Australia", detail: "Mesotherapy & Anti-Ageing Medicine" },
-  { location: "Taiwan / Singapore", detail: "Stem Cell & Regenerative Therapy \u2014 under Dr. Richard DeAndrea" },
+  { location: "Bangkok", detail: "Mesotherapy & Anti-Ageing Medicine \u2014 Aesthetic Medicine Training" },
+  { location: "Australia", detail: "Stem Cell & Regenerative Therapy \u2014 Under stem cell specialist Dr. Richard DeAndrea" },
+  { location: "Taiwan / Singapore", detail: "Cosmetic Laser Dermatology \u2014 With global experts including Dr. Woffles Wu" },
 ];
 
 const memberships = [
@@ -66,25 +69,20 @@ const certifications = [
 ];
 
 const awards = [
-  "Best Cosmetic Physician \u2014 South India (2023) \u2014 International Aesthetic Awards",
+  "Best Cosmetic Physician \u2013 South India \u2014 International Aesthetic Awards (2023)",
   "Times Global Best Doctor Award \u2014 Times Group Global Healthcare Awards",
-  "Zee Business \u2014 IGA Healthcare Award \u2014 Zee Business International Awards",
+  "Zee Business \u2013 IGA Healthcare Award \u2014 Zee Business International Awards",
   "Arogya Jyothi Best Cosmetologist Award \u2014 Healthcare Excellence Awards",
   "Excellence in Aesthetic Medicine \u2014 International Cosmetic Medicine Forum",
-  "Global Impact Award \u2014 Aesthetic Medicine \u2014 India Health Congress",
-  "Rising Star Award \u2014 Injectables \u2014 World Congress of Dermatology (WCD)",
-  "Top 6 Doctors to Watch \u2014 Times Group & Ministry of Health",
-  "Leadership Award",
-  "Government Role \u2014 Medical Advisor, NMC India Cosmetic Guidelines Taskforce",
-  "Featured in Elle & Vogue",
 ];
 
 const contributions = [
   "Founder \u2014 KO Clinics, Kosmedix, The Bodyline, REE Age, Kosmedix Global Aesthetic Institute",
   "Innovator \u2014 AAA Stemcell Therapy, Breast Derma Filler, Liquid Face Lift, Lipodissolve Ultra, Ponytail Lift",
-  "Trainer \u2014 Aesthetic medicine training programmes across India and internationally",
-  "Mentor \u2014 Non-Surgical Breast Lift, Liquid Face Lift, Micro Bio FUE Hair Transplant",
-  "Public articles in \u2014 Micro Bio FUE, Liquid Breast Lift, Liquid Face Lift, AAA Stemcell Therapy for anti-ageing",
+  "Trainer \u2014 Conducts aesthetic medicine training programs",
+  "Author \u2014 Kosmedix Global Aesthetic Institute, KO Clinics Chain",
+  "Mentor \u2014 Non Surgical Breast Lift, Liquid Face Lift, Micro Bio Fue Hair Transplant",
+  "Public Articles In \u2014 Micro Bio Fue, Liquid Breast Lift, Liquid Face Lift, AAA Stemcell Therapy For Anti Ageing",
 ];
 
 function SectionTitle({ label }: { label: string }) {
@@ -146,7 +144,7 @@ export default function BrandSection() {
               className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed max-w-4xl"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Founded in 2005 by aesthetic medicine expert <strong className="text-white">Dr. Vikas Singh</strong>, Kosmedixx Clinic has emerged as a pioneering force in advanced aesthetic and cosmetic medicine. Dr. Singh was among the first to introduce LIPODISSOLVE Ultra and laser-based inch-loss treatments to Bangalore and India, setting new benchmarks in non-invasive body contouring. As the visionary founder behind Bodyline Clinic and Ree Age Clinic, he has also established the Kosmedixx Global Aesthetic Institute and serves as a key figure in the European Federation of Aesthetic Medicine and Surgery (EFAMS).
+               Founded in 2005 by renowned aesthetic medicine expert <strong className="text-white">Dr. Vikas Singh</strong>, Kosmedixx Clinic has emerged as a pioneering force in the field of advanced aesthetic and cosmetic medicine. Dr. Singh was among the first to introduce LIPODISSOLVE Ultra and laser-based inch-loss treatments to Bangalore and India, setting new benchmarks in non-invasive body contouring. As the visionary founder behind Bodyline Clinic and Ree Age Clinic, he has also established the Kosmedixx Global Aesthetic Institute and serves as a key figure in the European Federation of Aesthetic Medicine and Surgery (EFAMS).
             </motion.p>
 
             <motion.p
@@ -154,7 +152,7 @@ export default function BrandSection() {
               className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed mt-6"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Kosmedixx is committed to delivering scientifically-backed, cutting-edge treatments in anti-aging, advanced hair restoration, stem cell therapy, weight and inch loss, and cosmetic surgery. The team comprises internationally trained and board-certified dermatologists, plastic surgeons, and aesthetic physicians who uphold the highest standards of safety, ethics, and clinical excellence.
+              Kosmedixx is committed to delivering scientifically-backed, cutting-edge treatments in anti-aging, advanced hair restoration, stem cell therapy, weight and inch loss, and cosmetic surgery. Our team comprises internationally trained and board-certified dermatologists, plastic surgeons, and aesthetic physicians who uphold the highest standards of safety, ethics, and clinical excellence.
             </motion.p>
 
             <motion.p
@@ -162,7 +160,7 @@ export default function BrandSection() {
               className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed mt-6"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              With a mission to make premium aesthetic care accessible, KO Clinics are expanding rapidly across India and internationally, offering practitioners the opportunity to partner and join a growing global network. Whether you&apos;re a client seeking world-class results or a professional looking to be part of a progressive aesthetic brand, Kosmedixx stands as a symbol of trust, innovation, and integrity.
+              With a mission to make premium aesthetic care accessible, KO Clinics are expanding rapidly across India and internationally, offering practitioners the opportunity to partner and join our growing global network. Whether you&apos;re a client seeking world-class results or a professional looking to be part of a progressive aesthetic brand, Kosmedixx stands as a symbol of trust, innovation, and integrity.
             </motion.p>
 
             <motion.p
@@ -170,7 +168,7 @@ export default function BrandSection() {
               className="text-[#CBA135] text-2xl md:text-3xl font-semibold mt-8 italic"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Aesthetics with Ethics.
+              At Kosmedixx, we believe in &ldquo;Aesthetics with Ethics&rdquo; &mdash; delivering gold-standard outcomes while prioritizing transparency, education, and individualized care.
             </motion.p>
           </motion.div>
         </div>
@@ -277,7 +275,7 @@ export default function BrandSection() {
         <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle label="THE FOUNDER" />
+          <SectionTitle label="MEET YOUR DOCTOR" />
 
           <motion.div
             initial="hidden"
@@ -286,6 +284,11 @@ export default function BrandSection() {
             variants={container}
           >
             <motion.div variants={fadeUp} custom={0} className="text-center mb-4">
+              <div className="mb-6 flex justify-center">
+                <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[#CBA135]/30 md:h-52 md:w-52">
+                  <img src="/images/dr-vikas.png" alt="Dr. Vikas Singh" className="h-full w-full object-cover" />
+                </div>
+              </div>
               <h2
                 className="text-4xl md:text-6xl font-bold text-white"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -302,24 +305,26 @@ export default function BrandSection() {
               className="text-[#B7B7B7] text-lg leading-relaxed max-w-4xl mx-auto text-center"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Dr. Vikas Singh is a globally recognized Celebrity Hair Transplant Surgeon &amp; Cosmetic Dermatologist, and the visionary Founder &amp; CEO of Kosmedixx Clinics \u2014 a premier chain of advanced skin, hair, and aesthetic wellness centres in India.
+              Dr. Vikas Singh is a board-certified aesthetic physician with extensive international training in non-surgical facial rejuvenation. With a passion for artistry and precision, he has helped thousands of patients achieve their aesthetic goals naturally and safely.
             </motion.p>
 
-            <motion.p
+            <motion.div
               variants={fadeUp} custom={2}
-              className="text-[#B7B7B7] text-lg leading-relaxed max-w-4xl mx-auto text-center mt-4"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="max-w-4xl mx-auto mt-6 text-center space-y-1"
             >
-              Known fondly as &ldquo;Doctor Transform&rdquo;, Dr. Vikas is renowned for combining scientific expertise with artistic precision, delivering transformational results to a high-profile clientele including celebrities, industrialists, top executives, and international patients.
-            </motion.p>
-
-            <motion.p
-              variants={fadeUp} custom={3}
-              className="text-[#B7B7B7] text-lg leading-relaxed max-w-4xl mx-auto text-center mt-4"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              With over two decades of experience, his clinical mastery includes Micro Bio-FUE Hair Transplant, PRP &amp; Stem Cell Therapies, Vampire Facelifts, HIFU, MNRF, Botox &amp; Fillers, and PDO Thread Lifts. He is board-certified with extensive international training in non-surgical facial rejuvenation.
-            </motion.p>
+              <p className="text-[#CBA135] text-base font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                Celebrity Hair Transplant Surgeon, Cosmetic Dermatologist &amp; Aesthetic Physician
+              </p>
+              <p className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Founder Kosmedix Hair &amp; Skin Clinics, KO Clinics, La Crown Aesthetics
+              </p>
+              <p className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                20+ Years in Aesthetic Medicine, Hair Restoration &amp; Anti-Ageing Medicine
+              </p>
+              <p className="text-[#B7B7B7] text-xs mt-2 italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                MBBS, AIIMS (Bangalore Medical College &amp; Research Centre) &middot; Clinic Dermatology \u2013 Cardiff University Wales
+              </p>
+            </motion.div>
 
             {/* Stats */}
             <motion.div
@@ -334,30 +339,64 @@ export default function BrandSection() {
                 <span className="block text-4xl md:text-5xl font-bold text-[#CBA135]" style={{ fontFamily: "'Playfair Display', serif" }}>10,000+</span>
                 <span className="text-[#B7B7B7] text-sm uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Procedures</span>
               </div>
+              <div className="text-center">
+                <span className="block text-4xl md:text-5xl font-bold text-[#CBA135]" style={{ fontFamily: "'Playfair Display', serif" }}>International</span>
+                <span className="text-[#B7B7B7] text-sm uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certifications</span>
+              </div>
             </motion.div>
 
             {/* Education */}
             <motion.div variants={fadeUp} custom={5} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4 text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Education &amp; Certifications</h3>
-              <div className="grid md:grid-cols-2 gap-3">
-                {education.map((item, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl p-4"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <p className="text-white text-sm font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.degree}</p>
-                    <p className="text-[#B7B7B7] text-xs mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>{item.institution}</p>
-                  </div>
-                ))}
+              <h3 className="text-xl font-semibold text-[#CBA135] mb-4 text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Education</h3>
+              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="text-[#CBA135] text-xs uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif", background: "rgba(203,161,53,0.08)" }}>
+                      <th className="p-3 font-semibold">Qualification</th>
+                      <th className="p-3 font-semibold">Institution</th>
+                      <th className="p-3 font-semibold">Country</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {education.map((item, i) => (
+                      <tr key={i} className="border-t border-white/5">
+                        <td className="p-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.degree}</td>
+                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.institution}</td>
+                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.country}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+
+            {/* Certifications */}
+            <motion.div variants={fadeUp} custom={6} className="max-w-4xl mx-auto mb-12">
+              <h3 className="text-xl font-semibold text-[#CBA135] mb-4 text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certifications</h3>
+              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="text-[#CBA135] text-xs uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif", background: "rgba(203,161,53,0.08)" }}>
+                      <th className="p-3 font-semibold">Certification</th>
+                      <th className="p-3 font-semibold">Organization</th>
+                      <th className="p-3 font-semibold">Country</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {certificationsData.map((item, i) => (
+                      <tr key={i} className="border-t border-white/5">
+                        <td className="p-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.cert}</td>
+                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.org}</td>
+                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.country}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </motion.div>
 
             {/* Specializations */}
-            <motion.div variants={fadeUp} custom={6} className="max-w-4xl mx-auto mb-12">
+            <motion.div variants={fadeUp} custom={7} className="max-w-4xl mx-auto mb-12">
               <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Specializations</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {specializations.map((item, i) => (
@@ -370,7 +409,7 @@ export default function BrandSection() {
             </motion.div>
 
             {/* International Training */}
-            <motion.div variants={fadeUp} custom={7} className="max-w-4xl mx-auto mb-12">
+            <motion.div variants={fadeUp} custom={8} className="max-w-4xl mx-auto mb-12">
               <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>International Training</h3>
               <div className="space-y-3">
                 {internationalTraining.map((item, i) => (
@@ -390,7 +429,7 @@ export default function BrandSection() {
             </motion.div>
 
             {/* Professional Memberships */}
-            <motion.div variants={fadeUp} custom={8} className="max-w-4xl mx-auto mb-12">
+            <motion.div variants={fadeUp} custom={9} className="max-w-4xl mx-auto mb-12">
               <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Professional Memberships</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {memberships.map((item, i) => (
@@ -402,9 +441,9 @@ export default function BrandSection() {
               </div>
             </motion.div>
 
-            {/* Product / Laser Training Certificates */}
-            <motion.div variants={fadeUp} custom={9} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Product / Laser Training Certificates</h3>
+            {/* Certificates of Participation & Training */}
+            <motion.div variants={fadeUp} custom={10} className="max-w-4xl mx-auto mb-12">
+              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certificates of Participation &amp; Training</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {certifications.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -416,7 +455,7 @@ export default function BrandSection() {
             </motion.div>
 
             {/* Awards & Recognitions */}
-            <motion.div variants={fadeUp} custom={10} className="max-w-4xl mx-auto mb-12">
+            <motion.div variants={fadeUp} custom={11} className="max-w-4xl mx-auto mb-12">
               <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Awards &amp; Recognitions</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {awards.map((item, i) => (
@@ -428,8 +467,27 @@ export default function BrandSection() {
               </div>
             </motion.div>
 
+            {/* Media & Public Appearances */}
+            <motion.div variants={fadeUp} custom={12} className="max-w-4xl mx-auto mb-12">
+              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Media &amp; Public Appearances</h3>
+              <div className="grid sm:grid-cols-2 gap-2">
+                {[
+                  "Times Group \u2014 Global Doctor Award Recognition",
+                  "Zee Business \u2014 Healthcare Excellence Awards",
+                  "Health & Lifestyle Magazines \u2014 Cosmetic dermatology expert interviews",
+                  "Medical Conferences \u2014 Speaker on Hair Transplant & Anti-Ageing",
+                  "Social Media \u2014 Instagram, YouTube, International Aesthetic Workshops",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
             {/* Professional Contributions */}
-            <motion.div variants={fadeUp} custom={11} className="max-w-4xl mx-auto mb-12">
+            <motion.div variants={fadeUp} custom={13} className="max-w-4xl mx-auto mb-12">
               <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Professional Contributions</h3>
               <div className="space-y-2">
                 {contributions.map((item, i) => (
@@ -443,7 +501,7 @@ export default function BrandSection() {
 
             {/* Philosophy */}
             <motion.div
-              variants={fadeUp} custom={12}
+              variants={fadeUp} custom={14}
               className="max-w-3xl mx-auto mt-16 p-8 rounded-2xl text-center"
               style={{
                 background: "linear-gradient(135deg, rgba(203,161,53,0.08) 0%, rgba(203,161,53,0.02) 100%)",
