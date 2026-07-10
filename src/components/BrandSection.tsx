@@ -235,7 +235,7 @@ export default function BrandSection() {
               className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              To redefine the future of aesthetic medicine by providing science-backed, innovative, and safe cosmetic solutions that enhance natural beauty and personal confidence. Dr. Vikas Singh is committed to delivering world-class results through personalized care, cutting-edge techniques, and a team of internationally trained professionals. Kosmedix aims to build trust through transparency, ethics, and excellence in every patient interaction.
+              To make world-class aesthetic and cosmetic medicine accessible, safe and honest. Since 2005, KO Clinics has worked to bring globally proven treatments to patients in India — not the newest trend, but the techniques with evidence behind them. Every treatment plan is built around the individual: their concerns, their anatomy, their goals. No templates, no pressure, no promises we can't keep. We measure success by results that look natural and by patients who understand exactly what was done and why. That means clear consultations, transparent pricing, realistic expectations, and the willingness to tell someone a procedure isn't right for them. As we grow across India and internationally, our commitment stays the same — the standard of care in every KO clinic, in every city, is the standard of care in our first.
             </motion.p>
           </motion.div>
         </div>
