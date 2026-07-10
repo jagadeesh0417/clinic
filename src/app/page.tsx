@@ -2,6 +2,8 @@ import PageLayout from "@/components/PageLayout";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WhyChoose from "@/components/WhyChoose";
+import WhyPartner from "@/components/WhyPartner";
+import ClinicalLeadership from "@/components/ClinicalLeadership";
 import QScan from "@/components/QScan";
 import PartnerBenefits from "@/components/PartnerBenefits";
 import PartnerRequirements from "@/components/PartnerRequirements";
@@ -15,6 +17,8 @@ export default function Home() {
       <Hero />
       <About />
       <WhyChoose />
+      <WhyPartner />
+      <ClinicalLeadership />
       <QScan />
       <PartnerBenefits />
       <PartnerRequirements />

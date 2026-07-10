@@ -92,6 +92,41 @@ function ParallaxImage({
   );
 }
 
+function DoctorAvatar({ name, size = "lg" }: { name: string; size?: "sm" | "md" | "lg" }) {
+  const initials = name
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2);
+  const sizeMap = { sm: "w-10 h-10 text-sm", md: "w-16 h-16 text-lg", lg: "w-24 h-24 text-2xl" };
+  return (
+    <div
+      className={`${sizeMap[size]} rounded-full bg-gradient-to-br from-[#CBA135] to-[#E8C860] flex items-center justify-center text-[#050505] font-bold shrink-0`}
+    >
+      {initials}
+    </div>
+  );
+}
+
+function FounderCard() {
+  return (
+    <motion.div
+      variants={itemVariants}
+      className="flex items-center gap-6 p-6 md:p-8 rounded-2xl border border-[#CBA135]/20 bg-[#CBA135]/5 mb-10"
+    >
+      <DoctorAvatar name="Dr. Vikas Singh" size="lg" />
+      <div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+          Dr. Vikas Singh
+        </h3>
+        <p className="text-[#B7B7B7] text-sm mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+          Founder & Chief Medical Officer, KO Clinics
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function About() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -245,6 +280,7 @@ export default function About() {
               &ldquo;Aesthetics with Ethics&rdquo;
             </motion.p>
 
+            <FounderCard />
 
           </motion.div>
         </div>
