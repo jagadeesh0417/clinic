@@ -44,7 +44,7 @@ export default function ClinicalTeam() {
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <motion.div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-6 xl:px-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -53,19 +53,19 @@ export default function ClinicalTeam() {
         <motion.div variants={cardVariants} className="text-center mb-16">
           <span
             className="inline-block text-[#C9A14A] text-xs font-semibold uppercase tracking-[0.25em] mb-4"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             Clinical Team
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-white leading-tight"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             Clinical Team
           </h2>
           <p
             className="text-[#CBBFAF] text-lg mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             The specialists who set the protocols across our network.
           </p>
@@ -86,21 +86,21 @@ export default function ClinicalTeam() {
               <DoctorAvatar name={doctor.name} size="md" />
               <h3
                 className="text-lg font-bold text-white mb-1"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {doctor.name}
               </h3>
               {doctor.qualifications && (
                 <p
                   className="text-[#C9A14A] text-xs font-medium mb-2"
-                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {doctor.qualifications}
                 </p>
               )}
               <p
                 className="text-[#CBBFAF] text-sm leading-relaxed"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {doctor.specialty}
               </p>

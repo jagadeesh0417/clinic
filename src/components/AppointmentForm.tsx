@@ -130,7 +130,7 @@ export default function AppointmentForm() {
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
             </div>
-            <h2 className="font-displayisplay text-2xl text-white mb-3">Thank You</h2>
+            <h2 className="font-display text-2xl text-white mb-3">Thank You</h2>
             <p className="font-sans text-sm text-white/50 mb-2">Your enquiry has been received.</p>
             <p className="font-sans text-xs text-white/40">The team will contact you to schedule and provide further details.</p>
             <button
@@ -160,7 +160,7 @@ export default function AppointmentForm() {
           <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4">
             Get Started
           </span>
-          <h2 className="font-displayisplay text-3xl md:text-4xl text-white mb-3">
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-3">
             Book an <span className="text-[#C9A14A]">Appointment</span>
           </h2>
           <p className="text-white/50 font-sans text-sm max-w-lg mx-auto">
@@ -295,7 +295,7 @@ export default function AppointmentForm() {
                 </p>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-2xl bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
+                  className="w-full py-3.5 rounded-2xl bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#C9A14A] hover:shadow-lg hover:shadow-[#C9A14A]/25"
                 >
                   Send Enquiry
                 </button>
@@ -424,7 +424,7 @@ export default function AppointmentForm() {
                 </p>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-2xl bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
+                  className="w-full py-3.5 rounded-2xl bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#C9A14A] hover:shadow-lg hover:shadow-[#C9A14A]/25"
                 >
                   Book Appointment
                 </button>

@@ -42,7 +42,7 @@ export default function RentalSupport() {
       className="relative overflow-hidden py-24 md:py-32"
       style={{ background: "#100D0A" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#0a0a0a] to-[#100D0A]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#100D0A] to-[#100D0A]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div

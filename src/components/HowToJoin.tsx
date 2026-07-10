@@ -137,7 +137,7 @@ function StepCard({
         >
           <span
             className="text-base font-bold text-[#C9A14A]"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             {String(step.number).padStart(2, "0")}
           </span>
@@ -170,7 +170,7 @@ function StepCard({
           <div className="flex items-center gap-3 mb-3">
             <span
               className="text-sm font-medium text-[#C9A14A]"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               Step {step.number}
             </span>
@@ -178,13 +178,13 @@ function StepCard({
           </div>
           <h3
             className="text-xl md:text-2xl font-semibold text-white mb-2"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             {step.title}
           </h3>
           <p
             className="text-[#CBBFAF] text-sm md:text-base leading-relaxed"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             {step.description}
           </p>
@@ -210,7 +210,7 @@ export default function HowToJoin() {
       <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 xl:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -220,13 +220,13 @@ export default function HowToJoin() {
         >
           <motion.span
             className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             How to Join
           </motion.span>
           <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             Your Path to{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C]">
@@ -235,7 +235,7 @@ export default function HowToJoin() {
           </motion.h2>
           <motion.p
             className="text-[#CBBFAF] text-lg mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             A streamlined 9-step journey from registration to activating patient
             leads for your clinic.
@@ -281,7 +281,7 @@ export default function HowToJoin() {
               <div className="w-3 h-3 rounded-full bg-[#C9A14A] shadow-[0_0_8px_#C9A14A]" />
               <span
                 className="text-[#C9A14A] text-sm font-medium"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 Ready to begin? Start your registration today.
               </span>

@@ -80,7 +80,7 @@ export default function ClinicEnvironmentPage() {
             <motion.h1
               variants={fadeUp}
               custom={1}
-              className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6"
             >
               Clinic <span className="text-[#C9A14A]">Environment</span>
             </motion.h1>
@@ -118,7 +118,7 @@ export default function ClinicEnvironmentPage() {
                 }}
               >
                 <span className="text-3xl block mb-4">{f.icon}</span>
-                <h3 className="font-displayisplay text-lg font-bold text-white mb-3">{f.title}</h3>
+                <h3 className="font-display text-lg font-bold text-white mb-3">{f.title}</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
@@ -136,7 +136,7 @@ export default function ClinicEnvironmentPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="font-displayisplay text-2xl md:text-3xl text-white mb-3">Our Space</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-white mb-3">Our Space</h2>
             <p className="font-sans text-sm text-white/50 max-w-xl mx-auto">
               Premium surroundings designed for your comfort and peace of mind.
             </p>
@@ -183,7 +183,7 @@ export default function ClinicEnvironmentPage() {
               <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-3">
                 Your Comfort, Our Priority
               </span>
-              <h2 className="font-displayisplay text-2xl md:text-3xl text-white">
+              <h2 className="font-display text-2xl md:text-3xl text-white">
                 Patient Experience
               </h2>
             </motion.div>
@@ -197,7 +197,7 @@ export default function ClinicEnvironmentPage() {
                   border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-displayisplay text-lg text-white mb-3">Consultation Suites</h3>
+                <h3 className="font-display text-lg text-white mb-3">Consultation Suites</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Private consultation rooms and discrete entrance for your comfort.
                 </p>
@@ -210,7 +210,7 @@ export default function ClinicEnvironmentPage() {
                   border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-displayisplay text-lg text-white mb-3">Treatment Rooms</h3>
+                <h3 className="font-display text-lg text-white mb-3">Treatment Rooms</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Hospital-grade sterilisation with dedicated procedure suites for every treatment.
                 </p>
@@ -223,7 +223,7 @@ export default function ClinicEnvironmentPage() {
                   border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-displayisplay text-lg text-white mb-3">Privacy & Comfort</h3>
+                <h3 className="font-display text-lg text-white mb-3">Privacy & Comfort</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Privacy-focused design with discrete entrances and private consultation rooms ensuring your comfort throughout every visit.
                 </p>
@@ -236,7 +236,7 @@ export default function ClinicEnvironmentPage() {
                   border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-displayisplay text-lg text-white mb-3">Technology & Facilities</h3>
+                <h3 className="font-display text-lg text-white mb-3">Technology & Facilities</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed">
                   State-of-the-art HIFU, MNRF, and laser equipment for optimal results.
                 </p>
@@ -259,7 +259,7 @@ export default function ClinicEnvironmentPage() {
             <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-3">
               Your Safety Matters
             </span>
-            <h2 className="font-displayisplay text-2xl md:text-3xl text-white">
+            <h2 className="font-display text-2xl md:text-3xl text-white">
               Safety & Hygiene Standards
             </h2>
             <p className="font-sans text-sm text-white/50 mt-3 max-w-xl mx-auto">
@@ -307,7 +307,7 @@ export default function ClinicEnvironmentPage() {
               border: "1px solid rgba(203,161,53,0.15)",
             }}
           >
-            <h2 className="font-displayisplay text-2xl md:text-3xl text-white mb-4">
+            <h2 className="font-display text-2xl md:text-3xl text-white mb-4">
               Experience the Difference
             </h2>
             <p className="font-sans text-sm text-white/50 mb-8 max-w-md mx-auto">
@@ -316,7 +316,7 @@ export default function ClinicEnvironmentPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
+                className="px-8 py-3 rounded-full bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#C9A14A] hover:shadow-lg hover:shadow-[#C9A14A]/25"
               >
                 Book a Visit
               </a>

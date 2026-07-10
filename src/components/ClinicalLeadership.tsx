@@ -41,7 +41,7 @@ export default function ClinicalLeadership() {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <motion.div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-6 xl:px-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -50,19 +50,19 @@ export default function ClinicalLeadership() {
         <motion.div variants={cardVariants} className="text-center mb-16">
           <span
             className="inline-block text-[#C9A14A] text-xs font-semibold uppercase tracking-[0.25em] mb-4"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             Clinical Leadership
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-white leading-tight"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             Clinical Leadership
           </h2>
           <p
             className="text-[#CBBFAF] text-lg mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             The specialists who set the protocols your clinic will run.
           </p>
@@ -82,21 +82,21 @@ export default function ClinicalLeadership() {
               <DoctorAvatar name={doctor.name} />
               <h3
                 className="text-base font-bold text-white mb-1"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {doctor.name}
               </h3>
               {doctor.qualifications && (
                 <p
                   className="text-[#C9A14A] text-xs font-medium mb-1"
-                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {doctor.qualifications}
                 </p>
               )}
               <p
                 className="text-[#CBBFAF] text-xs leading-relaxed"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {doctor.specialty}
               </p>
@@ -111,7 +111,7 @@ export default function ClinicalLeadership() {
             style={{
               background: "linear-gradient(135deg, #C9A14A, #E8C860)",
               color: "#100D0A",
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
             }}
           >
             Meet the full team

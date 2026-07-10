@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-displayisplay",
+  variable: "--font-display",
 });
 
 const cinzel = Cinzel({
@@ -16,7 +16,7 @@ const cinzel = Cinzel({
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-displayans",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {

@@ -36,7 +36,7 @@ export default function Hero() {
     <section className="relative min-h-[88vh] bg-ink overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] min-h-[88vh]">
         {/* Copy column */}
-        <div className="relative z-10 flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 py-32 lg:py-0">
+        <div className="relative z-10 flex flex-col justify-center px-6 xl:px-12 py-32 lg:py-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
 
             <h1
-              className="text-cream font-displayisplay"
+              className="text-cream font-display"
               style={{
                 fontSize: "clamp(48px, 6vw, 80px)",
                 letterSpacing: "-0.01em",
@@ -62,7 +62,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-cream font-displayisplay uppercase mt-6"
+              className="text-cream font-display uppercase mt-6"
               style={{
                 fontSize: "clamp(22px, 2.6vw, 34px)",
                 letterSpacing: "0.25em",
@@ -77,7 +77,7 @@ export default function Hero() {
               style={{
                 fontSize: "16px",
                 lineHeight: 1.7,
-                fontFamily: "var(--font-displayans), sans-serif",
+                fontFamily: "var(--font-sans), sans-serif",
               }}
             >
               KO Clinics is a healthcare network connecting aesthetic clinics,
@@ -93,7 +93,7 @@ export default function Hero() {
                 <div key={f.label} className="flex flex-col items-center gap-2">
                   <IconCircle icon={f.icon} />
                   <span
-                    className="text-[10px] font-displayans uppercase tracking-[0.12em] text-gold-500 text-center"
+                    className="text-[10px] font-sans uppercase tracking-[0.12em] text-gold-500 text-center"
                     style={{ minHeight: "32px" }}
                   >
                     {f.label}
@@ -106,7 +106,7 @@ export default function Hero() {
             <div className="mt-10">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-displayans uppercase tracking-[0.12em] text-[13px] font-semibold transition-all duration-300 hover:brightness-110"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-sans uppercase tracking-[0.12em] text-[13px] font-semibold transition-all duration-300 hover:brightness-110"
                 style={{
                   background: "linear-gradient(135deg, #E6C578 0%, #B8873C 100%)",
                   color: "var(--on-gold)",

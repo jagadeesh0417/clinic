@@ -58,7 +58,7 @@ export default function ConsultationRental() {
       id="space-rental"
       className="relative overflow-hidden py-24 md:py-32 bg-[#100D0A]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 xl:px-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -70,7 +70,7 @@ export default function ConsultationRental() {
             <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4">
               Space Rental Program
             </span>
-            <h2 className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">
               Clinic Space <span className="text-[#C9A14A]">Rental</span>
             </h2>
             <p className="text-white/50 font-sans text-lg max-w-2xl mx-auto">
@@ -107,7 +107,7 @@ export default function ConsultationRental() {
             variants={itemVariants}
             className="rounded-2xl p-8 md:p-10 bg-[rgba(246,241,232,0.04)] backdrop-blur-xl border border-[rgba(246,241,232,0.08)]"
           >
-            <h4 className="font-displayisplay text-xl text-white text-center mb-6">
+            <h4 className="font-display text-xl text-white text-center mb-6">
               Specialists Connected
             </h4>
             <div className="flex flex-wrap justify-center gap-3">
@@ -131,7 +131,7 @@ export default function ConsultationRental() {
             variants={itemVariants}
             className="rounded-2xl p-8 md:p-10 bg-[rgba(246,241,232,0.04)] backdrop-blur-xl border border-[rgba(246,241,232,0.08)]"
           >
-            <h4 className="font-displayisplay text-xl text-white text-center mb-6">
+            <h4 className="font-display text-xl text-white text-center mb-6">
               Equipment Available for Rental
             </h4>
             <div className="flex flex-wrap justify-center gap-3">

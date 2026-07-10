@@ -90,16 +90,16 @@ export default function Locations() {
         >
           <span
             className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif" }}
           >
             Our Locations
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-white"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             Visit{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C]">
               Kosmedixx – KO Clinics
             </span>
           </h2>
@@ -116,7 +116,7 @@ export default function Locations() {
               <motion.h3
                 variants={fadeUp} custom={0}
                 className="text-xl font-semibold text-[#C9A14A] mb-6 text-center md:text-left"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {group.city}
               </motion.h3>
@@ -142,22 +142,22 @@ export default function Locations() {
                       <div>
                         <h4
                           className="text-white font-semibold text-base"
-                          style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                          style={{ fontFamily: "var(--font-sans), sans-serif" }}
                         >
                           {loc.name}
                         </h4>
-                        <p className="text-[#C9A14A] text-xs mt-0.5" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                        <p className="text-[#C9A14A] text-xs mt-0.5" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
                           Kosmedixx – Ko Clinics
                         </p>
                       </div>
                     </div>
-                    <p className="text-[#CBBFAF] text-sm ml-8" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <p className="text-[#CBBFAF] text-sm ml-8" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
                       {loc.address}
                       <br />
                       {loc.area}
                     </p>
                     {loc.phone && (
-                      <p className="text-[#C9A14A] text-sm ml-8 mt-2" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                      <p className="text-[#C9A14A] text-sm ml-8 mt-2" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
                         {loc.phone}
                       </p>
                     )}

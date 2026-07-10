@@ -108,13 +108,13 @@ export default function ExistingPartners() {
         >
           <p
             className="mb-3 text-sm font-semibold uppercase tracking-[0.2em]"
-            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Partner Network
           </p>
           <h2
             className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+            style={{ fontFamily: 'var(--font-display), serif' }}
           >
             Our{" "}
             <span className="bg-gradient-to-r from-[#C9A14A] to-[#C9A14A] bg-clip-text text-transparent">
@@ -124,7 +124,7 @@ export default function ExistingPartners() {
           <p
             className="mx-auto mt-4 max-w-xl text-sm leading-relaxed"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "rgba(246,241,232,0.5)",
             }}
           >
@@ -147,7 +147,7 @@ export default function ExistingPartners() {
                 onClick={() => setActiveCountry(country)}
                 className="relative rounded-full px-5 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-300"
                 style={{
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                   backgroundColor: isActive
                     ? "rgba(203,161,53,0.15)"
                     : "rgba(246,241,232,0.04)",
@@ -193,7 +193,7 @@ export default function ExistingPartners() {
                 <p
                   className="text-sm"
                   style={{
-                    fontFamily: "var(--font-displayans), sans-serif",
+                    fontFamily: "var(--font-sans), sans-serif",
                     color: "rgba(246,241,232,0.4)",
                   }}
                 >
@@ -262,7 +262,7 @@ export default function ExistingPartners() {
                         backdropFilter: "blur(8px)",
                         WebkitBackdropFilter: "blur(8px)",
                         color: "rgba(246,241,232,0.7)",
-                        fontFamily: "var(--font-displayans), sans-serif",
+                        fontFamily: "var(--font-sans), sans-serif",
                       }}
                     >
                       <svg
@@ -285,7 +285,7 @@ export default function ExistingPartners() {
                 <div className="relative z-10 p-5">
                   <h3
                     className="text-lg font-semibold tracking-tight"
-                    style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+                    style={{ fontFamily: 'var(--font-display), serif' }}
                   >
                     {partner.name}
                   </h3>

@@ -116,10 +116,10 @@ function FounderCard() {
     >
       <DoctorAvatar name="Dr. Vikas Singh" size="lg" />
       <div>
-        <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-displayisplay), serif" }}>
+        <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-display), serif" }}>
           Dr. Vikas Singh
         </h3>
-        <p className="text-[#CBBFAF] text-sm mt-1" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+        <p className="text-[#CBBFAF] text-sm mt-1" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
           Founder & Chief Medical Officer, KO Clinics
         </p>
       </div>
@@ -143,7 +143,7 @@ export default function About() {
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="relative h-[500px] md:h-[650px] lg:sticky lg:top-32">
             <div className="relative w-full h-full">
@@ -170,7 +170,7 @@ export default function About() {
             <motion.div variants={itemVariants} className="mb-2">
               <span
                 className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase"
-                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif" }}
               >
                 About KO Clinics
               </span>
@@ -179,10 +179,10 @@ export default function About() {
             <motion.h2
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-              style={{ fontFamily: "var(--font-displayisplay), serif" }}
+              style={{ fontFamily: "var(--font-display), serif" }}
             >
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C]">
                 KO Clinics
               </span>
             </motion.h2>
@@ -190,7 +190,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               KO Clinics was founded in 2005 by Dr. Vikas Singh — starting as a
               single aesthetic practice in Bengaluru. Two decades of running
@@ -206,7 +206,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               Among the first to introduce LIPODISSOLVE Ultra and laser-based
               inch-loss treatments to Bangalore and India. Dr. Singh is also
@@ -219,7 +219,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-white/50 text-sm tracking-wider uppercase mb-5"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               Focus Areas
             </motion.p>
@@ -243,7 +243,7 @@ export default function About() {
                     background:
                       "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(203,161,53,0.05) 100%)",
                     border: "1px solid rgba(203,161,53,0.3)",
-                    fontFamily: "var(--font-displayans), sans-serif",
+                    fontFamily: "var(--font-sans), sans-serif",
                   }}
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A]" />
@@ -255,7 +255,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               Our team comprises internationally trained, board-certified
               dermatologists, plastic surgeons and aesthetic physicians dedicated
@@ -265,7 +265,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-[#CBBFAF] text-lg leading-relaxed mb-10"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               We extend an open invitation to practitioners to partner with or
               join the KO Clinics network as it expands across India and
@@ -275,7 +275,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-white text-xl md:text-2xl font-semibold mb-10 italic"
-              style={{ fontFamily: "var(--font-displayisplay), serif" }}
+              style={{ fontFamily: "var(--font-display), serif" }}
             >
               &ldquo;Aesthetics with Ethics&rdquo;
             </motion.p>

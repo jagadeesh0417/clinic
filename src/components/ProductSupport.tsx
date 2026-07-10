@@ -70,13 +70,13 @@ export default function ProductSupport() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Product Support
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}
           >
             Quantum Health{" "}
             <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -85,13 +85,13 @@ export default function ProductSupport() {
           </h2>
           <p
             className="mt-4 text-lg font-medium md:text-xl"
-            style={{ color: "rgba(246,241,232,0.75)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.75)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Complete Retail Support for Partner Clinics
           </p>
           <p
             className="mt-3 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             KO Clinics provides comprehensive product support through Quantum Health.
           </p>
@@ -124,7 +124,7 @@ export default function ProductSupport() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -161,7 +161,7 @@ export default function ProductSupport() {
                   background: "rgba(0,213,255,0.1)",
                   color: "#C9A14A",
                   border: "1px solid rgba(0,213,255,0.15)",
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                 }}
               >
                 {String(benefit.id).padStart(2, "0")}
@@ -169,14 +169,14 @@ export default function ProductSupport() {
 
               <h3
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {benefit.title}
               </h3>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {benefit.desc}
               </p>
@@ -200,7 +200,7 @@ export default function ProductSupport() {
         >
           <span
             className="text-sm font-medium uppercase tracking-wider"
-            style={{ color: "rgba(246,241,232,0.4)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.4)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Also available:
           </span>
@@ -212,7 +212,7 @@ export default function ProductSupport() {
                 background: "rgba(203,161,53,0.08)",
                 borderColor: "rgba(203,161,53,0.25)",
                 color: "#C9A14A",
-                fontFamily: "var(--font-displayans), sans-serif",
+                fontFamily: "var(--font-sans), sans-serif",
               }}
             >
               {badge}
@@ -240,19 +240,19 @@ export default function ProductSupport() {
               <div className="relative">
                 <span
                   className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.2em]"
-                  style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   Counter Kit
                 </span>
                 <h3
                   className="mb-4 text-2xl font-bold md:text-3xl"
-                  style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}
                 >
                   Quantum Health Counter Kit
                 </h3>
                 <p
                   className="leading-relaxed"
-                  style={{ color: "rgba(246,241,232,0.65)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.65)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   Each partner clinic receives: Quantum Health Counter Branding, Display Units, Product Catalogues, Digital Marketing Support, Patient Awareness Materials
                 </p>
@@ -284,7 +284,7 @@ export default function ProductSupport() {
                     </span>
                     <span
                       className="text-sm font-medium"
-                      style={{ color: "rgba(246,241,232,0.85)", fontFamily: "var(--font-displayans), sans-serif" }}
+                      style={{ color: "rgba(246,241,232,0.85)", fontFamily: "var(--font-sans), sans-serif" }}
                     >
                       {item}
                     </span>

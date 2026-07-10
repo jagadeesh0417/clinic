@@ -110,7 +110,7 @@ export default function GalleryPage() {
       <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 xl:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,15 +119,15 @@ export default function GalleryPage() {
           >
             <span
               className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+              style={{ fontFamily: "var(--font-sans), sans-serif" }}
             >
               Gallery
             </span>
             <h2
               className="text-4xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "var(--font-displayisplay), serif" }}
+              style={{ fontFamily: "var(--font-display), serif" }}
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">World</span>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C]">World</span>
             </h2>
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function GalleryPage() {
                 <motion.h3
                   variants={fadeUp} custom={0}
                   className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-                  style={{ fontFamily: "var(--font-displayisplay), serif" }}
+                  style={{ fontFamily: "var(--font-display), serif" }}
                 >
                   {section.title}
                 </motion.h3>
@@ -169,7 +169,7 @@ export default function GalleryPage() {
                       <div className="absolute bottom-0 left-0 right-0 p-4">
                         <p
                           className="text-white text-sm font-medium"
-                          style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                          style={{ fontFamily: "var(--font-sans), sans-serif" }}
                         >
                           {img.label}
                         </p>

@@ -53,7 +53,7 @@ const itemVariants = {
 export default function Products() {
   return (
     <section id="products" className="relative py-24 bg-[#100D0A] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 xl:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Products() {
           <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4">
             Product Range
           </span>
-          <h2 className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">
             Premium <span className="text-[#C9A14A]">Products</span>
           </h2>
           <p className="text-white/60 font-sans text-lg max-w-2xl mx-auto">
@@ -96,7 +96,7 @@ export default function Products() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                  <h3 className="font-displayisplay text-2xl text-white">
+                  <h3 className="font-display text-2xl text-white">
                     {category.name}
                   </h3>
                 </div>

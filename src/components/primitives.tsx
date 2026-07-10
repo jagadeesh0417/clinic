@@ -8,7 +8,7 @@ export function EyebrowRule({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-4 justify-center">
       <span className="block w-10 h-px bg-gold-600" />
-      <span className="text-[13px] font-displayans uppercase tracking-[0.35em] text-gold-500">
+      <span className="text-[13px] font-sans uppercase tracking-[0.35em] text-gold-500 [text-indent:0.35em]">
         {text}
       </span>
       <span className="block w-10 h-px bg-gold-600" />

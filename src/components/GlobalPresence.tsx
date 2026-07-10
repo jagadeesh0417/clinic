@@ -170,23 +170,23 @@ function LocationCard({ location, index }: { location: LocationGroup; index: num
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 flex-wrap">
-                <p className="text-sm font-medium truncate" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#fff" }}>
+                <p className="text-sm font-medium truncate" style={{ fontFamily: "var(--font-sans), sans-serif", color: "#fff" }}>
                   {location.name}
                 </p>
-                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ fontFamily: "var(--font-displayans), sans-serif", background: "rgba(203,161,53,0.15)", color: "#C9A14A" }}>
+                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ fontFamily: "var(--font-sans), sans-serif", background: "rgba(203,161,53,0.15)", color: "#C9A14A" }}>
                   {typeLabel}
                 </span>
               </div>
-              <p className="text-xs mt-0.5" style={{ fontFamily: "var(--font-displayans), sans-serif", color: typeColor }}>
+              <p className="text-xs mt-0.5" style={{ fontFamily: "var(--font-sans), sans-serif", color: typeColor }}>
                 {location.detail}
               </p>
               {location.address && (
-                <p className="text-xs mt-1.5" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
+                <p className="text-xs mt-1.5" style={{ fontFamily: "var(--font-sans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
                   {location.address}
                 </p>
               )}
               {location.phone && (
-                <p className="text-xs mt-1" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
+                <p className="text-xs mt-1" style={{ fontFamily: "var(--font-sans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
                   {location.phone}
                 </p>
               )}
@@ -231,20 +231,20 @@ export default function GlobalPresence() {
         >
           <p
             className="text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
           >
             Our Reach
           </p>
           <h2
             className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#fff" }}
+            style={{ fontFamily: "var(--font-display), serif", color: "#fff" }}
           >
             Location-Wise{" "}
             <span style={{ color: "#C9A14A" }}>Network</span>
           </h2>
           <p
             className="text-sm max-w-xl mx-auto"
-            style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.5)" }}
+            style={{ fontFamily: "var(--font-sans), sans-serif", color: "rgba(246,241,232,0.5)" }}
           >
             KO Clinics locations and partner clinics across India and internationally.
           </p>
@@ -348,7 +348,7 @@ export default function GlobalPresence() {
                       textAnchor="middle"
                       fill={loc.type === "bengaluru" ? "#C9A14A" : "rgba(246,241,232,0.5)"}
                       fontSize="7"
-                      fontFamily="var(--font-displayans), sans-serif"
+                      fontFamily="var(--font-sans), sans-serif"
                       fontWeight="500"
                       opacity="0.85"
                     >
@@ -407,7 +407,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
               >
                 Bengaluru Clinics
               </motion.h3>
@@ -425,7 +425,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.15 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.5)", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif", color: "rgba(246,241,232,0.5)", letterSpacing: "0.2em" }}
               >
                 Other Indian Cities
               </motion.h3>
@@ -443,7 +443,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(203,161,53,0.6)", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-sans), sans-serif", color: "rgba(203,161,53,0.6)", letterSpacing: "0.2em" }}
               >
                 International
               </motion.h3>

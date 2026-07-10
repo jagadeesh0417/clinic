@@ -33,7 +33,7 @@ const fadeUp = {
 function Section({ title, className = "", children }: { title?: string; className?: string; children: React.ReactNode }) {
   return (
     <motion.div variants={fadeUp} className={className}>
-      {title && <h2 className="mb-5 font-displayisplay text-2xl font-bold text-white">{title}</h2>}
+      {title && <h2 className="mb-5 font-display text-2xl font-bold text-white">{title}</h2>}
       {children}
     </motion.div>
   );
@@ -48,7 +48,7 @@ function ListSection({ title, items }: { title: string; items: string[] }) {
             <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C9A14A]/20">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A14A" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <span className="font-displayans text-sm text-white/60">{item}</span>
+            <span className="font-sans text-sm text-white/60">{item}</span>
           </div>
         ))}
       </div>
@@ -66,8 +66,8 @@ export default function TreatmentDetailPage() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#100D0A]">
         <div className="text-center">
-          <h1 className="font-displayisplay text-4xl font-bold text-white">Treatment Not Found</h1>
-          <a href="/treatments" className="mt-4 inline-block font-displayans text-[#C9A14A] underline">Back to Treatments</a>
+          <h1 className="font-display text-4xl font-bold text-white">Treatment Not Found</h1>
+          <a href="/treatments" className="mt-4 inline-block font-sans text-[#C9A14A] underline">Back to Treatments</a>
         </div>
       </div>
     );
@@ -83,7 +83,7 @@ export default function TreatmentDetailPage() {
           href="/treatments"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="mb-8 inline-flex items-center gap-2 font-displayans text-sm text-white/40 transition-colors hover:text-[#C9A14A]"
+          className="mb-8 inline-flex items-center gap-2 font-sans text-sm text-white/40 transition-colors hover:text-[#C9A14A]"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
           Back to Treatments
@@ -91,13 +91,13 @@ export default function TreatmentDetailPage() {
 
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <span className="inline-block rounded-full border border-[#C9A14A]/20 bg-[#C9A14A]/5 px-3 py-1 font-displayans text-[10px] font-medium tracking-wider uppercase text-[#C9A14A]">
+          <span className="inline-block rounded-full border border-[#C9A14A]/20 bg-[#C9A14A]/5 px-3 py-1 font-sans text-[10px] font-medium tracking-wider uppercase text-[#C9A14A]">
             {treatment.category}
           </span>
-          <h1 className="mt-4 font-displayisplay text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 font-display text-4xl font-bold text-white md:text-5xl lg:text-6xl">
             {treatment.name}
           </h1>
-          <p className="mt-4 max-w-3xl font-displayans text-base leading-relaxed text-white/50">
+          <p className="mt-4 max-w-3xl font-sans text-base leading-relaxed text-white/50">
             {treatment.description}
           </p>
         </motion.div>
@@ -123,7 +123,7 @@ export default function TreatmentDetailPage() {
         {/* About This Treatment */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-14">
           <Section title="About This Treatment">
-            <p className="font-displayans text-base leading-relaxed text-white/60">{treatment.longDescription}</p>
+            <p className="font-sans text-base leading-relaxed text-white/60">{treatment.longDescription}</p>
           </Section>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function TreatmentDetailPage() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-12">
           <Section title="How It Works">
             <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] px-6 py-5">
-              <p className="font-displayans text-sm leading-relaxed text-white/60">{treatment.howItWorks}</p>
+              <p className="font-sans text-sm leading-relaxed text-white/60">{treatment.howItWorks}</p>
             </div>
           </Section>
         </motion.div>
@@ -192,7 +192,7 @@ export default function TreatmentDetailPage() {
                       className="flex w-full items-center justify-between px-6 py-4 text-left"
                       style={{ background: "rgba(246,241,232,0.03)" }}
                     >
-                      <span className="flex-1 pr-4 font-displayans text-sm font-medium text-white/80">{item.question}</span>
+                      <span className="flex-1 pr-4 font-sans text-sm font-medium text-white/80">{item.question}</span>
                       <svg
                         className={`h-4 w-4 shrink-0 text-white/40 transition-transform duration-300 ${openFaq === `q-${fi}` ? "rotate-180" : ""}`}
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -210,7 +210,7 @@ export default function TreatmentDetailPage() {
                           className="overflow-hidden"
                         >
                           <div className="border-t border-white/[0.06] px-6 py-4">
-                            <p className="font-displayans text-sm leading-relaxed text-white/50">{item.answer}</p>
+                            <p className="font-sans text-sm leading-relaxed text-white/50">{item.answer}</p>
                           </div>
                         </motion.div>
                       )}
@@ -232,13 +232,13 @@ export default function TreatmentDetailPage() {
         >
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#C9A14A] px-6 py-3 font-displayans text-sm font-semibold text-black transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#C9A14A] px-6 py-3 font-sans text-sm font-semibold text-black transition-all duration-300 hover:bg-[#C9A14A] hover:shadow-lg hover:shadow-[#C9A14A]/25"
           >
             Book Consultation
           </a>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-displayans text-sm font-semibold text-white transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-[#C9A14A]"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-sans text-sm font-semibold text-white transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-[#C9A14A]"
           >
             Enquire Now
           </a>
@@ -253,7 +253,7 @@ export default function TreatmentDetailPage() {
             transition={{ duration: 0.6 }}
             className="mt-20"
           >
-            <h2 className="mb-8 font-displayisplay text-2xl font-bold text-white">
+            <h2 className="mb-8 font-display text-2xl font-bold text-white">
               Related <span className="text-[#C9A14A]">Treatments</span>
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -264,10 +264,10 @@ export default function TreatmentDetailPage() {
                   className="group relative overflow-hidden rounded-2xl border border-white/[0.06] p-5 transition-all duration-500 hover:border-[#C9A14A]/20"
                   style={{ background: "rgba(246,241,232,0.03)", backdropFilter: "blur(12px)" }}
                 >
-                  <span className="font-displayisplay text-base font-bold text-white transition-colors duration-300 group-hover:text-[#C9A14A]">
+                  <span className="font-display text-base font-bold text-white transition-colors duration-300 group-hover:text-[#C9A14A]">
                     {t.name}
                   </span>
-                  <p className="mt-2 line-clamp-2 font-displayans text-xs text-white/40">{t.description}</p>
+                  <p className="mt-2 line-clamp-2 font-sans text-xs text-white/40">{t.description}</p>
                 </a>
               ))}
             </div>

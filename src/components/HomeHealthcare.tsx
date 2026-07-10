@@ -96,7 +96,7 @@ export default function HomeHealthcare() {
                 WebkitBackdropFilter: "blur(16px)",
               }}
             >
-              <p className="font-displayisplay text-3xl font-bold text-white">
+              <p className="font-display text-3xl font-bold text-white">
                 9<span className="text-[#C9A14A]">+</span>
               </p>
               <p className="font-sans text-xs tracking-wider text-white/60">
@@ -131,7 +131,7 @@ export default function HomeHealthcare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.1 }}
-              className="mt-3 font-displayisplay text-4xl font-bold leading-tight text-white md:text-5xl"
+              className="mt-3 font-display text-4xl font-bold leading-tight text-white md:text-5xl"
             >
               Home Healthcare{" "}
               <span className="text-[#C9A14A]">Services</span>

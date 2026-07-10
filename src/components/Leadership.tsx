@@ -55,7 +55,7 @@ export default function Leadership() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl text-center mb-16"
           style={{
-            fontFamily: "var(--font-displayisplay), serif",
+            fontFamily: "var(--font-display), serif",
             color: "#C9A14A",
           }}
         >
@@ -89,7 +89,7 @@ export default function Leadership() {
                 <h3
                   className="text-2xl md:text-3xl font-bold mb-1"
                   style={{
-                    fontFamily: "var(--font-displayisplay), serif",
+                    fontFamily: "var(--font-display), serif",
                     color: "#C9A14A",
                   }}
                 >
@@ -98,14 +98,14 @@ export default function Leadership() {
 
                 <p
                   className="text-xs uppercase tracking-[0.2em] mb-1 text-[#C9A14A]/70 font-semibold"
-                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {profile.title}
                 </p>
 
                 <p
                   className="text-sm uppercase tracking-[0.15em] mb-4 text-neutral-300"
-                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {profile.subtitle}
                 </p>
@@ -113,7 +113,7 @@ export default function Leadership() {
                 {profile.experience && (
                   <p
                     className="text-sm text-neutral-400 italic mb-4 border-l-2 border-[#C9A14A]/50 pl-3"
-                    style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                    style={{ fontFamily: "var(--font-sans), sans-serif" }}
                   >
                     {profile.experience}
                   </p>
@@ -124,7 +124,7 @@ export default function Leadership() {
                     <li
                       key={item}
                       className="flex items-center gap-3 text-sm text-neutral-400"
-                      style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                      style={{ fontFamily: "var(--font-sans), sans-serif" }}
                     >
                       <span
                         className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0"

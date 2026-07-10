@@ -44,7 +44,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block text-[#C9A14A] font-displayans text-sm tracking-[0.2em] uppercase mb-4"
+            className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4"
           >
             Educational Content
           </motion.span>
@@ -52,7 +52,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4"
+            className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4"
           >
             Blog & <span className="text-[#C9A14A]">Library</span>
           </motion.h1>
@@ -60,7 +60,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/60 font-displayans text-lg max-w-2xl mx-auto"
+            className="text-white/60 font-sans text-lg max-w-2xl mx-auto"
           >
             Expert insights, treatment guides, and comparative analyses from KO Clinics
           </motion.p>
@@ -87,7 +87,7 @@ export default function BlogPage() {
               placeholder="Search articles..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-displayans text-sm placeholder:text-white/30 focus:outline-none focus:border-[#C9A14A]/40 transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-sans text-sm placeholder:text-white/30 focus:outline-none focus:border-[#C9A14A]/40 transition-all duration-300"
             />
           </div>
           <div className="flex flex-wrap gap-2">
@@ -95,7 +95,7 @@ export default function BlogPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full font-displayans text-xs font-medium tracking-wide transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full font-sans text-xs font-medium tracking-wide transition-all duration-300 ${
                   activeCategory === cat
                     ? "bg-[#C9A14A] text-black shadow-lg shadow-[#C9A14A]/20"
                     : "border border-white/10 bg-white/5 text-white/60 hover:border-[#C9A14A]/40 hover:text-white"
@@ -119,7 +119,7 @@ export default function BlogPage() {
               exit={{ opacity: 0 }}
               className="py-20 text-center"
             >
-              <p className="font-displayans text-white/40 text-lg">No articles found matching your criteria.</p>
+              <p className="font-sans text-white/40 text-lg">No articles found matching your criteria.</p>
             </motion.div>
           ) : (
             <motion.div
@@ -150,27 +150,27 @@ export default function BlogPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A]/80 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-block px-3 py-1 rounded-full bg-[#C9A14A]/90 text-black text-[10px] font-displayans font-semibold tracking-wider uppercase">
+                      <span className="inline-block px-3 py-1 rounded-full bg-[#C9A14A]/90 text-black text-[10px] font-sans font-semibold tracking-wider uppercase">
                         {post.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-white/30 font-displayans text-xs">{post.date}</span>
+                      <span className="text-white/30 font-sans text-xs">{post.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/20" />
-                      <span className="text-white/30 font-displayans text-xs capitalize">{post.source}</span>
+                      <span className="text-white/30 font-sans text-xs capitalize">{post.source}</span>
                     </div>
-                    <h2 className="font-displayisplay text-xl text-white mb-2 line-clamp-2 group-hover:text-[#C9A14A] transition-colors duration-300">
+                    <h2 className="font-display text-xl text-white mb-2 line-clamp-2 group-hover:text-[#C9A14A] transition-colors duration-300">
                       {post.title}
                     </h2>
-                    <p className="font-displayans text-sm text-white/50 line-clamp-3 leading-relaxed mb-5">
+                    <p className="font-sans text-sm text-white/50 line-clamp-3 leading-relaxed mb-5">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-3">
                       <a
                         href={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-2 text-[#C9A14A] font-displayans text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:gap-3"
+                        className="inline-flex items-center gap-2 text-[#C9A14A] font-sans text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:gap-3"
                       >
                         Read Article
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -179,7 +179,7 @@ export default function BlogPage() {
                       </a>
                       <a
                         href="/contact"
-                        className="ml-auto inline-flex items-center gap-1.5 text-white/40 hover:text-white font-displayans text-xs transition-all duration-300"
+                        className="ml-auto inline-flex items-center gap-1.5 text-white/40 hover:text-white font-sans text-xs transition-all duration-300"
                       >
                         Book Consultation
                       </a>

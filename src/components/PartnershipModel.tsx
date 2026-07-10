@@ -74,13 +74,13 @@ export default function PartnershipModel() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
           >
             The Partnership Model
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             <span
               style={{
@@ -96,7 +96,7 @@ export default function PartnershipModel() {
           </h2>
           <p
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Everything you need to transform your clinic into a premium KO Clinics partner destination — with zero upfront franchise cost.
           </p>
@@ -135,14 +135,14 @@ export default function PartnershipModel() {
 
               <h4
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {req.title}
               </h4>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {req.desc}
               </p>
@@ -195,7 +195,7 @@ export default function PartnershipModel() {
           <p
             className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl"
             style={{
-              fontFamily: "var(--font-displayisplay), serif",
+              fontFamily: "var(--font-display), serif",
               background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -209,7 +209,7 @@ export default function PartnershipModel() {
           />
           <p
             className="mt-6 text-sm italic leading-relaxed md:text-base"
-            style={{ color: "rgba(246,241,232,0.45)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.45)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             &ldquo;Start with the essentials. Scale with the ecosystem.&rdquo;
           </p>

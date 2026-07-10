@@ -172,7 +172,7 @@ export default function PartnerWizard() {
       transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="mx-auto w-full max-w-3xl"
     >
-      <h2 className="mb-2 font-displayisplay text-3xl font-bold tracking-tight text-[#1a1a1a]">
+      <h2 className="mb-2 font-display text-3xl font-bold tracking-tight text-[#191410]">
         {title}
       </h2>
       <p className="mb-8 font-sans text-sm text-[#8a8a8a]">
@@ -187,7 +187,7 @@ export default function PartnerWizard() {
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-8">
         <div className="mb-10 flex items-center justify-between">
           <div>
-            <span className="font-displayisplay text-2xl font-bold tracking-tight text-[#1a1a1a]">KO</span>
+            <span className="font-display text-2xl font-bold tracking-tight text-[#191410]">KO</span>
             <span className="ml-1 font-sans text-xs tracking-[0.15em] uppercase text-[#C6A769]">Clinics</span>
             <p className="mt-1 font-sans text-xs text-[#8a8a8a]">Partner Registration</p>
           </div>
@@ -212,7 +212,7 @@ export default function PartnerWizard() {
                     {done ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg> : num}
                   </div>
                   <span className={`text-[10px] font-medium tracking-wider uppercase whitespace-nowrap transition-colors duration-300 ${
-                    active ? "text-[#1a1a1a]" : done ? "text-[#C6A769]" : "text-[#b0b0b0]"
+                    active ? "text-[#191410]" : done ? "text-[#C6A769]" : "text-[#b0b0b0]"
                   }`}>{label}</span>
                 </button>
               );
@@ -272,7 +272,7 @@ export default function PartnerWizard() {
                     <button key={opt} onClick={() => toggleEstablishment(opt)}
                       className={`group relative flex items-center gap-3 rounded-xl border px-4 py-3.5 text-left text-sm font-medium transition-all duration-300 ${
                         data.establishmentTypes.includes(opt)
-                          ? "border-[#C6A769] bg-[#C6A769]/5 text-[#1a1a1a] shadow-sm"
+                          ? "border-[#C6A769] bg-[#C6A769]/5 text-[#191410] shadow-sm"
                           : "border-[#e5e5e5] bg-white text-[#6a6a6a] hover:border-[#C6A769]/40 hover:shadow-sm"
                       }`}
                     >
@@ -300,7 +300,7 @@ export default function PartnerWizard() {
                     <button key={opt} onClick={() => toggleFacility(opt)}
                       className={`group relative flex items-center gap-3 rounded-xl border px-4 py-3.5 text-left text-sm font-medium transition-all duration-300 ${
                         data.facilities.includes(opt)
-                          ? "border-[#C6A769] bg-[#C6A769]/5 text-[#1a1a1a] shadow-sm"
+                          ? "border-[#C6A769] bg-[#C6A769]/5 text-[#191410] shadow-sm"
                           : "border-[#e5e5e5] bg-white text-[#6a6a6a] hover:border-[#C6A769]/40 hover:shadow-sm"
                       }`}
                     >
@@ -338,7 +338,7 @@ export default function PartnerWizard() {
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#C6A769]/10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                   </div>
-                  <p className="font-sans text-sm font-medium text-[#1a1a1a]">Drop images here or click to browse</p>
+                  <p className="font-sans text-sm font-medium text-[#191410]">Drop images here or click to browse</p>
                   <p className="mt-1 font-sans text-xs text-[#8a8a8a]">JPG, PNG, WebP — Max 10 images</p>
                   <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={e => {
                     const files = Array.from(e.target.files || []);
@@ -386,7 +386,7 @@ export default function PartnerWizard() {
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#C6A769]/10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                   </div>
-                  <p className="font-sans text-sm font-medium text-[#1a1a1a]">Drop video here or click to browse</p>
+                  <p className="font-sans text-sm font-medium text-[#191410]">Drop video here or click to browse</p>
                   <p className="mt-1 font-sans text-xs text-[#8a8a8a]">MP4, MOV — Max 1–2 minutes</p>
                   <input ref={videoInputRef} type="file" accept="video/*" className="hidden" onChange={e => {
                     const file = e.target.files?.[0];
@@ -417,7 +417,7 @@ export default function PartnerWizard() {
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
                   </motion.div>
-                  <h3 className="font-displayisplay text-2xl font-bold text-[#1a1a1a]">Application Under Review</h3>
+                  <h3 className="font-display text-2xl font-bold text-[#191410]">Application Under Review</h3>
                   <p className="mt-3 font-sans text-sm text-[#8a8a8a] max-w-md">
                     Your application has been submitted successfully. Our team will review it within 48–72 hours.
                   </p>
@@ -434,7 +434,7 @@ export default function PartnerWizard() {
                           i <= 1 ? "bg-[#C6A769] text-white" : "bg-[#f0f0f0] text-[#b0b0b0]"
                         }`}>{i + 1}</div>
                         <span className={`text-[10px] font-medium tracking-wider uppercase ${
-                          i <= 1 ? "text-[#1a1a1a]" : "text-[#b0b0b0]"
+                          i <= 1 ? "text-[#191410]" : "text-[#b0b0b0]"
                         }`}>{l}</span>
                       </div>
                     ))}
@@ -466,7 +466,7 @@ export default function PartnerWizard() {
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         )}
                       </div>
-                      <span className="font-sans text-sm font-semibold text-[#1a1a1a]">
+                      <span className="font-sans text-sm font-semibold text-[#191410]">
                         {t === "virtual" ? "Virtual Verification" : "Physical Verification"}
                       </span>
                       <span className="font-sans text-xs text-[#8a8a8a]">
@@ -479,7 +479,7 @@ export default function PartnerWizard() {
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
                     <label className="block font-sans text-xs font-medium text-[#6a6a6a]">Schedule Appointment</label>
                     <input type="date" value={scheduledDate} onChange={e => setScheduledDate(e.target.value)}
-                      className="w-full rounded-xl border border-[#e5e5e5] px-4 py-3 font-sans text-sm text-[#1a1a1a] outline-none transition-all duration-300 focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10"
+                      className="w-full rounded-xl border border-[#e5e5e5] px-4 py-3 font-sans text-sm text-[#191410] outline-none transition-all duration-300 focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10"
                     />
                   </motion.div>
                 )}
@@ -494,7 +494,7 @@ export default function PartnerWizard() {
                     <span className="rounded-md bg-[#C6A769]/10 px-2.5 py-0.5 font-sans text-[10px] font-medium text-[#C6A769]">PDF</span>
                   </div>
                   <div className="max-h-48 overflow-y-auto p-5 font-sans text-xs leading-relaxed text-[#6a6a6a]">
-                    <p className="mb-3 font-semibold text-[#1a1a1a]">KO CLINICS PARTNERSHIP AGREEMENT</p>
+                    <p className="mb-3 font-semibold text-[#191410]">KO CLINICS PARTNERSHIP AGREEMENT</p>
                     <p>This Partnership Agreement ("Agreement") is entered into between KO Clinics and the Partner specified in the registration form.</p>
                     <p className="mt-2">1. <strong>Partnership Terms</strong> — The Partner agrees to operate under the KO Clinics brand and standards as outlined in the partnership handbook.</p>
                     <p className="mt-2">2. <strong>Revenue Sharing</strong> — Revenue shall be shared on a 50:50 basis for all healthcare services provided through KO Clinics patient acquisition channels.</p>
@@ -509,7 +509,7 @@ export default function PartnerWizard() {
                   <label className="mb-2 block font-sans text-xs font-medium text-[#6a6a6a]">Digital Signature</label>
                   <div className="overflow-hidden rounded-xl border border-[#e5e5e5]">
                     <canvas id="signature-pad" className="h-32 w-full cursor-crosshair bg-white"
-                      onMouseDown={e => { const c = e.currentTarget; const ctx = c.getContext("2d"); if (!ctx) return; const rect = c.getBoundingClientRect(); c.style.cursor = "crosshair"; let drawing = false; const startDraw = (ev: MouseEvent) => { drawing = true; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.beginPath(); ctx.moveTo(x, y); }; const draw = (ev: MouseEvent) => { if (!drawing) return; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.lineWidth = 2.5; ctx.lineCap = "round"; ctx.strokeStyle = "#1a1a1a"; ctx.lineTo(x, y); ctx.stroke(); }; const stopDraw = () => { if (drawing) { drawing = false; setSigned(true); } }; c.addEventListener("mousedown", startDraw); c.addEventListener("mousemove", draw); c.addEventListener("mouseup", stopDraw); c.addEventListener("mouseleave", stopDraw); }}
+                      onMouseDown={e => { const c = e.currentTarget; const ctx = c.getContext("2d"); if (!ctx) return; const rect = c.getBoundingClientRect(); c.style.cursor = "crosshair"; let drawing = false; const startDraw = (ev: MouseEvent) => { drawing = true; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.beginPath(); ctx.moveTo(x, y); }; const draw = (ev: MouseEvent) => { if (!drawing) return; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.lineWidth = 2.5; ctx.lineCap = "round"; ctx.strokeStyle = "#191410"; ctx.lineTo(x, y); ctx.stroke(); }; const stopDraw = () => { if (drawing) { drawing = false; setSigned(true); } }; c.addEventListener("mousedown", startDraw); c.addEventListener("mousemove", draw); c.addEventListener("mouseup", stopDraw); c.addEventListener("mouseleave", stopDraw); }}
                     />
                   </div>
                   <button onClick={() => { const c = document.getElementById("signature-pad") as HTMLCanvasElement; const ctx = c?.getContext("2d"); if (ctx) { ctx.clearRect(0, 0, c.width, c.height); setSigned(false); } }} className="mt-2 font-sans text-xs font-medium text-[#C6A769] hover:text-[#b89650]">Clear Signature</button>
@@ -543,7 +543,7 @@ export default function PartnerWizard() {
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
                     </svg>
                   </motion.div>
-                  <h2 className="font-displayisplay text-3xl font-bold text-[#1a1a1a]">
+                  <h2 className="font-display text-3xl font-bold text-[#191410]">
                     Welcome to KO Clinics!
                   </h2>
                   <p className="mt-3 font-sans text-sm text-[#8a8a8a] max-w-md">
@@ -579,7 +579,7 @@ export default function PartnerWizard() {
                         <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#C6A769]/10 transition-colors duration-300 group-hover:bg-[#C6A769]/20">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><path d={b.icon}/></svg>
                         </div>
-                        <span className="font-sans text-xs font-semibold text-[#1a1a1a]">{b.title}</span>
+                        <span className="font-sans text-xs font-semibold text-[#191410]">{b.title}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -593,7 +593,7 @@ export default function PartnerWizard() {
           <button
             onClick={goBack}
             disabled={step === 1}
-            className="flex items-center gap-2 rounded-xl border border-[#e5e5e5] bg-white px-5 py-2.5 font-sans text-sm font-medium text-[#6a6a6a] transition-all duration-300 hover:border-[#C6A769]/40 hover:text-[#1a1a1a] disabled:opacity-40 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 rounded-xl border border-[#e5e5e5] bg-white px-5 py-2.5 font-sans text-sm font-medium text-[#6a6a6a] transition-all duration-300 hover:border-[#C6A769]/40 hover:text-[#191410] disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
             Back
@@ -660,7 +660,7 @@ function Field({ label, value, onChange, error, placeholder, type = "text", clas
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className={`w-full rounded-xl border px-4 py-3 font-sans text-sm text-[#1a1a1a] outline-none transition-all duration-300 placeholder:text-[#b0b0b0] focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10 ${
+        className={`w-full rounded-xl border px-4 py-3 font-sans text-sm text-[#191410] outline-none transition-all duration-300 placeholder:text-[#b0b0b0] focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10 ${
           error ? "border-red-300 bg-red-50" : "border-[#e5e5e5] bg-white"
         }`}
       />

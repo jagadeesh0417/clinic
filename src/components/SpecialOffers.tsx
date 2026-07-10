@@ -95,7 +95,7 @@ export default function SpecialOffers() {
           <span
             className="mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em]"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "#C9A14A",
               backgroundColor: "rgba(203,161,53,0.1)",
               border: "1px solid rgba(203,161,53,0.2)",
@@ -105,7 +105,7 @@ export default function SpecialOffers() {
           </span>
           <h2
             className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+            style={{ fontFamily: 'var(--font-display), serif' }}
           >
             Special Offers for{" "}
             <span
@@ -117,7 +117,7 @@ export default function SpecialOffers() {
           <p
             className="mx-auto mt-4 max-w-xl text-sm leading-relaxed"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "rgba(246,241,232,0.5)",
             }}
           >
@@ -198,14 +198,14 @@ export default function SpecialOffers() {
               <div className="relative z-10 p-6">
                 <h3
                   className="mb-2 text-lg font-semibold tracking-tight"
-                  style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+                  style={{ fontFamily: 'var(--font-display), serif' }}
                 >
                   {offer.title}
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
                   style={{
-                    fontFamily: "var(--font-displayans), sans-serif",
+                    fontFamily: "var(--font-sans), sans-serif",
                     color: "rgba(246,241,232,0.5)",
                   }}
                 >

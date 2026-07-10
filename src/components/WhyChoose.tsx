@@ -59,8 +59,8 @@ export default function WhyChoose() {
             Why Partner
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#FFFFFF" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ fontFamily: "var(--font-display), serif", color: "#FFFFFF" }}
           >
             Why Partner with{" "}
             <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -91,13 +91,13 @@ export default function WhyChoose() {
             >
               <h3
                 className="text-lg md:text-xl font-semibold mb-2"
-                style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {b.title}
               </h3>
               <p
                 className="text-base leading-relaxed"
-                style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {b.desc}
               </p>

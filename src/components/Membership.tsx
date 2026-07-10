@@ -157,8 +157,8 @@ export default function Membership() {
             Premium Network
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}
           >
             KO Clinics{" "}
             <span
@@ -174,7 +174,7 @@ export default function Membership() {
           </h2>
           <p
             className="mt-5 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Premium Benefits for Partner Clinics
           </p>
@@ -208,7 +208,7 @@ export default function Membership() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -253,7 +253,7 @@ export default function Membership() {
                     backgroundColor: lvl.bg,
                     color: lvl.text,
                     border: `1px solid ${lvl.border}`,
-                    fontFamily: "var(--font-displayans), sans-serif",
+                    fontFamily: "var(--font-sans), sans-serif",
                   }}
                 >
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
@@ -340,14 +340,14 @@ export default function Membership() {
 
                 <h3
                   className="mb-2 text-lg font-semibold"
-                  style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {benefit.title}
                 </h3>
 
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {benefit.desc}
                 </p>

@@ -31,10 +31,10 @@ export default function TrustBar() {
           {items.map((item, i) => (
             <div key={item.label} className="flex-1 flex items-center justify-center gap-3 relative">
               {i > 0 && (
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-6 bg-gold-600" />
+                <span className="w-px self-stretch bg-gold-600" />
               )}
               <item.icon className="w-5 h-5 text-gold-500 shrink-0" strokeWidth={1.5} />
-              <span className="text-[12px] font-displayans uppercase tracking-[0.14em] text-body leading-tight">
+              <span className="text-[12px] font-sans uppercase tracking-[0.14em] text-body leading-tight [text-indent:0.14em]">
                 {item.label}
               </span>
             </div>

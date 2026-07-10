@@ -75,8 +75,8 @@ export default function PartnerBenefits() {
             Partner Benefits
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}
           >
             Revenue{" "}
             <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -86,7 +86,7 @@ export default function PartnerBenefits() {
           </h2>
           <p
             className="mt-5 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Unlock eight powerful revenue streams designed to transform your clinic into a
             high-growth healthcare enterprise.
@@ -120,7 +120,7 @@ export default function PartnerBenefits() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -157,7 +157,7 @@ export default function PartnerBenefits() {
                   background: "rgba(0,213,255,0.1)",
                   color: "#C9A14A",
                   border: "1px solid rgba(0,213,255,0.15)",
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                 }}
               >
                 {String(benefit.id).padStart(2, "0")}
@@ -165,14 +165,14 @@ export default function PartnerBenefits() {
 
               <h3
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {benefit.title}
               </h3>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-sans), sans-serif" }}
               >
                 {benefit.desc}
               </p>

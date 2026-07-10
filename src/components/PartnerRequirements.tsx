@@ -90,10 +90,10 @@ export default function PartnerRequirements() {
             variants={fadeUp}
             className="mx-auto max-w-4xl text-center"
           >
-            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}>
+            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}>
               What You Need to Join KO Clinics
             </span>
-            <h2 className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}>
+            <h2 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}>
               Partner{" "}
               <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                 Requirements
@@ -130,7 +130,7 @@ export default function PartnerRequirements() {
                     <path d="M20 6L9 17L4 12" stroke="#C9A14A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h4 className="text-base font-semibold leading-snug" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}>
+                <h4 className="text-base font-semibold leading-snug" style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}>
                   {req}
                 </h4>
                 <div className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full" style={{ background: "linear-gradient(90deg, #C9A14A 50%, transparent 100%)" }} />
@@ -176,10 +176,10 @@ export default function PartnerRequirements() {
             variants={fadeUp}
             className="mx-auto mb-16 max-w-3xl text-center md:mb-20"
           >
-            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}>
+            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}>
               Why Partner With Us
             </span>
-            <h3 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}>
+            <h3 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}>
               Benefits of Partnership
             </h3>
           </motion.div>
@@ -203,7 +203,7 @@ export default function PartnerRequirements() {
                   className="mb-5 text-xl font-bold md:text-2xl"
                   style={{
                     color: "#C9A14A",
-                    fontFamily: "var(--font-displayisplay), serif",
+                    fontFamily: "var(--font-display), serif",
                   }}
                 >
                   {category.title}
@@ -217,7 +217,7 @@ export default function PartnerRequirements() {
                         background: "rgba(246,241,232,0.04)",
                         border: "1px solid rgba(203,161,53,0.15)",
                         color: "rgba(246,241,232,0.85)",
-                        fontFamily: "var(--font-displayans), sans-serif",
+                        fontFamily: "var(--font-sans), sans-serif",
                       }}
                     >
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">

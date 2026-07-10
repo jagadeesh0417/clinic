@@ -46,7 +46,7 @@ export default function EquipmentRental() {
 
   return (
     <section id="equipment-rental" className="relative overflow-hidden bg-[#100D0A] py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#0a0a0a] to-[#100D0A]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#100D0A] to-[#100D0A]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -59,7 +59,7 @@ export default function EquipmentRental() {
           <span className="mb-3 inline-block tracking-[0.2em] text-[#C9A14A] font-mono text-xs uppercase">
             Premium Medical Equipment
           </span>
-          <h2 className="font-displayisplay text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+          <h2 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
             Equipment <span className="text-[#C9A14A]">Rental</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-sans text-base text-white/60">
@@ -126,7 +126,7 @@ export default function EquipmentRental() {
               >
                 <item.icon className="w-6 h-6 text-[#C9A14A]" />
               </motion.div>
-              <h3 className="font-displayisplay text-sm font-semibold text-white sm:text-base">
+              <h3 className="font-display text-sm font-semibold text-white sm:text-base">
                 {item.title}
               </h3>
               <div

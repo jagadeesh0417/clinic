@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-[12px] font-displayans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors duration-300 relative"
+                className="px-3 py-2 text-[12px] font-sans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors duration-300 relative"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-3 right-3 h-px bg-gold-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -59,7 +59,7 @@ export default function Navbar() {
             <div className="ml-6 pl-6 border-l border-gold-600/30">
               <a
                 href="/contact"
-                className="px-5 py-2.5 rounded-full border border-gold-500 text-gold-500 text-[12px] font-displayans uppercase tracking-[0.14em] hover:bg-gold-500/8 transition-all duration-300"
+                className="px-5 py-2.5 rounded-full border border-gold-500 text-gold-500 text-[12px] font-sans uppercase tracking-[0.14em] hover:bg-gold-500/8 transition-all duration-300"
               >
                 Become Partner
               </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={handleNavClick}
-                  className="text-[12px] font-displayans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors py-2"
+                  className="text-[12px] font-sans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors py-2"
                 >
                   {item.label}
                 </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={handleNavClick}
-                className="mt-2 px-5 py-3 rounded-full border border-gold-500 text-gold-500 text-[12px] font-displayans uppercase tracking-[0.14em] text-center hover:bg-gold-500/8 transition-all duration-300"
+                className="mt-2 px-5 py-3 rounded-full border border-gold-500 text-gold-500 text-[12px] font-sans uppercase tracking-[0.14em] text-center hover:bg-gold-500/8 transition-all duration-300"
               >
                 Become Partner
               </a>

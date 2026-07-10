@@ -77,7 +77,7 @@ export default function VisionMission() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" as const }}
-            className="font-displayisplay text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
+            className="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
           >
             Our Vision
           </motion.h2>
@@ -112,7 +112,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: "easeOut" as const }}
-              className="font-displayisplay text-4xl font-bold text-white sm:text-5xl md:text-6xl"
+              className="font-display text-4xl font-bold text-white sm:text-5xl md:text-6xl"
             >
               Our Mission
             </motion.h2>

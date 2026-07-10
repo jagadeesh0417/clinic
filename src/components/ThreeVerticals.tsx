@@ -182,7 +182,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
         <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
           <h3
             className="text-2xl font-bold md:text-3xl"
-            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#fff" }}
+            style={{ fontFamily: "var(--font-display), serif", color: "#fff" }}
           >
             {v.title}
           </h3>
@@ -194,7 +194,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
         <p
           className="mb-5 text-sm leading-relaxed"
           style={{
-            fontFamily: "var(--font-displayans), sans-serif",
+            fontFamily: "var(--font-sans), sans-serif",
             color: "rgba(246,241,232,0.65)",
           }}
         >
@@ -206,7 +206,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.15em]"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "#C9A14A",
             }}
           >
@@ -218,7 +218,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
                 key={s}
                 className="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-300"
                 style={{
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                   background: "rgba(246,241,232,0.05)",
                   border: "1px solid rgba(246,241,232,0.08)",
                   color: "rgba(246,241,232,0.8)",
@@ -235,7 +235,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.15em]"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "#C9A14A",
             }}
           >
@@ -247,7 +247,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
                 key={b}
                 className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-medium transition-colors duration-300"
                 style={{
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                   background: "rgba(0,213,255,0.06)",
                   border: "1px solid rgba(0,213,255,0.1)",
                   color: "#DDBB6C",
@@ -324,7 +324,7 @@ export default function ThreeVerticals() {
           <p
             className="mb-4 text-sm font-semibold uppercase tracking-[0.2em]"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "#C9A14A",
               letterSpacing: "0.2em",
             }}
@@ -333,7 +333,7 @@ export default function ThreeVerticals() {
           </p>
           <h2
             className="mb-4 text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "var(--font-displayisplay), serif" }}
+            style={{ fontFamily: "var(--font-display), serif" }}
           >
             Our Three Business{" "}
             <span
@@ -345,7 +345,7 @@ export default function ThreeVerticals() {
           <p
             className="mx-auto max-w-2xl text-lg"
             style={{
-              fontFamily: "var(--font-displayans), sans-serif",
+              fontFamily: "var(--font-sans), sans-serif",
               color: "rgba(246,241,232,0.55)",
             }}
           >

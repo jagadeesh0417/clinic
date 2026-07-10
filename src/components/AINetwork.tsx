@@ -106,7 +106,7 @@ export default function AINetwork() {
           transition={{ duration: 0.8, ease: "easeOut" as const }}
           className="text-center"
         >
-          <h2 className="font-displayisplay text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+          <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
             India&apos;s{" "}
             <span className="bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C] bg-clip-text text-transparent">
               AI-Powered

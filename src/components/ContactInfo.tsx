@@ -46,7 +46,7 @@ export default function ContactInfo() {
           </motion.span>
           <motion.h1
             variants={fadeUp} custom={1}
-            className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4"
+            className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4"
           >
             Contact <span className="text-[#C9A14A]">Us</span>
           </motion.h1>
@@ -68,7 +68,7 @@ export default function ContactInfo() {
         >
           <motion.h2
             variants={fadeUp} custom={0}
-            className="font-displayisplay text-2xl text-white text-center mb-8"
+            className="font-display text-2xl text-white text-center mb-8"
           >
             Phone
           </motion.h2>
@@ -210,7 +210,7 @@ export default function ContactInfo() {
         >
           <motion.h2
             variants={fadeUp} custom={0}
-            className="font-displayisplay text-2xl text-white text-center mb-8"
+            className="font-display text-2xl text-white text-center mb-8"
           >
             Social
           </motion.h2>

@@ -83,7 +83,7 @@ function ImageShowcase() {
     <div ref={ref} className="relative w-full h-full min-h-[500px]">
       <motion.div
         style={{ scale, y }}
-        className="relative w-full h-full rounded-2xl overflow-hidden bg-[#1A1A1A] flex items-center justify-center border border-white/10"
+        className="relative w-full h-full rounded-2xl overflow-hidden bg-[#191410] flex items-center justify-center border border-white/10"
       >
         <div className="text-center p-8">
           <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#C9A14A]/10 flex items-center justify-center">
@@ -233,7 +233,7 @@ export default function QScan() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-[10%] w-80 h-80 bg-[#E8D48B]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <ImageShowcase />
@@ -248,7 +248,7 @@ export default function QScan() {
               <motion.div variants={itemVariants} className="mb-2">
                 <span
                   className="inline-flex items-center gap-2 text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase"
-                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] animate-pulse" />
                   Next-Gen Technology
@@ -258,7 +258,7 @@ export default function QScan() {
               <motion.h2
                 variants={itemVariants}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2"
-                style={{ fontFamily: "var(--font-displayisplay), serif" }}
+                style={{ fontFamily: "var(--font-display), serif" }}
               >
                 QScan{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] via-[#E8D48B] to-[#C9A14A]">

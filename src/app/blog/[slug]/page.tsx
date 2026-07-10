@@ -22,8 +22,8 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-screen bg-[#100D0A] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-displayisplay text-4xl font-bold text-white">Article Not Found</h1>
-          <a href="/blog" className="mt-4 inline-block font-displayans text-[#C9A14A] underline">Back to Blog</a>
+          <h1 className="font-display text-4xl font-bold text-white">Article Not Found</h1>
+          <a href="/blog" className="mt-4 inline-block font-sans text-[#C9A14A] underline">Back to Blog</a>
         </div>
       </div>
     );
@@ -41,7 +41,7 @@ export default function BlogDetailPage() {
           href="/blog"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="inline-flex items-center gap-2 font-displayans text-sm text-white/40 hover:text-[#C9A14A] transition-colors mb-8"
+          className="inline-flex items-center gap-2 font-sans text-sm text-white/40 hover:text-[#C9A14A] transition-colors mb-8"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
@@ -70,12 +70,12 @@ export default function BlogDetailPage() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-wrap items-center gap-3 mb-4"
         >
-          <span className="px-3 py-1 rounded-full bg-[#C9A14A]/20 text-[#C9A14A] font-displayans text-[10px] font-semibold tracking-wider uppercase">
+          <span className="px-3 py-1 rounded-full bg-[#C9A14A]/20 text-[#C9A14A] font-sans text-[10px] font-semibold tracking-wider uppercase">
             {post.category}
           </span>
-          <span className="text-white/30 font-displayans text-sm">{post.date}</span>
+          <span className="text-white/30 font-sans text-sm">{post.date}</span>
           <span className="w-1 h-1 rounded-full bg-white/20" />
-          <span className="text-white/30 font-displayans text-sm capitalize">{post.source}</span>
+          <span className="text-white/30 font-sans text-sm capitalize">{post.source}</span>
         </motion.div>
 
         {/* Title */}
@@ -83,7 +83,7 @@ export default function BlogDetailPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="font-displayisplay text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8"
+          className="font-display text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8"
         >
           {post.title}
         </motion.h1>
@@ -101,9 +101,9 @@ export default function BlogDetailPage() {
               const [label, ...rest] = paragraph.split(/\u2014|:\s/);
               return (
                 <motion.div key={i} variants={fadeUp} custom={i}>
-                  <h2 className="font-displayans text-lg text-[#C9A14A] mb-2">{label}</h2>
+                  <h2 className="font-sans text-lg text-[#C9A14A] mb-2">{label}</h2>
                   {rest.length > 0 && (
-                    <p className="font-displayans text-base text-white/60 leading-relaxed">{rest.join("\u2014 ").trim()}</p>
+                    <p className="font-sans text-base text-white/60 leading-relaxed">{rest.join("\u2014 ").trim()}</p>
                   )}
                 </motion.div>
               );
@@ -113,7 +113,7 @@ export default function BlogDetailPage() {
                 key={i}
                 variants={fadeUp}
                 custom={i}
-                className="font-displayans text-base text-white/60 leading-relaxed"
+                className="font-sans text-base text-white/60 leading-relaxed"
               >
                 {paragraph}
               </motion.p>
@@ -134,12 +134,12 @@ export default function BlogDetailPage() {
               border: "1px solid rgba(203,161,53,0.15)",
             }}
           >
-            <h2 className="font-displayans text-sm tracking-wider uppercase text-[#C9A14A] mb-5">Key Takeaways</h2>
+            <h2 className="font-sans text-sm tracking-wider uppercase text-[#C9A14A] mb-5">Key Takeaways</h2>
             <div className="space-y-3">
               {post.takeaways.map((t, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
-                  <p className="font-displayans text-sm text-white/70 leading-relaxed">{t}</p>
+                  <p className="font-sans text-sm text-white/70 leading-relaxed">{t}</p>
                 </div>
               ))}
             </div>
@@ -155,7 +155,7 @@ export default function BlogDetailPage() {
             transition={{ duration: 0.6 }}
             className="mt-12"
           >
-            <h2 className="font-displayisplay text-2xl text-white mb-6">Frequently Asked Questions</h2>
+            <h2 className="font-display text-2xl text-white mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {post.faq.map((item, i) => (
                 <div
@@ -166,8 +166,8 @@ export default function BlogDetailPage() {
                     border: "1px solid rgba(246,241,232,0.06)",
                   }}
                 >
-                  <h3 className="font-displayans text-sm font-semibold text-white mb-2">{item.q}</h3>
-                  <p className="font-displayans text-sm text-white/50 leading-relaxed">{item.a}</p>
+                  <h3 className="font-sans text-sm font-semibold text-white mb-2">{item.q}</h3>
+                  <p className="font-sans text-sm text-white/50 leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -189,20 +189,20 @@ export default function BlogDetailPage() {
               border: "1px solid rgba(203,161,53,0.15)",
             }}
           >
-            <h2 className="font-displayisplay text-2xl text-white mb-3">Ready to Begin Your Journey?</h2>
-            <p className="font-displayans text-sm text-white/50 mb-6 max-w-lg mx-auto">
+            <h2 className="font-display text-2xl text-white mb-3">Ready to Begin Your Journey?</h2>
+            <p className="font-sans text-sm text-white/50 mb-6 max-w-lg mx-auto">
               Book a consultation with KO Clinics to discuss your personalised treatment plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-[#C9A14A] text-black font-displayans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
+                className="px-8 py-3 rounded-full bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#C9A14A] hover:shadow-lg hover:shadow-[#C9A14A]/25"
               >
                 Book Consultation
               </a>
               <a
                 href="/blog"
-                className="px-8 py-3 rounded-full border border-white/10 text-white/70 font-displayans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-white"
+                className="px-8 py-3 rounded-full border border-white/10 text-white/70 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-white"
               >
                 More Articles
               </a>
@@ -219,7 +219,7 @@ export default function BlogDetailPage() {
             transition={{ duration: 0.6 }}
             className="mt-16"
           >
-            <h2 className="font-displayisplay text-2xl text-white mb-6">
+            <h2 className="font-display text-2xl text-white mb-6">
               Related <span className="text-[#C9A14A]">Articles</span>
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -233,8 +233,8 @@ export default function BlogDetailPage() {
                     border: "1px solid rgba(246,241,232,0.06)",
                   }}
                 >
-                  <span className="text-[10px] font-displayans tracking-wider uppercase text-[#C9A14A]">{r.date}</span>
-                  <h3 className="font-displayisplay text-base text-white mt-1 group-hover:text-[#C9A14A] transition-colors">
+                  <span className="text-[10px] font-sans tracking-wider uppercase text-[#C9A14A]">{r.date}</span>
+                  <h3 className="font-display text-base text-white mt-1 group-hover:text-[#C9A14A] transition-colors">
                     {r.title}
                   </h3>
                 </a>

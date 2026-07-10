@@ -111,13 +111,13 @@ export default function RevenueModel() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Financial Model
           </span>
           <h2
-            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#FFFFFF" }}
+            className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ fontFamily: "var(--font-display), serif", color: "#FFFFFF" }}
           >
             Revenue{" "}
             <span
@@ -132,7 +132,7 @@ export default function RevenueModel() {
           </h2>
           <p
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Zero Franchise Fee <span style={{ color: "rgba(203,161,53,0.5)" }}>•</span> No Royalty{" "}
             <span style={{ color: "rgba(203,161,53,0.5)" }}>•</span> No Hidden Costs
@@ -181,19 +181,19 @@ export default function RevenueModel() {
               <div className="relative z-10 p-8">
                 <p
                   className="mb-2 text-xs font-semibold uppercase tracking-[0.15em]"
-                  style={{ color: "rgba(203,161,53,0.7)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(203,161,53,0.7)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {m.label}
                 </p>
                 <p
                   className="text-5xl font-bold md:text-6xl"
-                  style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   <AnimatedCounter to={m.value} suffix={m.suffix} />
                 </p>
                 <p
                   className="mt-3 text-sm leading-relaxed"
-                  style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   {m.desc}
                 </p>
@@ -224,7 +224,7 @@ export default function RevenueModel() {
           >
             <h3
               className="mb-8 text-center text-lg font-semibold"
-              style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
+              style={{ color: "#FFFFFF", fontFamily: "var(--font-display), serif" }}
             >
               Monthly Revenue Breakdown
             </h3>
@@ -243,13 +243,13 @@ export default function RevenueModel() {
                   >
                     <span
                       className="text-sm"
-                      style={{ color: "rgba(246,241,232,0.7)", fontFamily: "var(--font-displayans), sans-serif" }}
+                      style={{ color: "rgba(246,241,232,0.7)", fontFamily: "var(--font-sans), sans-serif" }}
                     >
                       {item.label}
                     </span>
                     <span
                       className="text-lg font-bold"
-                      style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
+                      style={{ color: "#C9A14A", fontFamily: "var(--font-sans), sans-serif" }}
                     >
                       {formatCurrency(item.amount)}
                     </span>
@@ -288,7 +288,7 @@ export default function RevenueModel() {
               >
                 <span
                   className="text-base font-semibold"
-                  style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-sans), sans-serif" }}
                 >
                   Monthly Potential
                 </span>
@@ -296,7 +296,7 @@ export default function RevenueModel() {
                   className="text-2xl font-bold md:text-3xl"
                   style={{
                     color: "#C9A14A",
-                    fontFamily: "var(--font-displayans), sans-serif",
+                    fontFamily: "var(--font-sans), sans-serif",
                     background: "linear-gradient(135deg, #C9A14A, #E8D48B)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -319,7 +319,7 @@ export default function RevenueModel() {
         >
           <p
             className="mb-6 text-sm font-semibold uppercase tracking-[0.2em]"
-            style={{ color: "rgba(203,161,53,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
+            style={{ color: "rgba(203,161,53,0.6)", fontFamily: "var(--font-sans), sans-serif" }}
           >
             Additional Income Streams
           </p>
@@ -332,7 +332,7 @@ export default function RevenueModel() {
                   background: "rgba(203,161,53,0.08)",
                   border: "1px solid rgba(203,161,53,0.2)",
                   color: "#C9A14A",
-                  fontFamily: "var(--font-displayans), sans-serif",
+                  fontFamily: "var(--font-sans), sans-serif",
                   backdropFilter: "blur(8px)",
                 }}
               >
@@ -349,7 +349,7 @@ export default function RevenueModel() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mx-auto max-w-2xl text-center text-xs leading-relaxed"
-          style={{ color: "rgba(246,241,232,0.3)", fontFamily: "var(--font-displayans), sans-serif" }}
+          style={{ color: "rgba(246,241,232,0.3)", fontFamily: "var(--font-sans), sans-serif" }}
         >
           Revenue depends upon market conditions, clinic performance, patient volume, and implementation.
         </motion.p>

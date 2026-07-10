@@ -12,7 +12,7 @@ export default function FinalCTA() {
           padding: 120px 24px;
           background: #100D0A;
           overflow: hidden;
-          font-displayamily: var(--font-displayans), sans-serif;
+          font-displayamily: var(--font-sans), sans-serif;
         }
 
         .cta-overlay {
@@ -57,7 +57,7 @@ export default function FinalCTA() {
         }
 
         .cta-headline {
-          font-displayamily: var(--font-displayisplay), serif;
+          font-displayamily: var(--font-display), serif;
           font-displayize: clamp(32px, 5vw, 56px);
           font-weight: 700;
           line-height: 1.1;
@@ -71,7 +71,7 @@ export default function FinalCTA() {
         }
 
         .cta-description {
-          font-displayamily: var(--font-displayans), sans-serif;
+          font-displayamily: var(--font-sans), sans-serif;
           font-displayize: clamp(13px, 1.4vw, 16px);
           font-weight: 400;
           color: #C9A14A;
@@ -87,7 +87,7 @@ export default function FinalCTA() {
           padding: 16px 40px;
           border: none;
           border-radius: 60px;
-          font-displayamily: var(--font-displayans), sans-serif;
+          font-displayamily: var(--font-sans), sans-serif;
           font-displayize: 15px;
           font-weight: 600;
           letter-spacing: 0.02em;

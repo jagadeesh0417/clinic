@@ -81,7 +81,7 @@ function CardGrid() {
           <div className="relative z-10">
             <h3
               className="mb-2 text-lg font-semibold tracking-tight"
-              style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+              style={{ fontFamily: 'var(--font-display), serif' }}
             >
               {card.title}
             </h3>
@@ -133,7 +133,7 @@ export default function WhyPartner() {
       id="why-partner"
       className="relative overflow-hidden px-5 py-24 md:px-10 lg:px-20"
       style={{
-        background: "linear-gradient(180deg, #0a0f1e 0%, #0d1326 50%, #0a0f1e 100%)",
+        background: "linear-gradient(180deg, #0a0f1e 0%, #100D0A 50%, #0a0f1e 100%)",
         color: "#ffffff",
       }}
     >
@@ -167,7 +167,7 @@ export default function WhyPartner() {
             </p>
             <h2
               className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-              style={{ fontFamily: 'var(--font-displayisplay), serif' }}
+              style={{ fontFamily: 'var(--font-display), serif' }}
             >
               Partner with{" "}
               <span
