@@ -7,7 +7,7 @@ const requirements = [
   "1 Consultation Room",
   "1 Procedure Room",
   "KO Clinics Branding Board",
-  "Small KO Clinics Lollypop Sign Board",
+  "Small KO Clinics A-frame standee",
   "Prime Clinic Location",
   "Clinic Registration",
   "Required Licenses",

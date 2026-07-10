@@ -10,10 +10,12 @@ const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80",
 ];
 
+import { PARTNER_CLINICS, CITIES, COUNTRIES } from "@/config/stats";
+
 const STATS = [
-  { top: "5000+", bottom: "Clinics" },
-  { top: "100+", bottom: "Cities" },
-  { top: "4+", bottom: "Countries" },
+  { top: PARTNER_CLINICS, bottom: "Clinics" },
+  { top: CITIES, bottom: "Cities" },
+  { top: COUNTRIES, bottom: "Countries" },
   { top: "AI", bottom: "Enabled" },
 ];
 
@@ -500,10 +502,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            India&apos;s Largest{" "}
-            <span className="hero-headline-accent">AI-Powered</span>
+            An{" "}
+            <span className="hero-headline-accent">AI-powered</span>
             <br />
-            Clinic Network
+            clinic network, built by clinicians.
           </motion.h1>
 
           <motion.div
@@ -523,13 +525,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            KO Clinics is a global healthcare aggregator connecting aesthetic
-            clinics, hospitals, dermatology centres, wellness facilities,
-            diagnostic centres and specialist doctors under one trusted
-            international brand. KO Clinics empowers healthcare providers
-            through technology, patient acquisition, AI healthcare solutions,
-            branding, digital marketing and operational support with minimal
-            investment.
+            KO Clinics is a healthcare network connecting aesthetic clinics,
+            hospitals, dermatology centres, wellness facilities, diagnostic
+            centres and specialist doctors under one trusted brand. We empower
+            healthcare providers through technology, patient acquisition, AI
+            diagnostics, branding, digital marketing and operational support.
           </motion.p>
         </motion.div>
 
@@ -552,22 +552,6 @@ export default function Hero() {
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
-          <a href="/partners" className="btn-secondary">
-            <span>Find a Clinic</span>
-          </a>
-          <a href="/treatments" className="btn-tertiary">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-            Explore Treatments
           </a>
         </motion.div>
       </div>

@@ -442,7 +442,7 @@ export default function FinalCTA() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Join India's Fastest Growing Healthcare Ecosystem.
+              Join India's growing healthcare ecosystem.
             </motion.p>
 
             <motion.div
@@ -482,7 +482,7 @@ export default function FinalCTA() {
                   <line x1="3" y1="10" x2="21" y2="10" />
                 </svg>
               </a>
-              <a href="/global-presence" className="cta-btn-ghost">
+              <a href="/locations" className="cta-btn-ghost">
                 <span>Explore Locations</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
@@ -503,7 +503,7 @@ export default function FinalCTA() {
 
       <div className={`sticky-cta${showSticky ? " visible" : ""}`}>
         <span className="sticky-cta-text">
-          <span>KO Clinics</span> — Join India's Fastest Growing Healthcare Ecosystem
+          <span>KO Clinics</span> — Join India's growing healthcare ecosystem
         </span>
         <div className="sticky-cta-buttons">
           <a href="/contact" className="sticky-btn sticky-btn-gold">
@@ -512,7 +512,7 @@ export default function FinalCTA() {
           <a href="/contact" className="sticky-btn sticky-btn-ghost">
             Book Consultation
           </a>
-          <a href="/global-presence" className="sticky-btn sticky-btn-ghost">
+          <a href="/locations" className="sticky-btn sticky-btn-ghost">
             Explore Locations
           </a>
         </div>

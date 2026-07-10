@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Shield, Sparkles, Star, Clock } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,10 +18,10 @@ const container = {
 };
 
 const pillars = [
-  { title: "US-FDA Approved Products", icon: "\u2697\uFE0F" },
-  { title: "Signature Combination Technique", icon: "\ud83C\udf1F" },
-  { title: "Natural Results", icon: "\u2728" },
-  { title: "Minimal Downtime", icon: "\u23F3" },
+  { title: "US-FDA Approved Products", icon: Shield },
+  { title: "Signature Combination Technique", icon: Sparkles },
+  { title: "Natural Results", icon: Star },
+  { title: "Minimal Downtime", icon: Clock },
 ];
 
 const steps = [
@@ -172,7 +173,7 @@ export default function LiquidFaceLift() {
                 border: "1px solid rgba(203,161,53,0.2)",
               }}
             >
-              <span className="text-3xl block mb-3">{p.icon}</span>
+              <span className="block mb-3">{(() => { const Icon = p.icon; return <Icon className="w-7 h-7 mx-auto text-[#CBA135]" />; })()}</span>
               <p className="text-white text-sm font-semibold leading-snug" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 {p.title}
               </p>

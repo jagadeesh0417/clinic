@@ -12,6 +12,29 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 }
 
+const benefits = [
+  {
+    title: "Patient flow, not just a logo.",
+    desc: "Partner clinics plug into our diagnostics network and referral pipeline from day one.",
+  },
+  {
+    title: "Diagnostics without capex.",
+    desc: "The QScan AI Health ATM sits in your clinic. You don't buy it.",
+  },
+  {
+    title: "Clinical protocols, ready to run.",
+    desc: "Treatment SOPs, consumables sourcing, and staff training, standardised across the network.",
+  },
+  {
+    title: "A brand patients already searched for.",
+    desc: "Twenty years of practice under one name.",
+  },
+  {
+    title: "You keep your practice.",
+    desc: "Partnership, not acquisition. Your clinic, your patients, your name alongside ours.",
+  },
+]
+
 export default function WhyChoose() {
   return (
     <section
@@ -33,13 +56,13 @@ export default function WhyChoose() {
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
             style={{ color: "#CBA135" }}
           >
-            Why Choose
+            Why Partner
           </span>
           <h2
             className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif", color: "#FFFFFF" }}
           >
-            Why Choose{" "}
+            Why Partner with{" "}
             <span style={{ background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               KO Clinics
             </span>
@@ -51,22 +74,34 @@ export default function WhyChoose() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="max-w-5xl mx-auto space-y-8 text-center"
+          className="max-w-4xl mx-auto space-y-6"
         >
-          {[
-            "Choose Kosmedixx for cutting-edge aesthetic and dermatological treatments designed to enhance your natural beauty and restore skin confidence. We offer advanced, US FDA-approved solutions for a wide range of concerns, including skin lightening, long-term sun damage, acne-related pigmentation, melasma, and age-related discoloration.",
-            "At Kosmedixx, we go beyond skin\u2014our services also include hair transplant procedures, anti-ageing stem cell therapy, and a medically supervised weight and inch loss programme, all using FDA-approved technology to ensure safety and efficacy.",
-            "Experience the Science of Kosmedixx, where board-certified dermatologists and aesthetic experts create personalised treatment plans to suit your unique needs. Whether you're looking to achieve a more even skin tone, rejuvenate your appearance, combat signs of ageing, or reshape your body, we are here to help you look and feel your best\u2014with visible, lasting results.",
-            "Choose Kosmedixx\u2014where expert care meets scientific innovation for healthy, radiant skin, revitalised hair, and a confident new you.",
-          ].map((text, i) => (
-            <motion.p
+          {benefits.map((b, i) => (
+            <motion.div
               key={i}
               variants={itemVariants}
-              className="text-base leading-relaxed md:text-lg"
-              style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+              className="rounded-2xl p-6 md:p-8 transition-all duration-300"
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                border: "1px solid rgba(255,255,255,0.06)",
+              }}
+              whileHover={{ y: -2, borderColor: "rgba(203,161,53,0.3)" }}
             >
-              {text}
-            </motion.p>
+              <h3
+                className="text-lg md:text-xl font-semibold mb-2"
+                style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}
+              >
+                {b.title}
+              </h3>
+              <p
+                className="text-base leading-relaxed"
+                style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+              >
+                {b.desc}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

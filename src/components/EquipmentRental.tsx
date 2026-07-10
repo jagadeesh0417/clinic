@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useRef } from "react"
+import { Scissors, Zap, Droplets, Radio, Scan, TestTube, Dumbbell, Microscope } from "lucide-react"
 
 const images = [
   "https://images.unsplash.com/photo-1583912267550-d6c2db41684e?w=800&q=80",
@@ -11,14 +12,14 @@ const images = [
 ]
 
 const equipment = [
-  { icon: "💇", title: "Hair Transplant Machines" },
-  { icon: "⚡", title: "Laser Systems" },
-  { icon: "💧", title: "HydraFacial Devices" },
-  { icon: "📡", title: "HIFU" },
-  { icon: "🔦", title: "Pico Laser" },
-  { icon: "🩸", title: "PRP Equipment" },
-  { icon: "🏋️", title: "Slimming Systems" },
-  { icon: "🔬", title: "Skin Analysis Machines" },
+  { icon: Scissors, title: "Hair Transplant Machines" },
+  { icon: Zap, title: "Laser Systems" },
+  { icon: Droplets, title: "HydraFacial Devices" },
+  { icon: Radio, title: "HIFU" },
+  { icon: Scan, title: "Pico Laser" },
+  { icon: TestTube, title: "PRP Equipment" },
+  { icon: Dumbbell, title: "Slimming Systems" },
+  { icon: Microscope, title: "Skin Analysis Machines" },
 ]
 
 const containerVariants = {
@@ -115,13 +116,13 @@ export default function EquipmentRental() {
                 borderColor: "rgba(255,255,255,0.08)",
               }}
             >
-              <motion.span
-                className="mb-3 inline-block text-3xl sm:text-4xl"
+              <motion.div
+                className="mb-3 inline-flex items-center justify-center w-10 h-10"
                 whileHover={{ scale: 1.2, rotate: 8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {item.icon}
-              </motion.span>
+                <item.icon className="w-6 h-6 text-[#00D5FF]" />
+              </motion.div>
               <h3 className="font-['Playfair_Display'] text-sm font-semibold text-white sm:text-base">
                 {item.title}
               </h3>

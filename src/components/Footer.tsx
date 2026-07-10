@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SITE } from "@/config/site";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -12,6 +13,8 @@ const quickLinks = [
   { label: "Partners", href: "/partners" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
 ];
 
 const socialIcons = [
@@ -58,7 +61,7 @@ export default function Footer() {
               </div>
             </a>
             <p className="text-white/50 text-sm leading-relaxed font-[family-name:var(--font-body)] mb-6 max-w-xs">
-              India&apos;s Largest AI-Powered Healthcare Growth Network
+              An AI-powered clinic network, built by clinicians.
             </p>
             <div className="flex items-center gap-3">
               {socialIcons.map((icon) => (
@@ -104,22 +107,25 @@ export default function Footer() {
             <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-6 font-[family-name:var(--font-body)]">
               Contact
             </h3>
-            <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4">
               <li>
-                <a href="mailto:hello@koclinics.com" className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
-                  hello@koclinics.com
+                <a href={`mailto:${SITE.email}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
+                  {SITE.email}
                 </a>
               </li>
               <li>
-                <a href="tel:+919910099100" className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
-                  +91 99100 99100
+                <a href={`tel:${SITE.phone}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
+                  {SITE.phone}
                 </a>
               </li>
               <li>
                 <span className="text-sm text-white/50 leading-relaxed font-[family-name:var(--font-body)] block">
-                  7th Floor, Indiqube Alpha<br />
-                  Bellandur, Bengaluru<br />
-                  Karnataka 560103, India
+                  {SITE.address}
+                </span>
+              </li>
+              <li className="pt-2">
+                <span className="text-[10px] text-white/20 font-[family-name:var(--font-body)]">
+                  TODO_VERIFY: Contact details — phone number may differ on live sites
                 </span>
               </li>
             </ul>
@@ -132,7 +138,7 @@ export default function Footer() {
             <p className="text-sm text-white/50 leading-relaxed mb-4 font-[family-name:var(--font-body)]">
               Stay informed about the latest in AI-powered healthcare.
             </p>
-            <div className="relative">
+            <div className="relative mb-3">
               <input
                 type="email"
                 placeholder="Your email address"
@@ -142,6 +148,14 @@ export default function Footer() {
                 Subscribe
               </button>
             </div>
+            <label className="flex items-start gap-2 cursor-pointer">
+              <input type="checkbox" className="mt-0.5 accent-[#CBA135]" />
+              <span className="text-[10px] text-white/30 leading-relaxed font-[family-name:var(--font-body)]">
+                I agree to the{" "}
+                <a href="/privacy" className="text-[#CBA135]/70 hover:text-[#CBA135] underline">Privacy Policy</a>{" "}
+                as per India DPDP Act 2023.
+              </span>
+            </label>
           </motion.div>
         </div>
 
@@ -160,6 +174,14 @@ export default function Footer() {
           <p className="text-xs text-white/30 font-[family-name:var(--font-body)] tracking-wide">
             &copy; 2026 KO Clinics. All rights reserved.
           </p>
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="text-xs text-white/20 hover:text-white/50 transition-colors font-[family-name:var(--font-body)]">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="text-xs text-white/20 hover:text-white/50 transition-colors font-[family-name:var(--font-body)]">
+              Terms of Service
+            </a>
+          </div>
           <p className="text-xs text-white/20 font-[family-name:var(--font-body)] tracking-wide">
             Built with{" "}
             <span className="text-red-400/60 inline-block">&#9829;</span>{" "}

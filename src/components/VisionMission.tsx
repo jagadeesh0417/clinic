@@ -1,45 +1,46 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Monitor, Stethoscope, Rocket, TrendingUp, Users, Building2, Handshake, Globe } from "lucide-react"
 
 const cards = [
   {
-    icon: "\uD83D\uDCC0",
+    icon: Monitor,
     title: "Digitize Clinics",
     desc: "Transform clinics with smart digital records and modern management systems",
   },
   {
-    icon: "\uD83E\uDE78",
+    icon: Stethoscope,
     title: "Increase Patient Accessibility",
     desc: "Make quality healthcare reachable to every community across the globe",
   },
   {
-    icon: "\uD83D\uDE80",
+    icon: Rocket,
     title: "Empower Healthcare Entrepreneurs",
     desc: "Support visionaries building the next generation of healthcare solutions",
   },
   {
-    icon: "\uD83D\uDCC8",
+    icon: TrendingUp,
     title: "Create Sustainable Clinic Growth",
     desc: "Drive long-term clinic growth through our integrated digital ecosystem",
   },
   {
-    icon: "\uD83E\uDDCD",
+    icon: Users,
     title: "Support Doctors",
     desc: "Equip doctors with tools and resources so they can focus on patient care",
   },
   {
-    icon: "\uD83C\uDFD7\uFE0F",
+    icon: Building2,
     title: "Expand Healthcare Infrastructure",
     desc: "Build the digital and physical backbone of a connected healthcare network",
   },
   {
-    icon: "\uD83E\uDD1D",
+    icon: Handshake,
     title: "Increase Partner Profitability",
     desc: "Maximize value and returns for every partner within our healthcare ecosystem",
   },
   {
-    icon: "\uD83C\uDF0D",
+    icon: Globe,
     title: "Build a Global Healthcare Ecosystem",
     desc: "Create a world-class international network of healthcare innovation and access",
   },
@@ -138,7 +139,7 @@ export default function VisionMission() {
                 whileHover={{ scale: 1.03, y: -6 }}
                 className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-8 backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(203,161,53,0.2)]"
               >
-                <span className="text-4xl">{card.icon}</span>
+                <card.icon className="w-8 h-8 text-[#CBA135]" />
                 <h3 className="mt-5 font-['Space_Grotesk'] text-xl font-semibold text-white">
                   {card.title}
                 </h3>

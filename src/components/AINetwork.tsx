@@ -1,6 +1,7 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
+import { Building2, Search, BarChart3, Monitor, TrendingUp, FileText, Users, LayoutDashboard } from "lucide-react"
 
 const images = [
   {
@@ -23,42 +24,42 @@ const images = [
 
 const features = [
   {
-    icon: "\uD83C\uDFE5",
+    icon: Building2,
     title: "AI Health ATM",
     desc: "Instant health checkups and diagnostics powered by artificial intelligence at your fingertips.",
   },
   {
-    icon: "\uD83D\uDD0D",
+    icon: Search,
     title: "Health Screening",
     desc: "Comprehensive screening packages with AI-driven analysis for early detection.",
   },
   {
-    icon: "\uD83D\uDCCA",
+    icon: BarChart3,
     title: "Digital Reports",
     desc: "Secure, instant access to your health records and diagnostic reports anywhere.",
   },
   {
-    icon: "\uD83D\uDCBB",
+    icon: Monitor,
     title: "Telemedicine",
     desc: "Consult with specialists from the comfort of your home via secure video calls.",
   },
   {
-    icon: "\uD83D\uDCC8",
+    icon: TrendingUp,
     title: "Predictive Analytics",
     desc: "AI-powered predictions for preventive healthcare and personalized wellness plans.",
   },
   {
-    icon: "\uD83D\uDCD1",
+    icon: FileText,
     title: "Electronic Medical Records",
     desc: "Centralized, secure storage of your complete medical history across all clinics.",
   },
   {
-    icon: "\uD83D\uDC65",
+    icon: Users,
     title: "Patient Management",
     desc: "Seamless appointment scheduling, reminders, and coordinated patient care.",
   },
   {
-    icon: "\uD83D\uDEE0\uFE0F",
+    icon: LayoutDashboard,
     title: "AI Dashboard",
     desc: "Real-time insights and analytics for healthcare providers to maximize efficiency.",
   },
@@ -105,7 +106,7 @@ export default function AINetwork() {
           className="text-center"
         >
           <h2 className="font-['Playfair_Display'] text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            India&apos;s First{" "}
+            India&apos;s{" "}
             <span className="bg-gradient-to-r from-[#00D5FF] to-[#7EE8FA] bg-clip-text text-transparent">
               AI-Powered
             </span>{" "}
@@ -187,7 +188,7 @@ export default function AINetwork() {
                 whileHover={{ scale: 1.03, y: -6 }}
                 className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-5 backdrop-blur-xl transition-all duration-300 hover:border-[rgba(0,213,255,0.2)] hover:shadow-[0_0_30px_rgba(0,213,255,0.12)] sm:p-6"
               >
-                <span className="text-2xl sm:text-3xl">{feature.icon}</span>
+                <div className="w-10 h-10 flex items-center justify-center">{(() => { const Icon = feature.icon; return <Icon className="w-6 h-6 text-[#00D5FF]" />; })()}</div>
                 <h3 className="mt-3 font-['Space_Grotesk'] text-base font-semibold text-white sm:text-lg">
                   {feature.title}
                 </h3>
@@ -214,3 +215,4 @@ export default function AINetwork() {
     </section>
   )
 }
+

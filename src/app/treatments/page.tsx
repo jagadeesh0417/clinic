@@ -907,6 +907,41 @@ export default function TreatmentsPage() {
           </div>
         </motion.div>
 
+        {/* Why Choose KO Clinics – Patient */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-24 max-w-4xl mx-auto"
+        >
+          <div className="mb-12 text-center">
+            <span className="text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase">Why Choose</span>
+            <h2 className="font-['Playfair_Display'] text-3xl md:text-4xl font-bold text-white mt-2">
+              Why Choose{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+                KO Clinics
+              </span>
+            </h2>
+          </div>
+          <div className="space-y-6 text-center">
+            {[
+              "Choose Kosmedixx for cutting-edge aesthetic and dermatological treatments designed to enhance your natural beauty and restore skin confidence. We offer advanced, US FDA-approved solutions for a wide range of concerns, including skin lightening, long-term sun damage, acne-related pigmentation, melasma, and age-related discoloration.",
+              "At Kosmedixx, we go beyond skin\u2014our services also include hair transplant procedures, anti-ageing stem cell therapy, and a medically supervised weight and inch loss programme, all using FDA-approved technology to ensure safety and efficacy.",
+              "Experience the Science of Kosmedixx, where board-certified dermatologists and aesthetic experts create personalised treatment plans to suit your unique needs. Whether you're looking to achieve a more even skin tone, rejuvenate your appearance, combat signs of ageing, or reshape your body, we are here to help you look and feel your best\u2014with visible, lasting results.",
+              "Choose Kosmedixx\u2014where expert care meets scientific innovation for healthy, radiant skin, revitalised hair, and a confident new you.",
+            ].map((text, i) => (
+              <p
+                key={i}
+                className="text-base leading-relaxed md:text-lg"
+                style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+              >
+                {text}
+              </p>
+            ))}
+          </div>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           variants={fadeUp}

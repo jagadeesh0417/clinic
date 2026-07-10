@@ -1,17 +1,14 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform,
-  useInView,
-  useMotionValue,
-  useSpring,
-  animate,
   type MotionValue,
 } from "framer-motion";
 import Image from "next/image";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const images = [
   {
@@ -39,14 +36,23 @@ const images = [
   },
 ];
 
-
-
+/**
+ * Patients Served and Satisfaction Rate were removed because we lack
+ * a verifiable source for either number. Re-add only when a data
+ * source can be cited.
+ */
 const stats = [
   { value: 500, suffix: "+", label: "Partner Clinics" },
-  { value: 50, suffix: "K+", label: "Patients Served" },
-  { value: 98, suffix: "%", label: "Satisfaction Rate" },
-  { value: 24, suffix: "/7", label: "Support" },
 ];
+
+function CountUp({ end }: { end: number }) {
+  const { ref, value } = useCountUp({ end });
+  return (
+    <span ref={ref} className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
+      {value}
+    </span>
+  );
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -101,41 +107,6 @@ function ParallaxImage({
         />
       </div>
     </motion.div>
-  );
-}
-
-function AnimatedCounter({
-  value,
-  suffix,
-}: {
-  value: number;
-  suffix: string;
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const count = useMotionValue(0);
-  const smoothCount = useSpring(count, { stiffness: 80, damping: 20 });
-  const displayValue = useTransform(smoothCount, Math.round);
-
-  useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, value, {
-        duration: 2.5,
-        ease: "easeOut" as const,
-      });
-      return () => controls.stop();
-    }
-  }, [isInView]);
-
-  return (
-    <span ref={ref} className="inline-flex items-baseline gap-0.5">
-      <motion.span className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
-        {displayValue}
-      </motion.span>
-      <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
-        {suffix}
-      </span>
-    </span>
   );
 }
 
@@ -224,6 +195,21 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              KO Clinics began in 2005 as a single aesthetic practice in
+              Bengaluru. Two decades of running clinics taught us where the real
+              friction sits — not in clinical skill, but in patient acquisition,
+              diagnostics, and the technology gap between a standalone clinic and
+              a hospital chain. We built KO Clinics to close that gap. Today we
+              operate as a healthcare network, giving independent clinics the
+              diagnostics, digital infrastructure, and patient flow that were
+              once available only to large groups.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
               className="text-white/50 text-sm tracking-wider uppercase mb-5"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
@@ -292,7 +278,12 @@ export default function About() {
             >
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center md:text-left">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                  <span className="inline-flex items-baseline gap-0.5">
+                    <CountUp end={stat.value} />
+                    <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
+                      {stat.suffix}
+                    </span>
+                  </span>
                   <p
                     className="text-[#B7B7B7] text-sm mt-1"
                     style={{ fontFamily: "'Inter', sans-serif" }}
@@ -301,6 +292,22 @@ export default function About() {
                   </p>
                 </div>
               ))}
+              <div className="text-center md:text-left">
+                <span className="inline-flex items-baseline gap-0.5">
+                  <span className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
+                    24
+                  </span>
+                  <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
+                    /7
+                  </span>
+                </span>
+                <p
+                  className="text-[#B7B7B7] text-sm mt-1"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Support
+                </p>
+              </div>
             </motion.div>
           </motion.div>
         </div>

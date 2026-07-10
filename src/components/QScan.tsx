@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -10,17 +10,18 @@ import {
   useSpring,
   animate,
 } from "framer-motion";
-import Image from "next/image";
+import { useCountUp } from "@/hooks/useCountUp";
+import { Zap, Shield, Activity, Dna, Heart, Trophy, ClipboardList, Smartphone } from "lucide-react";
 
 const features = [
-  { label: "Instant Health Check", icon: "⚡" },
-  { label: "AI Risk Prediction", icon: "🛡️" },
-  { label: "Lifestyle Assessment", icon: "📊" },
-  { label: "Body Composition", icon: "🧬" },
-  { label: "Vital Parameters", icon: "❤️" },
-  { label: "Health Score", icon: "🏆" },
-  { label: "Preventive Recommendations", icon: "📋" },
-  { label: "Digital Reports", icon: "📱" },
+  { label: "Instant Health Check", icon: Zap },
+  { label: "AI-Assisted Wellness Insights", icon: Shield },
+  { label: "Lifestyle Assessment", icon: Activity },
+  { label: "Body Composition", icon: Dna },
+  { label: "Vital Parameters", icon: Heart },
+  { label: "Health Score", icon: Trophy },
+  { label: "Lifestyle Guidance", icon: ClipboardList },
+  { label: "Digital Reports", icon: Smartphone },
 ];
 
 const containerVariants = {
@@ -62,21 +63,53 @@ function AnimatedRing({
   );
   const displayVal = useTransform(smoothProgress, (v) => Math.round(v));
 
+  const started = useRef(false);
+  const ringRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    if (trigger) {
-      const controls = animate(progress, value, {
-        duration: 2,
-        delay: index * 0.1,
-        ease: "easeOut" as const,
-      });
-      return () => controls.stop();
+    if (started.current) return;
+    const el = ringRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          animate(progress, value, {
+            duration: 2,
+            delay: index * 0.1,
+            ease: "easeOut" as const,
+          });
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+
+    if (el.getBoundingClientRect().top < window.innerHeight && !started.current) {
+      started.current = true;
+      const id = setTimeout(() => {
+        animate(progress, value, {
+          duration: 2,
+          delay: index * 0.1,
+          ease: "easeOut" as const,
+        });
+      }, 100);
+      return () => {
+        clearTimeout(id);
+        observer.disconnect();
+      };
     }
+
+    return () => observer.disconnect();
   }, [trigger, value, index, progress]);
 
   return (
     <motion.div
       variants={itemVariants}
       className="flex flex-col items-center gap-1.5"
+      ref={ringRef}
     >
       <div className="relative w-[80px] h-[80px]">
         <svg width="80" height="80" viewBox="0 0 80 80" className="transform -rotate-90">
@@ -114,11 +147,10 @@ function AnimatedRing({
 }
 
 function FeatureCard({
-  icon,
+  icon: Icon,
   label,
-  index,
 }: {
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   label: string;
   index: number;
 }) {
@@ -133,8 +165,8 @@ function FeatureCard({
         border: "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <div className="w-9 h-9 rounded-lg bg-[#CBA135]/10 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform duration-300">
-        {icon}
+      <div className="w-9 h-9 rounded-lg bg-[#CBA135]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="w-4 h-4 text-[#CBA135]" />
       </div>
       <span className="text-sm md:text-base text-white/80 group-hover:text-white transition-colors duration-300 font-['Space_Grotesk',sans-serif]">
         {label}
@@ -156,57 +188,21 @@ function ImageShowcase() {
     <div ref={ref} className="relative w-full h-full min-h-[500px]">
       <motion.div
         style={{ scale, y }}
-        className="relative w-full h-full rounded-2xl overflow-hidden"
+        className="relative w-full h-full rounded-2xl overflow-hidden bg-[#1A1A1A] flex items-center justify-center border border-white/10"
       >
-        <Image
-          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
-          alt="QScan AI Health ATM"
-          fill
-          className="object-cover"
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#CBA135]/20 via-transparent to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]/80 z-10" />
-
-        <motion.div
-          className="absolute bottom-6 left-6 right-6 z-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <div
-            className="px-5 py-4 rounded-xl"
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              backdropFilter: "blur(20px)",
-              WebkitBackdropFilter: "blur(20px)",
-              border: "1px solid rgba(255,255,255,0.08)",
-            }}
-          >
-            <span className="text-xs font-medium text-[#CBA135] font-['Space_Grotesk',sans-serif] uppercase tracking-[0.15em]">
-              AI-Powered Diagnostics
-            </span>
-            <p className="text-sm text-white/70 mt-1 font-['Inter',sans-serif]">
-              Complete health assessment in under 3 minutes
-            </p>
+        <div className="text-center p-8">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#CBA135]/10 flex items-center justify-center">
+            <svg className="w-8 h-8 text-[#CBA135]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
           </div>
-        </motion.div>
+          <span className="text-[#B7B7B7] text-sm font-['Inter',sans-serif]">
+            QScan unit photo — pending
+          </span>
+        </div>
       </motion.div>
-
-      <motion.div
-        className="absolute -top-4 -right-4 w-24 h-24 rounded-full border border-[#CBA135]/20 z-0"
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-[#CBA135]/5 blur-xl z-0"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
     </div>
   );
 }
@@ -222,17 +218,46 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
     [0, 100],
     [circumference, circumference * (1 - score / 100)]
   );
-  const displayScore = useTransform(smooth, (v) => Math.round(v));
+  const { ref, value } = useCountUp({ end: score });
+
+  const startedRef = useRef(false);
 
   useEffect(() => {
-    if (trigger) {
-      const controls = animate(progress, score, {
-        duration: 2.5,
-        ease: "easeOut" as const,
-      });
-      return () => controls.stop();
+    if (startedRef.current) return;
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !startedRef.current) {
+          startedRef.current = true;
+          animate(progress, score, {
+            duration: 2.5,
+            ease: "easeOut" as const,
+          });
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+
+    if (el.getBoundingClientRect().top < window.innerHeight && !startedRef.current) {
+      startedRef.current = true;
+      const id = setTimeout(() => {
+        animate(progress, score, {
+          duration: 2.5,
+          ease: "easeOut" as const,
+        });
+      }, 100);
+      return () => {
+        clearTimeout(id);
+        observer.disconnect();
+      };
     }
-  }, [trigger, score, progress]);
+
+    return () => observer.disconnect();
+  }, [trigger, score, progress, ref]);
 
   return (
     <motion.div
@@ -279,9 +304,9 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
           </defs>
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <motion.span className="text-3xl font-bold text-white font-['Playfair_Display',serif]">
-            {displayScore}
-          </motion.span>
+          <span ref={ref} className="text-3xl font-bold text-white font-['Playfair_Display',serif]">
+            {value}
+          </span>
           <span className="text-[10px] text-white/40 uppercase tracking-wider font-['Inter',sans-serif]">
             / 100
           </span>
@@ -289,6 +314,9 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
       </div>
       <p className="text-xs text-white/50 mt-3 font-['Inter',sans-serif]">
         Excellent wellness rating based on comprehensive assessment
+      </p>
+      <p className="text-[10px] text-white/30 mt-2 font-['Inter',sans-serif] leading-relaxed max-w-xs mx-auto">
+        Not a diagnostic test. Results are indicative and do not replace consultation with a qualified physician.
       </p>
     </motion.div>
   );
@@ -375,10 +403,8 @@ export default function QScan() {
                   </h4>
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { label: "Accuracy", value: 97 },
                       { label: "Speed", value: 94 },
                       { label: "Coverage", value: 90 },
-                      { label: "Reliability", value: 96 },
                     ].map((m, i) => (
                       <AnimatedRing
                         key={m.label}
