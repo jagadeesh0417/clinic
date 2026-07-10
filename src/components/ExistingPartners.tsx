@@ -2,6 +2,10 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
+import { URLS, img } from "@/config/images";
+
+const MotionImage = motion(Image);
 
 interface Partner {
   name: string;
@@ -13,12 +17,12 @@ interface Partner {
 }
 
 const images = [
-  "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80",
-  "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&q=80",
-  "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&q=80",
-  "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80",
-  "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80",
-  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
+  img(URLS.RECEPTION, 600),
+  img(URLS.PARTNER_REQ_2, 600),
+  img(URLS.CONSULTATION, 600),
+  img(URLS.DOCTOR, 600),
+  img(URLS.CLINIC, 600),
+  img(URLS.STETHOSCOPE, 600),
 ];
 
 const countries = ["All", "India", "Hong Kong", "Dubai", "Canada", "Upcoming"];
@@ -220,13 +224,14 @@ export default function ExistingPartners() {
                 />
 
                 <div className="relative h-48 overflow-hidden">
-                  <motion.img
+                  <MotionImage
                     src={partner.image}
                     alt={partner.name}
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    loading="lazy"
+                    unoptimized
                   />
                   <div
                     className="absolute inset-0"

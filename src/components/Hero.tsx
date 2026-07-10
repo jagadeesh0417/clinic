@@ -2,12 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { URLS, img } from "@/config/images";
+
+const MotionImage = motion(Image);
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=80",
-  "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1920&q=80",
-  "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1920&q=80",
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80",
+  img(URLS.MEDICAL_TEAM_CONFERENCE, 1920),
+  img(URLS.SURGERY, 1920),
+  img(URLS.MEDICAL_TECH, 1920),
+  img(URLS.DENTAL, 1920),
 ];
 
 
@@ -117,12 +121,6 @@ export default function Hero() {
         .hero-slideshow {
           position: absolute;
           inset: 0;
-        }
-
-        .hero-slideshow img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
         }
 
         .hero-overlay {
@@ -373,10 +371,15 @@ export default function Hero() {
 
       <div className="hero-slideshow">
         <AnimatePresence mode="wait">
-          <motion.img
+          <MotionImage
             key={currentIndex}
             src={HERO_IMAGES[currentIndex]}
             alt="" aria-hidden="true"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            unoptimized
+            priority
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}

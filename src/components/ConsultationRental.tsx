@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { URLS, img } from "@/config/images";
 
 const images = [
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
-  "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+  img(URLS.MEDICAL_TEAM_CONFERENCE),
+  img(URLS.MODERN_CLINIC),
+  img(URLS.DENTAL),
+  img(URLS.DOCTOR),
 ];
 
 const specialists = [

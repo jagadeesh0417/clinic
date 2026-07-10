@@ -3,11 +3,12 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
+import { URLS, img } from "@/config/images"
 
 const images = [
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
-  "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80",
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+  img(URLS.PARTNER_REQ_1),
+  img(URLS.RENTAL_SUPPORT),
+  img(URLS.MODERN_CLINIC),
 ]
 
 const services = [

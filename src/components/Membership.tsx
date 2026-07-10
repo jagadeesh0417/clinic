@@ -3,25 +3,26 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useRef } from "react"
+import { URLS, img } from "@/config/images"
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    src: img(URLS.RECEPTION),
     alt: "Modern clinic reception",
     span: "md:col-span-2 md:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+    src: img(URLS.CLINIC),
     alt: "Medical professionals",
     span: "md:col-span-1 md:row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+    src: img(URLS.STETHOSCOPE),
     alt: "Healthcare team",
     span: "md:col-span-1 md:row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&q=80",
+    src: img(URLS.DOCTOR_TABLET),
     alt: "Medical consultation",
     span: "md:col-span-2 md:row-span-1",
   },
@@ -196,6 +197,7 @@ export default function Membership() {
                 fill
                 className="object-cover transition-all duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                unoptimized
               />
               <div
                 className="absolute inset-0"

@@ -8,18 +8,18 @@ import {
   type MotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import { useCountUp } from "@/hooks/useCountUp";
+import { URLS, img } from "@/config/images";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    src: img(URLS.RECEPTION),
     alt: "Modern medical facility reception area",
     positionClass: "top-0 left-0 w-full h-[320px] md:h-[400px] z-[1]",
     parallaxOffset: -60,
     initialX: -60,
   },
   {
-    src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&q=80",
+    src: img(URLS.CONSULTATION),
     alt: "Healthcare professional consulting patient",
     positionClass:
       "top-[180px] md:top-[220px] right-0 w-[80%] md:w-[70%] h-[260px] md:h-[340px] z-[2]",
@@ -27,7 +27,7 @@ const images = [
     initialX: 60,
   },
   {
-    src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&q=80",
+    src: img(URLS.DOCTOR_TABLET),
     alt: "Advanced medical technology and equipment",
     positionClass:
       "top-[360px] md:top-[460px] left-[5%] md:left-[8%] w-[70%] md:w-[60%] h-[200px] md:h-[260px] z-[3]",
@@ -35,25 +35,6 @@ const images = [
     initialX: -40,
   },
 ];
-
-/**
- * Patients Served and Satisfaction Rate were removed because we lack
- * a verifiable source for either number. Re-add only when a data
- * source can be cited.
- */
-const stats = [
-  { value: 500, suffix: "+", label: "Partner Clinics" },
-];
-
-function CountUp({ end }: { end: number }) {
-  const { ref, value } = useCountUp({ end });
-  if (value === null) return null;
-  return (
-    <span ref={ref} className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
-      {value}
-    </span>
-  );
-}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -176,9 +157,15 @@ export default function About() {
               className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Founded in 2005 by Dr. Vikas Singh, Kosmedixx (KO) Clinics is
-              positioned as a pioneer in advanced aesthetic and cosmetic medicine
-              in India.
+              KO Clinics was founded in 2005 by Dr. Vikas Singh — starting as a
+              single aesthetic practice in Bengaluru. Two decades of running
+              clinics taught us where the real friction sits: not in clinical
+              skill, but in patient acquisition, diagnostics, and the technology
+              gap between a standalone clinic and a hospital chain. We built KO
+              Clinics to close that gap. Today we operate as a healthcare
+              network, giving independent clinics the diagnostics, digital
+              infrastructure, and patient flow that were once available only to
+              large groups.
             </motion.p>
 
             <motion.p
@@ -192,21 +179,6 @@ export default function About() {
               established the Kosmedixx Global Aesthetic Institute, with an
               association to the European Federation of Aesthetic Medicine and
               Surgery (EFAMS).
-            </motion.p>
-
-            <motion.p
-              variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              KO Clinics began in 2005 as a single aesthetic practice in
-              Bengaluru. Two decades of running clinics taught us where the real
-              friction sits — not in clinical skill, but in patient acquisition,
-              diagnostics, and the technology gap between a standalone clinic and
-              a hospital chain. We built KO Clinics to close that gap. Today we
-              operate as a healthcare network, giving independent clinics the
-              diagnostics, digital infrastructure, and patient flow that were
-              once available only to large groups.
             </motion.p>
 
             <motion.p
@@ -273,43 +245,7 @@ export default function About() {
               &ldquo;Aesthetics with Ethics&rdquo;
             </motion.p>
 
-            <motion.div
-              variants={itemVariants}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10"
-            >
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center md:text-left">
-                  <span className="inline-flex items-baseline gap-0.5">
-                    <CountUp end={stat.value} />
-                    <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
-                      {stat.suffix}
-                    </span>
-                  </span>
-                  <p
-                    className="text-[#B7B7B7] text-sm mt-1"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-              <div className="text-center md:text-left">
-                <span className="inline-flex items-baseline gap-0.5">
-                  <span className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
-                    24
-                  </span>
-                  <span className="text-2xl md:text-3xl font-bold text-[#CBA135]">
-                    /7
-                  </span>
-                </span>
-                <p
-                  className="text-[#B7B7B7] text-sm mt-1"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  Support
-                </p>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>

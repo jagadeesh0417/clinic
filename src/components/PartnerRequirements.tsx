@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useRef } from "react"
+import { URLS, img } from "@/config/images"
 
 const requirements = [
   "1 Consultation Room",
@@ -51,10 +52,10 @@ const benefitCategories = [
 ]
 
 const images = [
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
-  "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&q=80",
-  "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
-  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+  { src: img(URLS.PARTNER_REQ_1), alt: "Medical team collaborating in a modern clinic corridor" },
+  { src: img(URLS.PARTNER_REQ_2), alt: "Doctor consulting with a patient during examination" },
+  { src: img(URLS.DOCTOR), alt: "Healthcare professional reviewing medical reports" },
+  { src: img(URLS.EQUIPMENT), alt: "Advanced medical equipment in a treatment room" },
 ]
 
 const containerVariants = {
@@ -139,9 +140,9 @@ export default function PartnerRequirements() {
 
           {/* Image strip */}
           <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            {images.map((src, i) => (
+            {images.map((img, i) => (
               <motion.div
-                key={src}
+                key={img.src}
                 initial={{ opacity: 0, scale: 0.92 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -150,8 +151,8 @@ export default function PartnerRequirements() {
                 style={{ minHeight: "200px" }}
               >
                 <Image
-                  src={src}
-                  alt="" aria-hidden="true"
+                  src={img.src}
+                  alt={img.alt}
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 25vw"

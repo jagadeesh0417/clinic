@@ -72,6 +72,10 @@ const URLS = {
   STAFF: "https://images.unsplash.com/photo-1582750433449-648ed127bb54",
   /** photo-1594824476967-48c8b964273f — staff 2 */
   STAFF_2: "https://images.unsplash.com/photo-1594824476967-48c8b964273f",
+  /** photo-1504813184591-01572f98c85f — medical team corridor */
+  PARTNER_REQ_1: "https://images.unsplash.com/photo-1504813184591-01572f98c85f",
+  /** photo-1551608275-e47f8f9960f8 — doctor consulting patient */
+  PARTNER_REQ_2: "https://images.unsplash.com/photo-1551608275-e47f8f9960f8",
 } as const;
 
 // Build-time dedup assertion

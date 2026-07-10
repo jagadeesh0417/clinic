@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { URLS, img } from "@/config/images"
 
 const services = [
   "Home Doctor Visit",
@@ -16,10 +17,10 @@ const services = [
 ]
 
 const images = [
-  "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80",
-  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-  "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&q=80",
-  "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+  img(URLS.SURGERY),
+  img(URLS.EQUIPMENT),
+  img(URLS.DOCTOR_TABLET),
+  img(URLS.DOCTOR),
 ]
 
 const containerVariants = {

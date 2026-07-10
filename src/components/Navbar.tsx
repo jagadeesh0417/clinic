@@ -62,7 +62,7 @@ export default function Navbar() {
             ))}
             <a
               href="/contact"
-              className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-white hover:bg-[#00D5FF]/20 hover:border-[#00D5FF]/30 transition-all duration-500 font-[family-name:var(--font-body)]"
+              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#CBA135] to-[#E8C860] text-sm font-semibold text-[#050505] hover:shadow-lg hover:shadow-[#CBA135]/30 transition-all duration-500 font-[family-name:var(--font-body)]"
             >
               Become Partner
             </a>
@@ -104,7 +104,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={handleNavClick}
-                className="mt-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-white hover:bg-[#00D5FF]/20 hover:border-[#00D5FF]/30 transition-all text-center"
+                className="mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#CBA135] to-[#E8C860] text-sm font-semibold text-[#050505] transition-all text-center"
               >
                 Become Partner
               </a>

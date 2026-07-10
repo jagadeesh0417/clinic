@@ -1,6 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { URLS, img } from "@/config/images";
+
+const MotionImage = motion(Image);
 
 interface Vertical {
   title: string;
@@ -38,8 +42,7 @@ const verticals: Vertical[] = [
       "Corporate Tie-ups",
       "Operational Support",
     ],
-    image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+    image: img(URLS.STETHOSCOPE),
   },
   {
     title: "Quantum Health Products",
@@ -69,8 +72,7 @@ const verticals: Vertical[] = [
       "Retail Display Assistance",
       "Increased Patient Retention",
     ],
-    image:
-      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
+    image: img(URLS.PRODUCTS),
   },
   {
     title: "Clinic Space Rental",
@@ -96,8 +98,7 @@ const verticals: Vertical[] = [
       "Shared Healthcare Infrastructure",
       "Business Collaboration Opportunities",
     ],
-    image:
-      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
+    image: img(URLS.PARTNER_REQ_1),
   },
 ];
 
@@ -162,12 +163,14 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
     >
       {/* Image background */}
       <div className="relative h-56 w-full flex-shrink-0 overflow-hidden">
-        <motion.img
+        <MotionImage
           src={v.image}
           alt={v.title}
-          className="h-full w-full object-cover"
+          fill
+          className="object-cover"
           whileHover={{ scale: 1.08 }}
           transition={{ duration: 0.8, ease: "easeOut" as const }}
+          unoptimized
         />
         <div
           className="absolute inset-0"

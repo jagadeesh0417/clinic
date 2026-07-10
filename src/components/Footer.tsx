@@ -160,18 +160,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="relative my-12">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-white/[0.06]" />
-          </div>
-          <div className="relative flex justify-center">
-            <span className="bg-[#050505] px-6 text-[10px] tracking-[0.2em] uppercase text-white/20 font-[family-name:var(--font-body)]">
-              Excellence in Healthcare
-            </span>
-          </div>
-        </div>
-
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-between gap-4">
+<motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30 font-[family-name:var(--font-body)] tracking-wide">
             &copy; 2026 KO Clinics. All rights reserved.
           </p>
