@@ -167,7 +167,7 @@ export default function PartnershipModel() {
             >
               <img
                 src={src}
-                alt=""
+                alt="" aria-hidden="true"
                 className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                 style={{ minHeight: "220px" }}
               />

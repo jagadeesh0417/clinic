@@ -22,7 +22,7 @@ const locations: LocationGroup[] = [
   { name: "Frazer Town", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 622, cy: 342, address: "8, Mosque Rd, Cleveland Town, Frazer Town, Bengaluru 560005" },
   { name: "Indiranagar", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 625, cy: 344, address: "No. 221, 1st Floor, Indiranagar 1st Main Rd, Stage 2, Domlur, Bengaluru 560071" },
   { name: "Banashankari", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 615, cy: 350, address: "3rd Floor, No. 241, 7th A Cross Rd, opp Kamakya Theater, 6th Block, 3rd Phase, Banashankari, Bengaluru 560085" },
-  { name: "OMBR Layout", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 623, cy: 343, address: "Shiva Parvathi Kalayan Mandapa, OMBR Layout, Banaswadi, Bengaluru \u2014 Opposite to the clinic" },
+  { name: "OMBR Layout", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 623, cy: 343, address: "Shiva Parvathi Kalayan Mandapa, OMBR Layout, Banaswadi, Bengaluru" },
   { name: "HBR Layout", detail: "Kosmedixx \u2013 Ko Clinics", type: "bengaluru", cx: 624, cy: 341 },
   // Other India
   { name: "Hyderabad", detail: "Kosmedixx / KO Clinics partner", type: "india", cx: 635, cy: 360 },
@@ -36,9 +36,9 @@ const locations: LocationGroup[] = [
   { name: "Hong Kong", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 740, cy: 290, address: "55-65\u865f, Lung Mun Rd, Tuen Mun, Hong Kong", phone: "+852 6082 3699" },
   { name: "Bangkok", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 720, cy: 310, address: "JLK Tower, 129 Sukhumvit Rd, Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand" },
   { name: "Bahrain", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 590, cy: 300, address: "7J62+X92, Shaikh Isa Causeway, Al Sayh, Bahrain" },
-  { name: "Dubai, UAE", detail: "+971 54 536 6831", type: "international", cx: 585, cy: 305, phone: "+971 54 536 6831" },
-  { name: "Canada", detail: "+1 (647) 581-4279", type: "international", cx: 200, cy: 270, phone: "+1 (647) 581-4279" },
-  { name: "Manila", detail: "Address to be confirmed", type: "international", cx: 710, cy: 360, phone: "+63 966 168 8381" },
+  { name: "Dubai, UAE", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 585, cy: 305, phone: "+971 54 536 6831" },
+  { name: "Canada", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 200, cy: 270, phone: "+1 (647) 581-4279" },
+  { name: "Manila", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 710, cy: 360, address: "Address to be confirmed", phone: "+63 966 168 8381" },
 ];
 
 const connectionPairs: [number, number][] = [

@@ -12,7 +12,7 @@ const HERO_IMAGES = [
 
 import { PARTNER_CLINICS, CITIES, COUNTRIES } from "@/config/stats";
 
-const STATS = [
+const STATS: { top: string | null; bottom: string }[] = [
   { top: PARTNER_CLINICS, bottom: "Clinics" },
   { top: CITIES, bottom: "Cities" },
   { top: COUNTRIES, bottom: "Countries" },
@@ -99,10 +99,11 @@ function StatCard({
   bottom,
   index,
 }: {
-  top: string;
+  top: string | null;
   bottom: string;
   index: number;
 }) {
+  if (top === null) return null;
   return (
     <motion.div
       className="stat-card"
@@ -461,7 +462,7 @@ export default function Hero() {
           <motion.img
             key={currentIndex}
             src={HERO_IMAGES[currentIndex]}
-            alt=""
+            alt="" aria-hidden="true"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
@@ -515,8 +516,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <p className="hero-line">One Network.</p>
-            <p className="hero-line">Thousands of Clinics.</p>
-            <p className="hero-line-final">Unlimited Growth.</p>
+            <p className="hero-line">One Standard.</p>
+            <p className="hero-line-final">Real Growth.</p>
           </motion.div>
 
           <motion.p

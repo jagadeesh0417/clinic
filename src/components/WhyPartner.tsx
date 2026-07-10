@@ -43,7 +43,7 @@ function ImageGrid() {
         >
           <motion.img
             src={src}
-            alt=""
+            alt="" aria-hidden="true"
             className="h-40 w-full object-cover md:h-56"
             whileHover={{ scale: 1.08 }}
             transition={{ duration: 0.5 }}

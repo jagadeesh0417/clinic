@@ -43,7 +43,7 @@ const benefitCategories = [
   {
     title: "AI Healthcare Platform",
     items: [
-      "AI Health ATM", "Full Body Screening", "Health Reports", "Preventive Analysis",
+      "AI Health ATM", "Whole-Body Wellness Assessment", "Health Reports", "Wellness Insights",
       "Telemedicine", "Electronic Medical Records", "Online Consultation", "Smart Patient Management",
     ],
   },
@@ -150,7 +150,7 @@ export default function PartnerRequirements() {
               >
                 <img
                   src={src}
-                  alt=""
+                  alt="" aria-hidden="true"
                   className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                   style={{ minHeight: "200px" }}
                 />

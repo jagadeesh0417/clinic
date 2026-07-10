@@ -41,111 +41,6 @@ const itemVariants = {
   },
 };
 
-function AnimatedRing({
-  value,
-  label,
-  trigger,
-  index,
-}: {
-  value: number;
-  label: string;
-  trigger: boolean;
-  index: number;
-}) {
-  const radius = 32;
-  const circumference = 2 * Math.PI * radius;
-  const progress = useMotionValue(0);
-  const smoothProgress = useSpring(progress, { stiffness: 60, damping: 20 });
-  const dashOffset = useTransform(
-    smoothProgress,
-    [0, 100],
-    [circumference, circumference * (1 - value / 100)]
-  );
-  const displayVal = useTransform(smoothProgress, (v) => Math.round(v));
-
-  const started = useRef(false);
-  const ringRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (started.current) return;
-    const el = ringRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          animate(progress, value, {
-            duration: 2,
-            delay: index * 0.1,
-            ease: "easeOut" as const,
-          });
-        }
-      },
-      { threshold: 0 }
-    );
-
-    observer.observe(el);
-
-    if (el.getBoundingClientRect().top < window.innerHeight && !started.current) {
-      started.current = true;
-      const id = setTimeout(() => {
-        animate(progress, value, {
-          duration: 2,
-          delay: index * 0.1,
-          ease: "easeOut" as const,
-        });
-      }, 100);
-      return () => {
-        clearTimeout(id);
-        observer.disconnect();
-      };
-    }
-
-    return () => observer.disconnect();
-  }, [trigger, value, index, progress]);
-
-  return (
-    <motion.div
-      variants={itemVariants}
-      className="flex flex-col items-center gap-1.5"
-      ref={ringRef}
-    >
-      <div className="relative w-[80px] h-[80px]">
-        <svg width="80" height="80" viewBox="0 0 80 80" className="transform -rotate-90">
-          <circle
-            cx="40"
-            cy="40"
-            r={radius}
-            fill="none"
-            stroke="rgba(255,255,255,0.06)"
-            strokeWidth="4"
-          />
-          <motion.circle
-            cx="40"
-            cy="40"
-            r={radius}
-            fill="none"
-            stroke={index % 2 === 0 ? "#CBA135" : "#E8D48B"}
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeDasharray={circumference}
-            style={{ strokeDashoffset: dashOffset }}
-          />
-        </svg>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.span className="text-sm font-bold text-white font-['Space_Grotesk',sans-serif]">
-            {displayVal}
-          </motion.span>
-        </div>
-      </div>
-      <span className="text-[10px] text-white/50 text-center uppercase tracking-wider font-['Inter',sans-serif] leading-tight max-w-[72px]">
-        {label}
-      </span>
-    </motion.div>
-  );
-}
-
 function FeatureCard({
   icon: Icon,
   label,
@@ -308,7 +203,7 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
             {value}
           </span>
           <span className="text-[10px] text-white/40 uppercase tracking-wider font-['Inter',sans-serif]">
-            / 100
+            /100
           </span>
         </div>
       </div>
@@ -387,35 +282,6 @@ export default function QScan() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <HealthScoreMeter trigger={isInView} />
-
-                <motion.div
-                  variants={itemVariants}
-                  className="p-6 rounded-2xl"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <h4 className="text-white/80 text-sm font-semibold mb-5 font-['Space_Grotesk',sans-serif] uppercase tracking-[0.12em]">
-                    Key Metrics
-                  </h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { label: "Speed", value: 94 },
-                      { label: "Coverage", value: 90 },
-                    ].map((m, i) => (
-                      <AnimatedRing
-                        key={m.label}
-                        label={m.label}
-                        value={m.value}
-                        index={i}
-                        trigger={isInView}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
               </div>
             </motion.div>
           </div>

@@ -160,14 +160,14 @@ export default function RevenueModel() {
               <div className="absolute inset-0 overflow-hidden opacity-30">
                 <img
                   src={m.img}
-                  alt=""
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(5,5,5,0.4) 0%, #050505 100%)" }} />
-              </div>
+                alt="" aria-hidden="true"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(5,5,5,0.4) 0%, #050505 100%)" }} />
+            </div>
 
-              {/* Hover glow */}
+            {/* Hover glow */}
               <div
                 className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{

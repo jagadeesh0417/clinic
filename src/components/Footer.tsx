@@ -113,21 +113,19 @@ export default function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              <li>
-                <a href={`tel:${SITE.phone}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
-                  {SITE.phone}
-                </a>
-              </li>
+              {SITE.phone && (
+                <li>
+                  <a href={`tel:${SITE.phone}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
+                    {SITE.phone}
+                  </a>
+                </li>
+              )}
               <li>
                 <span className="text-sm text-white/50 leading-relaxed font-[family-name:var(--font-body)] block">
                   {SITE.address}
                 </span>
               </li>
-              <li className="pt-2">
-                <span className="text-[10px] text-white/20 font-[family-name:var(--font-body)]">
-                  TODO_VERIFY: Contact details — phone number may differ on live sites
-                </span>
-              </li>
+
             </ul>
           </motion.div>
 

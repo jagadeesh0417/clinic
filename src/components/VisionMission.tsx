@@ -95,7 +95,7 @@ export default function VisionMission() {
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
             className="mt-8 font-['Inter'] text-lg leading-relaxed text-[#B7B7B7] sm:text-xl md:text-2xl"
           >
-            To build the world&apos;s largest integrated healthcare ecosystem
+            To build a world-class integrated healthcare ecosystem
             connecting clinics, doctors, products, patients, and healthcare
             technology.
           </motion.p>
