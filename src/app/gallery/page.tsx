@@ -31,6 +31,19 @@ const sections = [
     ],
   },
   {
+    title: "Before & After",
+    images: [
+      { src: "/images/Screenshot 2026-07-10 070955.png", label: "Before & After 1" },
+      { src: "/images/Screenshot 2026-07-10 071004.png", label: "Before & After 2" },
+      { src: "/images/Screenshot 2026-07-10 071010.png", label: "Before & After 3" },
+      { src: "/images/Screenshot 2026-07-10 071055.png", label: "Before & After 4" },
+      { src: "/images/Screenshot 2026-07-10 071113.png", label: "Before & After 5" },
+      { src: "/images/Screenshot 2026-07-10 071122.png", label: "Before & After 6" },
+      { src: "/images/Screenshot 2026-07-10 071133.png", label: "Before & After 7" },
+      { src: "/images/Screenshot 2026-07-10 071142.png", label: "Before & After 8" },
+    ],
+  },
+  {
     title: "La Crown Wellness",
     images: [
       { src: "/images/la-crown-1.png", label: "La Crown 1" },
