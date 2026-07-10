@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,38 +34,36 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "bg-[#050505]/90 backdrop-blur-xl border-b border-white/[0.06]"
+          ? "bg-ink/95 backdrop-blur-xl border-b border-gold-600/20"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 xl:px-12">
         <div className="flex items-center justify-between h-20 xl:h-24">
-          <a href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00D5FF] to-[#7EE8FA] flex items-center justify-center">
-              <span className="text-[#050505] font-bold font-[family-name:var(--font-subtitle)] text-lg">K</span>
-            </div>
-            <div>
-              <span className="text-lg font-semibold tracking-tight text-white font-[family-name:var(--font-subtitle)]">KO</span>
-              <span className="text-lg font-light text-white/70 font-[family-name:var(--font-subtitle)]"> Clinics</span>
-            </div>
+          <a href="/" className="flex items-center gap-2" style={{ fontFamily: "var(--font-brand), serif" }}>
+            <span className="text-xl font-semibold tracking-[0.08em] text-cream">KO</span>
+            <span className="text-xl font-displayight text-gold-500">Clinics</span>
           </a>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-white/60 hover:text-white transition-colors duration-300 tracking-wide font-[family-name:var(--font-body)]"
+                className="px-3 py-2 text-[12px] font-displayans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors duration-300 relative"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-3 right-3 h-px bg-gold-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </a>
             ))}
-            <a
-              href="/contact"
-              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#CBA135] to-[#E8C860] text-sm font-semibold text-[#050505] hover:shadow-lg hover:shadow-[#CBA135]/30 transition-all duration-500 font-[family-name:var(--font-body)]"
-            >
-              Become Partner
-            </a>
+            <div className="ml-6 pl-6 border-l border-gold-600/30">
+              <a
+                href="/contact"
+                className="px-5 py-2.5 rounded-full border border-gold-500 text-gold-500 text-[12px] font-displayans uppercase tracking-[0.14em] hover:bg-gold-500/8 transition-all duration-300"
+              >
+                Become Partner
+              </a>
+            </div>
           </div>
 
           <button
@@ -74,9 +72,9 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <div className="w-5 h-4 relative flex flex-col justify-between">
-              <span className={`block h-[1.5px] w-full bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
-              <span className={`block h-[1.5px] w-full bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
-              <span className={`block h-[1.5px] w-full bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
+              <span className={`block h-[1.5px] w-full bg-cream transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
+              <span className={`block h-[1.5px] w-full bg-cream transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+              <span className={`block h-[1.5px] w-full bg-cream transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
             </div>
           </button>
         </div>
@@ -88,7 +86,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-white/[0.06] bg-[#050505]/95 backdrop-blur-xl"
+            className="lg:hidden border-t border-gold-600/20 bg-ink/95 backdrop-blur-xl"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
               {navItems.map((item) => (
@@ -96,7 +94,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={handleNavClick}
-                  className="text-base text-white/60 hover:text-white transition-colors py-2"
+                  className="text-[12px] font-displayans uppercase tracking-[0.14em] text-body hover:text-gold-500 transition-colors py-2"
                 >
                   {item.label}
                 </a>
@@ -104,7 +102,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={handleNavClick}
-                className="mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#CBA135] to-[#E8C860] text-sm font-semibold text-[#050505] transition-all text-center"
+                className="mt-2 px-5 py-3 rounded-full border border-gold-500 text-gold-500 text-[12px] font-displayans uppercase tracking-[0.14em] text-center hover:bg-gold-500/8 transition-all duration-300"
               >
                 Become Partner
               </a>

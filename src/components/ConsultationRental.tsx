@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -56,7 +56,7 @@ export default function ConsultationRental() {
   return (
     <section
       id="space-rental"
-      className="relative overflow-hidden py-24 md:py-32 bg-[#050505]"
+      className="relative overflow-hidden py-24 md:py-32 bg-[#100D0A]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -67,16 +67,16 @@ export default function ConsultationRental() {
           className="space-y-16"
         >
           <motion.div variants={itemVariants} className="text-center">
-            <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4">
+            <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4">
               Space Rental Program
             </span>
-            <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-              Clinic Space <span className="text-[#CBA135]">Rental</span>
+            <h2 className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+              Clinic Space <span className="text-[#C9A14A]">Rental</span>
             </h2>
-            <p className="text-white/50 font-['Space_Grotesk'] text-lg max-w-2xl mx-auto">
+            <p className="text-white/50 font-sans text-lg max-w-2xl mx-auto">
               Turn Unused Space into Revenue
             </p>
-            <p className="text-white/40 font-['Inter'] text-sm max-w-xl mx-auto mt-3">
+            <p className="text-white/40 font-sans text-sm max-w-xl mx-auto mt-3">
               Monetize your clinic's unused infrastructure by renting to verified healthcare professionals
             </p>
           </motion.div>
@@ -98,16 +98,16 @@ export default function ConsultationRental() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A]/60 via-transparent to-transparent" />
               </div>
             ))}
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="rounded-2xl p-8 md:p-10 bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)]"
+            className="rounded-2xl p-8 md:p-10 bg-[rgba(246,241,232,0.04)] backdrop-blur-xl border border-[rgba(246,241,232,0.08)]"
           >
-            <h4 className="font-['Playfair_Display'] text-xl text-white text-center mb-6">
+            <h4 className="font-displayisplay text-xl text-white text-center mb-6">
               Specialists Connected
             </h4>
             <div className="flex flex-wrap justify-center gap-3">
@@ -119,7 +119,7 @@ export default function ConsultationRental() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.05, duration: 0.4 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="inline-block px-4 py-2 text-sm font-['Inter'] text-white/80 bg-[#CBA135]/10 border border-[#CBA135]/20 rounded-full transition-all duration-300 hover:bg-[#CBA135]/20 hover:text-white"
+                  className="inline-block px-4 py-2 text-sm font-sans text-white/80 bg-[#C9A14A]/10 border border-[#C9A14A]/20 rounded-full transition-all duration-300 hover:bg-[#C9A14A]/20 hover:text-white"
                 >
                   {prof}
                 </motion.span>
@@ -129,9 +129,9 @@ export default function ConsultationRental() {
 
           <motion.div
             variants={itemVariants}
-            className="rounded-2xl p-8 md:p-10 bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)]"
+            className="rounded-2xl p-8 md:p-10 bg-[rgba(246,241,232,0.04)] backdrop-blur-xl border border-[rgba(246,241,232,0.08)]"
           >
-            <h4 className="font-['Playfair_Display'] text-xl text-white text-center mb-6">
+            <h4 className="font-displayisplay text-xl text-white text-center mb-6">
               Equipment Available for Rental
             </h4>
             <div className="flex flex-wrap justify-center gap-3">
@@ -143,7 +143,7 @@ export default function ConsultationRental() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.04, duration: 0.4 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="inline-block px-4 py-2 text-sm font-['Inter'] text-white/80 bg-white/5 border border-white/10 rounded-full transition-all duration-300 hover:border-[#CBA135]/40 hover:text-[#CBA135] hover:bg-white/10"
+                  className="inline-block px-4 py-2 text-sm font-sans text-white/80 bg-white/5 border border-white/10 rounded-full transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-[#C9A14A] hover:bg-white/10"
                 >
                   {item}
                 </motion.span>

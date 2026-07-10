@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -69,7 +69,7 @@ function ConnectionLine({ from, to, delay }: { from: { cx: number; cy: number };
       <motion.path
         d={d}
         fill="none"
-        stroke="#CBA135"
+        stroke="#C9A14A"
         strokeWidth="1.5"
         strokeDasharray="4 8"
         initial={{ pathLength: 0, opacity: 0 }}
@@ -131,7 +131,7 @@ function GlowingMarker({ cx, cy, delay, color }: { cx: number; cy: number; delay
 function LocationCard({ location, index }: { location: LocationGroup; index: number }) {
   const isBengaluru = location.type === "bengaluru";
   const isIndia = location.type === "india";
-  const typeColor = isBengaluru ? "#CBA135" : isIndia ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.4)";
+  const typeColor = isBengaluru ? "#C9A14A" : isIndia ? "rgba(246,241,232,0.6)" : "rgba(246,241,232,0.4)";
   const typeLabel = isBengaluru ? "Bengaluru" : isIndia ? "India" : "International";
 
   return (
@@ -145,13 +145,13 @@ function LocationCard({ location, index }: { location: LocationGroup; index: num
       <div
         className="relative overflow-hidden rounded-xl p-4 transition-all duration-500 hover:scale-[1.02]"
         style={{
-          background: "rgba(255,255,255,0.04)",
+          background: "rgba(246,241,232,0.04)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
-          border: "1px solid rgba(255,255,255,0.08)",
+          border: "1px solid rgba(246,241,232,0.08)",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#CBA135]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#C9A14A]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="relative z-10">
           <div className="flex items-start gap-3">
             <div className="relative flex-shrink-0 mt-1">
@@ -170,23 +170,23 @@ function LocationCard({ location, index }: { location: LocationGroup; index: num
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 flex-wrap">
-                <p className="text-sm font-medium truncate" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#fff" }}>
+                <p className="text-sm font-medium truncate" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#fff" }}>
                   {location.name}
                 </p>
-                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ fontFamily: "'Inter', sans-serif", background: "rgba(203,161,53,0.15)", color: "#CBA135" }}>
+                <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ fontFamily: "var(--font-displayans), sans-serif", background: "rgba(203,161,53,0.15)", color: "#C9A14A" }}>
                   {typeLabel}
                 </span>
               </div>
-              <p className="text-xs mt-0.5" style={{ fontFamily: "'Inter', sans-serif", color: typeColor }}>
+              <p className="text-xs mt-0.5" style={{ fontFamily: "var(--font-displayans), sans-serif", color: typeColor }}>
                 {location.detail}
               </p>
               {location.address && (
-                <p className="text-xs mt-1.5" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.4)" }}>
+                <p className="text-xs mt-1.5" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
                   {location.address}
                 </p>
               )}
               {location.phone && (
-                <p className="text-xs mt-1" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.4)" }}>
+                <p className="text-xs mt-1" style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.4)" }}>
                   {location.phone}
                 </p>
               )}
@@ -210,7 +210,7 @@ export default function GlobalPresence() {
     <section
       id="global-presence"
       className="relative overflow-hidden py-24 px-5 md:px-10 lg:px-20"
-      style={{ backgroundColor: "#050505" }}
+      style={{ backgroundColor: "#100D0A" }}
     >
       <div
         className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl pointer-events-none"
@@ -231,20 +231,20 @@ export default function GlobalPresence() {
         >
           <p
             className="text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#CBA135", letterSpacing: "0.2em" }}
+            style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
           >
             Our Reach
           </p>
           <h2
             className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ fontFamily: "'Playfair Display', serif", color: "#fff" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#fff" }}
           >
             Location-Wise{" "}
-            <span style={{ color: "#CBA135" }}>Network</span>
+            <span style={{ color: "#C9A14A" }}>Network</span>
           </h2>
           <p
             className="text-sm max-w-xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.5)" }}
+            style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.5)" }}
           >
             KO Clinics locations and partner clinics across India and internationally.
           </p>
@@ -258,12 +258,12 @@ export default function GlobalPresence() {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
               className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden"
-              style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}
+              style={{ background: "rgba(246,241,232,0.02)", border: "1px solid rgba(246,241,232,0.06)" }}
             >
               <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.08 }}>
                 <defs>
                   <pattern id="grid-gold" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBA135" strokeWidth="0.5" />
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#C9A14A" strokeWidth="0.5" />
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#grid-gold)" />
@@ -318,8 +318,8 @@ export default function GlobalPresence() {
                 {mounted && locations.map((loc, idx) => {
                   let color: string;
                   switch (loc.type) {
-                    case "bengaluru": color = "#CBA135"; break;
-                    case "india": color = "rgba(255,255,255,0.5)"; break;
+                    case "bengaluru": color = "#C9A14A"; break;
+                    case "india": color = "rgba(246,241,232,0.5)"; break;
                     case "international": color = "rgba(203,161,53,0.4)"; break;
                     default: color = "#FFFFFF";
                   }
@@ -346,9 +346,9 @@ export default function GlobalPresence() {
                       x={loc.cx}
                       y={loc.cy - 22}
                       textAnchor="middle"
-                      fill={loc.type === "bengaluru" ? "#CBA135" : "rgba(255,255,255,0.5)"}
+                      fill={loc.type === "bengaluru" ? "#C9A14A" : "rgba(246,241,232,0.5)"}
                       fontSize="7"
-                      fontFamily="'Space Grotesk', sans-serif"
+                      fontFamily="var(--font-displayans), sans-serif"
                       fontWeight="500"
                       opacity="0.85"
                     >
@@ -366,7 +366,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ delay: 1.5, duration: 0.6 }}
                 className="flex-1 h-28 rounded-xl overflow-hidden relative"
-                style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                style={{ border: "1px solid rgba(246,241,232,0.06)" }}
               >
                 <Image
                   src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
@@ -384,7 +384,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ delay: 1.7, duration: 0.6 }}
                 className="flex-1 h-28 rounded-xl overflow-hidden relative"
-                style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                style={{ border: "1px solid rgba(246,241,232,0.06)" }}
               >
                 <Image
                   src="https://images.unsplash.com/photo-1526778548025-fa2f459b5f6a?w=800&q=80"
@@ -407,7 +407,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#CBA135", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "#C9A14A", letterSpacing: "0.2em" }}
               >
                 Bengaluru Clinics
               </motion.h3>
@@ -425,7 +425,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.15 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "rgba(255,255,255,0.5)", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(246,241,232,0.5)", letterSpacing: "0.2em" }}
               >
                 Other Indian Cities
               </motion.h3>
@@ -443,7 +443,7 @@ export default function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-xs tracking-[0.2em] uppercase mb-4"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "rgba(203,161,53,0.6)", letterSpacing: "0.2em" }}
+                style={{ fontFamily: "var(--font-displayans), sans-serif", color: "rgba(203,161,53,0.6)", letterSpacing: "0.2em" }}
               >
                 International
               </motion.h3>

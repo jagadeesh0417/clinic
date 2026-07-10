@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -79,7 +79,7 @@ export default function PartnerRequirements() {
   return (
     <section ref={ref} id="partner-requirements" className="relative overflow-hidden">
       {/* Hero */}
-      <div style={{ background: "#050505" }} className="relative overflow-hidden py-24 md:py-32">
+      <div style={{ background: "#100D0A" }} className="relative overflow-hidden py-24 md:py-32">
         <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
         <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2" style={{ width: "800px", height: "800px", background: "radial-gradient(circle, rgba(203,161,53,0.06) 0%, transparent 70%)" }} />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,12 +90,12 @@ export default function PartnerRequirements() {
             variants={fadeUp}
             className="mx-auto max-w-4xl text-center"
           >
-            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}>
+            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}>
               What You Need to Join KO Clinics
             </span>
-            <h2 className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl" style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}>
               Partner{" "}
-              <span style={{ background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                 Requirements
               </span>
             </h2>
@@ -104,7 +104,7 @@ export default function PartnerRequirements() {
       </div>
 
       {/* Requirements */}
-      <div style={{ background: "#0D0D0D" }} className="relative overflow-hidden py-24 md:py-32">
+      <div style={{ background: "#191410" }} className="relative overflow-hidden py-24 md:py-32">
         <div className="pointer-events-none absolute right-0 top-1/4 w-96 h-96 rounded-full blur-[150px]" style={{ background: "radial-gradient(circle, rgba(203,161,53,0.06) 0%, transparent 70%)" }} />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -120,20 +120,20 @@ export default function PartnerRequirements() {
                 variants={itemVariants}
                 className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  borderColor: "rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  borderColor: "rgba(246,241,232,0.08)",
                 }}
               >
-                <div className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20" style={{ background: "radial-gradient(circle, #CBA135 0%, transparent 70%)" }} />
+                <div className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20" style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }} />
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm" style={{ background: "rgba(203,161,53,0.12)", border: "1px solid rgba(203,161,53,0.2)" }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#CBA135" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M20 6L9 17L4 12" stroke="#C9A14A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h4 className="text-base font-semibold leading-snug" style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}>
+                <h4 className="text-base font-semibold leading-snug" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}>
                   {req}
                 </h4>
-                <div className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full" style={{ background: "linear-gradient(90deg, #CBA135 50%, transparent 100%)" }} />
+                <div className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full" style={{ background: "linear-gradient(90deg, #C9A14A 50%, transparent 100%)" }} />
               </motion.div>
             ))}
           </motion.div>
@@ -166,7 +166,7 @@ export default function PartnerRequirements() {
       </div>
 
       {/* Benefits of Partnership */}
-      <div style={{ background: "#050505" }} className="relative overflow-hidden py-24 md:py-32">
+      <div style={{ background: "#100D0A" }} className="relative overflow-hidden py-24 md:py-32">
         <div className="pointer-events-none absolute left-1/4 top-1/3 w-80 h-80 rounded-full blur-[120px]" style={{ background: "radial-gradient(circle, rgba(203,161,53,0.05) 0%, transparent 70%)" }} />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -176,10 +176,10 @@ export default function PartnerRequirements() {
             variants={fadeUp}
             className="mx-auto mb-16 max-w-3xl text-center md:mb-20"
           >
-            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}>
+            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}>
               Why Partner With Us
             </span>
-            <h3 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl" style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl" style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}>
               Benefits of Partnership
             </h3>
           </motion.div>
@@ -194,16 +194,16 @@ export default function PartnerRequirements() {
                 transition={{ duration: 0.6, delay: catIndex * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as const }}
                 className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 md:p-8"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  borderColor: "rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  borderColor: "rgba(246,241,232,0.08)",
                 }}
               >
-                <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-20" style={{ background: "radial-gradient(circle, #CBA135 0%, transparent 70%)" }} />
+                <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-20" style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }} />
                 <h4
                   className="mb-5 text-xl font-bold md:text-2xl"
                   style={{
-                    color: "#CBA135",
-                    fontFamily: "'Playfair Display', serif",
+                    color: "#C9A14A",
+                    fontFamily: "var(--font-displayisplay), serif",
                   }}
                 >
                   {category.title}
@@ -214,14 +214,14 @@ export default function PartnerRequirements() {
                       key={item}
                       className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium md:text-sm"
                       style={{
-                        background: "rgba(255,255,255,0.04)",
+                        background: "rgba(246,241,232,0.04)",
                         border: "1px solid rgba(203,161,53,0.15)",
-                        color: "rgba(255,255,255,0.85)",
-                        fontFamily: "'Inter', sans-serif",
+                        color: "rgba(246,241,232,0.85)",
+                        fontFamily: "var(--font-displayans), sans-serif",
                       }}
                     >
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                        <path d="M20 6L9 17L4 12" stroke="#CBA135" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M20 6L9 17L4 12" stroke="#C9A14A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       {item}
                     </span>

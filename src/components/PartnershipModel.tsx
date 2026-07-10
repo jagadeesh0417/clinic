@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -57,7 +57,7 @@ export default function PartnershipModel() {
       ref={ref}
       id="partnership-model"
       className="relative overflow-hidden"
-      style={{ background: "#050505" }}
+      style={{ background: "#100D0A" }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
 
@@ -74,17 +74,17 @@ export default function PartnershipModel() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             The Partnership Model
           </span>
           <h2
-            className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             <span
               style={{
-                background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)",
+                background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -96,7 +96,7 @@ export default function PartnershipModel() {
           </h2>
           <p
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Everything you need to transform your clinic into a premium KO Clinics partner destination — with zero upfront franchise cost.
           </p>
@@ -118,38 +118,38 @@ export default function PartnershipModel() {
                 i === requirements.length - 1 ? "lg:col-start-2 lg:col-end-3" : ""
               }`}
               style={{
-                background: "rgba(255,255,255,0.04)",
-                borderColor: "rgba(255,255,255,0.08)",
+                background: "rgba(246,241,232,0.04)",
+                borderColor: "rgba(246,241,232,0.08)",
               }}
             >
               <div
                 className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20"
-                style={{ background: "radial-gradient(circle, #CBA135 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }}
               />
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full" style={{ background: "rgba(203,161,53,0.15)" }}>
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 6L5.5 9.5L14 2" stroke="#CBA135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M2 6L5.5 9.5L14 2" stroke="#C9A14A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
               <h4
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {req.title}
               </h4>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter', sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {req.desc}
               </p>
 
               <div
                 className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full"
-                style={{ background: "linear-gradient(90deg, #CBA135 0%, #E8D48B 50%, transparent 100%)" }}
+                style={{ background: "linear-gradient(90deg, #C9A14A 0%, #E8D48B 50%, transparent 100%)" }}
               />
             </motion.div>
           ))}
@@ -188,15 +188,15 @@ export default function PartnershipModel() {
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const, delay: 0.3 }}
           className="mx-auto mt-16 max-w-4xl rounded-2xl border p-8 text-center backdrop-blur-xl md:p-12"
           style={{
-            background: "rgba(255,255,255,0.04)",
-            borderColor: "rgba(255,255,255,0.08)",
+            background: "rgba(246,241,232,0.04)",
+            borderColor: "rgba(246,241,232,0.08)",
           }}
         >
           <p
             className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl"
             style={{
-              fontFamily: "'Playfair Display', serif",
-              background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)",
+              fontFamily: "var(--font-displayisplay), serif",
+              background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -209,7 +209,7 @@ export default function PartnershipModel() {
           />
           <p
             className="mt-6 text-sm italic leading-relaxed md:text-base"
-            style={{ color: "rgba(255,255,255,0.45)", fontFamily: "'Inter', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.45)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             &ldquo;Start with the essentials. Scale with the ecosystem.&rdquo;
           </p>

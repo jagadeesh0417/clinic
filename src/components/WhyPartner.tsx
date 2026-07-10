@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -67,8 +67,8 @@ function CardGrid() {
           whileHover={{ y: -6, scale: 1.02 }}
           className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-colors duration-300"
           style={{
-            backgroundColor: "rgba(255,255,255,0.04)",
-            borderColor: "rgba(255,255,255,0.08)",
+            backgroundColor: "rgba(246,241,232,0.04)",
+            borderColor: "rgba(246,241,232,0.08)",
           }}
         >
           <div
@@ -81,7 +81,7 @@ function CardGrid() {
           <div className="relative z-10">
             <h3
               className="mb-2 text-lg font-semibold tracking-tight"
-              style={{ fontFamily: '"Playfair Display", serif' }}
+              style={{ fontFamily: 'var(--font-displayisplay), serif' }}
             >
               {card.title}
             </h3>
@@ -112,9 +112,9 @@ function FeaturesStrip() {
           whileHover={{ scale: 1.06 }}
           className="rounded-full px-4 py-2 text-xs font-medium uppercase tracking-wider"
           style={{
-            backgroundColor: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            color: "#CBA135",
+            backgroundColor: "rgba(246,241,232,0.05)",
+            border: "1px solid rgba(246,241,232,0.08)",
+            color: "#C9A14A",
           }}
         >
           {feat}
@@ -161,17 +161,17 @@ export default function WhyPartner() {
           >
             <p
               className="mb-3 text-sm font-semibold uppercase tracking-[0.2em]"
-              style={{ color: "#CBA135" }}
+              style={{ color: "#C9A14A" }}
             >
               Why Partner
             </p>
             <h2
               className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-              style={{ fontFamily: '"Playfair Display", serif' }}
+              style={{ fontFamily: 'var(--font-displayisplay), serif' }}
             >
               Partner with{" "}
               <span
-                className="bg-gradient-to-r from-[#00D5FF] to-[#CBA135] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-[#C9A14A] to-[#C9A14A] bg-clip-text text-transparent"
               >
                 KO Clinics
               </span>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { SITE } from "@/config/site";
@@ -39,7 +39,7 @@ const itemVariants = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#050505] border-t border-white/[0.06] overflow-hidden">
+    <footer className="relative bg-[#100D0A] border-t border-white/[0.06] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
 
       <motion.div
@@ -52,12 +52,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-1">
             <a href="/" className="inline-flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#CBA135] to-[#E8C960] flex items-center justify-center">
-                <span className="text-[#050505] font-bold font-[family-name:var(--font-heading)] text-lg">K</span>
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A14A] to-[#E8C960] flex items-center justify-center">
+                <span className="text-[#100D0A] font-bold font-[family-name:var(--font-heading)] text-lg">K</span>
               </div>
               <div>
                 <span className="text-lg font-semibold tracking-tight text-white font-[family-name:var(--font-heading)]">KO</span>
-                <span className="text-lg font-light text-white/70 font-[family-name:var(--font-heading)]"> Clinics</span>
+                <span className="text-lg font-displayight text-white/70 font-[family-name:var(--font-heading)]"> Clinics</span>
               </div>
             </a>
             <p className="text-white/50 text-sm leading-relaxed font-[family-name:var(--font-body)] mb-6 max-w-xs">
@@ -143,17 +143,17 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full bg-white/5 border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 font-[family-name:var(--font-body)] outline-none focus:border-[#CBA135]/40 focus:bg-white/[0.08] transition-all duration-300"
+                className="w-full bg-white/5 border border-white/[0.06] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 font-[family-name:var(--font-body)] outline-none focus:border-[#C9A14A]/40 focus:bg-white/[0.08] transition-all duration-300"
               />
-              <button className="absolute right-1.5 top-1/2 -translate-y-1/2 px-4 py-1.5 rounded-lg bg-[#CBA135] text-[#050505] text-xs font-semibold font-[family-name:var(--font-body)] hover:bg-[#D4A843] transition-colors duration-300">
+              <button className="absolute right-1.5 top-1/2 -translate-y-1/2 px-4 py-1.5 rounded-lg bg-[#C9A14A] text-[#100D0A] text-xs font-semibold font-[family-name:var(--font-body)] hover:bg-[#D4A843] transition-colors duration-300">
                 Subscribe
               </button>
             </div>
             <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" className="mt-0.5 accent-[#CBA135]" />
+              <input type="checkbox" className="mt-0.5 accent-[#C9A14A]" />
               <span className="text-[10px] text-white/30 leading-relaxed font-[family-name:var(--font-body)]">
                 I agree to the{" "}
-                <a href="/privacy" className="text-[#CBA135]/70 hover:text-[#CBA135] underline">Privacy Policy</a>{" "}
+                <a href="/privacy" className="text-[#C9A14A]/70 hover:text-[#C9A14A] underline">Privacy Policy</a>{" "}
                 as per India DPDP Act 2023.
               </span>
             </label>

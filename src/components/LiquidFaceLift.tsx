@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Shield, Sparkles, Star, Clock } from "lucide-react";
@@ -84,9 +84,9 @@ const testimonials = [
 
 export default function LiquidFaceLift() {
   return (
-    <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
@@ -99,25 +99,25 @@ export default function LiquidFaceLift() {
         >
           <motion.span
             variants={fadeUp} custom={0}
-            className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Signature Procedure
           </motion.span>
           <motion.h2
             variants={fadeUp} custom={1}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             The{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
               Liquid Face Lift
             </span>
           </motion.h2>
           <motion.p
             variants={fadeUp} custom={2}
-            className="text-[#B7B7B7] text-xl md:text-2xl mt-4 font-light"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-xl md:text-2xl mt-4 font-displayight"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Lift, contour &amp; rejuvenate \u2014 without surgery.
           </motion.p>
@@ -134,21 +134,21 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             What is a Liquid Face Lift?
           </motion.h3>
           <motion.p
             variants={fadeUp} custom={1}
-            className="text-[#B7B7B7] text-lg leading-relaxed"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-lg leading-relaxed"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             A Liquid Face Lift is a comprehensive, non-surgical facial rejuvenation procedure that strategically combines injectable treatments \u2014 dermal fillers, neuromodulators (Botox), PDO threads, and bio-stimulators \u2014 to lift sagging skin, restore lost volume, smooth wrinkles, and redefine facial contours.
           </motion.p>
           <motion.p
             variants={fadeUp} custom={2}
-            className="text-[#B7B7B7] text-lg leading-relaxed mt-4"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-lg leading-relaxed mt-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Unlike a surgical face lift, there are no incisions, no general anesthesia, and minimal recovery time. Dr. Vikas&apos;s signature combination technique allows for a multi-dimensional approach that addresses ageing at every layer of the face. Walk in during lunch, walk out looking refreshed.
           </motion.p>
@@ -173,8 +173,8 @@ export default function LiquidFaceLift() {
                 border: "1px solid rgba(203,161,53,0.2)",
               }}
             >
-              <span className="block mb-3">{(() => { const Icon = p.icon; return <Icon className="w-7 h-7 mx-auto text-[#CBA135]" />; })()}</span>
-              <p className="text-white text-sm font-semibold leading-snug" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span className="block mb-3">{(() => { const Icon = p.icon; return <Icon className="w-7 h-7 mx-auto text-[#C9A14A]" />; })()}</span>
+              <p className="text-white text-sm font-semibold leading-snug" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 {p.title}
               </p>
             </motion.div>
@@ -192,14 +192,14 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-2 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             How It Works
           </motion.h3>
           <motion.p
             variants={fadeUp} custom={1}
-            className="text-[#CBA135] text-sm uppercase tracking-wider text-center mb-10"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-[#C9A14A] text-sm uppercase tracking-wider text-center mb-10"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             The Four-Step Journey
           </motion.p>
@@ -211,23 +211,23 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 2}
                 className="relative rounded-2xl p-6"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
                 <span
                   className="absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
                   style={{
-                    background: "linear-gradient(135deg, #CBA135, #F5D779)",
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    background: "linear-gradient(135deg, #C9A14A, #F5D779)",
+                    fontFamily: "var(--font-displayans), sans-serif",
                   }}
                 >
                   {s.step}
                 </span>
-                <h4 className="text-white font-semibold text-base mt-2 mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <h4 className="text-white font-semibold text-base mt-2 mb-2" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   {s.title}
                 </h4>
-                <p className="text-[#B7B7B7] text-sm leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <p className="text-[#CBBFAF] text-sm leading-relaxed" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   {s.desc}
                 </p>
               </motion.div>
@@ -246,7 +246,7 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Benefits
           </motion.h3>
@@ -257,12 +257,12 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 1}
                 className="flex items-center gap-3 rounded-xl p-4"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
-                <span className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{b}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
+                <span className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{b}</span>
               </motion.div>
             ))}
           </div>
@@ -279,7 +279,7 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Ideal Candidates
           </motion.h3>
@@ -290,12 +290,12 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 1}
                 className="flex items-center gap-3 rounded-xl p-4"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
-                <span className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{c}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
+                <span className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{c}</span>
               </motion.div>
             ))}
           </div>
@@ -303,7 +303,7 @@ export default function LiquidFaceLift() {
           <motion.h4
             variants={fadeUp} custom={5}
             className="text-lg font-semibold text-white mt-10 mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Contraindications
           </motion.h4>
@@ -314,12 +314,12 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 6}
                 className="flex items-center gap-3 rounded-xl p-4"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]/50 flex-shrink-0" />
-                <span className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{c}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A]/50 flex-shrink-0" />
+                <span className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{c}</span>
               </motion.div>
             ))}
           </div>
@@ -336,7 +336,7 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Frequently Asked Questions
           </motion.h3>
@@ -347,14 +347,14 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 1}
                 className="rounded-2xl p-6"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
-                <h4 className="text-white font-semibold text-base mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <h4 className="text-white font-semibold text-base mb-2" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   {faq.q}
                 </h4>
-                <p className="text-[#B7B7B7] text-sm leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <p className="text-[#CBBFAF] text-sm leading-relaxed" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   {faq.a}
                 </p>
               </motion.div>
@@ -373,7 +373,7 @@ export default function LiquidFaceLift() {
           <motion.h3
             variants={fadeUp} custom={0}
             className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Testimonials
           </motion.h3>
@@ -384,17 +384,17 @@ export default function LiquidFaceLift() {
                 variants={fadeUp} custom={i + 1}
                 className="rounded-2xl p-6 text-center"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
-                <p className="text-[#B7B7B7] text-sm leading-relaxed italic mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <p className="text-[#CBBFAF] text-sm leading-relaxed italic mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <p className="text-[#CBA135] text-sm font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <p className="text-[#C9A14A] text-sm font-semibold" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                   {t.name}
                 </p>
-                <p className="text-[#CBA135] text-xs mt-1">
+                <p className="text-[#C9A14A] text-xs mt-1">
                   {"\u2605".repeat(t.rating)}
                 </p>
               </motion.div>
@@ -418,10 +418,10 @@ export default function LiquidFaceLift() {
               border: "1px solid rgba(203,161,53,0.2)",
             }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-displayisplay), serif" }}>
               Ready to Transform?
             </h3>
-            <p className="text-[#B7B7B7] text-base leading-relaxed mb-8" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-[#CBBFAF] text-base leading-relaxed mb-8" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
               Experience the signature Liquid Face Lift by Dr. Vikas Singh. Book your consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -429,9 +429,9 @@ export default function LiquidFaceLift() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
                 style={{
-                  background: "linear-gradient(135deg, #CBA135, #F5D779)",
-                  color: "#050505",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  background: "linear-gradient(135deg, #C9A14A, #F5D779)",
+                  color: "#100D0A",
+                  fontFamily: "var(--font-displayans), sans-serif",
                 }}
               >
                 Book Consultation
@@ -441,9 +441,9 @@ export default function LiquidFaceLift() {
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
                 style={{
                   background: "transparent",
-                  color: "#CBA135",
+                  color: "#C9A14A",
                   border: "1px solid rgba(203,161,53,0.4)",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "var(--font-displayans), sans-serif",
                 }}
               >
                 Enquire Now

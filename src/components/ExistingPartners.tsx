@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -77,7 +77,7 @@ export default function ExistingPartners() {
     <section
       id="existing-partners"
       className="relative overflow-hidden px-5 py-24 md:px-10 lg:px-20"
-      style={{ backgroundColor: "#050505", color: "#ffffff" }}
+      style={{ backgroundColor: "#100D0A", color: "#ffffff" }}
     >
       <div
         className="pointer-events-none absolute left-1/3 top-1/4 -translate-x-1/2 -translate-y-1/2"
@@ -108,24 +108,24 @@ export default function ExistingPartners() {
         >
           <p
             className="mb-3 text-sm font-semibold uppercase tracking-[0.2em]"
-            style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Partner Network
           </p>
           <h2
             className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: '"Playfair Display", serif' }}
+            style={{ fontFamily: 'var(--font-displayisplay), serif' }}
           >
             Our{" "}
-            <span className="bg-gradient-to-r from-[#CBA135] to-[#CBA135] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#C9A14A] to-[#C9A14A] bg-clip-text text-transparent">
               Partner Network
             </span>
           </h2>
           <p
             className="mx-auto mt-4 max-w-xl text-sm leading-relaxed"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "rgba(255,255,255,0.5)",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "rgba(246,241,232,0.5)",
             }}
           >
             Trusted by healthcare providers globally
@@ -147,14 +147,14 @@ export default function ExistingPartners() {
                 onClick={() => setActiveCountry(country)}
                 className="relative rounded-full px-5 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-300"
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "var(--font-displayans), sans-serif",
                   backgroundColor: isActive
                     ? "rgba(203,161,53,0.15)"
-                    : "rgba(255,255,255,0.04)",
-                  color: isActive ? "#CBA135" : "rgba(255,255,255,0.6)",
+                    : "rgba(246,241,232,0.04)",
+                  color: isActive ? "#C9A14A" : "rgba(246,241,232,0.6)",
                   border: isActive
                     ? "1px solid rgba(203,161,53,0.3)"
-                    : "1px solid rgba(255,255,255,0.08)",
+                    : "1px solid rgba(246,241,232,0.08)",
                   boxShadow: isActive
                     ? "0 0 20px rgba(203,161,53,0.15)"
                     : "none",
@@ -165,7 +165,7 @@ export default function ExistingPartners() {
                   scale: 1.05,
                   backgroundColor: isActive
                     ? "rgba(203,161,53,0.2)"
-                    : "rgba(255,255,255,0.08)",
+                    : "rgba(246,241,232,0.08)",
                 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -193,8 +193,8 @@ export default function ExistingPartners() {
                 <p
                   className="text-sm"
                   style={{
-                    fontFamily: "'Inter', sans-serif",
-                    color: "rgba(255,255,255,0.4)",
+                    fontFamily: "var(--font-displayans), sans-serif",
+                    color: "rgba(246,241,232,0.4)",
                   }}
                 >
                   No partners in this region yet.
@@ -209,10 +209,10 @@ export default function ExistingPartners() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group relative overflow-hidden rounded-2xl transition-all duration-500"
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.04)",
+                  backgroundColor: "rgba(246,241,232,0.04)",
                   backdropFilter: "blur(16px)",
                   WebkitBackdropFilter: "blur(16px)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
                 <div
@@ -246,7 +246,7 @@ export default function ExistingPartners() {
                       style={{
                         backgroundColor: "rgba(203,161,53,0.2)",
                         border: "1px solid rgba(203,161,53,0.3)",
-                        color: "#CBA135",
+                        color: "#C9A14A",
                         backdropFilter: "blur(8px)",
                         WebkitBackdropFilter: "blur(8px)",
                       }}
@@ -261,13 +261,13 @@ export default function ExistingPartners() {
                         backgroundColor: "rgba(0,0,0,0.5)",
                         backdropFilter: "blur(8px)",
                         WebkitBackdropFilter: "blur(8px)",
-                        color: "rgba(255,255,255,0.7)",
-                        fontFamily: "'Inter', sans-serif",
+                        color: "rgba(246,241,232,0.7)",
+                        fontFamily: "var(--font-displayans), sans-serif",
                       }}
                     >
                       <svg
                         className="h-3 w-3"
-                        style={{ color: "#CBA135" }}
+                        style={{ color: "#C9A14A" }}
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -285,7 +285,7 @@ export default function ExistingPartners() {
                 <div className="relative z-10 p-5">
                   <h3
                     className="text-lg font-semibold tracking-tight"
-                    style={{ fontFamily: '"Playfair Display", serif' }}
+                    style={{ fontFamily: 'var(--font-displayisplay), serif' }}
                   >
                     {partner.name}
                   </h3>
@@ -298,7 +298,7 @@ export default function ExistingPartners() {
                         style={{
                           backgroundColor: "rgba(203,161,53,0.08)",
                           border: "1px solid rgba(203,161,53,0.15)",
-                          color: "#CBA135",
+                          color: "#C9A14A",
                         }}
                       >
                         {s}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,16 +35,16 @@ export default function BlogPage() {
   const categories = ["All", ...blogCategories];
 
   return (
-    <div className="min-h-screen bg-[#050505]">
+    <div className="min-h-screen bg-[#100D0A]">
       {/* Hero */}
       <section className="relative pt-36 pb-20 overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#CBA135]/5 rounded-full blur-[180px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#C9A14A]/5 rounded-full blur-[180px] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4"
+            className="inline-block text-[#C9A14A] font-displayans text-sm tracking-[0.2em] uppercase mb-4"
           >
             Educational Content
           </motion.span>
@@ -52,15 +52,15 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-4"
+            className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4"
           >
-            Blog & <span className="text-[#CBA135]">Library</span>
+            Blog & <span className="text-[#C9A14A]">Library</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/60 font-['Inter'] text-lg max-w-2xl mx-auto"
+            className="text-white/60 font-displayans text-lg max-w-2xl mx-auto"
           >
             Expert insights, treatment guides, and comparative analyses from KO Clinics
           </motion.p>
@@ -87,7 +87,7 @@ export default function BlogPage() {
               placeholder="Search articles..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-['Inter'] text-sm placeholder:text-white/30 focus:outline-none focus:border-[#CBA135]/40 transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-displayans text-sm placeholder:text-white/30 focus:outline-none focus:border-[#C9A14A]/40 transition-all duration-300"
             />
           </div>
           <div className="flex flex-wrap gap-2">
@@ -95,10 +95,10 @@ export default function BlogPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full font-['Inter'] text-xs font-medium tracking-wide transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full font-displayans text-xs font-medium tracking-wide transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#CBA135] text-black shadow-lg shadow-[#CBA135]/20"
-                    : "border border-white/10 bg-white/5 text-white/60 hover:border-[#CBA135]/40 hover:text-white"
+                    ? "bg-[#C9A14A] text-black shadow-lg shadow-[#C9A14A]/20"
+                    : "border border-white/10 bg-white/5 text-white/60 hover:border-[#C9A14A]/40 hover:text-white"
                 }`}
               >
                 {cat}
@@ -119,7 +119,7 @@ export default function BlogPage() {
               exit={{ opacity: 0 }}
               className="py-20 text-center"
             >
-              <p className="font-['Inter'] text-white/40 text-lg">No articles found matching your criteria.</p>
+              <p className="font-displayans text-white/40 text-lg">No articles found matching your criteria.</p>
             </motion.div>
           ) : (
             <motion.div
@@ -134,11 +134,11 @@ export default function BlogPage() {
                   key={post.slug}
                   variants={fadeUp}
                   custom={i}
-                  className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#CBA135]/20"
+                  className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#C9A14A]/20"
                   style={{
-                    background: "rgba(255,255,255,0.03)",
+                    background: "rgba(246,241,232,0.03)",
                     backdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(246,241,232,0.06)",
                   }}
                 >
                   <div className="aspect-[16/9] overflow-hidden bg-white/5 relative">
@@ -148,29 +148,29 @@ export default function BlogPage() {
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A]/80 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-block px-3 py-1 rounded-full bg-[#CBA135]/90 text-black text-[10px] font-['Space_Grotesk'] font-semibold tracking-wider uppercase">
+                      <span className="inline-block px-3 py-1 rounded-full bg-[#C9A14A]/90 text-black text-[10px] font-displayans font-semibold tracking-wider uppercase">
                         {post.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-white/30 font-['Inter'] text-xs">{post.date}</span>
+                      <span className="text-white/30 font-displayans text-xs">{post.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/20" />
-                      <span className="text-white/30 font-['Inter'] text-xs capitalize">{post.source}</span>
+                      <span className="text-white/30 font-displayans text-xs capitalize">{post.source}</span>
                     </div>
-                    <h2 className="font-['Playfair_Display'] text-xl text-white mb-2 line-clamp-2 group-hover:text-[#CBA135] transition-colors duration-300">
+                    <h2 className="font-displayisplay text-xl text-white mb-2 line-clamp-2 group-hover:text-[#C9A14A] transition-colors duration-300">
                       {post.title}
                     </h2>
-                    <p className="font-['Inter'] text-sm text-white/50 line-clamp-3 leading-relaxed mb-5">
+                    <p className="font-displayans text-sm text-white/50 line-clamp-3 leading-relaxed mb-5">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-3">
                       <a
                         href={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-2 text-[#CBA135] font-['Inter'] text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:gap-3"
+                        className="inline-flex items-center gap-2 text-[#C9A14A] font-displayans text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:gap-3"
                       >
                         Read Article
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -179,7 +179,7 @@ export default function BlogPage() {
                       </a>
                       <a
                         href="/contact"
-                        className="ml-auto inline-flex items-center gap-1.5 text-white/40 hover:text-white font-['Inter'] text-xs transition-all duration-300"
+                        className="ml-auto inline-flex items-center gap-1.5 text-white/40 hover:text-white font-displayans text-xs transition-all duration-300"
                       >
                         Book Consultation
                       </a>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -10,9 +10,9 @@ export default function FinalCTA() {
           position: relative;
           width: 100%;
           padding: 120px 24px;
-          background: #050505;
+          background: #100D0A;
           overflow: hidden;
-          font-family: "Space Grotesk", sans-serif;
+          font-displayamily: var(--font-displayans), sans-serif;
         }
 
         .cta-overlay {
@@ -50,15 +50,15 @@ export default function FinalCTA() {
         .cta-glass {
           padding: 64px 48px;
           border-radius: 24px;
-          background: rgba(255, 255, 255, 0.04);
+          background: rgba(246,241,232,0.04);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(246,241,232,0.08);
         }
 
         .cta-headline {
-          font-family: "Playfair Display", serif;
-          font-size: clamp(32px, 5vw, 56px);
+          font-displayamily: var(--font-displayisplay), serif;
+          font-displayize: clamp(32px, 5vw, 56px);
           font-weight: 700;
           line-height: 1.1;
           color: #ffffff;
@@ -67,14 +67,14 @@ export default function FinalCTA() {
         }
 
         .cta-headline span {
-          color: #CBA135;
+          color: #C9A14A;
         }
 
         .cta-description {
-          font-family: "Inter", sans-serif;
-          font-size: clamp(13px, 1.4vw, 16px);
+          font-displayamily: var(--font-displayans), sans-serif;
+          font-displayize: clamp(13px, 1.4vw, 16px);
           font-weight: 400;
-          color: #CBA135;
+          color: #C9A14A;
           letter-spacing: 0.08em;
           margin: 0 0 36px;
           opacity: 0.9;
@@ -87,12 +87,12 @@ export default function FinalCTA() {
           padding: 16px 40px;
           border: none;
           border-radius: 60px;
-          font-family: "Space Grotesk", sans-serif;
-          font-size: 15px;
+          font-displayamily: var(--font-displayans), sans-serif;
+          font-displayize: 15px;
           font-weight: 600;
           letter-spacing: 0.02em;
-          color: #050505;
-          background: linear-gradient(135deg, #CBA135, #e0b84c);
+          color: #100D0A;
+          background: linear-gradient(135deg, #C9A14A, #e0b84c);
           cursor: pointer;
           text-decoration: none;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -104,7 +104,7 @@ export default function FinalCTA() {
           content: "";
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, #e0b84c, #CBA135, #d4a843);
+          background: linear-gradient(135deg, #e0b84c, #C9A14A, #d4a843);
           opacity: 0;
           transition: opacity 0.4s ease;
         }

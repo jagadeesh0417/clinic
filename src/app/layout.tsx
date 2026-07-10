@@ -1,7 +1,23 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
+import { Playfair_Display, Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-displayisplay",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-brand",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-displayans",
+});
 
 export const metadata: Metadata = {
   title: "KO Clinics | An AI-Powered Clinic Network, Built by Clinicians",
@@ -24,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-[#050505] text-white antialiased">
+      <body className={`${playfair.variable} ${cinzel.variable} ${montserrat.variable} min-h-screen bg-ink text-body antialiased`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

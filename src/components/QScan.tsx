@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useRef, useEffect } from "react";
 import {
@@ -52,18 +52,18 @@ function FeatureCard({
   return (
     <motion.div
       variants={itemVariants}
-      className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:bg-[#CBA135]/5 cursor-default"
+      className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:bg-[#C9A14A]/5 cursor-default"
       style={{
-        background: "rgba(255,255,255,0.04)",
+        background: "rgba(246,241,232,0.04)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
-        border: "1px solid rgba(255,255,255,0.08)",
+        border: "1px solid rgba(246,241,232,0.08)",
       }}
     >
-      <div className="w-9 h-9 rounded-lg bg-[#CBA135]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-        <Icon className="w-4 h-4 text-[#CBA135]" />
+      <div className="w-9 h-9 rounded-lg bg-[#C9A14A]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="w-4 h-4 text-[#C9A14A]" />
       </div>
-      <span className="text-sm md:text-base text-white/80 group-hover:text-white transition-colors duration-300 font-['Space_Grotesk',sans-serif]">
+      <span className="text-sm md:text-base text-white/80 group-hover:text-white transition-colors duration-300 font-sans">
         {label}
       </span>
     </motion.div>
@@ -86,14 +86,14 @@ function ImageShowcase() {
         className="relative w-full h-full rounded-2xl overflow-hidden bg-[#1A1A1A] flex items-center justify-center border border-white/10"
       >
         <div className="text-center p-8">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#CBA135]/10 flex items-center justify-center">
-            <svg className="w-8 h-8 text-[#CBA135]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#C9A14A]/10 flex items-center justify-center">
+            <svg className="w-8 h-8 text-[#C9A14A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="3" width="20" height="14" rx="2" />
               <line x1="8" y1="21" x2="16" y2="21" />
               <line x1="12" y1="17" x2="12" y2="21" />
             </svg>
           </div>
-          <span className="text-[#B7B7B7] text-sm font-['Inter',sans-serif]">
+          <span className="text-[#CBBFAF] text-sm font-sans">
             QScan unit photo — pending
           </span>
         </div>
@@ -161,13 +161,13 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
       variants={itemVariants}
       className="p-6 rounded-2xl text-center"
       style={{
-        background: "rgba(255,255,255,0.03)",
+        background: "rgba(246,241,232,0.03)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
-        border: "1px solid rgba(255,255,255,0.06)",
+        border: "1px solid rgba(246,241,232,0.06)",
       }}
     >
-      <h4 className="text-white/80 text-sm font-semibold mb-4 font-['Space_Grotesk',sans-serif] uppercase tracking-[0.12em]">
+      <h4 className="text-white/80 text-sm font-semibold mb-4 font-sans uppercase tracking-[0.12em]">
         Overall Health Score
       </h4>
       <div className="relative w-[140px] h-[140px] mx-auto">
@@ -177,7 +177,7 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
             cy="70"
             r={radius}
             fill="none"
-            stroke="rgba(255,255,255,0.06)"
+            stroke="rgba(246,241,232,0.06)"
             strokeWidth="6"
           />
           <motion.circle
@@ -195,24 +195,24 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
         <svg width="0" height="0" className="absolute">
           <defs>
             <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#CBA135" />
+              <stop offset="0%" stopColor="#C9A14A" />
               <stop offset="100%" stopColor="#E8D48B" />
             </linearGradient>
           </defs>
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span ref={ref} className="text-3xl font-bold text-white font-['Playfair_Display',serif]">
+          <span ref={ref} className="text-3xl font-bold text-white font-display">
             {value}
           </span>
-          <span className="text-[10px] text-white/40 uppercase tracking-wider font-['Inter',sans-serif]">
+          <span className="text-[10px] text-white/40 uppercase tracking-wider font-sans">
             /100
           </span>
         </div>
       </div>
-      <p className="text-xs text-white/50 mt-3 font-['Inter',sans-serif]">
+      <p className="text-xs text-white/50 mt-3 font-sans">
         Excellent wellness rating based on comprehensive assessment
       </p>
-      <p className="text-[10px] text-white/30 mt-2 font-['Inter',sans-serif] leading-relaxed max-w-xs mx-auto">
+      <p className="text-[10px] text-white/30 mt-2 font-sans leading-relaxed max-w-xs mx-auto">
         Not a diagnostic test. Results are indicative and do not replace consultation with a qualified physician.
       </p>
     </motion.div>
@@ -228,9 +228,9 @@ export default function QScan() {
     <section
       ref={sectionRef}
       id="qscan"
-      className="relative bg-[#050505] py-24 md:py-32 overflow-hidden"
+      className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden"
     >
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-[10%] w-80 h-80 bg-[#E8D48B]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,10 +247,10 @@ export default function QScan() {
             >
               <motion.div variants={itemVariants} className="mb-2">
                 <span
-                  className="inline-flex items-center gap-2 text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  className="inline-flex items-center gap-2 text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase"
+                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] animate-pulse" />
                   Next-Gen Technology
                 </span>
               </motion.div>
@@ -258,17 +258,17 @@ export default function QScan() {
               <motion.h2
                 variants={itemVariants}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-displayisplay), serif" }}
               >
                 QScan{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] via-[#E8D48B] to-[#CBA135]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] via-[#E8D48B] to-[#C9A14A]">
                   AI Health ATM
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={itemVariants}
-                className="text-[#B7B7B7] text-lg leading-relaxed mb-8 font-['Inter',sans-serif]"
+                className="text-[#CBBFAF] text-lg leading-relaxed mb-8 font-sans"
               >
                 Comprehensive Wellness Assessment System
               </motion.p>

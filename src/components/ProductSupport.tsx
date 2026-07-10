@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -56,7 +56,7 @@ export default function ProductSupport() {
     <section
       id="product-support"
       className="relative overflow-hidden py-24 md:py-32"
-      style={{ background: "linear-gradient(180deg, #050505 0%, #0D0D0D 100%)" }}
+      style={{ background: "linear-gradient(180deg, #100D0A 0%, #191410 100%)" }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
 
@@ -70,28 +70,28 @@ export default function ProductSupport() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#00D5FF", fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Product Support
           </span>
           <h2
-            className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}
+            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
           >
             Quantum Health{" "}
-            <span style={{ background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Product Support
             </span>
           </h2>
           <p
             className="mt-4 text-lg font-medium md:text-xl"
-            style={{ color: "rgba(255,255,255,0.75)", fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.75)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Complete Retail Support for Partner Clinics
           </p>
           <p
             className="mt-3 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             KO Clinics provides comprehensive product support through Quantum Health.
           </p>
@@ -124,7 +124,7 @@ export default function ProductSupport() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(255,255,255,0.9)", fontFamily: "'Inter', sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -146,22 +146,22 @@ export default function ProductSupport() {
               variants={itemVariants}
               className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                borderColor: "rgba(255,255,255,0.08)",
+                background: "rgba(246,241,232,0.04)",
+                borderColor: "rgba(246,241,232,0.08)",
               }}
             >
               <div
                 className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full opacity-10 blur-2xl transition-all duration-500 group-hover:opacity-25"
-                style={{ background: "radial-gradient(circle, #00D5FF 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }}
               />
 
               <div
                 className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold backdrop-blur-sm"
                 style={{
                   background: "rgba(0,213,255,0.1)",
-                  color: "#00D5FF",
+                  color: "#C9A14A",
                   border: "1px solid rgba(0,213,255,0.15)",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "var(--font-displayans), sans-serif",
                 }}
               >
                 {String(benefit.id).padStart(2, "0")}
@@ -169,14 +169,14 @@ export default function ProductSupport() {
 
               <h3
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {benefit.title}
               </h3>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter', sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {benefit.desc}
               </p>
@@ -184,7 +184,7 @@ export default function ProductSupport() {
               <div
                 className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full"
                 style={{
-                  background: "linear-gradient(90deg, #00D5FF 0%, #CBA135 50%, transparent 100%)",
+                  background: "linear-gradient(90deg, #C9A14A 0%, #C9A14A 50%, transparent 100%)",
                 }}
               />
             </motion.div>
@@ -200,7 +200,7 @@ export default function ProductSupport() {
         >
           <span
             className="text-sm font-medium uppercase tracking-wider"
-            style={{ color: "rgba(255,255,255,0.4)", fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.4)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Also available:
           </span>
@@ -211,8 +211,8 @@ export default function ProductSupport() {
               style={{
                 background: "rgba(203,161,53,0.08)",
                 borderColor: "rgba(203,161,53,0.25)",
-                color: "#CBA135",
-                fontFamily: "'Space Grotesk', sans-serif",
+                color: "#C9A14A",
+                fontFamily: "var(--font-displayans), sans-serif",
               }}
             >
               {badge}
@@ -228,31 +228,31 @@ export default function ProductSupport() {
           className="mx-auto mt-20 max-w-5xl overflow-hidden rounded-3xl border backdrop-blur-xl md:mt-28"
           style={{
             background: "linear-gradient(135deg, rgba(0,213,255,0.04) 0%, rgba(203,161,53,0.04) 100%)",
-            borderColor: "rgba(255,255,255,0.08)",
+            borderColor: "rgba(246,241,232,0.08)",
           }}
         >
           <div className="grid md:grid-cols-2">
             <div className="relative flex items-center p-8 md:p-12">
               <div
                 className="pointer-events-none absolute -left-10 -top-10 h-72 w-72 rounded-full opacity-20 blur-3xl"
-                style={{ background: "radial-gradient(circle, #00D5FF 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }}
               />
               <div className="relative">
                 <span
                   className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.2em]"
-                  style={{ color: "#CBA135", fontFamily: "'Space Grotesk', sans-serif" }}
+                  style={{ color: "#C9A14A", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   Counter Kit
                 </span>
                 <h3
                   className="mb-4 text-2xl font-bold md:text-3xl"
-                  style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
                 >
                   Quantum Health Counter Kit
                 </h3>
                 <p
                   className="leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Inter', sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.65)", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   Each partner clinic receives: Quantum Health Counter Branding, Display Units, Product Catalogues, Digital Marketing Support, Patient Awareness Materials
                 </p>
@@ -260,7 +260,7 @@ export default function ProductSupport() {
             </div>
             <div
               className="relative flex items-center p-8 md:p-12"
-              style={{ background: "rgba(255,255,255,0.02)" }}
+              style={{ background: "rgba(246,241,232,0.02)" }}
             >
               <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
                 {kitItems.map((item, i) => (
@@ -270,21 +270,21 @@ export default function ProductSupport() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className="flex items-center gap-3 rounded-xl border px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:border-[#00D5FF]/30"
+                    className="flex items-center gap-3 rounded-xl border px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:border-[#C9A14A]/30"
                     style={{
-                      background: "rgba(255,255,255,0.04)",
-                      borderColor: "rgba(255,255,255,0.08)",
+                      background: "rgba(246,241,232,0.04)",
+                      borderColor: "rgba(246,241,232,0.08)",
                     }}
                   >
                     <span
                       className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold"
-                      style={{ background: "rgba(0,213,255,0.15)", color: "#00D5FF" }}
+                      style={{ background: "rgba(0,213,255,0.15)", color: "#C9A14A" }}
                     >
                       {i + 1}
                     </span>
                     <span
                       className="text-sm font-medium"
-                      style={{ color: "rgba(255,255,255,0.85)", fontFamily: "'Space Grotesk', sans-serif" }}
+                      style={{ color: "rgba(246,241,232,0.85)", fontFamily: "var(--font-displayans), sans-serif" }}
                     >
                       {item}
                     </span>

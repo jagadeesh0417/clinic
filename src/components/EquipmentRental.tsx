@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -45,8 +45,8 @@ export default function EquipmentRental() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section id="equipment-rental" className="relative overflow-hidden bg-[#050505] py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a0a0a] to-[#050505]" />
+    <section id="equipment-rental" className="relative overflow-hidden bg-[#100D0A] py-24">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#0a0a0a] to-[#100D0A]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -56,13 +56,13 @@ export default function EquipmentRental() {
           transition={{ duration: 0.7 }}
           className="mb-16 text-center"
         >
-          <span className="mb-3 inline-block tracking-[0.2em] text-[#CBA135] font-mono text-xs uppercase">
+          <span className="mb-3 inline-block tracking-[0.2em] text-[#C9A14A] font-mono text-xs uppercase">
             Premium Medical Equipment
           </span>
-          <h2 className="font-['Playfair_Display'] text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            Equipment <span className="text-[#00D5FF]">Rental</span>
+          <h2 className="font-displayisplay text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+            Equipment <span className="text-[#C9A14A]">Rental</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl font-['Inter'] text-base text-white/60">
+          <p className="mx-auto mt-4 max-w-2xl font-sans text-base text-white/60">
             State-of-the-art aesthetic and surgical machines available for short-term and long-term rental.
           </p>
         </motion.div>
@@ -92,7 +92,7 @@ export default function EquipmentRental() {
                 unoptimized
               />
               <div className="absolute bottom-0 left-0 right-0 z-20 p-6">
-                <span className="font-['Inter'] text-sm text-[#00D5FF]">
+                <span className="font-sans text-sm text-[#C9A14A]">
                   0{i + 1}
                 </span>
               </div>
@@ -115,8 +115,8 @@ export default function EquipmentRental() {
               whileHover={{ scale: 1.03, y: -4 }}
               className="group cursor-pointer rounded-xl border p-5 text-center backdrop-blur-xl transition-all duration-300 sm:p-6"
               style={{
-                backgroundColor: "rgba(255,255,255,0.04)",
-                borderColor: "rgba(255,255,255,0.08)",
+                backgroundColor: "rgba(246,241,232,0.04)",
+                borderColor: "rgba(246,241,232,0.08)",
               }}
             >
               <motion.div
@@ -124,14 +124,14 @@ export default function EquipmentRental() {
                 whileHover={{ scale: 1.2, rotate: 8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <item.icon className="w-6 h-6 text-[#00D5FF]" />
+                <item.icon className="w-6 h-6 text-[#C9A14A]" />
               </motion.div>
-              <h3 className="font-['Playfair_Display'] text-sm font-semibold text-white sm:text-base">
+              <h3 className="font-displayisplay text-sm font-semibold text-white sm:text-base">
                 {item.title}
               </h3>
               <div
                 className="mx-auto mt-3 h-px w-0 transition-all duration-300 group-hover:w-3/4"
-                style={{ backgroundColor: "#00D5FF" }}
+                style={{ backgroundColor: "#C9A14A" }}
               />
             </motion.div>
           ))}

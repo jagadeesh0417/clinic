@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import {
@@ -79,7 +79,7 @@ function ParallaxImage({
       transition={{ duration: 0.8, ease: "easeOut" as const }}
     >
       <div className="group relative w-full h-full overflow-hidden rounded-2xl">
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#CBA135]/10 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#C9A14A]/10 via-transparent to-transparent z-10 pointer-events-none" />
         <Image
           src={src}
           alt={alt}
@@ -101,7 +101,7 @@ function DoctorAvatar({ name, size = "lg" }: { name: string; size?: "sm" | "md" 
   const sizeMap = { sm: "w-10 h-10 text-sm", md: "w-16 h-16 text-lg", lg: "w-24 h-24 text-2xl" };
   return (
     <div
-      className={`${sizeMap[size]} rounded-full bg-gradient-to-br from-[#CBA135] to-[#E8C860] flex items-center justify-center text-[#050505] font-bold shrink-0`}
+      className={`${sizeMap[size]} rounded-full bg-gradient-to-br from-[#C9A14A] to-[#E8C860] flex items-center justify-center text-[#100D0A] font-bold shrink-0`}
     >
       {initials}
     </div>
@@ -112,14 +112,14 @@ function FounderCard() {
   return (
     <motion.div
       variants={itemVariants}
-      className="flex items-center gap-6 p-6 md:p-8 rounded-2xl border border-[#CBA135]/20 bg-[#CBA135]/5 mb-10"
+      className="flex items-center gap-6 p-6 md:p-8 rounded-2xl border border-[#C9A14A]/20 bg-[#C9A14A]/5 mb-10"
     >
       <DoctorAvatar name="Dr. Vikas Singh" size="lg" />
       <div>
-        <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-displayisplay), serif" }}>
           Dr. Vikas Singh
         </h3>
-        <p className="text-[#B7B7B7] text-sm mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-[#CBBFAF] text-sm mt-1" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
           Founder & Chief Medical Officer, KO Clinics
         </p>
       </div>
@@ -138,10 +138,10 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative bg-[#050505] py-24 md:py-32 overflow-hidden"
+      className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden"
     >
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -169,8 +169,8 @@ export default function About() {
           >
             <motion.div variants={itemVariants} className="mb-2">
               <span
-                className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 About KO Clinics
               </span>
@@ -179,18 +179,18 @@ export default function About() {
             <motion.h2
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
                 KO Clinics
               </span>
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               KO Clinics was founded in 2005 by Dr. Vikas Singh — starting as a
               single aesthetic practice in Bengaluru. Two decades of running
@@ -205,8 +205,8 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Among the first to introduce LIPODISSOLVE Ultra and laser-based
               inch-loss treatments to Bangalore and India. Dr. Singh is also
@@ -219,7 +219,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-white/50 text-sm tracking-wider uppercase mb-5"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Focus Areas
             </motion.p>
@@ -243,10 +243,10 @@ export default function About() {
                     background:
                       "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(203,161,53,0.05) 100%)",
                     border: "1px solid rgba(203,161,53,0.3)",
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "var(--font-displayans), sans-serif",
                   }}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A]" />
                   {area}
                 </motion.span>
               ))}
@@ -254,8 +254,8 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Our team comprises internationally trained, board-certified
               dermatologists, plastic surgeons and aesthetic physicians dedicated
@@ -264,8 +264,8 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed mb-10"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               We extend an open invitation to practitioners to partner with or
               join the KO Clinics network as it expands across India and
@@ -275,7 +275,7 @@ export default function About() {
             <motion.p
               variants={itemVariants}
               className="text-white text-xl md:text-2xl font-semibold mb-10 italic"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               &ldquo;Aesthetics with Ethics&rdquo;
             </motion.p>

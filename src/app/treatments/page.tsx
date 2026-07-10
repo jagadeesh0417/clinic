@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { treatments } from "@/data/treatments";
@@ -55,7 +55,7 @@ export default function TreatmentsPage() {
           <h1 className="mt-4 font-['Fraunces'] text-4xl font-bold text-[#F5F1E8] md:text-5xl lg:text-6xl">
             Our <span className="text-[#B8935A]">Treatments</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl font-['Inter'] text-base leading-relaxed text-[#F5F1E8]/50">
+          <p className="mx-auto mt-4 max-w-2xl font-displayans text-base leading-relaxed text-[#F5F1E8]/50">
             Comprehensive aesthetic and wellness treatments delivered by world-class practitioners
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${sculptra.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -85,15 +85,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {sculptra.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {sculptra.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -142,7 +142,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${profhilo.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -153,15 +153,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {profhilo.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {profhilo.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -209,7 +209,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${liquidFaceLift.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -220,15 +220,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {liquidFaceLift.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {liquidFaceLift.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -276,7 +276,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${skinBoosters.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -287,15 +287,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {skinBoosters.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {skinBoosters.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -343,7 +343,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${nonSurgicalFaceLift.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -354,15 +354,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {nonSurgicalFaceLift.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {nonSurgicalFaceLift.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -410,7 +410,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${microBioFue.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -421,15 +421,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {microBioFue.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {microBioFue.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -477,7 +477,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${stemCellTherapy.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -488,15 +488,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {stemCellTherapy.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {stemCellTherapy.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -533,7 +533,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${exosomeTherapy.slug}`}
               className="group relative mt-6 block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -544,15 +544,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {exosomeTherapy.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {exosomeTherapy.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -600,7 +600,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${breastLift.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -611,15 +611,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {breastLift.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {breastLift.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -656,7 +656,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${breastAugmentationSculptra.slug}`}
               className="group relative mt-6 block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -667,15 +667,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {breastAugmentationSculptra.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {breastAugmentationSculptra.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -722,7 +722,7 @@ export default function TreatmentsPage() {
             <Link
               href={`/treatments/${tummyTuck.slug}`}
               className="group relative block overflow-hidden rounded-3xl border border-[#F5F1E8]/[0.06] transition-all duration-500 hover:border-[#B8935A]/30"
-              style={{ background: "rgba(255,255,255,0.03)" }}
+              style={{ background: "rgba(246,241,232,0.03)" }}
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -733,15 +733,15 @@ export default function TreatmentsPage() {
                     <h2 className="mt-3 font-['Fraunces'] text-2xl font-bold text-[#F5F1E8] md:text-3xl">
                       {tummyTuck.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                    <p className="mt-2 max-w-2xl font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                       {tummyTuck.description}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-5 py-2.5 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                       View Treatment
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-5 py-2.5 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B8935A]/25">
                       Book Consultation
                     </span>
                   </div>
@@ -788,18 +788,18 @@ export default function TreatmentsPage() {
             {[rhinoplasty, faceliftSurgical, blepharoplasty, browLift, neckLift, otoplasty, chinAugmentation].filter(Boolean).map((t) => t && (
               <Link key={t.slug} href={`/treatments/${t.slug}`}
                 className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
-                style={{ background: "rgba(255,255,255,0.03)" }}>
+                style={{ background: "rgba(246,241,232,0.03)" }}>
                 <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
                   {t.category}
                 </span>
                 <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
                   {t.name}
                 </h3>
-                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                <p className="mt-2 line-clamp-2 font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                   {t.description}
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-displayans text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                     View Treatment
                   </span>
                 </div>
@@ -821,18 +821,18 @@ export default function TreatmentsPage() {
             {[liposuction, tummyTuckSurgical, gynecomastiaSurgery, brazilianButtLift].filter(Boolean).map((t) => t && (
               <Link key={t.slug} href={`/treatments/${t.slug}`}
                 className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
-                style={{ background: "rgba(255,255,255,0.03)" }}>
+                style={{ background: "rgba(246,241,232,0.03)" }}>
                 <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
                   {t.category}
                 </span>
                 <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
                   {t.name}
                 </h3>
-                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                <p className="mt-2 line-clamp-2 font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                   {t.description}
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-displayans text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                     View Treatment
                   </span>
                 </div>
@@ -854,18 +854,18 @@ export default function TreatmentsPage() {
             {[breastAugImplants, breastLiftSurgical, breastReduction].filter(Boolean).map((t) => t && (
               <Link key={t.slug} href={`/treatments/${t.slug}`}
                 className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
-                style={{ background: "rgba(255,255,255,0.03)" }}>
+                style={{ background: "rgba(246,241,232,0.03)" }}>
                 <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
                   {t.category}
                 </span>
                 <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
                   {t.name}
                 </h3>
-                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                <p className="mt-2 line-clamp-2 font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                   {t.description}
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-displayans text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                     View Treatment
                   </span>
                 </div>
@@ -887,18 +887,18 @@ export default function TreatmentsPage() {
             {mommyMakeover && (
               <Link key={mommyMakeover.slug} href={`/treatments/${mommyMakeover.slug}`}
                 className="group relative overflow-hidden rounded-2xl border border-[#F5F1E8]/[0.06] p-5 transition-all duration-500 hover:border-[#B8935A]/30"
-                style={{ background: "rgba(255,255,255,0.03)" }}>
+                style={{ background: "rgba(246,241,232,0.03)" }}>
                 <span className="inline-block rounded-full border border-[#B8935A]/20 bg-[#B8935A]/10 px-2.5 py-0.5 font-['IBM_Plex_Mono'] text-[9px] tracking-wider uppercase text-[#B8935A]">
                   {mommyMakeover.category}
                 </span>
                 <h3 className="mt-3 font-['Fraunces'] text-lg font-bold text-[#F5F1E8] group-hover:text-[#B8935A] transition-colors">
                   {mommyMakeover.name}
                 </h3>
-                <p className="mt-2 line-clamp-2 font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">
+                <p className="mt-2 line-clamp-2 font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">
                   {mommyMakeover.description}
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-['Inter'] text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-3 py-1.5 font-displayans text-xs font-semibold text-[#F5F1E8] transition-all duration-300 group-hover:border-[#B8935A]/40 group-hover:text-[#B8935A]">
                     View Treatment
                   </span>
                 </div>
@@ -916,10 +916,10 @@ export default function TreatmentsPage() {
           className="mt-24 max-w-4xl mx-auto"
         >
           <div className="mb-12 text-center">
-            <span className="text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase">Why Choose</span>
-            <h2 className="font-['Playfair_Display'] text-3xl md:text-4xl font-bold text-white mt-2">
+            <span className="text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase">Why Choose</span>
+            <h2 className="font-displayisplay text-3xl md:text-4xl font-bold text-white mt-2">
               Why Choose{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
                 KO Clinics
               </span>
             </h2>
@@ -934,7 +934,7 @@ export default function TreatmentsPage() {
               <p
                 key={i}
                 className="text-base leading-relaxed md:text-lg"
-                style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {text}
               </p>
@@ -950,12 +950,12 @@ export default function TreatmentsPage() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="font-['Inter'] text-xs text-[#F5F1E8]/30 leading-relaxed max-w-lg mx-auto mb-6">
+          <p className="font-displayans text-xs text-[#F5F1E8]/30 leading-relaxed max-w-lg mx-auto mb-6">
             Results and experience may vary. Consult Dr. Vikas Singh to determine suitability.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-6 py-3 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 hover:bg-[#C9A46B] hover:shadow-lg hover:shadow-[#B8935A]/25"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-6 py-3 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 hover:bg-[#C9A46B] hover:shadow-lg hover:shadow-[#B8935A]/25"
           >
             Book a Consultation
           </Link>

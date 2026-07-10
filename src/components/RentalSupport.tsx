@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -40,9 +40,9 @@ export default function RentalSupport() {
     <section
       id="rental-support"
       className="relative overflow-hidden py-24 md:py-32"
-      style={{ background: "#050505" }}
+      style={{ background: "#100D0A" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a0a0a] to-[#050505]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#100D0A] via-[#0a0a0a] to-[#100D0A]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -56,7 +56,7 @@ export default function RentalSupport() {
           <motion.div variants={itemVariants} className="text-center">
             <span
               className="mb-4 inline-block tracking-[0.2em] text-xs font-mono uppercase"
-              style={{ color: "#CBA135" }}
+              style={{ color: "#C9A14A" }}
             >
               Infrastructure Monetization
             </span>
@@ -65,17 +65,17 @@ export default function RentalSupport() {
               style={{ fontFamily: "Playfair Display, serif", color: "#ffffff" }}
             >
               Rental{" "}
-              <span style={{ color: "#00D5FF" }}>Support</span>
+              <span style={{ color: "#C9A14A" }}>Support</span>
             </h2>
             <p
               className="mx-auto mt-3 max-w-lg text-sm tracking-wider uppercase"
-              style={{ fontFamily: "Space Grotesk, sans-serif", color: "rgba(255,255,255,0.5)" }}
+              style={{ fontFamily: "Space Grotesk, sans-serif", color: "rgba(246,241,232,0.5)" }}
             >
               Complete Infrastructure Monetization Solutions
             </p>
             <p
               className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed md:text-xl"
-              style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.6)" }}
+              style={{ fontFamily: "Inter, sans-serif", color: "rgba(246,241,232,0.6)" }}
             >
               KO Clinics offers consultation and infrastructure rental solutions to help partner clinics
               generate recurring revenue through unused treatment rooms and consultation spaces.
@@ -90,10 +90,10 @@ export default function RentalSupport() {
                 variants={itemVariants}
                 className="group overflow-hidden rounded-2xl"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
+                  background: "rgba(246,241,232,0.04)",
                   backdropFilter: "blur(16px)",
                   WebkitBackdropFilter: "blur(16px)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -125,17 +125,17 @@ export default function RentalSupport() {
                 whileHover={{ scale: 1.03, y: -4 }}
                 className="group cursor-pointer rounded-xl p-6 text-center transition-all duration-300"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
+                  background: "rgba(246,241,232,0.04)",
                   backdropFilter: "blur(16px)",
                   WebkitBackdropFilter: "blur(16px)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(246,241,232,0.08)",
                 }}
               >
                 <div
                   className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold transition-colors duration-300"
                   style={{
                     background: "rgba(0, 213, 255, 0.1)",
-                    color: "#00D5FF",
+                    color: "#C9A14A",
                     fontFamily: "Inter, sans-serif",
                   }}
                 >
@@ -149,7 +149,7 @@ export default function RentalSupport() {
                 </h3>
                 <div
                   className="mx-auto mt-3 h-px w-0 transition-all duration-300 group-hover:w-3/4"
-                  style={{ background: "#00D5FF" }}
+                  style={{ background: "#C9A14A" }}
                 />
               </motion.div>
             ))}
@@ -164,10 +164,10 @@ export default function RentalSupport() {
             <div
               className="flex flex-col items-center justify-center rounded-2xl p-8 md:p-10"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid rgba(246,241,232,0.08)",
               }}
             >
               <RevenueCounter />
@@ -177,10 +177,10 @@ export default function RentalSupport() {
             <div
               className="flex items-center justify-center rounded-2xl p-8 md:p-10"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid rgba(246,241,232,0.08)",
               }}
             >
               <div className="text-center">
@@ -188,17 +188,17 @@ export default function RentalSupport() {
                   className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full"
                   style={{ background: "rgba(203, 161, 53, 0.12)" }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#C9A14A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
                     <path d="M12 2v20" />
                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                   </svg>
                 </div>
                 <p
                   className="max-w-md text-lg font-medium leading-relaxed md:text-xl"
-                  style={{ fontFamily: "Playfair Display, serif", color: "rgba(255,255,255,0.85)" }}
+                  style={{ fontFamily: "Playfair Display, serif", color: "rgba(246,241,232,0.85)" }}
                 >
                   Partner clinics can generate{" "}
-                  <span style={{ color: "#CBA135" }}>recurring revenue</span> through
+                  <span style={{ color: "#C9A14A" }}>recurring revenue</span> through
                   unused treatment rooms and consultation spaces.
                 </p>
               </div>
@@ -236,16 +236,16 @@ function RevenueCounter() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <span className="text-xs tracking-widest uppercase" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.5)" }}>
+      <span className="text-xs tracking-widest uppercase" style={{ fontFamily: "Inter, sans-serif", color: "rgba(246,241,232,0.5)" }}>
         Avg. Annual Partner Revenue
       </span>
       <div className="flex items-baseline gap-1">
-        <span className="text-base" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.4)" }}>
+        <span className="text-base" style={{ fontFamily: "Inter, sans-serif", color: "rgba(246,241,232,0.4)" }}>
           $
         </span>
         <motion.span
           className="text-4xl font-bold tracking-tight md:text-5xl"
-          style={{ fontFamily: "Playfair Display, serif", color: "#00D5FF" }}
+          style={{ fontFamily: "Playfair Display, serif", color: "#C9A14A" }}
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -261,9 +261,9 @@ function RevenueCounter() {
           viewport={{ once: true }}
           transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" as const }}
           className="h-1.5 rounded-full"
-          style={{ background: "linear-gradient(to right, #00D5FF, #CBA135)" }}
+          style={{ background: "linear-gradient(to right, #C9A14A, #C9A14A)" }}
         />
-        <span className="text-xs font-medium" style={{ fontFamily: "Inter, sans-serif", color: "#CBA135" }}>
+        <span className="text-xs font-medium" style={{ fontFamily: "Inter, sans-serif", color: "#C9A14A" }}>
           +26% YoY
         </span>
       </div>

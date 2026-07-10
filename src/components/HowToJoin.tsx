@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import {
@@ -94,11 +94,11 @@ function TimelineLine({ scrollYProgress }: { scrollYProgress: MotionValue<number
     <div className="absolute left-[23px] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] z-0">
       <div className="absolute inset-0 bg-white/5 rounded-full" />
       <motion.div
-        className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#00D5FF] via-[#00D5FF] to-[#CBA135] rounded-full origin-top"
+        className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#C9A14A] via-[#C9A14A] to-[#C9A14A] rounded-full origin-top"
         style={{ height: lineHeight }}
       />
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[6px] aspect-square rounded-full bg-[#00D5FF] shadow-[0_0_12px_#00D5FF]"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[6px] aspect-square rounded-full bg-[#C9A14A] shadow-[0_0_12px_#C9A14A]"
         style={{ opacity: glowOpacity }}
       />
     </div>
@@ -129,15 +129,15 @@ function StepCard({
 
       <div className="relative z-10 flex-shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2">
         <motion.div
-          className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-[#00D5FF] bg-[#050505] shadow-[0_0_16px_rgba(0,213,255,0.3)]"
+          className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-[#C9A14A] bg-[#100D0A] shadow-[0_0_16px_rgba(0,213,255,0.3)]"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 15 }}
         >
           <span
-            className="text-base font-bold text-[#00D5FF]"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-base font-bold text-[#C9A14A]"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             {String(step.number).padStart(2, "0")}
           </span>
@@ -159,32 +159,32 @@ function StepCard({
         }}
       >
         <div
-          className="p-5 md:p-6 rounded-2xl transition-all duration-500 group hover:border-[#00D5FF]/30"
+          className="p-5 md:p-6 rounded-2xl transition-all duration-500 group hover:border-[#C9A14A]/30"
           style={{
-            background: "rgba(255,255,255,0.04)",
+            background: "rgba(246,241,232,0.04)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            border: "1px solid rgba(246,241,232,0.08)",
           }}
         >
           <div className="flex items-center gap-3 mb-3">
             <span
-              className="text-sm font-medium text-[#00D5FF]"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-sm font-medium text-[#C9A14A]"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Step {step.number}
             </span>
-            <div className="h-px flex-1 bg-gradient-to-r from-[#00D5FF]/30 to-transparent" />
+            <div className="h-px flex-1 bg-gradient-to-r from-[#C9A14A]/30 to-transparent" />
           </div>
           <h3
             className="text-xl md:text-2xl font-semibold text-white mb-2"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             {step.title}
           </h3>
           <p
-            className="text-[#B7B7B7] text-sm md:text-base leading-relaxed"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-sm md:text-base leading-relaxed"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             {step.description}
           </p>
@@ -205,10 +205,10 @@ export default function HowToJoin() {
     <section
       ref={sectionRef}
       id="how-to-join"
-      className="relative bg-[#050505] py-24 md:py-32 overflow-hidden"
+      className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden"
     >
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#00D5FF]/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -219,23 +219,23 @@ export default function HowToJoin() {
           className="text-center mb-16 md:mb-24"
         >
           <motion.span
-            className="inline-block text-[#00D5FF] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             How to Join
           </motion.span>
           <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Your Path to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D5FF] to-[#7EE8FA]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C]">
               Partnership
             </span>
           </motion.h2>
           <motion.p
-            className="text-[#B7B7B7] text-lg mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-lg mt-4 max-w-2xl mx-auto"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             A streamlined 9-step journey from registration to activating patient
             leads for your clinic.
@@ -272,16 +272,16 @@ export default function HowToJoin() {
             <div
               className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
                 border: "1px solid rgba(0,213,255,0.15)",
               }}
             >
-              <div className="w-3 h-3 rounded-full bg-[#CBA135] shadow-[0_0_8px_#CBA135]" />
+              <div className="w-3 h-3 rounded-full bg-[#C9A14A] shadow-[0_0_8px_#C9A14A]" />
               <span
-                className="text-[#CBA135] text-sm font-medium"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-[#C9A14A] text-sm font-medium"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 Ready to begin? Start your registration today.
               </span>

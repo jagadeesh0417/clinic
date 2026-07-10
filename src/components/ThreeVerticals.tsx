@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -138,7 +138,7 @@ function IconCircle({ index }: { index: number }) {
         viewBox="0 0 24 24"
         className="h-7 w-7"
         fill="none"
-        stroke="#00D5FF"
+        stroke="#C9A14A"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -155,10 +155,10 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
       variants={cardVariants}
       className="group relative flex flex-col overflow-hidden rounded-3xl border transition-all duration-700"
       style={{
-        background: "rgba(255,255,255,0.04)",
+        background: "rgba(246,241,232,0.04)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
-        borderColor: "rgba(255,255,255,0.08)",
+        borderColor: "rgba(246,241,232,0.08)",
       }}
     >
       {/* Image background */}
@@ -182,7 +182,7 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
         <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
           <h3
             className="text-2xl font-bold md:text-3xl"
-            style={{ fontFamily: "'Playfair Display', serif", color: "#fff" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif", color: "#fff" }}
           >
             {v.title}
           </h3>
@@ -194,8 +194,8 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
         <p
           className="mb-5 text-sm leading-relaxed"
           style={{
-            fontFamily: "'Inter', sans-serif",
-            color: "rgba(255,255,255,0.65)",
+            fontFamily: "var(--font-displayans), sans-serif",
+            color: "rgba(246,241,232,0.65)",
           }}
         >
           {v.description}
@@ -206,8 +206,8 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.15em]"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "#CBA135",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "#C9A14A",
             }}
           >
             Services &amp; Specialties
@@ -218,10 +218,10 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
                 key={s}
                 className="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-300"
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  color: "rgba(255,255,255,0.8)",
+                  fontFamily: "var(--font-displayans), sans-serif",
+                  background: "rgba(246,241,232,0.05)",
+                  border: "1px solid rgba(246,241,232,0.08)",
+                  color: "rgba(246,241,232,0.8)",
                 }}
               >
                 {s}
@@ -231,12 +231,12 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
         </div>
 
         {/* Benefits */}
-        <div className="mt-auto border-t pt-4" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="mt-auto border-t pt-4" style={{ borderColor: "rgba(246,241,232,0.06)" }}>
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.15em]"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "#00D5FF",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "#C9A14A",
             }}
           >
             Partner Benefits
@@ -247,17 +247,17 @@ function VerticalCard({ v, i }: { v: Vertical; i: number }) {
                 key={b}
                 className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-medium transition-colors duration-300"
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "var(--font-displayans), sans-serif",
                   background: "rgba(0,213,255,0.06)",
                   border: "1px solid rgba(0,213,255,0.1)",
-                  color: "#7EE8FA",
+                  color: "#DDBB6C",
                 }}
               >
                 <svg
                   viewBox="0 0 24 24"
                   className="h-3 w-3 flex-shrink-0"
                   fill="none"
-                  stroke="#00D5FF"
+                  stroke="#C9A14A"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -288,7 +288,7 @@ export default function ThreeVerticals() {
     <section
       id="three-verticals"
       className="relative overflow-hidden px-5 py-24 md:px-10 lg:px-20"
-      style={{ background: "#050505", color: "#ffffff" }}
+      style={{ background: "#100D0A", color: "#ffffff" }}
     >
       {/* Ambient orbs */}
       <div
@@ -324,8 +324,8 @@ export default function ThreeVerticals() {
           <p
             className="mb-4 text-sm font-semibold uppercase tracking-[0.2em]"
             style={{
-              fontFamily: "'Inter', sans-serif",
-              color: "#00D5FF",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "#C9A14A",
               letterSpacing: "0.2em",
             }}
           >
@@ -333,11 +333,11 @@ export default function ThreeVerticals() {
           </p>
           <h2
             className="mb-4 text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Our Three Business{" "}
             <span
-              className="bg-gradient-to-r from-[#00D5FF] to-[#CBA135] bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-[#C9A14A] to-[#C9A14A] bg-clip-text text-transparent"
             >
               Verticals
             </span>
@@ -345,8 +345,8 @@ export default function ThreeVerticals() {
           <p
             className="mx-auto max-w-2xl text-lg"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "rgba(255,255,255,0.55)",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "rgba(246,241,232,0.55)",
             }}
           >
             One Powerful Healthcare Ecosystem

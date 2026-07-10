@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -56,7 +56,7 @@ export default function PartnerBenefits() {
       ref={ref}
       id="partner-benefits"
       className="relative overflow-hidden py-24 md:py-32"
-      style={{ background: "linear-gradient(180deg, #050505 0%, #0D0D0D 100%)" }}
+      style={{ background: "linear-gradient(180deg, #100D0A 0%, #191410 100%)" }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
 
@@ -70,23 +70,23 @@ export default function PartnerBenefits() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#00D5FF" }}
+            style={{ color: "#C9A14A" }}
           >
             Partner Benefits
           </span>
           <h2
-            className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}
+            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
           >
             Revenue{" "}
-            <span style={{ background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Growth
             </span>{" "}
             Engine
           </h2>
           <p
             className="mt-5 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Unlock eight powerful revenue streams designed to transform your clinic into a
             high-growth healthcare enterprise.
@@ -120,7 +120,7 @@ export default function PartnerBenefits() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(255,255,255,0.9)", fontFamily: "'Inter', sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -142,22 +142,22 @@ export default function PartnerBenefits() {
               variants={itemVariants}
               className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                borderColor: "rgba(255,255,255,0.08)",
+                background: "rgba(246,241,232,0.04)",
+                borderColor: "rgba(246,241,232,0.08)",
               }}
             >
               <div
                 className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full opacity-10 blur-2xl transition-all duration-500 group-hover:opacity-25"
-                style={{ background: "radial-gradient(circle, #00D5FF 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #C9A14A 0%, transparent 70%)" }}
               />
 
               <div
                 className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold backdrop-blur-sm"
                 style={{
                   background: "rgba(0,213,255,0.1)",
-                  color: "#00D5FF",
+                  color: "#C9A14A",
                   border: "1px solid rgba(0,213,255,0.15)",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "var(--font-displayans), sans-serif",
                 }}
               >
                 {String(benefit.id).padStart(2, "0")}
@@ -165,14 +165,14 @@ export default function PartnerBenefits() {
 
               <h3
                 className="mb-2 text-lg font-semibold"
-                style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}
+                style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {benefit.title}
               </h3>
 
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter', sans-serif" }}
+                style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {benefit.desc}
               </p>
@@ -180,7 +180,7 @@ export default function PartnerBenefits() {
               <div
                 className="mt-4 h-px w-0 transition-all duration-500 group-hover:w-full"
                 style={{
-                  background: "linear-gradient(90deg, #00D5FF 0%, #CBA135 50%, transparent 100%)",
+                  background: "linear-gradient(90deg, #C9A14A 0%, #C9A14A 50%, transparent 100%)",
                 }}
               />
             </motion.div>

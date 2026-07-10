@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -59,10 +59,10 @@ const galleryImages = [
 
 export default function ClinicEnvironmentPage() {
   return (
-    <div className="min-h-screen bg-[#050505]">
+    <div className="min-h-screen bg-[#100D0A]">
       {/* Hero */}
       <section className="relative pt-36 pb-24 overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#CBA135]/5 rounded-full blur-[200px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#C9A14A]/5 rounded-full blur-[200px] pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -73,21 +73,21 @@ export default function ClinicEnvironmentPage() {
             <motion.span
               variants={fadeUp}
               custom={0}
-              className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4"
+              className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4"
             >
               The KO Clinics Experience
             </motion.span>
             <motion.h1
               variants={fadeUp}
               custom={1}
-              className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-6"
             >
-              Clinic <span className="text-[#CBA135]">Environment</span>
+              Clinic <span className="text-[#C9A14A]">Environment</span>
             </motion.h1>
             <motion.p
               variants={fadeUp}
               custom={2}
-              className="text-white/60 font-['Inter'] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-white/60 font-sans text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
             >
               A premium aesthetic environment designed for comfort, safety, and the best possible results.
             </motion.p>
@@ -118,8 +118,8 @@ export default function ClinicEnvironmentPage() {
                 }}
               >
                 <span className="text-3xl block mb-4">{f.icon}</span>
-                <h3 className="font-['Playfair_Display'] text-lg font-bold text-white mb-3">{f.title}</h3>
-                <p className="font-['Inter'] text-sm text-white/50 leading-relaxed">{f.desc}</p>
+                <h3 className="font-displayisplay text-lg font-bold text-white mb-3">{f.title}</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -136,8 +136,8 @@ export default function ClinicEnvironmentPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="font-['Playfair_Display'] text-2xl md:text-3xl text-white mb-3">Our Space</h2>
-            <p className="font-['Inter'] text-sm text-white/50 max-w-xl mx-auto">
+            <h2 className="font-displayisplay text-2xl md:text-3xl text-white mb-3">Our Space</h2>
+            <p className="font-sans text-sm text-white/50 max-w-xl mx-auto">
               Premium surroundings designed for your comfort and peace of mind.
             </p>
           </motion.div>
@@ -152,7 +152,7 @@ export default function ClinicEnvironmentPage() {
                 className={`group relative overflow-hidden rounded-2xl ${
                   i === 0 ? "col-span-2 row-span-2" : ""
                 }`}
-                style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                style={{ border: "1px solid rgba(246,241,232,0.06)" }}
               >
                 <div className={`${i === 0 ? "aspect-[2/1] md:aspect-auto md:h-full" : "aspect-[4/3]"}`}>
                   <img
@@ -180,10 +180,10 @@ export default function ClinicEnvironmentPage() {
             className="max-w-4xl mx-auto"
           >
             <motion.div variants={fadeUp} custom={0} className="text-center mb-14">
-              <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-3">
+              <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-3">
                 Your Comfort, Our Priority
               </span>
-              <h2 className="font-['Playfair_Display'] text-2xl md:text-3xl text-white">
+              <h2 className="font-displayisplay text-2xl md:text-3xl text-white">
                 Patient Experience
               </h2>
             </motion.div>
@@ -193,12 +193,12 @@ export default function ClinicEnvironmentPage() {
                 variants={fadeUp} custom={1}
                 className="rounded-2xl p-6 md:p-8"
                 style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  background: "rgba(246,241,232,0.03)",
+                  border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-['Playfair_Display'] text-lg text-white mb-3">Consultation Suites</h3>
-                <p className="font-['Inter'] text-sm text-white/50 leading-relaxed">
+                <h3 className="font-displayisplay text-lg text-white mb-3">Consultation Suites</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Private consultation rooms and discrete entrance for your comfort.
                 </p>
               </motion.div>
@@ -206,12 +206,12 @@ export default function ClinicEnvironmentPage() {
                 variants={fadeUp} custom={2}
                 className="rounded-2xl p-6 md:p-8"
                 style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  background: "rgba(246,241,232,0.03)",
+                  border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-['Playfair_Display'] text-lg text-white mb-3">Treatment Rooms</h3>
-                <p className="font-['Inter'] text-sm text-white/50 leading-relaxed">
+                <h3 className="font-displayisplay text-lg text-white mb-3">Treatment Rooms</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Hospital-grade sterilisation with dedicated procedure suites for every treatment.
                 </p>
               </motion.div>
@@ -219,12 +219,12 @@ export default function ClinicEnvironmentPage() {
                 variants={fadeUp} custom={3}
                 className="rounded-2xl p-6 md:p-8"
                 style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  background: "rgba(246,241,232,0.03)",
+                  border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-['Playfair_Display'] text-lg text-white mb-3">Privacy & Comfort</h3>
-                <p className="font-['Inter'] text-sm text-white/50 leading-relaxed">
+                <h3 className="font-displayisplay text-lg text-white mb-3">Privacy & Comfort</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">
                   Privacy-focused design with discrete entrances and private consultation rooms ensuring your comfort throughout every visit.
                 </p>
               </motion.div>
@@ -232,12 +232,12 @@ export default function ClinicEnvironmentPage() {
                 variants={fadeUp} custom={4}
                 className="rounded-2xl p-6 md:p-8"
                 style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  background: "rgba(246,241,232,0.03)",
+                  border: "1px solid rgba(246,241,232,0.06)",
                 }}
               >
-                <h3 className="font-['Playfair_Display'] text-lg text-white mb-3">Technology & Facilities</h3>
-                <p className="font-['Inter'] text-sm text-white/50 leading-relaxed">
+                <h3 className="font-displayisplay text-lg text-white mb-3">Technology & Facilities</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">
                   State-of-the-art HIFU, MNRF, and laser equipment for optimal results.
                 </p>
               </motion.div>
@@ -256,13 +256,13 @@ export default function ClinicEnvironmentPage() {
           className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <motion.div variants={fadeUp} custom={0} className="text-center mb-12">
-            <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-3">
+            <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-3">
               Your Safety Matters
             </span>
-            <h2 className="font-['Playfair_Display'] text-2xl md:text-3xl text-white">
+            <h2 className="font-displayisplay text-2xl md:text-3xl text-white">
               Safety & Hygiene Standards
             </h2>
-            <p className="font-['Inter'] text-sm text-white/50 mt-3 max-w-xl mx-auto">
+            <p className="font-sans text-sm text-white/50 mt-3 max-w-xl mx-auto">
               Hospital-grade protocols ensure the highest standards of cleanliness and safety in every procedure.
             </p>
           </motion.div>
@@ -278,12 +278,12 @@ export default function ClinicEnvironmentPage() {
             <div className="space-y-4">
               {protocols.map((p, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#CBA135]/20 shrink-0">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#CBA135" strokeWidth="3">
+                  <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#C9A14A]/20 shrink-0">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A14A" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12"/>
                     </svg>
                   </span>
-                  <span className="font-['Inter'] text-sm text-white/60 leading-relaxed">{p}</span>
+                  <span className="font-sans text-sm text-white/60 leading-relaxed">{p}</span>
                 </div>
               ))}
             </div>
@@ -307,22 +307,22 @@ export default function ClinicEnvironmentPage() {
               border: "1px solid rgba(203,161,53,0.15)",
             }}
           >
-            <h2 className="font-['Playfair_Display'] text-2xl md:text-3xl text-white mb-4">
+            <h2 className="font-displayisplay text-2xl md:text-3xl text-white mb-4">
               Experience the Difference
             </h2>
-            <p className="font-['Inter'] text-sm text-white/50 mb-8 max-w-md mx-auto">
+            <p className="font-sans text-sm text-white/50 mb-8 max-w-md mx-auto">
               Visit KO Clinics and discover a premium environment designed around your comfort and safety.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-[#CBA135] text-black font-['Space_Grotesk'] text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#CBA135]/25"
+                className="px-8 py-3 rounded-full bg-[#C9A14A] text-black font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#d4a83a] hover:shadow-lg hover:shadow-[#C9A14A]/25"
               >
                 Book a Visit
               </a>
               <a
                 href="/treatments"
-                className="px-8 py-3 rounded-full border border-white/10 text-white/70 font-['Space_Grotesk'] text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:border-[#CBA135]/40 hover:text-white"
+                className="px-8 py-3 rounded-full border border-white/10 text-white/70 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:border-[#C9A14A]/40 hover:text-white"
               >
                 Explore Treatments
               </a>

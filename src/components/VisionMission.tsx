@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
 import { Monitor, Stethoscope, Rocket, TrendingUp, Users, Building2, Handshake, Globe } from "lucide-react"
@@ -68,7 +68,7 @@ export default function VisionMission() {
       {/* Vision Section */}
       <div
         id="vision"
-        className="relative flex min-h-[70vh] items-center justify-center bg-[#0D0D0D] px-6 py-28"
+        className="relative flex min-h-[70vh] items-center justify-center bg-[#191410] px-6 py-28"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(203,161,_53,_0.06)_0%,_transparent_70%)]" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -77,7 +77,7 @@ export default function VisionMission() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" as const }}
-            className="font-['Playfair_Display'] text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
+            className="font-displayisplay text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
           >
             Our Vision
           </motion.h2>
@@ -86,14 +86,14 @@ export default function VisionMission() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" as const }}
-            className="mx-auto mt-6 h-[2px] w-24 origin-center bg-[#CBA135]"
+            className="mx-auto mt-6 h-[2px] w-24 origin-center bg-[#C9A14A]"
           />
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
-            className="mt-8 font-['Inter'] text-lg leading-relaxed text-[#B7B7B7] sm:text-xl md:text-2xl"
+            className="mt-8 font-sans text-lg leading-relaxed text-[#CBBFAF] sm:text-xl md:text-2xl"
           >
             To build a world-class integrated healthcare ecosystem
             connecting clinics, doctors, products, patients, and healthcare
@@ -103,7 +103,7 @@ export default function VisionMission() {
       </div>
 
       {/* Mission Section */}
-      <div id="mission" className="relative bg-[#050505] px-6 pb-32 pt-16">
+      <div id="mission" className="relative bg-[#100D0A] px-6 pb-32 pt-16">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(203,161,_53,_0.04)_0%,_transparent_60%)]" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="mb-16 text-center">
@@ -112,7 +112,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: "easeOut" as const }}
-              className="font-['Playfair_Display'] text-4xl font-bold text-white sm:text-5xl md:text-6xl"
+              className="font-displayisplay text-4xl font-bold text-white sm:text-5xl md:text-6xl"
             >
               Our Mission
             </motion.h2>
@@ -121,7 +121,7 @@ export default function VisionMission() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as const }}
-              className="mx-auto mt-4 h-[2px] w-20 origin-center bg-[#CBA135]"
+              className="mx-auto mt-4 h-[2px] w-20 origin-center bg-[#C9A14A]"
             />
           </div>
 
@@ -137,13 +137,13 @@ export default function VisionMission() {
                 key={i}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03, y: -6 }}
-                className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-8 backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(203,161,53,0.2)]"
+                className="group cursor-pointer rounded-2xl border border-[rgba(246,241,232,0.08)] bg-[rgba(246,241,232,0.04)] p-8 backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(203,161,53,0.2)]"
               >
-                <card.icon className="w-8 h-8 text-[#CBA135]" />
-                <h3 className="mt-5 font-['Space_Grotesk'] text-xl font-semibold text-white">
+                <card.icon className="w-8 h-8 text-[#C9A14A]" />
+                <h3 className="mt-5 font-sans text-xl font-semibold text-white">
                   {card.title}
                 </h3>
-                <p className="mt-3 font-['Inter'] text-base leading-relaxed text-[#B7B7B7]">
+                <p className="mt-3 font-sans text-base leading-relaxed text-[#CBBFAF]">
                   {card.desc}
                 </p>
               </motion.div>

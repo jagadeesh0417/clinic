@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
 import WhyChoose from "@/components/WhyChoose";
 import WhyPartner from "@/components/WhyPartner";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <PageLayout>
       <Hero />
+      <TrustBar />
       <About />
       <WhyChoose />
       <WhyPartner />

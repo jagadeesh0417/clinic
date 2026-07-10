@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -106,12 +106,12 @@ const benefits = [
 const levelColors: Record<string, { bg: string; text: string; border: string }> = {
   Platinum: {
     bg: "rgba(0,213,255,0.12)",
-    text: "#00D5FF",
+    text: "#C9A14A",
     border: "rgba(0,213,255,0.2)",
   },
   Gold: {
     bg: "rgba(203,161,53,0.12)",
-    text: "#CBA135",
+    text: "#C9A14A",
     border: "rgba(203,161,53,0.2)",
   },
 }
@@ -138,7 +138,7 @@ export default function Membership() {
       ref={ref}
       id="membership"
       className="relative overflow-hidden py-24 md:py-32"
-      style={{ background: "#0D0D0D" }}
+      style={{ background: "#191410" }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
 
@@ -152,18 +152,18 @@ export default function Membership() {
         >
           <span
             className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: "#00D5FF" }}
+            style={{ color: "#C9A14A" }}
           >
             Premium Network
           </span>
           <h2
-            className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
-            style={{ color: "#FFFFFF", fontFamily: "'Playfair Display', serif" }}
+            className="font-displayerif text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+            style={{ color: "#FFFFFF", fontFamily: "var(--font-displayisplay), serif" }}
           >
             KO Clinics{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #CBA135 0%, #E8D48B 100%)",
+                background: "linear-gradient(135deg, #C9A14A 0%, #E8D48B 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -174,7 +174,7 @@ export default function Membership() {
           </h2>
           <p
             className="mt-5 text-base leading-relaxed md:text-lg"
-            style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter', sans-serif" }}
+            style={{ color: "rgba(246,241,232,0.6)", fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Premium Benefits for Partner Clinics
           </p>
@@ -208,7 +208,7 @@ export default function Membership() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span
                   className="text-sm font-medium tracking-wide"
-                  style={{ color: "rgba(255,255,255,0.9)", fontFamily: "'Inter', sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.9)", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {img.alt}
                 </span>
@@ -233,8 +233,8 @@ export default function Membership() {
                 variants={cardVariants}
                 className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  borderColor: "rgba(255,255,255,0.08)",
+                  background: "rgba(246,241,232,0.04)",
+                  borderColor: "rgba(246,241,232,0.08)",
                 }}
               >
                 <div
@@ -242,8 +242,8 @@ export default function Membership() {
                   style={{
                     background:
                       benefit.level === "Platinum"
-                        ? "radial-gradient(circle, #00D5FF 0%, transparent 70%)"
-                        : "radial-gradient(circle, #CBA135 0%, transparent 70%)",
+                        ? "radial-gradient(circle, #C9A14A 0%, transparent 70%)"
+                        : "radial-gradient(circle, #C9A14A 0%, transparent 70%)",
                   }}
                 />
 
@@ -253,7 +253,7 @@ export default function Membership() {
                     backgroundColor: lvl.bg,
                     color: lvl.text,
                     border: `1px solid ${lvl.border}`,
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "var(--font-displayans), sans-serif",
                   }}
                 >
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
@@ -340,14 +340,14 @@ export default function Membership() {
 
                 <h3
                   className="mb-2 text-lg font-semibold"
-                  style={{ color: "#FFFFFF", fontFamily: "'Space Grotesk', sans-serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {benefit.title}
                 </h3>
 
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter', sans-serif" }}
+                  style={{ color: "rgba(246,241,232,0.55)", fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {benefit.desc}
                 </p>
@@ -357,8 +357,8 @@ export default function Membership() {
                   style={{
                     background:
                       benefit.level === "Platinum"
-                        ? "linear-gradient(90deg, #00D5FF 0%, #CBA135 50%, transparent 100%)"
-                        : "linear-gradient(90deg, #CBA135 0%, #00D5FF 50%, transparent 100%)",
+                        ? "linear-gradient(90deg, #C9A14A 0%, #C9A14A 50%, transparent 100%)"
+                        : "linear-gradient(90deg, #C9A14A 0%, #C9A14A 50%, transparent 100%)",
                   }}
                 />
               </motion.div>

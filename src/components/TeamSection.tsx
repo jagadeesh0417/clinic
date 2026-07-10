@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -106,8 +106,8 @@ const doctors: DoctorProps[] = [
 
 export default function TeamSection() {
   return (
-    <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-      <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
+    <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+      <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -118,23 +118,23 @@ export default function TeamSection() {
           className="text-center mb-16"
         >
           <span
-            className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             THE TEAM
           </span>
           <h2
             className="text-3xl md:text-5xl font-bold text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Meet the{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
               Doctors
             </span>
           </h2>
           <p
-            className="text-[#B7B7B7] text-base mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-base mt-4 max-w-2xl mx-auto"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             The KO Clinics network is anchored by a multi-disciplinary team of internationally trained specialists \u2014 cosmetic and plastic surgeons, maxillofacial and cardiothoracic surgeons, and general medicine.
           </p>
@@ -152,24 +152,24 @@ export default function TeamSection() {
               whileHover={{ y: -6 }}
               className="group rounded-2xl p-6 md:p-8 transition-all duration-500"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(12px)",
                 WebkitBackdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid rgba(246,241,232,0.08)",
               }}
             >
               {/* Avatar */}
               {doctor.image ? (
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-2 border-[#CBA135]/30">
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-2 border-[#C9A14A]/30">
                   <Image src={doctor.image} alt={doctor.name} fill className="object-cover" unoptimized />
                 </div>
               ) : (
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mb-5 text-lg font-bold text-[#CBA135]"
+                  className="w-16 h-16 rounded-full flex items-center justify-center mb-5 text-lg font-bold text-[#C9A14A]"
                   style={{
                     background: "rgba(203,161,53,0.12)",
                     border: "1px solid rgba(203,161,53,0.25)",
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "var(--font-displayisplay), serif",
                   }}
                 >
                   {doctor.name.split(" ").slice(1).map(w => w[0]).join("").slice(0, 2) || doctor.name.split(" ")[0]?.[0]}
@@ -178,21 +178,21 @@ export default function TeamSection() {
 
               <h3
                 className="text-xl md:text-2xl font-bold text-white mb-1"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-displayisplay), serif" }}
               >
                 {doctor.name}
               </h3>
 
               <p
-                className="text-xs uppercase tracking-[0.15em] text-[#CBA135]/80 font-semibold mb-3"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-xs uppercase tracking-[0.15em] text-[#C9A14A]/80 font-semibold mb-3"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {doctor.designation}
               </p>
 
               <p
-                className="text-sm text-[#B7B7B7] leading-relaxed mb-4"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="text-sm text-[#CBBFAF] leading-relaxed mb-4"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {doctor.summary}
               </p>
@@ -201,8 +201,8 @@ export default function TeamSection() {
               {doctor.qualifications.length > 0 && (
                 <div className="mb-4">
                   <p
-                    className="text-[#CBA135] text-xs uppercase tracking-wider font-semibold mb-2"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                    className="text-[#C9A14A] text-xs uppercase tracking-wider font-semibold mb-2"
+                    style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                   >
                     Qualifications
                   </p>
@@ -214,7 +214,7 @@ export default function TeamSection() {
                         style={{
                           background: "rgba(203,161,53,0.12)",
                           border: "1px solid rgba(203,161,53,0.2)",
-                          fontFamily: "'Inter', sans-serif",
+                          fontFamily: "var(--font-displayans), sans-serif",
                         }}
                       >
                         {q}
@@ -227,8 +227,8 @@ export default function TeamSection() {
               {/* Expertise */}
               <div className="mb-4">
                 <p
-                  className="text-[#CBA135] text-xs uppercase tracking-wider font-semibold mb-2"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  className="text-[#C9A14A] text-xs uppercase tracking-wider font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   Expertise
                 </p>
@@ -238,9 +238,9 @@ export default function TeamSection() {
                       key={i}
                       className="inline-block px-3 py-1 rounded-full text-xs text-white/80"
                       style={{
-                        background: "rgba(255,255,255,0.06)",
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        fontFamily: "'Inter', sans-serif",
+                        background: "rgba(246,241,232,0.06)",
+                        border: "1px solid rgba(246,241,232,0.1)",
+                        fontFamily: "var(--font-displayans), sans-serif",
                       }}
                     >
                       {e}
@@ -251,8 +251,8 @@ export default function TeamSection() {
 
               {/* Experience */}
               <p
-                className="text-sm text-neutral-400 italic border-l-2 border-[#CBA135]/50 pl-3 mb-4"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="text-sm text-neutral-400 italic border-l-2 border-[#C9A14A]/50 pl-3 mb-4"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {doctor.experience}
               </p>
@@ -261,8 +261,8 @@ export default function TeamSection() {
               {doctor.achievements && doctor.achievements.length > 0 && (
                 <div>
                   <p
-                    className="text-[#CBA135] text-xs uppercase tracking-wider font-semibold mb-2"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                    className="text-[#C9A14A] text-xs uppercase tracking-wider font-semibold mb-2"
+                    style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                   >
                     Achievements
                   </p>
@@ -270,10 +270,10 @@ export default function TeamSection() {
                     {doctor.achievements.map((a, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-2 text-xs text-[#B7B7B7]"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
+                        className="flex items-start gap-2 text-xs text-[#CBBFAF]"
+                        style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                       >
-                        <span className="w-1 h-1 rounded-full bg-[#CBA135] mt-1.5 flex-shrink-0" />
+                        <span className="w-1 h-1 rounded-full bg-[#C9A14A] mt-1.5 flex-shrink-0" />
                         {a}
                       </li>
                     ))}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -37,7 +37,7 @@ function ListSection({ title, items }: { title: string; items: string[] }) {
             <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#B8935A]/20">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#B8935A" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <span className="font-['Inter'] text-sm text-[#F5F1E8]/60">{item}</span>
+            <span className="font-displayans text-sm text-[#F5F1E8]/60">{item}</span>
           </div>
         ))}
       </div>
@@ -53,7 +53,7 @@ export default function SculptraDetailPage() {
       <div className="flex min-h-screen items-center justify-center bg-[#0F0F0E]">
         <div className="text-center">
           <h1 className="font-['Fraunces'] text-4xl font-bold text-[#F5F1E8]">Treatment Not Found</h1>
-          <Link href="/treatments" className="mt-4 inline-block font-['Inter'] text-[#B8935A] underline">Back to Treatments</Link>
+          <Link href="/treatments" className="mt-4 inline-block font-displayans text-[#B8935A] underline">Back to Treatments</Link>
         </div>
       </div>
     );
@@ -77,7 +77,7 @@ export default function SculptraDetailPage() {
             <h1 className="mt-3 font-['Fraunces'] text-4xl font-bold text-[#F5F1E8] md:text-5xl lg:text-6xl">
               Sculptra<sup>&reg;</sup>
             </h1>
-            <p className="mt-3 max-w-2xl font-['Inter'] text-base leading-relaxed text-[#F5F1E8]/60">
+            <p className="mt-3 max-w-2xl font-displayans text-base leading-relaxed text-[#F5F1E8]/60">
               Poly-L-lactic acid collagen biostimulator for gradual, natural facial rejuvenation
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function SculptraDetailPage() {
         >
           <Link
             href="/treatments"
-            className="mb-10 inline-flex items-center gap-2 font-['Inter'] text-sm text-[#F5F1E8]/40 transition-colors hover:text-[#B8935A]"
+            className="mb-10 inline-flex items-center gap-2 font-displayans text-sm text-[#F5F1E8]/40 transition-colors hover:text-[#B8935A]"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
             Back to Treatments
@@ -103,22 +103,22 @@ export default function SculptraDetailPage() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <Section title="What is Sculptra?">
             <div className="rounded-2xl border border-[#F5F1E8]/[0.06] bg-white/[0.02] px-6 py-5">
-              <p className="font-['Inter'] text-base leading-relaxed text-[#F5F1E8]/60">
+              <p className="font-displayans text-base leading-relaxed text-[#F5F1E8]/60">
                 {treatment.longDescription}
               </p>
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl border border-[#B8935A]/10 bg-[#B8935A]/5 px-4 py-3">
                 <p className="font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#4A5D3A]">Mechanism</p>
-                <p className="mt-1 font-['Inter'] text-sm text-[#F5F1E8]/70">Injectable collagen biostimulator made with poly-L-lactic acid (PLLA)</p>
+                <p className="mt-1 font-displayans text-sm text-[#F5F1E8]/70">Injectable collagen biostimulator made with poly-L-lactic acid (PLLA)</p>
               </div>
               <div className="rounded-xl border border-[#B8935A]/10 bg-[#B8935A]/5 px-4 py-3">
                 <p className="font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#4A5D3A]">Approach</p>
-                <p className="mt-1 font-['Inter'] text-sm text-[#F5F1E8]/70">Restores facial volume gradually by stimulating natural collagen</p>
+                <p className="mt-1 font-displayans text-sm text-[#F5F1E8]/70">Restores facial volume gradually by stimulating natural collagen</p>
               </div>
               <div className="rounded-xl border border-[#B8935A]/10 bg-[#B8935A]/5 px-4 py-3">
                 <p className="font-['IBM_Plex_Mono'] text-[10px] tracking-wider uppercase text-[#4A5D3A]">Results</p>
-                <p className="mt-1 font-['Inter'] text-sm text-[#F5F1E8]/70">Natural-looking, long-lasting rejuvenation developing over time</p>
+                <p className="mt-1 font-displayans text-sm text-[#F5F1E8]/70">Natural-looking, long-lasting rejuvenation developing over time</p>
               </div>
             </div>
           </Section>
@@ -128,7 +128,7 @@ export default function SculptraDetailPage() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-14">
           <Section title="How It Works">
             <div className="rounded-2xl border border-[#F5F1E8]/[0.06] bg-white/[0.02] px-6 py-5">
-              <p className="font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/60">{treatment.howItWorks}</p>
+              <p className="font-displayans text-sm leading-relaxed text-[#F5F1E8]/60">{treatment.howItWorks}</p>
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -139,7 +139,7 @@ export default function SculptraDetailPage() {
               ].map(s => (
                 <div key={s.step} className="rounded-xl border border-[#F5F1E8]/[0.06] bg-white/[0.02] px-4 py-4">
                   <span className="font-['IBM_Plex_Mono'] text-xs text-[#4A5D3A]">{s.step}</span>
-                  <p className="mt-1 font-['Inter'] text-sm text-[#F5F1E8]/70">{s.text}</p>
+                  <p className="mt-1 font-displayans text-sm text-[#F5F1E8]/70">{s.text}</p>
                 </div>
               ))}
             </div>
@@ -185,9 +185,9 @@ export default function SculptraDetailPage() {
                     <button
                       onClick={() => setOpenFaq(openFaq === `q-${fi}` ? null : `q-${fi}`)}
                       className="flex w-full items-center justify-between px-6 py-4 text-left"
-                      style={{ background: "rgba(255,255,255,0.03)" }}
+                      style={{ background: "rgba(246,241,232,0.03)" }}
                     >
-                      <span className="flex-1 pr-4 font-['Inter'] text-sm font-medium text-[#F5F1E8]/80">{item.question}</span>
+                      <span className="flex-1 pr-4 font-displayans text-sm font-medium text-[#F5F1E8]/80">{item.question}</span>
                       <svg
                         className={`h-4 w-4 shrink-0 text-[#F5F1E8]/40 transition-transform duration-300 ${openFaq === `q-${fi}` ? "rotate-180" : ""}`}
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -205,7 +205,7 @@ export default function SculptraDetailPage() {
                           className="overflow-hidden"
                         >
                           <div className="border-t border-[#F5F1E8]/[0.06] px-6 py-4">
-                            <p className="font-['Inter'] text-sm leading-relaxed text-[#F5F1E8]/50">{item.answer}</p>
+                            <p className="font-displayans text-sm leading-relaxed text-[#F5F1E8]/50">{item.answer}</p>
                           </div>
                         </motion.div>
                       )}
@@ -225,19 +225,19 @@ export default function SculptraDetailPage() {
           transition={{ duration: 0.6 }}
           className="mt-14"
         >
-          <p className="font-['Inter'] text-xs text-[#F5F1E8]/30 leading-relaxed max-w-lg mb-6">
+          <p className="font-displayans text-xs text-[#F5F1E8]/30 leading-relaxed max-w-lg mb-6">
             Results and experience may vary. Consult Dr. Vikas Singh to determine suitability.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-6 py-3 font-['Inter'] text-sm font-semibold text-[#0F0F0E] transition-all duration-300 hover:bg-[#C9A46B] hover:shadow-lg hover:shadow-[#B8935A]/25"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#B8935A] px-6 py-3 font-displayans text-sm font-semibold text-[#0F0F0E] transition-all duration-300 hover:bg-[#C9A46B] hover:shadow-lg hover:shadow-[#B8935A]/25"
             >
               Book Consultation
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-6 py-3 font-['Inter'] text-sm font-semibold text-[#F5F1E8] transition-all duration-300 hover:border-[#B8935A]/40 hover:text-[#B8935A]"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#F5F1E8]/10 bg-[#F5F1E8]/5 px-6 py-3 font-displayans text-sm font-semibold text-[#F5F1E8] transition-all duration-300 hover:border-[#B8935A]/40 hover:text-[#B8935A]"
             >
               Enquire Now
             </Link>

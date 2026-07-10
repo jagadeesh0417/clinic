@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { doctors } from "@/config/doctors";
@@ -10,7 +10,7 @@ function DoctorAvatar({ name }: { name: string }) {
     .join("")
     .slice(0, 2);
   return (
-    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#CBA135] to-[#E8C860] flex items-center justify-center text-[#050505] font-bold text-lg shrink-0 mx-auto mb-3">
+    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A14A] to-[#E8C860] flex items-center justify-center text-[#100D0A] font-bold text-lg shrink-0 mx-auto mb-3">
       {initials}
     </div>
   );
@@ -37,8 +37,8 @@ const cardVariants = {
 
 export default function ClinicalLeadership() {
   return (
-    <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -49,20 +49,20 @@ export default function ClinicalLeadership() {
       >
         <motion.div variants={cardVariants} className="text-center mb-16">
           <span
-            className="inline-block text-[#CBA135] text-xs font-semibold uppercase tracking-[0.25em] mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-block text-[#C9A14A] text-xs font-semibold uppercase tracking-[0.25em] mb-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Clinical Leadership
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-white leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Clinical Leadership
           </h2>
           <p
-            className="text-[#B7B7B7] text-lg mt-4 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#CBBFAF] text-lg mt-4 max-w-2xl mx-auto"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             The specialists who set the protocols your clinic will run.
           </p>
@@ -75,28 +75,28 @@ export default function ClinicalLeadership() {
               variants={cardVariants}
               className="rounded-2xl border p-6 text-center transition-all duration-500 hover:-translate-y-1"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                borderColor: "rgba(255,255,255,0.08)",
+                background: "rgba(246,241,232,0.04)",
+                borderColor: "rgba(246,241,232,0.08)",
               }}
             >
               <DoctorAvatar name={doctor.name} />
               <h3
                 className="text-base font-bold text-white mb-1"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {doctor.name}
               </h3>
               {doctor.qualifications && (
                 <p
-                  className="text-[#CBA135] text-xs font-medium mb-1"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
+                  className="text-[#C9A14A] text-xs font-medium mb-1"
+                  style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                 >
                   {doctor.qualifications}
                 </p>
               )}
               <p
-                className="text-[#B7B7B7] text-xs leading-relaxed"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="text-[#CBBFAF] text-xs leading-relaxed"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {doctor.specialty}
               </p>
@@ -109,9 +109,9 @@ export default function ClinicalLeadership() {
             href="/about#clinical-team"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
             style={{
-              background: "linear-gradient(135deg, #CBA135, #E8C860)",
-              color: "#050505",
-              fontFamily: "'Space Grotesk', sans-serif",
+              background: "linear-gradient(135deg, #C9A14A, #E8C860)",
+              color: "#100D0A",
+              fontFamily: "var(--font-displayans), sans-serif",
             }}
           >
             Meet the full team

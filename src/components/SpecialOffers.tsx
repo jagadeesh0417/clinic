@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -63,7 +63,7 @@ export default function SpecialOffers() {
     <section
       id="special-offers"
       className="relative overflow-hidden px-5 py-24 md:px-10 lg:px-20"
-      style={{ backgroundColor: "#050505", color: "#ffffff" }}
+      style={{ backgroundColor: "#100D0A", color: "#ffffff" }}
     >
       <div
         className="pointer-events-none absolute left-1/4 top-1/3 -translate-x-1/2 -translate-y-1/2"
@@ -95,8 +95,8 @@ export default function SpecialOffers() {
           <span
             className="mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em]"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "#CBA135",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "#C9A14A",
               backgroundColor: "rgba(203,161,53,0.1)",
               border: "1px solid rgba(203,161,53,0.2)",
             }}
@@ -105,11 +105,11 @@ export default function SpecialOffers() {
           </span>
           <h2
             className="text-4xl leading-tight md:text-5xl lg:text-6xl"
-            style={{ fontFamily: '"Playfair Display", serif' }}
+            style={{ fontFamily: 'var(--font-displayisplay), serif' }}
           >
             Special Offers for{" "}
             <span
-              className="bg-gradient-to-r from-[#CBA135] to-[#E2C55A] bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-[#C9A14A] to-[#E2C55A] bg-clip-text text-transparent"
             >
               Partner Clinics
             </span>
@@ -117,8 +117,8 @@ export default function SpecialOffers() {
           <p
             className="mx-auto mt-4 max-w-xl text-sm leading-relaxed"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              color: "rgba(255,255,255,0.5)",
+              fontFamily: "var(--font-displayans), sans-serif",
+              color: "rgba(246,241,232,0.5)",
             }}
           >
             Exclusive Benefits for Our Network
@@ -138,10 +138,10 @@ export default function SpecialOffers() {
               variants={cardVariants}
               className="group relative overflow-hidden rounded-2xl transition-all duration-500"
               style={{
-                backgroundColor: "rgba(255,255,255,0.04)",
+                backgroundColor: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid rgba(246,241,232,0.08)",
               }}
             >
               <div
@@ -174,7 +174,7 @@ export default function SpecialOffers() {
                     style={{
                       backgroundColor: "rgba(203,161,53,0.2)",
                       border: "1px solid rgba(203,161,53,0.3)",
-                      color: "#CBA135",
+                      color: "#C9A14A",
                       backdropFilter: "blur(8px)",
                       WebkitBackdropFilter: "blur(8px)",
                     }}
@@ -186,8 +186,8 @@ export default function SpecialOffers() {
                   <span
                     className="flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold"
                     style={{
-                      backgroundColor: "#CBA135",
-                      color: "#050505",
+                      backgroundColor: "#C9A14A",
+                      color: "#100D0A",
                     }}
                   >
                     {(i + 1).toString().padStart(2, "0")}
@@ -198,15 +198,15 @@ export default function SpecialOffers() {
               <div className="relative z-10 p-6">
                 <h3
                   className="mb-2 text-lg font-semibold tracking-tight"
-                  style={{ fontFamily: '"Playfair Display", serif' }}
+                  style={{ fontFamily: 'var(--font-displayisplay), serif' }}
                 >
                   {offer.title}
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
                   style={{
-                    fontFamily: "'Inter', sans-serif",
-                    color: "rgba(255,255,255,0.5)",
+                    fontFamily: "var(--font-displayans), sans-serif",
+                    color: "rgba(246,241,232,0.5)",
                   }}
                 >
                   {offer.desc}
@@ -215,7 +215,7 @@ export default function SpecialOffers() {
 
               <motion.div
                 className="absolute bottom-0 left-0 h-0.5"
-                style={{ backgroundColor: "#CBA135" }}
+                style={{ backgroundColor: "#C9A14A" }}
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}

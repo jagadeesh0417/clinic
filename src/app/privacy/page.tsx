@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KO Clinics",
@@ -7,12 +7,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-[#050505] py-32 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#100D0A] py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-['Playfair_Display',serif]">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-display">
           Privacy Policy
         </h1>
-        <div className="prose prose-invert max-w-none space-y-4 text-[#B7B7B7] font-['Inter',sans-serif] text-sm leading-relaxed">
+        <div className="prose prose-invert max-w-none space-y-4 text-[#CBBFAF] font-sans text-sm leading-relaxed">
           <p><strong className="text-white">Last updated:</strong> July 2026</p>
           <p>
             KO Clinics (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) respects your privacy and is committed to protecting your personal data in compliance with the India Digital Personal Data Protection Act 2023 (DPDP Act 2023).
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <h2 className="text-white text-lg font-semibold mt-6">4. Your Rights</h2>
           <p>Under DPDP Act 2023, you have the right to access, correct, delete, and port your data. You may also withdraw consent at any time.</p>
           <h2 className="text-white text-lg font-semibold mt-6">5. Contact</h2>
-          <p>For privacy-related enquiries, email us at <a href="mailto:hello@koclinics.com" className="text-[#CBA135]">hello@koclinics.com</a>.</p>
+          <p>For privacy-related enquiries, email us at <a href="mailto:hello@koclinics.com" className="text-[#C9A14A]">hello@koclinics.com</a>.</p>
           <p className="mt-8 pt-6 border-t border-white/10 text-white/40 text-xs">
             This page is a placeholder and must be reviewed by legal counsel before launch.
           </p>

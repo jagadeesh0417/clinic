@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -172,10 +172,10 @@ export default function PartnerWizard() {
       transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="mx-auto w-full max-w-3xl"
     >
-      <h2 className="mb-2 font-['Playfair_Display'] text-3xl font-bold tracking-tight text-[#1a1a1a]">
+      <h2 className="mb-2 font-displayisplay text-3xl font-bold tracking-tight text-[#1a1a1a]">
         {title}
       </h2>
-      <p className="mb-8 font-['Inter'] text-sm text-[#8a8a8a]">
+      <p className="mb-8 font-sans text-sm text-[#8a8a8a]">
         Step {step} of 12
       </p>
       {children}
@@ -183,15 +183,15 @@ export default function PartnerWizard() {
   );
 
   return (
-    <div className="min-h-screen bg-white font-['Inter']">
+    <div className="min-h-screen bg-white font-sans">
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-8">
         <div className="mb-10 flex items-center justify-between">
           <div>
-            <span className="font-['Playfair_Display'] text-2xl font-bold tracking-tight text-[#1a1a1a]">KO</span>
-            <span className="ml-1 font-['Space_Grotesk'] text-xs tracking-[0.15em] uppercase text-[#C6A769]">Clinics</span>
-            <p className="mt-1 font-['Inter'] text-xs text-[#8a8a8a]">Partner Registration</p>
+            <span className="font-displayisplay text-2xl font-bold tracking-tight text-[#1a1a1a]">KO</span>
+            <span className="ml-1 font-sans text-xs tracking-[0.15em] uppercase text-[#C6A769]">Clinics</span>
+            <p className="mt-1 font-sans text-xs text-[#8a8a8a]">Partner Registration</p>
           </div>
-          <span className="rounded-full border border-[#C6A769]/20 bg-[#C6A769]/5 px-4 py-1.5 font-['Space_Grotesk'] text-[11px] font-medium tracking-wider uppercase text-[#C6A769]">
+          <span className="rounded-full border border-[#C6A769]/20 bg-[#C6A769]/5 px-4 py-1.5 font-sans text-[11px] font-medium tracking-wider uppercase text-[#C6A769]">
             {status === "draft" ? "Draft" : status === "submitted" ? "Submitted" : status === "under-review" ? "Under Review" : status === "verification" ? "Verification" : status === "approved" ? "Approved" : "Live"}
           </span>
         </div>
@@ -289,7 +289,7 @@ export default function PartnerWizard() {
                     </button>
                   ))}
                 </div>
-                {errors.establishmentTypes && <p className="mt-3 font-['Inter'] text-xs text-red-500">{errors.establishmentTypes}</p>}
+                {errors.establishmentTypes && <p className="mt-3 font-sans text-xs text-red-500">{errors.establishmentTypes}</p>}
               </StepCard>
             )}
 
@@ -317,13 +317,13 @@ export default function PartnerWizard() {
                     </button>
                   ))}
                 </div>
-                {errors.facilities && <p className="mt-3 font-['Inter'] text-xs text-red-500">{errors.facilities}</p>}
+                {errors.facilities && <p className="mt-3 font-sans text-xs text-red-500">{errors.facilities}</p>}
               </StepCard>
             )}
 
             {step === 7 && (
               <StepCard title="Photo Upload">
-                <p className="mb-4 font-['Inter'] text-sm text-[#8a8a8a]">
+                <p className="mb-4 font-sans text-sm text-[#8a8a8a]">
                   Upload up to 10 images. Required: Front Elevation, Reception, Consultation Rooms, Procedure Rooms, Product Display.
                 </p>
                 <div
@@ -338,8 +338,8 @@ export default function PartnerWizard() {
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#C6A769]/10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                   </div>
-                  <p className="font-['Inter'] text-sm font-medium text-[#1a1a1a]">Drop images here or click to browse</p>
-                  <p className="mt-1 font-['Inter'] text-xs text-[#8a8a8a]">JPG, PNG, WebP — Max 10 images</p>
+                  <p className="font-sans text-sm font-medium text-[#1a1a1a]">Drop images here or click to browse</p>
+                  <p className="mt-1 font-sans text-xs text-[#8a8a8a]">JPG, PNG, WebP — Max 10 images</p>
                   <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={e => {
                     const files = Array.from(e.target.files || []);
                     update({ photos: [...data.photos, ...files].slice(0, 10) });
@@ -348,7 +348,7 @@ export default function PartnerWizard() {
                 {data.photos.length > 0 && (
                   <div className="mt-6">
                     <div className="mb-2 flex items-center justify-between">
-                      <span className="font-['Inter'] text-xs font-medium text-[#6a6a6a]">{data.photos.length} / 10 photos</span>
+                      <span className="font-sans text-xs font-medium text-[#6a6a6a]">{data.photos.length} / 10 photos</span>
                       <div className="h-1.5 w-40 overflow-hidden rounded-full bg-[#f0f0f0]">
                         <div className="h-full rounded-full bg-[#C6A769] transition-all duration-500" style={{ width: `${(data.photos.length / 10) * 100}%` }} />
                       </div>
@@ -357,7 +357,7 @@ export default function PartnerWizard() {
                       {data.photos.map((file, i) => (
                         <div key={i} className="group relative aspect-square overflow-hidden rounded-xl border border-[#e5e5e5] bg-[#fafafa]">
                           <img src={URL.createObjectURL(file)} alt={`Upload ${i + 1}`} className="h-full w-full object-cover" />
-                          <button onClick={() => removePhoto(i)} className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-black/50 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                          <button onClick={() => removePhoto(i)} className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-ink/50 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                           </button>
                         </div>
@@ -365,13 +365,13 @@ export default function PartnerWizard() {
                     </div>
                   </div>
                 )}
-                {errors.photos && <p className="mt-3 font-['Inter'] text-xs text-red-500">{errors.photos}</p>}
+                {errors.photos && <p className="mt-3 font-sans text-xs text-red-500">{errors.photos}</p>}
               </StepCard>
             )}
 
             {step === 8 && (
               <StepCard title="Video Upload">
-                <p className="mb-4 font-['Inter'] text-sm text-[#8a8a8a]">
+                <p className="mb-4 font-sans text-sm text-[#8a8a8a]">
                   Upload a 1–2 minute clinic walkthrough video.
                 </p>
                 <div
@@ -386,8 +386,8 @@ export default function PartnerWizard() {
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#C6A769]/10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                   </div>
-                  <p className="font-['Inter'] text-sm font-medium text-[#1a1a1a]">Drop video here or click to browse</p>
-                  <p className="mt-1 font-['Inter'] text-xs text-[#8a8a8a]">MP4, MOV — Max 1–2 minutes</p>
+                  <p className="font-sans text-sm font-medium text-[#1a1a1a]">Drop video here or click to browse</p>
+                  <p className="mt-1 font-sans text-xs text-[#8a8a8a]">MP4, MOV — Max 1–2 minutes</p>
                   <input ref={videoInputRef} type="file" accept="video/*" className="hidden" onChange={e => {
                     const file = e.target.files?.[0];
                     if (file) update({ video: file });
@@ -397,8 +397,8 @@ export default function PartnerWizard() {
                   <div className="mt-6 overflow-hidden rounded-xl border border-[#e5e5e5]">
                     <video src={URL.createObjectURL(data.video)} controls className="w-full" />
                     <div className="flex items-center justify-between border-t border-[#e5e5e5] px-4 py-3">
-                      <span className="font-['Inter'] text-sm text-[#6a6a6a]">{data.video.name}</span>
-                      <button onClick={() => update({ video: null })} className="font-['Inter'] text-xs font-medium text-red-500 hover:text-red-600">Remove</button>
+                      <span className="font-sans text-sm text-[#6a6a6a]">{data.video.name}</span>
+                      <button onClick={() => update({ video: null })} className="font-sans text-xs font-medium text-red-500 hover:text-red-600">Remove</button>
                     </div>
                   </div>
                 )}
@@ -417,8 +417,8 @@ export default function PartnerWizard() {
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
                   </motion.div>
-                  <h3 className="font-['Playfair_Display'] text-2xl font-bold text-[#1a1a1a]">Application Under Review</h3>
-                  <p className="mt-3 font-['Inter'] text-sm text-[#8a8a8a] max-w-md">
+                  <h3 className="font-displayisplay text-2xl font-bold text-[#1a1a1a]">Application Under Review</h3>
+                  <p className="mt-3 font-sans text-sm text-[#8a8a8a] max-w-md">
                     Your application has been submitted successfully. Our team will review it within 48–72 hours.
                   </p>
                   <motion.div
@@ -445,7 +445,7 @@ export default function PartnerWizard() {
 
             {step === 10 && (
               <StepCard title="Verification">
-                <p className="mb-6 font-['Inter'] text-sm text-[#8a8a8a]">
+                <p className="mb-6 font-sans text-sm text-[#8a8a8a]">
                   Select your preferred verification method and schedule a time.
                 </p>
                 <div className="mb-6 grid grid-cols-2 gap-4">
@@ -466,10 +466,10 @@ export default function PartnerWizard() {
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         )}
                       </div>
-                      <span className="font-['Inter'] text-sm font-semibold text-[#1a1a1a]">
+                      <span className="font-sans text-sm font-semibold text-[#1a1a1a]">
                         {t === "virtual" ? "Virtual Verification" : "Physical Verification"}
                       </span>
-                      <span className="font-['Inter'] text-xs text-[#8a8a8a]">
+                      <span className="font-sans text-xs text-[#8a8a8a]">
                         {t === "virtual" ? "Video call walkthrough" : "On-site visit"}
                       </span>
                     </button>
@@ -477,9 +477,9 @@ export default function PartnerWizard() {
                 </div>
                 {verificationType && (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
-                    <label className="block font-['Inter'] text-xs font-medium text-[#6a6a6a]">Schedule Appointment</label>
+                    <label className="block font-sans text-xs font-medium text-[#6a6a6a]">Schedule Appointment</label>
                     <input type="date" value={scheduledDate} onChange={e => setScheduledDate(e.target.value)}
-                      className="w-full rounded-xl border border-[#e5e5e5] px-4 py-3 font-['Inter'] text-sm text-[#1a1a1a] outline-none transition-all duration-300 focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10"
+                      className="w-full rounded-xl border border-[#e5e5e5] px-4 py-3 font-sans text-sm text-[#1a1a1a] outline-none transition-all duration-300 focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10"
                     />
                   </motion.div>
                 )}
@@ -490,10 +490,10 @@ export default function PartnerWizard() {
               <StepCard title="Partnership Approval">
                 <div className="mb-6 overflow-hidden rounded-2xl border border-[#e5e5e5]">
                   <div className="flex items-center justify-between border-b border-[#e5e5e5] bg-[#fafafa] px-5 py-3">
-                    <span className="font-['Inter'] text-xs font-medium text-[#6a6a6a]">KO Clinics Partnership Agreement</span>
-                    <span className="rounded-md bg-[#C6A769]/10 px-2.5 py-0.5 font-['Inter'] text-[10px] font-medium text-[#C6A769]">PDF</span>
+                    <span className="font-sans text-xs font-medium text-[#6a6a6a]">KO Clinics Partnership Agreement</span>
+                    <span className="rounded-md bg-[#C6A769]/10 px-2.5 py-0.5 font-sans text-[10px] font-medium text-[#C6A769]">PDF</span>
                   </div>
-                  <div className="max-h-48 overflow-y-auto p-5 font-['Inter'] text-xs leading-relaxed text-[#6a6a6a]">
+                  <div className="max-h-48 overflow-y-auto p-5 font-sans text-xs leading-relaxed text-[#6a6a6a]">
                     <p className="mb-3 font-semibold text-[#1a1a1a]">KO CLINICS PARTNERSHIP AGREEMENT</p>
                     <p>This Partnership Agreement ("Agreement") is entered into between KO Clinics and the Partner specified in the registration form.</p>
                     <p className="mt-2">1. <strong>Partnership Terms</strong> — The Partner agrees to operate under the KO Clinics brand and standards as outlined in the partnership handbook.</p>
@@ -506,23 +506,23 @@ export default function PartnerWizard() {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <label className="mb-2 block font-['Inter'] text-xs font-medium text-[#6a6a6a]">Digital Signature</label>
+                  <label className="mb-2 block font-sans text-xs font-medium text-[#6a6a6a]">Digital Signature</label>
                   <div className="overflow-hidden rounded-xl border border-[#e5e5e5]">
                     <canvas id="signature-pad" className="h-32 w-full cursor-crosshair bg-white"
                       onMouseDown={e => { const c = e.currentTarget; const ctx = c.getContext("2d"); if (!ctx) return; const rect = c.getBoundingClientRect(); c.style.cursor = "crosshair"; let drawing = false; const startDraw = (ev: MouseEvent) => { drawing = true; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.beginPath(); ctx.moveTo(x, y); }; const draw = (ev: MouseEvent) => { if (!drawing) return; const x = ev.clientX - rect.left; const y = ev.clientY - rect.top; ctx.lineWidth = 2.5; ctx.lineCap = "round"; ctx.strokeStyle = "#1a1a1a"; ctx.lineTo(x, y); ctx.stroke(); }; const stopDraw = () => { if (drawing) { drawing = false; setSigned(true); } }; c.addEventListener("mousedown", startDraw); c.addEventListener("mousemove", draw); c.addEventListener("mouseup", stopDraw); c.addEventListener("mouseleave", stopDraw); }}
                     />
                   </div>
-                  <button onClick={() => { const c = document.getElementById("signature-pad") as HTMLCanvasElement; const ctx = c?.getContext("2d"); if (ctx) { ctx.clearRect(0, 0, c.width, c.height); setSigned(false); } }} className="mt-2 font-['Inter'] text-xs font-medium text-[#C6A769] hover:text-[#b89650]">Clear Signature</button>
+                  <button onClick={() => { const c = document.getElementById("signature-pad") as HTMLCanvasElement; const ctx = c?.getContext("2d"); if (ctx) { ctx.clearRect(0, 0, c.width, c.height); setSigned(false); } }} className="mt-2 font-sans text-xs font-medium text-[#C6A769] hover:text-[#b89650]">Clear Signature</button>
                 </div>
                 <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#e5e5e5] px-4 py-3.5 transition-all duration-300 hover:border-[#C6A769]/40">
                   <input type="checkbox" checked={data.agreed} onChange={e => update({ agreed: e.target.checked })}
                     className="mt-0.5 h-4 w-4 rounded border-[#d0d0d0] text-[#C6A769] focus:ring-[#C6A769]/30"
                   />
-                  <span className="font-['Inter'] text-xs leading-relaxed text-[#6a6a6a]">
+                  <span className="font-sans text-xs leading-relaxed text-[#6a6a6a]">
                     I have read and agree to the terms and conditions of the KO Clinics Partnership Agreement.
                   </span>
                 </label>
-                {errors.agreed && <p className="mt-2 font-['Inter'] text-xs text-red-500">{errors.agreed}</p>}
+                {errors.agreed && <p className="mt-2 font-sans text-xs text-red-500">{errors.agreed}</p>}
               </StepCard>
             )}
 
@@ -543,10 +543,10 @@ export default function PartnerWizard() {
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
                     </svg>
                   </motion.div>
-                  <h2 className="font-['Playfair_Display'] text-3xl font-bold text-[#1a1a1a]">
+                  <h2 className="font-displayisplay text-3xl font-bold text-[#1a1a1a]">
                     Welcome to KO Clinics!
                   </h2>
-                  <p className="mt-3 font-['Inter'] text-sm text-[#8a8a8a] max-w-md">
+                  <p className="mt-3 font-sans text-sm text-[#8a8a8a] max-w-md">
                     Your clinic is now live on the KO Clinics network. You are officially a KO Clinics Partner.
                   </p>
                   <motion.div
@@ -556,7 +556,7 @@ export default function PartnerWizard() {
                     className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#C6A769]/30 bg-[#C6A769]/5 px-5 py-2"
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span className="font-['Space_Grotesk'] text-[10px] font-semibold tracking-wider uppercase text-[#C6A769]">
+                    <span className="font-sans text-[10px] font-semibold tracking-wider uppercase text-[#C6A769]">
                       Official KO Clinics Partner
                     </span>
                   </motion.div>
@@ -579,7 +579,7 @@ export default function PartnerWizard() {
                         <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#C6A769]/10 transition-colors duration-300 group-hover:bg-[#C6A769]/20">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C6A769" strokeWidth="1.5"><path d={b.icon}/></svg>
                         </div>
-                        <span className="font-['Inter'] text-xs font-semibold text-[#1a1a1a]">{b.title}</span>
+                        <span className="font-sans text-xs font-semibold text-[#1a1a1a]">{b.title}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -593,16 +593,16 @@ export default function PartnerWizard() {
           <button
             onClick={goBack}
             disabled={step === 1}
-            className="flex items-center gap-2 rounded-xl border border-[#e5e5e5] bg-white px-5 py-2.5 font-['Inter'] text-sm font-medium text-[#6a6a6a] transition-all duration-300 hover:border-[#C6A769]/40 hover:text-[#1a1a1a] disabled:opacity-40 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 rounded-xl border border-[#e5e5e5] bg-white px-5 py-2.5 font-sans text-sm font-medium text-[#6a6a6a] transition-all duration-300 hover:border-[#C6A769]/40 hover:text-[#1a1a1a] disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
             Back
           </button>
           <div className="flex items-center gap-3">
-            <span className="font-['Inter'] text-xs text-[#b0b0b0]">Step {step} / 12</span>
+            <span className="font-sans text-xs text-[#b0b0b0]">Step {step} / 12</span>
             {step < 9 && (
               <button onClick={goNext}
-                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98]"
+                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-sans text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98]"
               >
                 Continue
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -610,7 +610,7 @@ export default function PartnerWizard() {
             )}
             {step === 9 && (
               <button onClick={() => { setDirection(1); setStep(10); }}
-                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98]"
+                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-sans text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98]"
                 >
                 Proceed to Verification
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -619,7 +619,7 @@ export default function PartnerWizard() {
             {step === 10 && (
               <button onClick={() => { if (verificationType && scheduledDate) { setDirection(1); setStep(11); } }}
                 disabled={!verificationType || !scheduledDate}
-                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-sans text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 Schedule & Continue
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -628,7 +628,7 @@ export default function PartnerWizard() {
             {step === 11 && (
               <button onClick={() => { if (data.agreed && signed) { setDirection(1); setStep(12); } }}
                 disabled={!data.agreed || !signed}
-                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-sans text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 Accept & Complete
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -636,7 +636,7 @@ export default function PartnerWizard() {
             )}
             {step === 12 && (
               <a href="/"
-                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-['Inter'] text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30"
+                className="flex items-center gap-2 rounded-xl bg-[#C6A769] px-6 py-2.5 font-sans text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b89650] hover:shadow-lg hover:shadow-[#C6A769]/30"
               >
                 Back to Home
               </a>
@@ -654,17 +654,17 @@ function Field({ label, value, onChange, error, placeholder, type = "text", clas
 }) {
   return (
     <div className={className}>
-      <label className="mb-1.5 block font-['Inter'] text-xs font-medium text-[#6a6a6a]">{label}</label>
+      <label className="mb-1.5 block font-sans text-xs font-medium text-[#6a6a6a]">{label}</label>
       <input
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className={`w-full rounded-xl border px-4 py-3 font-['Inter'] text-sm text-[#1a1a1a] outline-none transition-all duration-300 placeholder:text-[#b0b0b0] focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10 ${
+        className={`w-full rounded-xl border px-4 py-3 font-sans text-sm text-[#1a1a1a] outline-none transition-all duration-300 placeholder:text-[#b0b0b0] focus:border-[#C6A769] focus:ring-2 focus:ring-[#C6A769]/10 ${
           error ? "border-red-300 bg-red-50" : "border-[#e5e5e5] bg-white"
         }`}
       />
-      {error && <p className="mt-1 font-['Inter'] text-[11px] text-red-500">{error}</p>}
+      {error && <p className="mt-1 font-sans text-[11px] text-red-500">{error}</p>}
     </div>
   );
 }

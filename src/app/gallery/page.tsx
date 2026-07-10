@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -107,8 +107,8 @@ const fadeUp = {
 export default function GalleryPage() {
   return (
     <PageLayout>
-      <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
+      <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -118,16 +118,16 @@ export default function GalleryPage() {
             className="text-center mb-16"
           >
             <span
-              className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Gallery
             </span>
             <h2
               className="text-4xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">World</span>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">World</span>
             </h2>
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function GalleryPage() {
                 <motion.h3
                   variants={fadeUp} custom={0}
                   className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "var(--font-displayisplay), serif" }}
                 >
                   {section.title}
                 </motion.h3>
@@ -154,8 +154,8 @@ export default function GalleryPage() {
                       variants={fadeUp} custom={ii + 1}
                       className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer"
                       style={{
-                        background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(255,255,255,0.08)",
+                        background: "rgba(246,241,232,0.04)",
+                        border: "1px solid rgba(246,241,232,0.08)",
                       }}
                     >
                       <Image
@@ -165,11 +165,11 @@ export default function GalleryPage() {
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 768px) 50vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A] via-transparent to-transparent opacity-60" />
                       <div className="absolute bottom-0 left-0 right-0 p-4">
                         <p
                           className="text-white text-sm font-medium"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
+                          style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                         >
                           {img.label}
                         </p>

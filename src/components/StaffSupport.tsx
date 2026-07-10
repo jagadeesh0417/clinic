@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -37,18 +37,18 @@ const fadeInUp = {
 const StaffCard = ({ label, index }: { label: string; index: number }) => (
   <motion.div
     variants={fadeInUp}
-    className="group relative overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] p-5 transition-all duration-500 hover:border-[#CBA135]/40"
+    className="group relative overflow-hidden rounded-2xl border border-[rgba(246,241,232,0.08)] p-5 transition-all duration-500 hover:border-[#C9A14A]/40"
     style={{
-      background: "rgba(255,255,255,0.04)",
+      background: "rgba(246,241,232,0.04)",
       backdropFilter: "blur(16px)",
       WebkitBackdropFilter: "blur(16px)",
     }}
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-[#CBA135]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-    <span className="relative z-10 font-mono text-xs tracking-[0.2em] text-[#CBA135]">
+    <div className="absolute inset-0 bg-gradient-to-br from-[#C9A14A]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+    <span className="relative z-10 font-mono text-xs tracking-[0.2em] text-[#C9A14A]">
       {String(index + 1).padStart(2, "0")}
     </span>
-    <h4 className="relative z-10 mt-2 font-[\'Space_Grotesk\'] text-base font-medium tracking-wide text-white">
+    <h4 className="relative z-10 mt-2 font-sans text-base font-medium tracking-wide text-white">
       {label}
     </h4>
   </motion.div>
@@ -58,7 +58,7 @@ export default function StaffSupport() {
   return (
     <section
       id="staff-support"
-      className="relative overflow-hidden bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
+      className="relative overflow-hidden bg-[#100D0A] px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -71,8 +71,8 @@ export default function StaffSupport() {
             className="relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10" />
-              <div className="absolute -inset-1 bg-[#CBA135]/20 blur-3xl rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A] via-transparent to-transparent z-10" />
+              <div className="absolute -inset-1 bg-[#C9A14A]/20 blur-3xl rounded-full" />
               <Image
                 src={images[0]}
                 alt="Healthcare team"
@@ -105,17 +105,17 @@ export default function StaffSupport() {
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -right-6 z-30 rounded-2xl border border-[rgba(255,255,255,0.08)] px-6 py-4"
+            <div className="absolute -bottom-6 -right-6 z-30 rounded-2xl border border-[rgba(246,241,232,0.08)] px-6 py-4"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
               }}
             >
-              <p className="font-[\'Playfair_Display\'] text-3xl font-bold text-white">
-                10<span className="text-[#CBA135]">+</span>
+              <p className="font-display text-3xl font-bold text-white">
+                10<span className="text-[#C9A14A]">+</span>
               </p>
-              <p className="font-[\'Space_Grotesk\'] text-xs tracking-wider text-white/60">
+              <p className="font-sans text-xs tracking-wider text-white/60">
                 Staff Categories
               </p>
             </div>
@@ -128,7 +128,7 @@ export default function StaffSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const }}
-              className="font-[\'Space_Grotesk\'] text-sm tracking-[0.3em] uppercase text-[#CBA135]"
+              className="font-sans text-sm tracking-[0.3em] uppercase text-[#C9A14A]"
             >
               Skilled Staff Support
             </motion.p>
@@ -138,7 +138,7 @@ export default function StaffSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.1 }}
-              className="mt-3 font-[\'Playfair_Display\'] text-4xl font-bold leading-tight text-white md:text-5xl"
+              className="mt-3 font-display text-4xl font-bold leading-tight text-white md:text-5xl"
             >
               Skilled Staff Support
             </motion.h2>
@@ -148,7 +148,7 @@ export default function StaffSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.2 }}
-              className="mt-2 font-[\'Space_Grotesk\'] text-lg text-white/50"
+              className="mt-2 font-sans text-lg text-white/50"
             >
               Access to Qualified Healthcare Professionals
             </motion.p>
@@ -158,7 +158,7 @@ export default function StaffSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.3 }}
-              className="mt-4 max-w-md font-[\'Inter\'] text-base leading-relaxed text-white/40"
+              className="mt-4 max-w-md font-sans text-base leading-relaxed text-white/40"
             >
               KO Clinics provides access to skilled healthcare professionals for
               partner clinics.

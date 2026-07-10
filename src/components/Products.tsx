@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -52,7 +52,7 @@ const itemVariants = {
 
 export default function Products() {
   return (
-    <section id="products" className="relative py-24 bg-[#050505] overflow-hidden">
+    <section id="products" className="relative py-24 bg-[#100D0A] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,13 +61,13 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[#CBA135] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase mb-4">
+          <span className="inline-block text-[#C9A14A] font-sans text-sm tracking-[0.2em] uppercase mb-4">
             Product Range
           </span>
-          <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-            Premium <span className="text-[#CBA135]">Products</span>
+          <h2 className="font-displayisplay text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+            Premium <span className="text-[#C9A14A]">Products</span>
           </h2>
-          <p className="text-white/60 font-['Inter'] text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 font-sans text-lg max-w-2xl mx-auto">
             Curated healthcare products for clinics and patients
           </p>
         </motion.div>
@@ -83,7 +83,7 @@ export default function Products() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group rounded-2xl overflow-hidden bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] transition-all duration-500 hover:scale-[1.02] hover:border-[#CBA135]/30"
+              className="group rounded-2xl overflow-hidden bg-[rgba(246,241,232,0.04)] backdrop-blur-xl border border-[rgba(246,241,232,0.08)] transition-all duration-500 hover:scale-[1.02] hover:border-[#C9A14A]/30"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
@@ -94,9 +94,9 @@ export default function Products() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                  <h3 className="font-['Playfair_Display'] text-2xl text-white">
+                  <h3 className="font-displayisplay text-2xl text-white">
                     {category.name}
                   </h3>
                 </div>
@@ -106,7 +106,7 @@ export default function Products() {
                   {category.items.map((item) => (
                     <span
                       key={item}
-                      className="inline-block px-3 py-1.5 text-sm font-['Inter'] text-white/60 bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#CBA135]/30 hover:text-white hover:bg-white/10"
+                      className="inline-block px-3 py-1.5 text-sm font-sans text-white/60 bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#C9A14A]/30 hover:text-white hover:bg-white/10"
                     >
                       {item}
                     </span>

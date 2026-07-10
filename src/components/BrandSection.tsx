@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -89,7 +89,7 @@ const contributions = [
 function SectionTitle({ label }: { label: string }) {
   return (
     <motion.div variants={fadeUp} custom={0} className="text-center mb-12">
-      <span className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+      <span className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
         {label}
       </span>
     </motion.div>
@@ -103,7 +103,7 @@ function GoldDivider() {
       whileInView={{ scaleX: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" as const }}
-      className="mx-auto my-6 h-[2px] w-20 origin-center bg-[#CBA135]"
+      className="mx-auto my-6 h-[2px] w-20 origin-center bg-[#C9A14A]"
     />
   );
 }
@@ -112,9 +112,9 @@ export default function BrandSection() {
   return (
     <>
       {/* --- HERO / BRAND INTRO --- */}
-      <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[120px] pointer-events-none" />
+      <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -124,7 +124,7 @@ export default function BrandSection() {
             variants={container}
           >
             <motion.div variants={fadeUp} custom={0}>
-              <span className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 THE CLINIC
               </span>
             </motion.div>
@@ -132,42 +132,42 @@ export default function BrandSection() {
             <motion.h1
               variants={fadeUp} custom={1}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mt-4 mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               Kosmedixx{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
                 / KO Clinics
               </span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp} custom={2}
-              className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed max-w-4xl"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg md:text-xl leading-relaxed max-w-4xl"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
                Founded in 2005 by renowned aesthetic medicine expert <strong className="text-white">Dr. Vikas Singh</strong>, Kosmedixx Clinic has emerged as a pioneering force in the field of advanced aesthetic and cosmetic medicine. Dr. Singh was among the first to introduce LIPODISSOLVE Ultra and laser-based inch-loss treatments to Bangalore and India, setting new benchmarks in non-invasive body contouring. As the visionary founder behind Bodyline Clinic and Ree Age Clinic, he has also established the Kosmedixx Global Aesthetic Institute and serves as a key figure in the European Federation of Aesthetic Medicine and Surgery (EFAMS).
             </motion.p>
 
             <motion.p
               variants={fadeUp} custom={3}
-              className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed mt-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg md:text-xl leading-relaxed mt-6"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Kosmedixx is committed to delivering scientifically-backed, cutting-edge treatments in anti-aging, advanced hair restoration, stem cell therapy, weight and inch loss, and cosmetic surgery. Our team comprises internationally trained and board-certified dermatologists, plastic surgeons, and aesthetic physicians who uphold the highest standards of safety, ethics, and clinical excellence.
             </motion.p>
 
             <motion.p
               variants={fadeUp} custom={4}
-              className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed mt-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg md:text-xl leading-relaxed mt-6"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               With a mission to make premium aesthetic care accessible, KO Clinics are expanding rapidly across India and internationally, offering practitioners the opportunity to partner and join our growing global network. Whether you&apos;re a client seeking world-class results or a professional looking to be part of a progressive aesthetic brand, Kosmedixx stands as a symbol of trust, innovation, and integrity.
             </motion.p>
 
             <motion.p
               variants={fadeUp} custom={5}
-              className="text-[#CBA135] text-2xl md:text-3xl font-semibold mt-8 italic"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-[#C9A14A] text-2xl md:text-3xl font-semibold mt-8 italic"
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               At Kosmedixx, we believe in &ldquo;Aesthetics with Ethics&rdquo; &mdash; delivering gold-standard outcomes while prioritizing transparency, education, and individualized care.
             </motion.p>
@@ -176,7 +176,7 @@ export default function BrandSection() {
       </section>
 
       {/* --- WHY CHOOSE KO CLINICS --- */}
-      <section className="relative bg-[#0D0D0D] py-24 overflow-hidden">
+      <section className="relative bg-[#191410] py-24 overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(203,161,_53,_0.06)_0%,_transparent_70%)]" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -188,25 +188,25 @@ export default function BrandSection() {
             <motion.h2
               variants={fadeUp} custom={0}
               className="text-3xl md:text-5xl font-bold text-white text-center mb-8"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               Why choose{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
                 KO Clinics
               </span>
             </motion.h2>
             <GoldDivider />
             <motion.p
               variants={fadeUp} custom={1}
-              className="text-[#B7B7B7] text-lg leading-relaxed text-center max-w-4xl mx-auto"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed text-center max-w-4xl mx-auto"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Kosmedixx delivers cutting-edge aesthetic and dermatological treatments designed to enhance natural beauty and restore skin confidence. Advanced, US-FDA-approved solutions across a wide range of concerns \u2014 skin lightening, long-term sun damage, acne-related pigmentation, melasma, and age-related discoloration.
             </motion.p>
             <motion.p
               variants={fadeUp} custom={2}
-              className="text-[#B7B7B7] text-lg leading-relaxed text-center max-w-4xl mx-auto mt-4"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed text-center max-w-4xl mx-auto mt-4"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Services extend beyond skin \u2014 hair transplant procedures, anti-ageing stem cell therapy, and a medically supervised weight and inch loss programme, all using FDA-approved technology.
             </motion.p>
@@ -215,7 +215,7 @@ export default function BrandSection() {
       </section>
 
       {/* --- MISSION --- */}
-      <section className="relative bg-[#050505] py-24 overflow-hidden">
+      <section className="relative bg-[#100D0A] py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial="hidden"
@@ -226,15 +226,15 @@ export default function BrandSection() {
             <motion.h2
               variants={fadeUp} custom={0}
               className="text-3xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               Our Mission
             </motion.h2>
             <GoldDivider />
             <motion.p
               variants={fadeUp} custom={1}
-              className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               To make world-class aesthetic and cosmetic medicine accessible, safe and honest. Since 2005, KO Clinics has worked to bring globally proven treatments to patients in India — not the newest trend, but the techniques with evidence behind them. Every treatment plan is built around the individual: their concerns, their anatomy, their goals. No templates, no pressure, no promises we can't keep. We measure success by results that look natural and by patients who understand exactly what was done and why. That means clear consultations, transparent pricing, realistic expectations, and the willingness to tell someone a procedure isn't right for them. As we grow across India and internationally, our commitment stays the same — the standard of care in every KO clinic, in every city, is the standard of care in our first.
             </motion.p>
@@ -243,7 +243,7 @@ export default function BrandSection() {
       </section>
 
       {/* --- VISION --- */}
-      <section className="relative bg-[#0D0D0D] py-24 overflow-hidden">
+      <section className="relative bg-[#191410] py-24 overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(203,161,_53,_0.04)_0%,_transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
@@ -255,15 +255,15 @@ export default function BrandSection() {
             <motion.h2
               variants={fadeUp} custom={0}
               className="text-3xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-displayisplay), serif" }}
             >
               Our Vision
             </motion.h2>
             <GoldDivider />
             <motion.p
               variants={fadeUp} custom={1}
-              className="text-[#B7B7B7] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               To establish the Kosmedixx KO Chain of Clinics as a leading global network of premium aesthetic centers that make advanced cosmetic dermatology and regenerative medicine accessible to everyone regardless of geography. With state-of-the-art technology and standardized protocols, Dr. Vikas Singh envisions affordable luxury aesthetics that are as available in tier-2 Indian cities as they are in Dubai, Hong Kong, London, or Bahrain.
             </motion.p>
@@ -272,8 +272,8 @@ export default function BrandSection() {
       </section>
 
       {/* --- THE FOUNDER --- */}
-      <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-        <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
+      <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+        <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle label="MEET YOUR DOCTOR" />
@@ -286,25 +286,25 @@ export default function BrandSection() {
           >
             <motion.div variants={fadeUp} custom={0} className="text-center mb-4">
               <div className="mb-6 flex justify-center">
-                <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[#CBA135]/30 md:h-52 md:w-52">
+                <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[#C9A14A]/30 md:h-52 md:w-52">
                   <Image src="/images/dr-vikas.png" alt="Dr. Vikas Singh" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h2
                 className="text-4xl md:text-6xl font-bold text-white"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-displayisplay), serif" }}
               >
                 Dr. Vikas Singh
               </h2>
-              <p className="text-[#CBA135] text-lg md:text-xl italic mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <p className="text-[#C9A14A] text-lg md:text-xl italic mt-2" style={{ fontFamily: "var(--font-displayisplay), serif" }}>
                 Enhance, Not Change.
               </p>
             </motion.div>
 
             <motion.p
               variants={fadeUp} custom={1}
-              className="text-[#B7B7B7] text-lg leading-relaxed max-w-4xl mx-auto text-center"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#CBBFAF] text-lg leading-relaxed max-w-4xl mx-auto text-center"
+              style={{ fontFamily: "var(--font-displayans), sans-serif" }}
             >
               Dr. Vikas Singh is a board-certified aesthetic physician with extensive international training in non-surgical facial rejuvenation. With a passion for artistry and precision, he has helped thousands of patients achieve their aesthetic goals naturally and safely.
             </motion.p>
@@ -313,16 +313,16 @@ export default function BrandSection() {
               variants={fadeUp} custom={2}
               className="max-w-4xl mx-auto mt-6 text-center space-y-1"
             >
-              <p className="text-[#CBA135] text-base font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <p className="text-[#C9A14A] text-base font-semibold" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 Celebrity Hair Transplant Surgeon, Cosmetic Dermatologist &amp; Aesthetic Physician
               </p>
-              <p className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 Founder Kosmedix Hair &amp; Skin Clinics, KO Clinics, La Crown Aesthetics
               </p>
-              <p className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 20+ Years in Aesthetic Medicine, Hair Restoration &amp; Anti-Ageing Medicine
               </p>
-              <p className="text-[#B7B7B7] text-xs mt-2 italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-[#CBBFAF] text-xs mt-2 italic" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                 MBBS, AIIMS (Bangalore Medical College &amp; Research Centre) &middot; Clinic Dermatology \u2013 Cardiff University Wales
               </p>
             </motion.div>
@@ -333,26 +333,26 @@ export default function BrandSection() {
               className="flex flex-wrap justify-center gap-12 mt-10 mb-16"
             >
               <div className="text-center">
-                <span className="block text-4xl md:text-5xl font-bold text-[#CBA135]" style={{ fontFamily: "'Playfair Display', serif" }}>20+</span>
-                <span className="text-[#B7B7B7] text-sm uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Years Experience</span>
+                <span className="block text-4xl md:text-5xl font-bold text-[#C9A14A]" style={{ fontFamily: "var(--font-displayisplay), serif" }}>20+</span>
+                <span className="text-[#CBBFAF] text-sm uppercase tracking-wider" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Years Experience</span>
               </div>
               <div className="text-center">
-                <span className="block text-4xl md:text-5xl font-bold text-[#CBA135]" style={{ fontFamily: "'Playfair Display', serif" }}>10,000+</span>
-                <span className="text-[#B7B7B7] text-sm uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Procedures</span>
+                <span className="block text-4xl md:text-5xl font-bold text-[#C9A14A]" style={{ fontFamily: "var(--font-displayisplay), serif" }}>10,000+</span>
+                <span className="text-[#CBBFAF] text-sm uppercase tracking-wider" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Procedures</span>
               </div>
               <div className="text-center">
-                <span className="block text-4xl md:text-5xl font-bold text-[#CBA135]" style={{ fontFamily: "'Playfair Display', serif" }}>International</span>
-                <span className="text-[#B7B7B7] text-sm uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certifications</span>
+                <span className="block text-4xl md:text-5xl font-bold text-[#C9A14A]" style={{ fontFamily: "var(--font-displayisplay), serif" }}>International</span>
+                <span className="text-[#CBBFAF] text-sm uppercase tracking-wider" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Certifications</span>
               </div>
             </motion.div>
 
             {/* Education */}
             <motion.div variants={fadeUp} custom={5} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4 text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Education</h3>
-              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4 text-center" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Education</h3>
+              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(246,241,232,0.08)" }}>
                 <table className="w-full text-left text-sm">
                   <thead>
-                    <tr className="text-[#CBA135] text-xs uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif", background: "rgba(203,161,53,0.08)" }}>
+                    <tr className="text-[#C9A14A] text-xs uppercase tracking-wider" style={{ fontFamily: "var(--font-displayans), sans-serif", background: "rgba(203,161,53,0.08)" }}>
                       <th className="p-3 font-semibold">Qualification</th>
                       <th className="p-3 font-semibold">Institution</th>
                       <th className="p-3 font-semibold">Country</th>
@@ -361,9 +361,9 @@ export default function BrandSection() {
                   <tbody>
                     {education.map((item, i) => (
                       <tr key={i} className="border-t border-white/5">
-                        <td className="p-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.degree}</td>
-                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.institution}</td>
-                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.country}</td>
+                        <td className="p-3 text-white" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.degree}</td>
+                        <td className="p-3 text-[#CBBFAF]" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.institution}</td>
+                        <td className="p-3 text-[#CBBFAF]" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.country}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -373,11 +373,11 @@ export default function BrandSection() {
 
             {/* Certifications */}
             <motion.div variants={fadeUp} custom={6} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4 text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certifications</h3>
-              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4 text-center" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Certifications</h3>
+              <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid rgba(246,241,232,0.08)" }}>
                 <table className="w-full text-left text-sm">
                   <thead>
-                    <tr className="text-[#CBA135] text-xs uppercase tracking-wider" style={{ fontFamily: "'Space Grotesk', sans-serif", background: "rgba(203,161,53,0.08)" }}>
+                    <tr className="text-[#C9A14A] text-xs uppercase tracking-wider" style={{ fontFamily: "var(--font-displayans), sans-serif", background: "rgba(203,161,53,0.08)" }}>
                       <th className="p-3 font-semibold">Certification</th>
                       <th className="p-3 font-semibold">Organization</th>
                       <th className="p-3 font-semibold">Country</th>
@@ -386,9 +386,9 @@ export default function BrandSection() {
                   <tbody>
                     {certificationsData.map((item, i) => (
                       <tr key={i} className="border-t border-white/5">
-                        <td className="p-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.cert}</td>
-                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.org}</td>
-                        <td className="p-3 text-[#B7B7B7]" style={{ fontFamily: "'Inter', sans-serif" }}>{item.country}</td>
+                        <td className="p-3 text-white" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.cert}</td>
+                        <td className="p-3 text-[#CBBFAF]" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.org}</td>
+                        <td className="p-3 text-[#CBBFAF]" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.country}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -398,11 +398,11 @@ export default function BrandSection() {
 
             {/* Specializations */}
             <motion.div variants={fadeUp} custom={7} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Specializations</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Specializations</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {specializations.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -411,19 +411,19 @@ export default function BrandSection() {
 
             {/* International Training */}
             <motion.div variants={fadeUp} custom={8} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>International Training</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>International Training</h3>
               <div className="space-y-3">
                 {internationalTraining.map((item, i) => (
                   <div
                     key={i}
                     className="flex flex-col sm:flex-row sm:items-center gap-2 rounded-xl p-4"
                     style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "rgba(246,241,232,0.04)",
+                      border: "1px solid rgba(246,241,232,0.08)",
                     }}
                   >
-                    <span className="text-[#CBA135] font-semibold text-sm uppercase tracking-wider flex-shrink-0" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.location}</span>
-                    <span className="text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{item.detail}</span>
+                    <span className="text-[#C9A14A] font-semibold text-sm uppercase tracking-wider flex-shrink-0" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.location}</span>
+                    <span className="text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>{item.detail}</span>
                   </div>
                 ))}
               </div>
@@ -431,11 +431,11 @@ export default function BrandSection() {
 
             {/* Professional Memberships */}
             <motion.div variants={fadeUp} custom={9} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Professional Memberships</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Professional Memberships</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {memberships.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -444,11 +444,11 @@ export default function BrandSection() {
 
             {/* Certificates of Participation & Training */}
             <motion.div variants={fadeUp} custom={10} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Certificates of Participation &amp; Training</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Certificates of Participation &amp; Training</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {certifications.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -457,11 +457,11 @@ export default function BrandSection() {
 
             {/* Awards & Recognitions */}
             <motion.div variants={fadeUp} custom={11} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Awards &amp; Recognitions</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Awards &amp; Recognitions</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {awards.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -470,7 +470,7 @@ export default function BrandSection() {
 
             {/* Media & Public Appearances */}
             <motion.div variants={fadeUp} custom={12} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Media &amp; Public Appearances</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Media &amp; Public Appearances</h3>
               <div className="grid sm:grid-cols-2 gap-2">
                 {[
                   "Times Group \u2014 Global Doctor Award Recognition",
@@ -479,8 +479,8 @@ export default function BrandSection() {
                   "Medical Conferences \u2014 Speaker on Hair Transplant & Anti-Ageing",
                   "Social Media \u2014 Instagram, YouTube, International Aesthetic Workshops",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -489,11 +489,11 @@ export default function BrandSection() {
 
             {/* Professional Contributions */}
             <motion.div variants={fadeUp} custom={13} className="max-w-4xl mx-auto mb-12">
-              <h3 className="text-xl font-semibold text-[#CBA135] mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Professional Contributions</h3>
+              <h3 className="text-xl font-semibold text-[#C9A14A] mb-4" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>Professional Contributions</h3>
               <div className="space-y-2">
                 {contributions.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[#B7B7B7] text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-3 text-[#CBBFAF] text-sm" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A14A] flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -509,10 +509,10 @@ export default function BrandSection() {
                 border: "1px solid rgba(203,161,53,0.2)",
               }}
             >
-              <p className="text-white text-lg md:text-xl leading-relaxed italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <p className="text-white text-lg md:text-xl leading-relaxed italic" style={{ fontFamily: "var(--font-displayisplay), serif" }}>
                 &ldquo;I believe true beauty lies in enhancing what nature has given you \u2014 not changing who you are. My approach is always conservative, precise, and personalized. Every face tells a story, and my job is to help you tell it with confidence.&rdquo;
               </p>
-              <p className="text-[#CBA135] mt-4 font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>— Dr. Vikas Singh</p>
+              <p className="text-[#C9A14A] mt-4 font-semibold" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>— Dr. Vikas Singh</p>
             </motion.div>
           </motion.div>
         </div>

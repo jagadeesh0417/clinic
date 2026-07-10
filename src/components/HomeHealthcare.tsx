@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -39,7 +39,7 @@ export default function HomeHealthcare() {
   return (
     <section
       id="home-healthcare"
-      className="relative overflow-hidden bg-[#0D0D0D] px-6 py-24 md:px-12 lg:px-24"
+      className="relative overflow-hidden bg-[#191410] px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
 
@@ -54,8 +54,8 @@ export default function HomeHealthcare() {
             className="relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent z-10" />
-              <div className="absolute -inset-1 bg-[#CBA135]/20 blur-3xl rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#191410] via-transparent to-transparent z-10" />
+              <div className="absolute -inset-1 bg-[#C9A14A]/20 blur-3xl rounded-full" />
               <Image
                 src={images[0]}
                 alt="Home healthcare visit"
@@ -89,17 +89,17 @@ export default function HomeHealthcare() {
             </div>
 
             <div
-              className="absolute -bottom-6 -right-6 z-30 rounded-2xl border border-[rgba(255,255,255,0.08)] px-6 py-4"
+              className="absolute -bottom-6 -right-6 z-30 rounded-2xl border border-[rgba(246,241,232,0.08)] px-6 py-4"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(246,241,232,0.04)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
               }}
             >
-              <p className="font-['Playfair_Display'] text-3xl font-bold text-white">
-                9<span className="text-[#CBA135]">+</span>
+              <p className="font-displayisplay text-3xl font-bold text-white">
+                9<span className="text-[#C9A14A]">+</span>
               </p>
-              <p className="font-['Space_Grotesk'] text-xs tracking-wider text-white/60">
+              <p className="font-sans text-xs tracking-wider text-white/60">
                 Services at Home
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function HomeHealthcare() {
               alt="Wellness care"
               width={96}
               height={96}
-              className="absolute -top-4 -left-4 z-20 h-24 w-24 rounded-2xl border-2 border-[#CBA135]/30 object-cover shadow-xl md:h-32 md:w-32"
+              className="absolute -top-4 -left-4 z-20 h-24 w-24 rounded-2xl border-2 border-[#C9A14A]/30 object-cover shadow-xl md:h-32 md:w-32"
               unoptimized
             />
           </motion.div>
@@ -121,7 +121,7 @@ export default function HomeHealthcare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const }}
-              className="font-['Space_Grotesk'] text-sm tracking-[0.3em] uppercase text-[#CBA135]"
+              className="font-sans text-sm tracking-[0.3em] uppercase text-[#C9A14A]"
             >
               Home Healthcare Services
             </motion.p>
@@ -131,10 +131,10 @@ export default function HomeHealthcare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.1 }}
-              className="mt-3 font-['Playfair_Display'] text-4xl font-bold leading-tight text-white md:text-5xl"
+              className="mt-3 font-displayisplay text-4xl font-bold leading-tight text-white md:text-5xl"
             >
               Home Healthcare{" "}
-              <span className="text-[#CBA135]">Services</span>
+              <span className="text-[#C9A14A]">Services</span>
             </motion.h2>
 
             <motion.p
@@ -142,7 +142,7 @@ export default function HomeHealthcare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.2 }}
-              className="mt-2 font-['Space_Grotesk'] text-lg text-white/50"
+              className="mt-2 font-sans text-lg text-white/50"
             >
               Quality Healthcare at Your Doorstep
             </motion.p>
@@ -152,7 +152,7 @@ export default function HomeHealthcare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.3 }}
-              className="mt-4 max-w-md font-['Inter'] text-base leading-relaxed text-white/40"
+              className="mt-4 max-w-md font-sans text-base leading-relaxed text-white/40"
             >
               Professional medical care delivered to your home. From doctor
               visits to nursing, diagnostics to therapy — we bring quality
@@ -170,16 +170,16 @@ export default function HomeHealthcare() {
                 <motion.div
                   key={service}
                   variants={fadeInUp}
-                  className="group relative overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 transition-all duration-500 hover:border-[#CBA135]/40"
+                  className="group relative overflow-hidden rounded-2xl border border-[rgba(246,241,232,0.08)] p-4 transition-all duration-500 hover:border-[#C9A14A]/40"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
+                    background: "rgba(246,241,232,0.04)",
                     backdropFilter: "blur(16px)",
                     WebkitBackdropFilter: "blur(16px)",
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#CBA135]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#C9A14A]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative z-10 flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#CBA135]/20 bg-[#CBA135]/10 text-xs text-[#CBA135]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#C9A14A]/20 bg-[#C9A14A]/10 text-xs text-[#C9A14A]">
                       <svg
                         width="14"
                         height="14"
@@ -195,7 +195,7 @@ export default function HomeHealthcare() {
                         <circle cx="18" cy="16" r="3" />
                       </svg>
                     </span>
-                    <h4 className="font-['Space_Grotesk'] text-sm font-medium tracking-wide text-white">
+                    <h4 className="font-sans text-sm font-medium tracking-wide text-white">
                       {service}
                     </h4>
                   </div>

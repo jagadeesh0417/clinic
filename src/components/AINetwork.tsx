@@ -93,7 +93,7 @@ const imageVariants = {
 
 export default function AINetwork() {
   return (
-    <section id="ai-network" className="relative overflow-hidden bg-[#0D0D0D]">
+    <section id="ai-network" className="relative overflow-hidden bg-[#191410]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,213,_255,_0.04)_0%,_transparent_70%)]" />
       <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] translate-x-1/3 -translate-y-1/3 rounded-full bg-[rgba(0,213,255,0.03)] blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[400px] w-[400px] -translate-x-1/4 translate-y-1/4 rounded-full bg-[rgba(203,161,53,0.03)] blur-3xl" />
@@ -106,9 +106,9 @@ export default function AINetwork() {
           transition={{ duration: 0.8, ease: "easeOut" as const }}
           className="text-center"
         >
-          <h2 className="font-['Playfair_Display'] text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+          <h2 className="font-displayisplay text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
             India&apos;s{" "}
-            <span className="bg-gradient-to-r from-[#00D5FF] to-[#7EE8FA] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#C9A14A] to-[#DDBB6C] bg-clip-text text-transparent">
               AI-Powered
             </span>{" "}
             Clinic Network
@@ -118,17 +118,17 @@ export default function AINetwork() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" as const }}
-            className="mx-auto mt-6 h-[2px] w-24 origin-center bg-[#CBA135]"
+            className="mx-auto mt-6 h-[2px] w-24 origin-center bg-[#C9A14A]"
           />
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
-            className="mx-auto mt-8 max-w-3xl font-['Inter'] text-lg leading-relaxed text-[#B7B7B7] sm:text-xl"
+            className="mx-auto mt-8 max-w-3xl font-sans text-lg leading-relaxed text-[#CBBFAF] sm:text-xl"
           >
             An integrated AI ecosystem that connects every touchpoint of your
-            healthcare journey — from smart diagnostics to predictive wellness —
+            healthcare journey � from smart diagnostics to predictive wellness �
             creating India&apos;s most advanced clinic network.
           </motion.p>
         </motion.div>
@@ -163,7 +163,7 @@ export default function AINetwork() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,5,5,0.9)] via-[rgba(5,5,5,0.3)] to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="font-['Space_Grotesk'] text-xs font-medium tracking-widest uppercase text-[rgba(255,255,255,0.6)]">
+                  <span className="font-sans text-xs font-medium tracking-widest uppercase text-[rgba(246,241,232,0.6)]">
                     {i === 0
                       ? "AI Diagnostics"
                       : i === 1
@@ -189,13 +189,13 @@ export default function AINetwork() {
                 key={i}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03, y: -6 }}
-                className="group cursor-pointer rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] p-5 backdrop-blur-xl transition-all duration-300 hover:border-[rgba(0,213,255,0.2)] hover:shadow-[0_0_30px_rgba(0,213,255,0.12)] sm:p-6"
+                className="group cursor-pointer rounded-2xl border border-[rgba(246,241,232,0.08)] bg-[rgba(246,241,232,0.04)] p-5 backdrop-blur-xl transition-all duration-300 hover:border-[rgba(0,213,255,0.2)] hover:shadow-[0_0_30px_rgba(0,213,255,0.12)] sm:p-6"
               >
-                <div className="w-10 h-10 flex items-center justify-center">{(() => { const Icon = feature.icon; return <Icon className="w-6 h-6 text-[#00D5FF]" />; })()}</div>
-                <h3 className="mt-3 font-['Space_Grotesk'] text-base font-semibold text-white sm:text-lg">
+                <div className="w-10 h-10 flex items-center justify-center">{(() => { const Icon = feature.icon; return <Icon className="w-6 h-6 text-[#C9A14A]" />; })()}</div>
+                <h3 className="mt-3 font-sans text-base font-semibold text-white sm:text-lg">
                   {feature.title}
                 </h3>
-                <p className="mt-2 font-['Inter'] text-sm leading-relaxed text-[#B7B7B7]">
+                <p className="mt-2 font-sans text-sm leading-relaxed text-[#CBBFAF]">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -210,7 +210,7 @@ export default function AINetwork() {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" as const }}
           className="mt-16 text-center"
         >
-          <p className="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-[rgba(255,255,255,0.3)]">
+          <p className="font-sans text-sm tracking-widest uppercase text-[rgba(246,241,232,0.3)]">
             Powered by advanced machine learning &bull; Serving millions of patients
           </p>
         </motion.div>

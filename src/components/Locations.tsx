@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -77,8 +77,8 @@ const fadeUp = {
 
 export default function Locations() {
   return (
-    <section className="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#CBA135]/5 rounded-full blur-[150px] pointer-events-none" />
+    <section className="relative bg-[#100D0A] py-24 md:py-32 overflow-hidden">
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -89,17 +89,17 @@ export default function Locations() {
           className="text-center mb-16"
         >
           <span
-            className="inline-block text-[#CBA135] font-mono text-sm tracking-[0.2em] uppercase mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="inline-block text-[#C9A14A] font-mono text-sm tracking-[0.2em] uppercase mb-4"
+            style={{ fontFamily: "var(--font-displayans), sans-serif" }}
           >
             Our Locations
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-displayisplay), serif" }}
           >
             Visit{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CBA135] to-[#F5D779]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F5D779]">
               Kosmedixx – KO Clinics
             </span>
           </h2>
@@ -115,8 +115,8 @@ export default function Locations() {
             >
               <motion.h3
                 variants={fadeUp} custom={0}
-                className="text-xl font-semibold text-[#CBA135] mb-6 text-center md:text-left"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-xl font-semibold text-[#C9A14A] mb-6 text-center md:text-left"
+                style={{ fontFamily: "var(--font-displayans), sans-serif" }}
               >
                 {group.city}
               </motion.h3>
@@ -128,36 +128,36 @@ export default function Locations() {
                     variants={fadeUp} custom={li + 1}
                     className="rounded-2xl p-6 transition-all duration-500 hover:scale-[1.02]"
                     style={{
-                      background: "rgba(255,255,255,0.04)",
+                      background: "rgba(246,241,232,0.04)",
                       backdropFilter: "blur(12px)",
                       WebkitBackdropFilter: "blur(12px)",
-                      border: "1px solid rgba(255,255,255,0.08)",
+                      border: "1px solid rgba(246,241,232,0.08)",
                     }}
                   >
                     <div className="flex items-start gap-3 mb-3">
-                      <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#CBA135" strokeWidth="2">
+                      <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#C9A14A" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                       <div>
                         <h4
                           className="text-white font-semibold text-base"
-                          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                          style={{ fontFamily: "var(--font-displayans), sans-serif" }}
                         >
                           {loc.name}
                         </h4>
-                        <p className="text-[#CBA135] text-xs mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <p className="text-[#C9A14A] text-xs mt-0.5" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                           Kosmedixx – Ko Clinics
                         </p>
                       </div>
                     </div>
-                    <p className="text-[#B7B7B7] text-sm ml-8" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <p className="text-[#CBBFAF] text-sm ml-8" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                       {loc.address}
                       <br />
                       {loc.area}
                     </p>
                     {loc.phone && (
-                      <p className="text-[#CBA135] text-sm ml-8 mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-[#C9A14A] text-sm ml-8 mt-2" style={{ fontFamily: "var(--font-displayans), sans-serif" }}>
                         {loc.phone}
                       </p>
                     )}
