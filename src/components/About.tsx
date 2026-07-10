@@ -39,96 +39,7 @@ const images = [
   },
 ];
 
-const platformFeatures = [
-  {
-    title: "Technology",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <line x1="8" y1="21" x2="16" y2="21" />
-        <line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    ),
-  },
-  {
-    title: "Digital Marketing",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 6V2M8 10l-4 4 4 4M16 10l4 4-4 4" />
-        <circle cx="12" cy="14" r="4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Telemedicine",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Healthcare Products",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-        <rect x="8" y="2" width="8" height="4" rx="1" />
-        <line x1="12" y1="11" x2="12" y2="17" />
-        <line x1="9" y1="14" x2="15" y2="14" />
-      </svg>
-    ),
-  },
-  {
-    title: "AI Health Screening",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a4 4 0 0 1 4 4c0 2-2 3-2 5h-4c0-2-2-3-2-5a4 4 0 0 1 4-4z" />
-        <path d="M12 14v4" />
-        <path d="M8 22h8" />
-        <path d="M12 18c-2 0-4-1-4-3" />
-      </svg>
-    ),
-  },
-  {
-    title: "Doctor Networking",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-  },
-  {
-    title: "Patient Acquisition",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="8.5" cy="7" r="4" />
-        <line x1="20" y1="8" x2="20" y2="14" />
-        <line x1="23" y1="11" x2="17" y2="11" />
-      </svg>
-    ),
-  },
-  {
-    title: "Business Growth Support",
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-  },
-];
 
-const locations = [
-  "Bengaluru",
-  "Hong Kong",
-  "Dubai",
-  "Canada",
-];
 
 const stats = [
   { value: 500, suffix: "+", label: "Partner Clinics" },
@@ -290,12 +201,25 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-[#B7B7B7] text-lg leading-relaxed mb-8"
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              KO Clinics is an AI-powered healthcare ecosystem committed to
-              making quality healthcare accessible while helping clinics improve
-              visibility, operational efficiency and profitability.
+              Founded in 2005 by Dr. Vikas Singh, Kosmedixx (KO) Clinics is
+              positioned as a pioneer in advanced aesthetic and cosmetic medicine
+              in India.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Among the first to introduce LIPODISSOLVE Ultra and laser-based
+              inch-loss treatments to Bangalore and India. Dr. Singh is also
+              credited as the founder of Bodyline Clinic and Ree Age Clinic, and
+              established the Kosmedixx Global Aesthetic Institute, with an
+              association to the European Federation of Aesthetic Medicine and
+              Surgery (EFAMS).
             </motion.p>
 
             <motion.p
@@ -303,74 +227,63 @@ export default function About() {
               className="text-white/50 text-sm tracking-wider uppercase mb-5"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              The platform combines
+              Focus Areas
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 gap-3 mb-10"
+              className="flex flex-wrap gap-3 mb-10"
             >
-              {platformFeatures.map((feature) => (
-                <motion.div
-                  key={feature.title}
-                  whileHover={{ y: -2 }}
-                  className="group rounded-xl p-4 transition-all duration-300"
+              {[
+                "Anti-ageing",
+                "Advanced Hair Restoration",
+                "Stem Cell Therapy",
+                "Weight & Inch Loss",
+                "Cosmetic Surgery",
+              ].map((area) => (
+                <motion.span
+                  key={area}
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    backdropFilter: "blur(12px)",
-                    WebkitBackdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    background:
+                      "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(203,161,53,0.05) 100%)",
+                    border: "1px solid rgba(203,161,53,0.3)",
+                    fontFamily: "'Space Grotesk', sans-serif",
                   }}
                 >
-                  <div className="text-[#CBA135] mb-2 transition-colors duration-300 group-hover:text-[#F5D779]">
-                    {feature.icon}
-                  </div>
-                  <p
-                    className="text-white text-sm font-medium leading-tight"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                  >
-                    {feature.title}
-                  </p>
-                </motion.div>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]" />
+                  {area}
+                </motion.span>
               ))}
             </motion.div>
 
-            <motion.div
+            <motion.p
               variants={itemVariants}
-              className="mb-8"
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <p
-                className="text-white/50 text-sm tracking-wider uppercase mb-4"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              >
-                Current Presence
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {locations.map((location) => (
-                  <motion.span
-                    key={location}
-                    whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(203,161,53,0.05) 100%)",
-                      border: "1px solid rgba(203,161,53,0.3)",
-                      fontFamily: "'Space Grotesk', sans-serif",
-                    }}
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]" />
-                    {location}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
+              Our team comprises internationally trained, board-certified
+              dermatologists, plastic surgeons and aesthetic physicians dedicated
+              to delivering world-class care.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-[#B7B7B7] text-lg leading-relaxed mb-10"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              We extend an open invitation to practitioners to partner with or
+              join the KO Clinics network as it expands across India and
+              internationally.
+            </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-white text-xl md:text-2xl font-semibold mb-10 italic"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              &ldquo;Building a truly global healthcare network.&rdquo;
+              &ldquo;Aesthetics with Ethics&rdquo;
             </motion.p>
 
             <motion.div
