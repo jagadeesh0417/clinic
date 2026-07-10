@@ -68,6 +68,12 @@ const sections = [
       { src: "/images/before-after-33.png", label: "Before & After 33" },
       { src: "/images/before-after-34.png", label: "Before & After 34" },
       { src: "/images/before-after-35.png", label: "Before & After 35" },
+      { src: "/images/before-after-36.png", label: "Before & After 36" },
+      { src: "/images/before-after-37.png", label: "Before & After 37" },
+      { src: "/images/before-after-38.png", label: "Before & After 38" },
+      { src: "/images/before-after-39.png", label: "Before & After 39" },
+      { src: "/images/before-after-40.png", label: "Before & After 40" },
+      { src: "/images/before-after-41.png", label: "Before & After 41" },
     ],
   },
   {
