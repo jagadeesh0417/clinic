@@ -7,7 +7,7 @@ interface UseCountUpOptions {
 
 export function useCountUp({ end, duration = 2500 }: UseCountUpOptions) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState<number | null>(null);
 
   useEffect(() => {
     const startTime = performance.now();

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion, useInView, animate } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
@@ -158,12 +159,14 @@ export default function RevenueModel() {
             >
               {/* Image background */}
               <div className="absolute inset-0 overflow-hidden opacity-30">
-                <img
+                <Image
                   src={m.img}
-                alt="" aria-hidden="true"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
+                  alt="" aria-hidden="true"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
+                />
               <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(5,5,5,0.4) 0%, #050505 100%)" }} />
             </div>
 

@@ -154,6 +154,8 @@ function HealthScoreMeter({ trigger }: { trigger: boolean }) {
     return () => observer.disconnect();
   }, [trigger, score, progress, ref]);
 
+  if (value === null) return null;
+
   return (
     <motion.div
       variants={itemVariants}

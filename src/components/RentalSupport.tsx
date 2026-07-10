@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
@@ -94,12 +95,14 @@ export default function RentalSupport() {
                   border: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
                     src={src}
                     alt={`Rental support ${i + 1}`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized
                   />
                 </div>
               </motion.div>

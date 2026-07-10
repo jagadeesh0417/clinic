@@ -31,7 +31,7 @@ const benefits = [
   { id: 1, title: "Lead Generation", desc: "High-intent patient leads delivered directly to your clinic through our premium digital marketing funnel." },
   { id: 2, title: "Walk-in Patients", desc: "Drive foot traffic with strategic local visibility and reputation management across all major platforms." },
   { id: 3, title: "Insurance Support", desc: "End-to-end insurance credentialing and claims management to maximize your reimbursements." },
-  { id: 4, title: "Health Packages", desc: "Curated preventive health packages that increase patient retention and average ticket size." },
+  { id: 4, title: "Health Packages", desc: "Curated wellness packages that increase patient retention and average ticket size." },
   { id: 5, title: "Membership Programs", desc: "Recurring revenue through membership plans that build long-term patient loyalty and cash flow." },
   { id: 6, title: "Corporate Patients", desc: "B2B corporate wellness partnerships that bring consistent, high-value patient volume to your clinic." },
   { id: 7, title: "Doctor Referrals", desc: "An integrated referral network connecting you with top specialists for mutual patient growth." },

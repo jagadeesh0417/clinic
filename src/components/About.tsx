@@ -47,6 +47,7 @@ const stats = [
 
 function CountUp({ end }: { end: number }) {
   const { ref, value } = useCountUp({ end });
+  if (value === null) return null;
   return (
     <span ref={ref} className="text-4xl md:text-5xl font-bold text-[#CBA135] tabular-nums">
       {value}

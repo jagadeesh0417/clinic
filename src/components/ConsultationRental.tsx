@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
@@ -88,11 +89,13 @@ export default function ConsultationRental() {
                 key={i}
                 className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white/5 border border-white/10"
               >
-                <img
+                <Image
                   src={src}
                   alt={`Clinic space ${i + 1}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent" />
               </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -38,7 +39,7 @@ const locations: LocationGroup[] = [
   { name: "Bahrain", detail: "Kosmedixx \u2013 Ko Clinics", type: "international", cx: 590, cy: 300, address: "7J62+X92, Shaikh Isa Causeway, Al Sayh, Bahrain" },
   { name: "Dubai, UAE", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 585, cy: 305, phone: "+971 54 536 6831" },
   { name: "Canada", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 200, cy: 270, phone: "+1 (647) 581-4279" },
-  { name: "Manila", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 710, cy: 360, address: "Address to be confirmed", phone: "+63 966 168 8381" },
+  { name: "Manila", detail: "Kosmedixx \u2013 KO Clinics partner", type: "international", cx: 710, cy: 360, phone: "+63 966 168 8381" },
 ];
 
 const connectionPairs: [number, number][] = [
@@ -201,7 +202,7 @@ export default function GlobalPresence() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  const bengaluruLocations = locations.filter((l) => l.type === "bengaluru");
+  const bengaluruLocations = locations.filter((l) => l.type === "bengaluru" && l.address);
   const indiaLocations = locations.filter((l) => l.type === "india");
   const internationalLocations = locations.filter((l) => l.type === "international");
 
@@ -367,11 +368,13 @@ export default function GlobalPresence() {
                 className="flex-1 h-28 rounded-xl overflow-hidden relative"
                 style={{ border: "1px solid rgba(255,255,255,0.06)" }}
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
                   alt="Global network"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="50vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(5,5,5,0.8), transparent)" }} />
               </motion.div>
@@ -383,11 +386,13 @@ export default function GlobalPresence() {
                 className="flex-1 h-28 rounded-xl overflow-hidden relative"
                 style={{ border: "1px solid rgba(255,255,255,0.06)" }}
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1526778548025-fa2f459b5f6a?w=800&q=80"
                   alt="Global tech"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="50vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(5,5,5,0.8), transparent)" }} />
               </motion.div>

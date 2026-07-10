@@ -103,31 +103,34 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
-            <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-6 font-[family-name:var(--font-body)]">
-              Contact
-            </h3>
-              <ul className="flex flex-col gap-4">
-              <li>
-                <a href={`mailto:${SITE.email}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
-                  {SITE.email}
-                </a>
-              </li>
-              {SITE.phone && (
+          {SITE.email && (
+            <motion.div variants={itemVariants}>
+              <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-6 font-[family-name:var(--font-body)]">
+                Contact
+              </h3>
+                <ul className="flex flex-col gap-4">
                 <li>
-                  <a href={`tel:${SITE.phone}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
-                    {SITE.phone}
+                  <a href={`mailto:${SITE.email}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
+                    {SITE.email}
                   </a>
                 </li>
-              )}
-              <li>
-                <span className="text-sm text-white/50 leading-relaxed font-[family-name:var(--font-body)] block">
-                  {SITE.address}
-                </span>
-              </li>
-
-            </ul>
-          </motion.div>
+                {SITE.phone && (
+                  <li>
+                    <a href={`tel:${SITE.phone}`} className="text-sm text-white/50 hover:text-white transition-all duration-300 font-[family-name:var(--font-body)] hover:translate-x-1 inline-block">
+                      {SITE.phone}
+                    </a>
+                  </li>
+                )}
+                {SITE.address && (
+                  <li>
+                    <span className="text-sm text-white/50 leading-relaxed font-[family-name:var(--font-body)] block">
+                      {SITE.address}
+                    </span>
+                  </li>
+                )}
+              </ul>
+            </motion.div>
+          )}
 
           <motion.div variants={itemVariants}>
             <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-6 font-[family-name:var(--font-body)]">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const reveal = {
@@ -160,7 +161,7 @@ export default function TeamSection() {
               {/* Avatar */}
               {doctor.image ? (
                 <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-2 border-[#CBA135]/30">
-                  <img src={doctor.image} alt={doctor.name} className="h-full w-full object-cover" />
+                  <Image src={doctor.image} alt={doctor.name} fill className="object-cover" unoptimized />
                 </div>
               ) : (
                 <div

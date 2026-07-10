@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -286,7 +287,7 @@ export default function BrandSection() {
             <motion.div variants={fadeUp} custom={0} className="text-center mb-4">
               <div className="mb-6 flex justify-center">
                 <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[#CBA135]/30 md:h-52 md:w-52">
-                  <img src="/images/dr-vikas.png" alt="Dr. Vikas Singh" className="h-full w-full object-cover" />
+                  <Image src="/images/dr-vikas.png" alt="Dr. Vikas Singh" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h2

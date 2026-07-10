@@ -10,14 +10,7 @@ const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80",
 ];
 
-import { PARTNER_CLINICS, CITIES, COUNTRIES } from "@/config/stats";
 
-const STATS: { top: string | null; bottom: string }[] = [
-  { top: PARTNER_CLINICS, bottom: "Clinics" },
-  { top: CITIES, bottom: "Cities" },
-  { top: COUNTRIES, bottom: "Countries" },
-  { top: "AI", bottom: "Enabled" },
-];
 
 interface Particle {
   x: number;
@@ -91,30 +84,6 @@ function CanvasParticles() {
         pointerEvents: "none",
       }}
     />
-  );
-}
-
-function StatCard({
-  top,
-  bottom,
-  index,
-}: {
-  top: string | null;
-  bottom: string;
-  index: number;
-}) {
-  if (top === null) return null;
-  return (
-    <motion.div
-      className="stat-card"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-    >
-      <span className="stat-top">{top}</span>
-      <span className="stat-bottom">{bottom}</span>
-    </motion.div>
   );
 }
 
@@ -374,61 +343,6 @@ export default function Hero() {
           height: 16px;
         }
 
-        .hero-stats {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 3;
-          display: flex;
-          justify-content: center;
-          padding: 28px 24px 32px;
-          background: linear-gradient(
-            to top,
-            rgba(5, 5, 5, 0.96) 0%,
-            rgba(5, 5, 5, 0.7) 50%,
-            transparent 100%
-          );
-        }
-
-        .hero-stats-inner {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-          max-width: 1000px;
-          width: 100%;
-        }
-
-        .stat-card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 4px;
-          padding: 18px 12px;
-          border: 1px solid rgba(203, 161, 53, 0.08);
-          border-radius: 16px;
-          background: rgba(255, 255, 255, 0.02);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-        }
-
-        .stat-top {
-          font-family: "Playfair Display", serif;
-          font-size: clamp(22px, 2.8vw, 36px);
-          font-weight: 700;
-          color: #CBA135;
-          letter-spacing: -0.02em;
-        }
-
-        .stat-bottom {
-          font-size: clamp(9px, 0.9vw, 12px);
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.4);
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          text-align: center;
-        }
-
         @media (max-width: 768px) {
           .hero-stats-inner {
             grid-template-columns: repeat(2, 1fr);
@@ -557,18 +471,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="hero-stats">
-        <div className="hero-stats-inner">
-          {STATS.map((stat, i) => (
-            <StatCard
-              key={stat.bottom}
-              top={stat.top}
-              bottom={stat.bottom}
-              index={i}
-            />
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

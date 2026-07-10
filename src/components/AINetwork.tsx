@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Building2, Search, BarChart3, Monitor, TrendingUp, FileText, Users, LayoutDashboard } from "lucide-react"
 
@@ -152,11 +153,13 @@ export default function AINetwork() {
                   i === 0 ? "row-span-2" : ""
                 }`}
               >
-                <img
+                <Image
                   src={img.src}
                   alt={img.alt}
-                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                  style={{ minHeight: i === 0 ? "320px" : "148px" }}
+                  fill
+                  className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,5,5,0.9)] via-[rgba(5,5,5,0.3)] to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">

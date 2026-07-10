@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { useRef } from "react"
 import { Scissors, Zap, Droplets, Radio, Scan, TestTube, Dumbbell, Microscope } from "lucide-react"
@@ -82,11 +83,13 @@ export default function EquipmentRental() {
               className="relative min-w-[280px] snap-start overflow-hidden rounded-2xl sm:min-w-[340px] md:min-w-[400px] aspect-[4/3] flex-shrink-0 group"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10" />
-              <img
+              <Image
                 src={src}
                 alt={`Equipment ${i + 1}`}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 400px"
+                unoptimized
               />
               <div className="absolute bottom-0 left-0 right-0 z-20 p-6">
                 <span className="font-['Inter'] text-sm text-[#00D5FF]">

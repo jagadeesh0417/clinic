@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const staffCategories = [
@@ -72,24 +73,33 @@ export default function StaffSupport() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10" />
               <div className="absolute -inset-1 bg-[#CBA135]/20 blur-3xl rounded-full" />
-              <img
+              <Image
                 src={images[0]}
                 alt="Healthcare team"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                unoptimized
               />
               <div className="absolute bottom-6 left-6 right-6 z-20 grid grid-cols-2 gap-3">
-                <div className="overflow-hidden rounded-xl">
-                  <img
+                <div className="relative overflow-hidden rounded-xl h-28">
+                  <Image
                     src={images[1]}
                     alt="Staff consultation"
-                    className="h-28 w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    unoptimized
                   />
                 </div>
-                <div className="overflow-hidden rounded-xl">
-                  <img
+                <div className="relative overflow-hidden rounded-xl h-28">
+                  <Image
                     src={images[2]}
                     alt="Clinic team"
-                    className="h-28 w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    unoptimized
                   />
                 </div>
               </div>

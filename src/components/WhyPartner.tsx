@@ -177,7 +177,7 @@ export default function WhyPartner() {
               </span>
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed opacity-70">
-              We don&apos;t just build clinics — we build futures. Join India&apos;s fastest-growing
+              We don&apos;t just build clinics — we build futures. Join India&apos;s leading
               healthcare network and unlock unmatched growth, technology, and brand equity.
             </p>
           </motion.div>

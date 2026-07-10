@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const services = [
@@ -54,24 +55,33 @@ export default function HomeHealthcare() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent z-10" />
               <div className="absolute -inset-1 bg-[#CBA135]/20 blur-3xl rounded-full" />
-              <img
+              <Image
                 src={images[0]}
                 alt="Home healthcare visit"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                unoptimized
               />
               <div className="absolute bottom-6 left-6 right-6 z-20 grid grid-cols-2 gap-3">
-                <div className="overflow-hidden rounded-xl">
-                  <img
+                <div className="relative overflow-hidden rounded-xl h-28">
+                  <Image
                     src={images[1]}
                     alt="Healthcare consultation"
-                    className="h-28 w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    unoptimized
                   />
                 </div>
-                <div className="overflow-hidden rounded-xl">
-                  <img
+                <div className="relative overflow-hidden rounded-xl h-28">
+                  <Image
                     src={images[2]}
                     alt="Medical care"
-                    className="h-28 w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    unoptimized
                   />
                 </div>
               </div>
@@ -93,10 +103,13 @@ export default function HomeHealthcare() {
               </p>
             </div>
 
-            <img
+            <Image
               src={images[3]}
               alt="Wellness care"
+              width={96}
+              height={96}
               className="absolute -top-4 -left-4 z-20 h-24 w-24 rounded-2xl border-2 border-[#CBA135]/30 object-cover shadow-xl md:h-32 md:w-32"
+              unoptimized
             />
           </motion.div>
 

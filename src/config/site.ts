@@ -5,10 +5,12 @@
 export const SITE = {
   name: "KO Clinics",
   tagline: "Aesthetics with Ethics",
-  email: "hello@koclinics.com",
+  // TODO_VERIFY: email address — may differ on live sites
+  email: null as string | null,
   // TODO_VERIFY: phone number — the live sites show a different number
   phone: null as string | null,
-  address: "7th Floor Indiqube Alpha Bellandur Bengaluru",
+  // TODO_VERIFY: registered office address
+  address: null as string | null,
   social: {
     instagram: "#",
     twitter: "#",

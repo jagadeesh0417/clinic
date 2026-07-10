@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { useRef } from "react"
 
@@ -148,11 +149,13 @@ export default function PartnerRequirements() {
                 className="group relative overflow-hidden rounded-2xl"
                 style={{ minHeight: "200px" }}
               >
-                <img
+                <Image
                   src={src}
                   alt="" aria-hidden="true"
-                  className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
-                  style={{ minHeight: "200px" }}
+                  fill
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(203,161,53,0.15) 0%, rgba(0,0,0,0.5) 100%)" }} />
               </motion.div>

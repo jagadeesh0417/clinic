@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
@@ -85,10 +86,13 @@ export default function Products() {
               className="group rounded-2xl overflow-hidden bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] transition-all duration-500 hover:scale-[1.02] hover:border-[#CBA135]/30"
             >
               <div className="relative h-48 w-full overflow-hidden">
-                <img
+                <Image
                   src={category.image}
                   alt={category.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
