@@ -43,6 +43,8 @@ const sections = [
       { src: "/images/la-crown-8.png", label: "La Crown 8" },
       { src: "/images/la-crown-9.png", label: "La Crown 9" },
       { src: "/images/la-crown-10.png", label: "La Crown 10" },
+      { src: "/images/la-crown-11.png", label: "La Crown 11" },
+      { src: "/images/la-crown-12.png", label: "La Crown 12" },
     ],
   },
 ];
