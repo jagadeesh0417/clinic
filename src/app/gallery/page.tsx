@@ -41,6 +41,12 @@ const sections = [
       { src: "/images/Screenshot 2026-07-10 071122.png", label: "Before & After 6" },
       { src: "/images/Screenshot 2026-07-10 071133.png", label: "Before & After 7" },
       { src: "/images/Screenshot 2026-07-10 071142.png", label: "Before & After 8" },
+      { src: "/images/Screenshot 2026-07-10 071450.png", label: "Before & After 9" },
+      { src: "/images/Screenshot 2026-07-10 071458.png", label: "Before & After 10" },
+      { src: "/images/Screenshot 2026-07-10 071512.png", label: "Before & After 11" },
+      { src: "/images/Screenshot 2026-07-10 071526.png", label: "Before & After 12" },
+      { src: "/images/Screenshot 2026-07-10 071532.png", label: "Before & After 13" },
+      { src: "/images/Screenshot 2026-07-10 071543.png", label: "Before & After 14" },
     ],
   },
   {
